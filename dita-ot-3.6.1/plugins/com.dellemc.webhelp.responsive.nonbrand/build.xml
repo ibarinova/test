@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HTML5 Web Help - Non-brand"
+		 default="dita2dellemc-webhelp-responsive.nonbrand">
+
+	<target name="dita2dellemc-webhelp-responsive.nonbrand" depends="dita2dellemc-webhelp-responsive.nonbrand.init,
+																    dita2dellemc-webhelp-responsive,
+																	dita2dellemc-webhelp-responsive.nonbrand.copy-resources"/>
+
+	<target name="dita2dellemc-webhelp-responsive.nonbrand.init">
+		<property name="dellemc-webhelp.resources.dir-nonbrand" value="${dita.plugin.com.dellemc.webhelp.responsive.nonbrand.dir}/resources"/>
+
+		<property name="dellemc-webhelp.output-resources.dir" value="oxygen-webhelp/template/resources"/>
+		<property name="dellemc-logo-required" value="no"/>
+		<property name="webhelp.logo.image.output" value=""/>
+
+		<property name="args.css.file" value="${dellemc-webhelp.output-resources.dir}/css/nonbrand-custom.css"/>
+	</target>
+
+	<target name="dita2dellemc-webhelp-responsive.nonbrand.copy-resources">
+		<copy todir="${output.dir}/${dellemc-webhelp.output-resources.dir}/css"
+			  overwrite="true" encoding="ISO-8859-1">
+			<fileset dir="${dellemc-webhelp.resources.dir-nonbrand}/css">
+				<include name="*/**"/>
+			</fileset>
+		</copy>
+	</target>
+</project>

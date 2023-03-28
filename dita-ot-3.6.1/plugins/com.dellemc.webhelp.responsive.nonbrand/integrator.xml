@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HTML5 Web Help - Non-brand">
+  <import file="build.xml"/>
+</project>

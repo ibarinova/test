@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HTML5 Web Help"
+		 xmlns:if="ant:if"
+		 default="dita2dell-webhelp-responsive">
+
+	<target name="dita2dell-webhelp-responsive" depends="dita2dell-webhelp-responsive.init,
+														dita2dell-webhelp-responsive.generate-properties"/>
+
+	<target name="dita2dell-webhelp-responsive.draft" depends="dita2dell-webhelp-responsive.draft.init,
+																dita2dell-webhelp-responsive"/>
+
+	<target name="dita2dell-webhelp-responsive.draft.init">
+		<property name="args.draft" value="yes"/>
+	</target>
+
+	<target name="dita2dell-webhelp-responsive.init">
+		<property name="dell-webhelp.xsl.dir" location="${dita.plugin.com.dell.webhelp.responsive.dir}/xsl"/>
+		<property name="dell-webhelp.properties" location="${dita.temp.dir}/dell-webhelp.properties"/>
+		<property name="output.type" value=""/>
+		<dirname property="orig.args.input.location" file="${args.input}"/>
+		<basename property="orig.args.input.name" file="${args.input}" />
+	</target>
+
+	<target name="dita2dell-webhelp-responsive.generate-properties">
+		<xslt style="${dell-webhelp.xsl.dir}${file.separator}generate-properties-file.xsl"
+			  in="${dell-webhelp.xsl.dir}${file.separator}dummy.xml"
+			  out="${dita.temp.dir}${file.separator}dummy.xml">
+			<param name="TEMP-DIR" expression="${dita.temp.dir}"/>
+			<param name="INPUT-DIR" expression="${orig.args.input.location}"/>
+			<param name="INPUT-NAME" expression="${orig.args.input.name}"/>
+			<param name="PROP-FILE-NAME" expression="dell-webhelp.properties"/>
+			<param name="include-outfilemode" expression="${include-outfile-mode}" if:set="include-outfile-mode"/>
+		</xslt>
+		<property file="${dell-webhelp.properties}"/>
+		<antcall target="dita2${required-dellemc-plugin}${output.type}"/>
+	</target>
+
+</project>

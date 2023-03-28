@@ -1,0 +1,772 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<strings>
+    <!-- PDF and common strings -->
+
+    <!-- Product name to be placed inside headers etc. -->
+    <variable id="Product Name">OpenTopic</variable>
+
+    <!-- The footer that appears on odd-numbered pages. -->
+    <variable id="Body odd footer"/>
+
+    <!-- The footer that appears on even-numbered pages. -->
+    <variable id="Body even footer"/>
+
+    <!-- The footer that appears on the first page of a chapter. -->
+    <variable id="Body first footer"/>
+
+    <!-- The header that appears on the first page of a chapter. -->
+    <variable id="Body first header"/>
+
+    <!-- The header that appears on odd-numbered pages. -->
+    <variable id="Body odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on even-numbered pages. -->
+    <variable id="Body even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/></variable>
+
+    <!-- The footer that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd footer"/>
+
+    <!-- The footer that appears on Preface even-numbered pages. -->
+    <variable id="Preface even footer"/>
+
+    <!-- The footer that appears on the first page of a Preface -->
+    <variable id="Preface first footer"/>
+
+    <!-- The header that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd header">Introduzione&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on Preface even-numbered pages. -->
+    <variable id="Preface even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;Introduzione</variable>
+
+    <!-- The header that appears on Preface first page. -->
+    <variable id="Preface first header"/>
+
+    <!-- The footer that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd footer"/>
+
+    <!-- The footer that appears on the even-numbered table of contents pages. -->
+    <variable id="Toc even footer"/>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;Sommario&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;Sommario</variable>
+
+    <!-- The footer that appears on the odd-numbered index pages. -->
+    <variable id="Index odd footer"/>
+
+    <!-- The footer that appears on the even-numbered index pages. -->
+    <variable id="Index even footer"/>
+
+    <!-- The header that appears on the odd-numbered index pages. -->
+    <variable id="Index odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;Indice analitico&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the even-numbered index pages. -->
+    <variable id="Index even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;Indice analitico</variable>
+
+    <!-- glj  Phrase appended to chapter title in header to indicate it's a continuation of the chapter -->
+    <variable id="Chapter Continued string">(segue)</variable>
+
+    <!-- The formatting used to display ordered lists (e.g., "1., 2." or "1), 2)" -->
+    <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number consumer"><param ref-name="number"/>&#xA0; </variable>
+
+    <!-- The unordered list bullet   -->
+    <variable id="Unordered List bullet 1">&#x25CF;</variable>
+	<variable id="Unordered List bullet 2">&#x25CB;</variable>
+	<variable id="Unordered List bullet 3">&#xFFED;</variable>
+	<variable id="Unordered List bullet 4">&#x002D;</variable>
+    <variable id="Unordered List bullet 5">&#x2022;</variable>
+    <variable id="Ordered List Number 1"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 2"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 3"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 4"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Format 1">1</variable>
+    <variable id="Ordered List Format 2">a</variable>
+    <variable id="Ordered List Format 3">i</variable>
+    <variable id="Ordered List Format 4">i</variable>
+
+    <variable id="Step Number"><param ref-name="number"/>. </variable>
+    <variable id="Step Format">1</variable>
+    <variable id="Substep Number"><param ref-name="number"/>) </variable>
+    <variable id="Substep Format">a</variable>
+
+    <!-- The heading string to put at the top of the Table of Contents -->
+    <variable id="Table of Contents">Sommario</variable>
+
+    <!-- The heading string to put at the top of the Index -->
+    <variable id="Index">Indice analitico</variable>
+
+    <variable id="Index Continued String">segue</variable>
+
+    <!--string before see element-->
+    <variable id="Index See String">, Vedere </variable>
+
+    <!--string before see also element-->
+    <variable id="Index See Also String">Vedere anche </variable>
+
+    <!-- The string used to label a chapter within the table of contents. -->
+    <!--<variable id="Table of Contents Chapter">Capitolo&#xA0;<param ref-name="number"/>:&#xA0;</variable>-->
+    <variable id="Table of Contents Chapter"> <param ref-name="number"/> </variable>
+
+    <!-- The string used to label an appendix within the table of contents. -->
+    <variable id="Table of Contents Appendix">Appendice&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an part within the table of contents. -->
+    <variable id="Table of Contents Part">Parte&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Preface">Prefazione:&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Notices"></variable>
+
+    <!-- The string used to label an preface in body text. -->
+    <variable id="Preface title">Prefazione</variable>
+
+    <!-- The string used to label an notices in body text. -->
+    <variable id="Notices title">Avviso</variable>
+
+    <!-- The heading to put at the top of a chapter when creating a
+         chapter-level "mini-TOC" -->
+    <variable id="Mini Toc">Argomenti: </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <variable id="Note">N.B.: </variable>
+    <variable id="note">N.B.: </variable>
+    <variable id="note-dell">N.B.:</variable>
+
+    <variable id="notice-dell">AVVISO</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Tip">SUGGERIMENTO: </variable>
+    <variable id="tip-dell">SUGGERIMENTO: </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Important">Importante</variable>
+    <variable id="important-dell">Importante</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'fastpath'. -->
+    <variable id="Fastpath">Fastpath</variable>
+    <variable id="fastpath-dell">Fastpath</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'remember'. -->
+    <variable id="Remember">Ricorda</variable>
+    <variable id="remember-dell">Ricorda</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'attention'. -->
+    <variable id="Attention">Attenzione</variable>
+    <variable id="attention-dell">Attenzione</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'caution'. -->
+    <variable id="Caution">ATTENZIONE: </variable>
+    <variable id="caution-dell">ATTENZIONE:</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'danger'. -->
+    <variable id="Danger">Pericolo</variable>
+    <variable id="danger-dell">Pericolo</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <variable id="Warning">AVVERTENZA: </variable>
+    <variable id="warning-dell">AVVERTENZA:</variable>
+    <variable id="Warning_Title">Informazioni sui messaggi di Avvertenza</variable>
+    <variable id="Warning_Blurb">Un messaggio di AVVERTENZA indica un rischio di danni materiali, lesioni personali o morte.</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+    <variable id="High Voltage">Rischio elettrico</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+        with 'type' attribute set to 'restriction'. -->
+    <variable id="Restriction">Restrizione</variable>
+
+    <!-- Text to use for figure titles. Renders as part of <fig>/<title>
+          elements. -->
+    <variable id="Figure.title">Figura <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for table titles. Renders as part of <table>/<title>
+         elements. -->
+    <variable id="Table.title">Tabella <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for related links label.
+         Renders as part of <related-links> element. -->
+    <variable id="Related Links">Collegamenti correlati</variable>
+
+    <!-- Default cross-reference text prefix. Used to generate reference
+         text in case it's not specified in source. -->
+    <variable id="Cross-Reference">Riferimento incrociato a:</variable>
+
+    <!-- Default content-reference text prefix. Used to generate reference
+         text in case target cannot be resolved. -->
+    <variable id="Content-Reference">Riferimento ai contenuti a:</variable>
+
+    <!-- Default title text for referenced section title. Used to generate
+         reference text in case reference has no explicit content and
+         referenced section has no title. -->
+    <variable id="Untitled section">Sezione senza nome.</variable>
+
+    <!-- Default title text for referenced list item. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a list item. -->
+    <variable id="List item">Elemento dell'elenco.</variable>
+
+    <!-- Default title text for referenced footnote. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a footnote. -->
+    <variable id="Foot note">Nota a pié di pagina.</variable>
+
+    <!-- Text to use for a generated label of navigation title. Renders
+         as part of <navtitle> element. -->
+    <variable id="Navigation title">Titolo di navigazione</variable>
+
+    <!-- Text to use for a generated label of search title. Renders
+         as part of <searchtitle> element. -->
+    <variable id="Search title">Titolo di ricerca</variable>
+
+    <!-- Text to use for chapter titles.-->
+    <variable id="Chapter with number">Capitolo <param ref-name="number"/></variable>
+
+    <!-- Text to use for appendix titles.-->
+    <variable id="Appendix with number">Appendice <param ref-name="number"/></variable>
+
+    <!-- Text to use for part titles.-->
+    <variable id="Part with number">Parte <param ref-name="number"/></variable>
+
+    <!-- Text to use for a label generated from <required-cleanup> element. -->
+    <variable id="Required-Cleanup">[Pulizia necessaria]</variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual. -->
+    <variable id="On the page"> a pagina <param ref-name="pagenum"/></variable>
+    <variable id="On the page EMC"> a pagina <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual, when referenced element has no title. -->
+    <variable id="Page"> pagina <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in chm/html, when referenced element has no title. -->
+    <variable id="This link">questo collegamento</variable>
+
+    <!-- Image path to use for a note of "note" type. -->
+    <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "attention" type. -->
+    <variable id="attention Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "caution" type. -->
+    <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution.png</variable>
+
+    <!-- Image path to use for a note of "danger" type. -->
+    <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image path to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "important" type. -->
+    <variable id="important Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "remember" type. -->
+    <variable id="remember Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "restriction" type. -->
+    <variable id="restriction Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "tip" type. -->
+    <variable id="tip Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "other" type. -->
+    <variable id="other Note Image Path">Customization/OpenTopic/common/artwork/hand.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Image Path">Customization/OpenTopic/common/artwork/highvoltage.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "warning" type. -->
+    <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image alt text to use for a note of "note" type. -->
+    <variable id="note Note Alt Text"><variable id="Note"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "attention" type. -->
+    <variable id="attention Note Alt Text"><variable id="Attention"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "caution" type. -->
+    <variable id="caution Note Alt Text"><variable id="Caution"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "danger" type. -->
+    <variable id="danger Note Alt Text"><variable id="Danger"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Alt Text"><variable id="Fastpath"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "important" type. -->
+    <variable id="important Note Alt Text"><variable id="Important"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "remember" type. -->
+    <variable id="remember Note Alt Text"><variable id="Remember"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "restriction" type. -->
+    <variable id="restriction Note Alt Text"><variable id="Restriction"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "tip" type. -->
+    <variable id="tip Note Alt Text"><variable id="Tip"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "other" type. -->
+    <variable id="other Note Alt Text">Hand icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Alt Text"><variable id="High Voltage"/> icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "warning" type. -->
+    <variable id="warning Note Alt Text"><variable id="Warning"/> icon</variable>
+
+    <!-- Image alt text to use for a logos. -->
+    <variable id="Logo Alt Text"><param ref-name="author"/> Logo</variable>
+
+
+    <!-- RN New strings for DELL -->
+    <variable id="Regulatory Model">Modello normativo: </variable>
+    <variable id="Regulatory Type">Tipo normativo: </variable>
+    <variable id="Computer Model">Modello computer:</variable>
+    <!--
+        String used for links in end of document in XHTML
+    -->
+
+    <!-- The title of the links to parent -->
+    <variable id="Parent topic">Argomento padre</variable>
+
+    <!-- The title of the links to next topics -->
+    <variable id="Next topic">Argomento successivo</variable>
+
+    <!-- The title of the links to previous topics -->
+    <variable id="Previous topic">Argomento precedente</variable>
+
+    <!-- The title of the links to child topics -->
+    <variable id="Child topics">Argomenti figli</variable>
+
+    <!-- The title of the links to Related concepts -->
+    <variable id="Related concepts">Concetti correlati</variable>
+
+    <!-- The title of the links to Related tasks -->
+    <variable id="Related tasks">Attività correlate</variable>
+
+    <!-- The title of the links to Related references -->
+    <variable id="Related references">Riferimenti correlati</variable>
+    <variable id="Related reference">Riferimenti correlati</variable>
+
+    <!-- The title of the links to Related information -->
+    <variable id="Related information">Informazioni correlate</variable>
+
+    <!--
+       Strings used in the online-help publishing.
+    -->
+
+    <!-- The title of the "contents" button in online-help output -->
+    <variable id="Contents button title">Sommario</variable>
+
+    <!-- The title of the "index" button in online-help output -->
+    <variable id="Index button title">Indice analitico</variable>
+
+    <!-- The separator of multiple index entries in online-help output -->
+    <variable id="Index multiple entries separator">, </variable>
+
+    <!-- The title of the "search" button in online-help output -->
+    <variable id="Search button title">Cerca</variable>
+
+    <!-- The title of the "back" button in online-help output -->
+    <variable id="Back button title">Indietro</variable>
+
+    <!-- The title of the "forward" button in online-help output -->
+    <variable id="Forward button title">Avanti</variable>
+
+    <!-- The title of the "main page" button in online-help output -->
+    <variable id="Main page button title">Pagina iniziale</variable>
+
+    <!-- The title of the "previous page" button in online-help output -->
+    <variable id="Previous page button title">Argomento precedente</variable>
+
+    <!-- The title of the "next page" button in online-help output -->
+    <variable id="Next page button title">Argomento successivo</variable>
+
+    <!-- The "online help" document title prefix in online-help output -->
+    <variable id="Online help prefix">Guida in linea</variable>
+
+    <!-- The search by index field title in online-help output -->
+    <variable id="Search index field title">Cerca la parola chiave:</variable>
+
+    <!-- The search by index button title in online-help output -->
+    <variable id="Search index button title">Visualizza</variable>
+
+    <!-- The search by text field title in online-help output -->
+    <variable id="Search text field title">Cerca nella guida:</variable>
+
+    <!-- The search by text button title in online-help output -->
+    <variable id="Search text button title">Cerca</variable>
+
+    <!-- The heading for task prerequisites -->
+    <variable id="Prereq Heading">Prerequisiti</variable>
+    <variable id="task_prereq-dell">Prerequisiti</variable>
+
+    <!-- The heading for task contexts -->
+    <variable id="Context Heading">Informazioni su questa attività</variable>
+    <variable id="task_context-dell">Informazioni su questa attività</variable>
+
+    <!-- The heading for task steps -->
+    <variable id="Steps Heading">Procedura</variable>
+    <variable id="task_procedure-dell">Procedura</variable>
+
+    <!-- The heading for task examples -->
+    <variable id="Example Heading">Esempio</variable>
+    <variable id="task_example-dell">Esempio</variable>
+    <variable id="Example Open">Esempio</variable>
+
+    <!-- The heading for task postrequisites -->
+    <variable id="Postreq Heading">Fasi successive</variable>
+    <variable id="task_postreq-dell">Fasi successive</variable>
+
+    <!-- User Interface strings -->
+
+    <variable id="Back">Argomento precedente</variable>
+    <variable id="Forward">Argomento successivo</variable>
+    <variable id="Glossary Pane">Glossario</variable>
+    <variable id="Go">Cerca</variable>
+    <variable id="Hide Navigation">Nascondi spostamento</variable>
+    <variable id="Home">Pagina iniziale</variable>
+    <str name="label.home" js="true" php="false">Pagina iniziale</str>
+    <variable id="Index Pane">Indice</variable>
+    <variable id="No Search Performed">Nessuna ricerca effettuata.</variable>
+    <variable id="No Search Results">La ricerca non ha prodotto risultati.</variable>
+    <variable id="Print">Stampa</variable>
+    <variable id="Print All">Stampa argomenti e argomenti correlati</variable>
+    <variable id="Print Topic">Stampa argomento</variable>
+    <variable id="printThisPage">Stampa argomento</variable>
+    <variable id="Search">Immetti termini di ricerca</variable>
+    <str name="webhelp.search" js="true" php="false">Immetti termini di ricerca</str>
+    <variable id="Search Blue">Cerca</variable>
+    <variable id="Search Pane">Cerca</variable>
+    <variable id="Search Results">Risultati ricerca</variable>
+    <str name="Search results" js="true" php="false">Risultati ricerca</str>
+    <variable id="TOC Pane">Sommario</variable>
+    <variable id="BreadCrumb Search">Cerca</variable>
+    <variable id="BreadCrumb TOC">Sommario</variable>
+    <variable id="Toggle Navigation">Attiva/Disattiva spostamento</variable>
+    <variable id="Toggle Highlighting">Attiva/Disattiva evidenziazione</variable>
+    <variable id="Searched for">Eseguita ricerca di</variable>
+    <variable id="PDF Link">PDF</variable>
+    <variable id="Email">Invia e-mail a</variable>
+    <variable id="Email Address">mailto:solutions@suite-sol.com</variable>
+
+    <variable id="Restricted">Dell - Con restrizioni - Informazioni riservate</variable>
+    <variable id="Copyright">Dell</variable>
+    <variable id="For Dell Employees">Informazioni riservate ai dipendenti e provider di servizi Dell.</variable>
+    <variable id="Legal">Note legali</variable>
+    <variable id="Contact">Contattaci</variable>
+
+    <!--IA      Dell EMC consolidation.     Jun-2019    Add EMC Strings - STARTS HERE      IB-->
+    <!-- Comtech Services 10/02/2013 strings for webhelp, webhelp-single, webhelp-mobile -->
+    <str name="label.home" js="true" php="false">Home</str>
+    <str name="expandSections" js="true" php="false">Espandi sezioni</str>
+    <str name="collapseSections" js="true" php="false">Riduci sezioni</str>
+    <str name="webhelp.search" js="true" php="false">Cerca</str>
+    <str name="Search results" js="true" php="false">Risultati della ricerca</str>
+
+    <str name="BacktoTop">Torna all'inizio</str>
+    <str name="TOC">Indice</str>
+    <str name="RSA">INFORMAZIONI RISERVATE RSA</str>
+    <str name="DraftRSA">BOZZA INFORMAZIONI RISERVATE RSA</str>
+    <str name="Draft">BOZZA INFORMAZIONI RISERVATE</str>
+    <str name="Content">Contenuti</str>
+    <str name="oldFrames">Con Frame</str>
+    <str name="Search">Ricerca</str>
+    <str name="Index">Indice</str>
+    <str name="Keywords">Parole chiave</str>
+    <str name="Loading, please wait ...">Caricamento in corso. Attendere...</str>
+    <str name="Search no results" js="true">La ricerca non ha restituito risultati per</str>
+    <str name="Results for:" js="true">Risultati per:</str>
+    <str name="There is no page containing all the search terms.">Nessuna pagina contiene tutti i
+        termini della ricerca.</str>
+    <str name="Partial results:">Risultati parziali:</str>
+    <str name="Output generated by">Output WebHelp generato da</str>
+    <str name="You must enter at least one character.">È necessario immettere almeno un carattere.</str>
+    <str name="Only first 10 words will be processed.">Solo le prime 10 parole verranno elaborate.</str>
+    <str name="Your browser is not supported. Use of Mozilla Firefox is recommended.">Browser
+        non supportato. Si consiglia di utilizzare Mozilla Firefox.</str>
+    <str name="linkToThis">Link alla pagina</str>
+    <str name="ExpandAll">Espandi tutti gli argomenti</str>
+    <str name="printThisPage">Stampa questa pagina</str>
+    <str name="CollapseAll">Riduci tutti gli argomenti</str>
+    <!-- various labels (not author controlled) -->
+    <str name="Figure">Figura</str>
+    <str name="Table">Tabella</str>
+    <str name="Next topic">Argomento successivo</str>
+    <str name="Previous topic">Argomento precedente</str>
+    <str name="Parent topic">Argomento principale</str>
+    <str name="Required cleanup">Correzione necessaria</str>
+    <str name="Draft comment">Commento per la versione bozza</str>
+    <str name="Option">Opzione</str>
+    <str name="Description">Descrizione</str>
+    <str name="Optional">Opzionale</str>
+    <str name="Required">Richiesto</str>
+    <str name="Skip visual syntax diagram">Salta diagramma di sintassi</str>
+    <str name="Read syntax diagram">Leggi diagramma di sintassi</str>
+    <str name="Start of change">Inizio modifica</str>
+    <str name="End of change">Fine modifica</str>
+    <str name="Index">Indice analitico</str>
+    <str name="Special characters">Caratteri speciali</str>
+    <str name="Numerics">Numerico</str>
+    <str name="End notes">Note a pié di pagina</str>
+    <str name="Artwork">Figura</str>
+    <str name="Syntax">Sintassi</str>
+    <str name="Type">Tipo</str>
+    <str name="Value">Valore</str>
+    <!-- Text that goes before a link to a topic -->
+    <str name="intro-to-topic-link"></str>
+
+    <!-- peril notice labels -->
+    <str name="Note">Nota</str>
+    <str name="Notes">Note</str>
+    <str name="Tip">Suggerimento</str>
+    <str name="Fastpath">Percorso di accesso rapido</str>
+    <str name="Important">Importante</str>
+    <str name="Attention">Attenzione</str>
+    <str name="Caution">Avvertenza</str>
+    <str name="Danger">Pericolo</str>
+    <str name="Remember">Attenzione</str>
+    <str name="Restriction">Limitazione</str>
+    <str name="Warning">Avvertenza</str>
+
+    <!-- default title text for section level generated sections -->
+    <str name="Contents">Indice</str>
+    <str name="Related concepts">Concetti correlati</str>
+    <str name="Related tasks">Attività correlate</str>
+    <!--    Comment 'Related reference' string because it was added above. IDPL-13249 -->
+<!--    <str name="Related reference">Riferimenti correlati</str>-->
+    <str name="Related information">Informazioni correlate</str>
+
+    <str name="Prerequisite">Prerequisito</str>
+    <str name="Prerequisites">Prerequisiti</str>
+    <str name="or">oppure</str>
+
+    <!--Task section labels -->
+    <str name="task_context">Informazioni su questa attività</str>
+    <str name="task_example">Esempio</str>
+    <str name="task_prereq">Prima di iniziare</str>
+    <str name="task_postreq">Operazioni successive</str>
+    <str name="task_procedure">Procedura</str>
+    <str name="task_results">Risultati</str>
+
+    <str name="Copyright">Copyright</str>
+
+    <!-- Symbols -->
+    <str name="OpenQuote">"</str>
+    <str name="CloseQuote">"</str>
+    <str name="ColonSymbol">:</str>
+
+    <!-- For odt transform -->
+    <str name="On the page"> alla pagina </str>
+    <str name="Related Links">Collegamenti correlati</str>
+    <str name="List item">Voce di elenco.</str>
+    <str name="Foot note">Piè di pagina.</str>
+    <str name="Page"> pagina </str>
+    <str name="Unordered List bullet">&#8226;</str>
+
+    <!-- emc: autogenerated strings based on paragraph style name -->
+    <str type="webworks" name="child link Open" attribute="bullet-character">Subtopics</str>
+    <str type="webworks" name="Next link" attribute="bullet-character" stylename="Bold">Argomento successivo: </str>
+    <str type="webworks" name="Previous link" attribute="bullet-character" stylename="Bold">Argomento precedente: </str>
+    <str type="webworks" name="Related Topic Open" attribute="bullet-character">Argomenti correlati</str>
+    <str type="webworks" name="Related Concepts Open" attribute="bullet-character">Concetti correlati</str>
+    <str type="webworks" name="Related Reference Open" attribute="bullet-character">Riferimenti correlati</str>
+    <str type="webworks" name="Related Tasks Open" attribute="bullet-character">Attività correlate</str>
+    <str type="webworks" name="Related Information Open" attribute="bullet-character">Informazioni correlate</str>
+
+    <str type="webworks" name="Postrequisite Open show_hide_open" attribute="bullet-character">Al termine</str>
+    <str type="webworks" name="Postrequisite Open show_hide_closed" attribute="bullet-character">Al termine</str>
+    <str type="webworks" name="Postrequisite Open" attribute="bullet-character">Al termine</str>
+
+    <str type="webworks" name="ReviewerNote" attribute="bullet-character">Reviewers</str>
+    <str type="webworks" name="child link sequence Open" attribute="bullet-character">Procedura</str>
+    <str type="webworks" name="Steps Open" attribute="bullet-character">Procedura</str>
+    <str type="webworks" name="Steps show_hide_open Open" attribute="bullet-character">Procedura</str>
+    <str type="webworks" name="Steps show_hide_closed Open" attribute="bullet-character">Procedura</str>
+
+    <str type="webworks" name="Single Appendix Heading 1" attribute="bullet-character">Appendice: </str>
+    <str type="webworks" name="Single Appendix Title" attribute="bullet-character">Appendice: </str>
+
+    <str type="webworks" name="List optional 1" attribute="paragraph-prefix">(Optional) </str>
+    <str type="webworks" name="List optional 2" attribute="paragraph-prefix">(Optional) </str>
+    <str type="webworks" name="List optional 3" attribute="paragraph-prefix">(Optional) </str>
+    <str type="webworks" name="Step optional 1" attribute="paragraph-prefix">(Facoltativo) </str>
+    <str type="webworks" name="SubStep optional 2" attribute="paragraph-prefix">(Facoltativo) </str>
+    <str type="webworks" name="Numbered optional 2" attribute="paragraph-prefix">(Optional) </str>
+    <str type="webworks" name="Numbered optional 1" attribute="paragraph-prefix">(Optional) </str>
+    <str type="webworks" name="Numbered optional 3" attribute="paragraph-prefix">(Optional) </str>
+    <str type="webworks" name="child link family Optional" attribute="paragraph-prefix">(Optional) </str>
+    <str type="webworks" name="child link sequence Optional" attribute="paragraph-prefix">(Optional) </str>
+    <str type="webworks" name="child link unordered Optional" attribute="paragraph-prefix">(Optional) </str>
+
+    <str type="webworks" name="Step required 1" attribute="paragraph-prefix">(Obbligatorio) </str>
+    <str type="webworks" name="SubStep required 2" attribute="paragraph-prefix">(Obbligatorio) </str>
+
+    <str type="webworks" name="copyright" attribute="paragraph-prefix">Copyright</str>
+    <str type="webworks" name="Prerequisite Open" attribute="bullet-character">Prima di cominciare</str>
+    <str type="webworks" name="Result Open" attribute="bullet-character">Risultati</str>
+    <str type="webworks" name="Context Open" attribute="bullet-character">Procedura</str>
+    <str type="webworks" name="Example Open" attribute="bullet-character">Esempio</str>
+    <str type="webworks" name="Example Open show_hide_closed" attribute="bullet-character">Esempio</str>
+    <str type="webworks" name="Example Open show_hide_open" attribute="bullet-character">Esempio</str>
+    <str type="webworks" name="Description Open" attribute="bullet-character">Descrizione</str>
+    <str type="webworks" name="Syntax Open" attribute="bullet-character">Sintassi</str>
+    <str type="webworks" name="Arguments Open" attribute="paragraph-prefix">Argomenti</str>
+    <str type="webworks" name="Options Open" attribute="paragraph-prefix">Opzioni</str>
+    <str type="webworks" name="Parameters Open" attribute="paragraph-prefix">Parametri</str>
+
+    <!-- EMC	IB5	  25-Aug-2014 	TKT-123: Remove word "Step" generated in WebHelp cross-references -->
+    <!--str type="webworks" name="XREF step" attribute="character-prefix">Step </str>
+    <str type="webworks" name="XREF li" attribute="character-prefix">Step </str-->
+    <str type="webworks" name="XREF figure" attribute="character-prefix">Figura </str>
+    <str type="webworks" name="XREF table" attribute="character-prefix">Tabella </str>
+    <str type="webworks" name="CLIOptions" attribute="character-prefix">Opzioni</str>
+    <str type="webworks" name="CLIParameters" attribute="character-prefix">Parametri</str>
+    <str type="webworks" name="CLIArguments" attribute="character-prefix">Argomenti</str>
+
+    <str type="webworks" name="fastpath Open" attribute="bullet-character">Percorso rapido</str>
+    <str type="webworks" name="fastpath 1 Open" attribute="bullet-character">Percorso rapido</str>
+    <str type="webworks" name="fastpath 2 Open" attribute="bullet-character">Percorso rapido</str>
+    <str type="webworks" name="fastpath 3 Open" attribute="bullet-character">Percorso rapido</str>
+    <str type="webworks" name="remember Open" attribute="bullet-character">Promemoria</str>
+    <str type="webworks" name="remember 1 Open" attribute="bullet-character">Promemoria</str>
+    <str type="webworks" name="remember 2 Open" attribute="bullet-character">Promemoria</str>
+    <str type="webworks" name="remember 3 Open" attribute="bullet-character">Promemoria</str>
+    <str type="webworks" name="restriction Open" attribute="bullet-character">Limitazione</str>
+    <str type="webworks" name="restriction 1 Open" attribute="bullet-character">Limitazione</str>
+    <str type="webworks" name="restriction 2 Open" attribute="bullet-character">Limitazione</str>
+    <str type="webworks" name="restriction 3 Open" attribute="bullet-character">Limitazione</str>
+    <str type="webworks" name="attention Open" attribute="bullet-character">Attenzione</str>
+    <str type="webworks" name="attention 1 Open" attribute="bullet-character">Attenzione</str>
+    <str type="webworks" name="attention 2 Open" attribute="bullet-character">Attenzione</str>
+    <str type="webworks" name="attention 3 Open" attribute="bullet-character">Attenzione</str>
+    <!-- EMC IB5 24-Jul-2014 "Option"/"Description" headers on <choicetable> are inconsistent -->
+    <str type="webworks" name="Option" attribute="character-prefix">Opzione</str>
+    <str type="webworks" name="Description" attribute="character-prefix">Descrizione</str>
+
+    <!-- Localization prefix and suffix characters -->
+    <str name="start_cite"></str>
+    <str name="end_cite"></str>
+
+    <str name="start_var"></str>
+    <str name="end_var"></str>
+
+    <str name="start_q">&quot;</str>
+    <str name="end_q">&quot;</str>
+
+    <str name="start_lq"></str>
+    <str name="end_lq"></str>
+
+    <str name="start_userinput"></str>
+    <str name="end_userinput"></str>
+
+    <str name="start_option"></str>
+    <str name="end_option"></str>
+
+    <str name="start_term"></str>
+    <str name="end_term"></str>
+
+    <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+
+    <str name="start_option_responsive"></str>
+    <str name="end_option_responsive"></str>
+
+    <str name="start_uicontrol_responsive"></str>
+    <str name="end_uicontrol_responsive"></str>
+
+    <str name="start_var_responsive"></str>
+    <str name="end_var_responsive"></str>
+
+    <str name="start_wintitle_responsive"></str>
+    <str name="end_wintitle_responsive"></str>
+
+    <!-- need to be translated-->
+    <str name="Published">Pubblicato </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">In questa pagina</str>
+    <str name="see_also">Vedi anche</str>
+
+    <str name="show_navigation">Mostra navigazione</str>
+    <str name="hide_navigation">Nascondi navigazione</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="danger">PERICOLO</variable>
+    <variable id="warning">AVVERTENZA</variable>
+    <variable id="caution">ATTENZIONE</variable>
+    <variable id="notice">AVVISO</variable>
+    <variable id="note">Nota:</variable>
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images ENDS HERE- IB-->
+    <!--IA      Dell EMC consolidation.     Jun-2019    Add EMC Strings - ENDS HERE      IB-->
+
+    <variable id="Current Release Version">Versione corrente: </variable>
+    <variable id="Previous Release Version">Versione precedente: </variable>
+    <variable id="Release Type">Tipo di rilascio: </variable>
+    <variable id="Major">Principale (MA)</variable>
+    <variable id="Minor">Secondario (MI)</variable>
+    <variable id="Service">Servizio (SR)</variable>
+    <variable id="Patch">Patch (P)</variable>
+
+    <variable id="Technote Current Version">Versione corrente: </variable>
+    <variable id="Technote Release Date">Data di rilascio: </variable>
+    <variable id="Technote Previous Version">Versione precedente: </variable>
+    <variable id="Technote Document Number">Numero documento: </variable>
+    <variable id="Technote Document Rev">Rev. </variable>
+    <variable id="part number">N/P </variable>
+    <variable id="batterywarning">AVVERTENZA SULLA BATTERIA</variable>
+    <variable id="dsg Updated Date">Aggiornato</variable>
+    <variable id="dsg Software Version">Versione</variable>
+    <variable id="dsg Part Number">Numero parte</variable>
+    <variable id="dsg topics">Argomenti:</variable>
+
+    <variable id="note-non-brand Image Path">Customization/OpenTopic/common/artwork/note-non-brand.png</variable>
+    <variable id="caution-non-brand Image Path">Customization/OpenTopic/common/artwork/caution-non-brand.png</variable>
+    <variable id="warning-non-brand Image Path">Customization/OpenTopic/common/artwork/warning-non-brand.png</variable>
+
+    <variable id="note Image Path">Customization/OpenTopic/common/artwork/note.svg</variable>
+    <variable id="caution Image Path">Customization/OpenTopic/common/artwork/caution.svg</variable>
+    <variable id="danger Image Path">Customization/OpenTopic/common/artwork/danger.svg</variable>
+    <variable id="warning Image Path">Customization/OpenTopic/common/artwork/warning.svg</variable>
+
+    <variable id="Highly Restricted Confidential">Soggetto a restrizioni elevate – Informazioni riservate</variable>
+    <variable id="Restricted Confidential">Soggetto a restrizioni - Informazioni riservate</variable>
+    <variable id="Restricted Internal">Uso interno - Informazioni riservate</variable>
+
+    <variable id="Abstract">Abstract</variable>
+
+    <variable id="continued">(continua)</variable>
+    <!--Added new variable for PDF A4-->
+	<variable id="continued">(continua)</variable>
+	<variable id="release">Rilascio</variable>
+	<variable id="revision">Revisione</variable>
+	<variable id="Version">Versione</variable>
+	<variable id="on page"> a pagina <param ref-name="pagenum"/></variable>
+	<variable id="Figure toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+	<variable id="Table toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+    <variable id="LOT-dell">Tabelle</variable>
+    <variable id="LOF-dell">Figure</variable>
+
+    <variable id="#menucascade-separator"> &gt; </variable>
+
+    <!--    IB: Add support for TOC 'expand all'/'Collapse all' buttons-->
+    <variable id="Expand all">Espandi tutto</variable>
+    <variable id="Collapse all">Coprimi tutto</variable>
+
+</strings>

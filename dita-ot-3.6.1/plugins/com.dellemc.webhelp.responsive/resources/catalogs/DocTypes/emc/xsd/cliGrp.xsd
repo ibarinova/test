@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    EMC DITA CLI Reference XSD Group Definitions      -->
+<!--  VERSION:   1.0                                               -->
+<!--  DATE:      November 2014                                     -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!-- SYSTEM:     Darwin Information Typing Architecture (DITA)     -->
+<!--                                                               -->
+<!-- PURPOSE:    W3C XML Schema customization                      -->
+<!--             to describe DITA CLI References                   -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+
+    <xs:group name="cli_reference">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_reference"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_body">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_body"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_syntax">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_syntax"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_prereq">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_prereq"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_description">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_description"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_postreq">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_postreq"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_args">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_args"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_arg">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_arg"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_arg_value">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_arg_value"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_arg_desc">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_arg_desc"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_options">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_options"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_options_head">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_options_head"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_option_type">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_option_type"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_option">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_option"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_option_value">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_option_value"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_option_desc">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_option_desc"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_params">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_params"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_param">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_param"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_param_value">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_param_value"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_param_desc">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_param_desc"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_backend_output">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_backend_output"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_example">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_example"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="cli_where">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="cli_where"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+</xs:schema>

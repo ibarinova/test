@@ -1,0 +1,41 @@
+.wh_header {
+    background-color: #7e7c8f;
+}
+
+.wh_search_input {
+    background-color: #7e7c8f;
+}
+
+.admonition td:first-of-type,
+.admonition.danger td:first-of-type,
+.admonition.warning td:first-of-type,
+.admonition.caution td:first-of-type {
+    border-right: 3px solid black;
+}
+
+.admonition-label,
+.admonition-label.danger,
+.admonition-label.caution,
+.admonition-label.warning {
+    color: black;
+}
+
+.wh_publication_toc #button-expand-action {
+    background-image: url("../images/expand-all-black.svg");
+}
+
+.wh_publication_toc #button-collapse-action {
+    background-image: url("../images/collapse-all-black.svg");
+}
+
+.wh_print_link button{
+    background-image: url("../images/printer-short-black.svg");
+}
+
+.glyphicon-arrow-left:before, .oxy-icon-arrow-left:before{
+    background-image: url('../images/arrow-tri-left-black.svg');
+}
+
+.glyphicon-arrow-right:before, .oxy-icon-arrow-right:before{
+    background-image: url('../images/arrow-tri-right-black.svg');
+}

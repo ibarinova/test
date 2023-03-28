@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<strings>
+    <!-- PDF and common strings -->
+
+    <!-- Product name to be placed inside headers etc. -->
+    <variable id="Product Name">BukaTopik</variable>
+
+    <!-- The footer that appears on odd-numbered pages. -->
+    <variable id="Body odd footer"/>
+
+    <!-- The footer that appears on even-numbered pages. -->
+    <variable id="Body even footer"/>
+
+    <!-- The footer that appears on the first page of a chapter. -->
+    <variable id="Body first footer"/>
+
+    <!-- The header that appears on the first page of a chapter. -->
+    <variable id="Body first header"/>
+
+    <!-- The header that appears on odd-numbered pages. -->
+    <variable id="Body odd header"><param ref-name="prodname"/> | <param ref-name="heading"/> | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on even-numbered pages. -->
+    <variable id="Body even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | <param ref-name="heading"/></variable>
+
+    <!-- The footer that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd footer"/>
+
+    <!-- The footer that appears on Preface even-numbered pages. -->
+    <variable id="Preface even footer"/>
+
+    <!-- The footer that appears on the first page of a Preface -->
+    <variable id="Preface first footer"/>
+
+    <!-- The header that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd header">Pendahuluan | <param ref-name="prodname"/> | <param ref-name="heading"/> | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on Preface even-numbered pages. -->
+    <variable id="Preface even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | Pendahuluan</variable>
+
+    <!-- The header that appears on Preface first page. -->
+    <variable id="Preface first header"/>
+
+    <!-- The footer that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd footer"/>
+
+    <!-- The footer that appears on the even-numbered table of contents pages. -->
+    <variable id="Toc even footer"/>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd header"><param ref-name="prodname"/> | TOC | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | TOC</variable>
+
+    <!-- The footer that appears on the odd-numbered index pages. -->
+    <variable id="Index odd footer"/>
+
+    <!-- The footer that appears on the even-numbered index pages. -->
+    <variable id="Index even footer"/>
+
+    <!-- The header that appears on the odd-numbered index pages. -->
+    <variable id="Index odd header"><param ref-name="prodname"/> | Indeks | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the even-numbered index pages. -->
+    <variable id="Index even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | Indeks</variable>
+
+    <!-- glj  Phrase appended to chapter title in header to indicate it's a continuation of the chapter -->
+    <variable id="Chapter Continued string">(Bersambung)</variable>
+
+    <!-- The formatting used to display ordered lists (e.g., "1., 2." or           "1), 2)" -->
+    <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number consumer"><param ref-name="number"/>&#xA0; </variable>
+
+    <!-- The unordered list bullet   -->
+    <variable id="Unordered List bullet">&#x25CF;</variable>
+    <variable id="Unordered List bullet 1">&#x25CF;</variable>
+	<variable id="Unordered List bullet 2">&#x25CB;</variable>
+	<variable id="Unordered List bullet 3">&#xFFED;</variable>
+	<variable id="Unordered List bullet 4">&#x002D;</variable>
+    <variable id="Unordered List bullet 5">&#x2022;</variable>
+    <variable id="Ordered List Number 1"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 2"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 3"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 4"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Format 1">1</variable>
+    <variable id="Ordered List Format 2">a</variable>
+    <variable id="Ordered List Format 3">i</variable>
+    <variable id="Ordered List Format 4">i</variable>
+
+    <variable id="Step Number"><param ref-name="number"/>. </variable>
+    <variable id="Step Format">1</variable>
+    <variable id="Substep Number"><param ref-name="number"/>) </variable>
+    <variable id="Substep Format">a</variable>
+
+    <!-- The heading string to put at the top of the Table of Contents -->
+    <variable id="Table of Contents">Daftar Isi</variable>
+
+    <!-- The heading string to put at the top of the Index -->
+    <variable id="Index">Indeks</variable>
+
+    <variable id="Index Continued String">bersambung</variable>
+
+    <!--string before see element-->
+    <variable id="Index See String">, Lihat </variable>
+
+    <!--string before see also element-->
+    <variable id="Index See Also String">Lihat juga </variable>
+
+    <!-- The string used to label a chapter within the table of contents. -->
+    <!--<variable id="Table of Contents Chapter">Bab <param ref-name="number"/>: </variable>-->
+    <variable id="Table of Contents Chapter"> <param ref-name="number"/> </variable>
+
+    <!-- The string used to label an appendix within the table of contents. -->
+    <variable id="Table of Contents Appendix">Lampiran <param ref-name="number"/>: </variable>
+
+    <!-- The string used to label an part within the table of contents. -->
+    <variable id="Table of Contents Part">Bagian <param ref-name="number"/>: </variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Preface">Pengantar: </variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Notices"></variable>
+
+    <!-- The string used to label an preface in body text. -->
+    <variable id="Preface title">Pengantar</variable>
+
+    <!-- The string used to label an notices in body text. -->
+    <variable id="Notices title">Pemberitahuan</variable>
+
+    <!-- The heading to put at the top of a chapter when creating a          chapter-level "mini-TOC" -->
+    <variable id="Mini Toc">Topik </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <variable id="Note">CATATAN </variable>
+    <variable id="note">CATATAN </variable>
+    <variable id="note-dell">CATATAN</variable>
+
+    <variable id="notice-dell">CATATAN </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'tip'. -->
+    <variable id="Tip">SARAN </variable>
+    <variable id="tip-dell">SARAN </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element          with 'type' attribute set to 'tip'. -->
+    <variable id="Important">Penting </variable>
+    <variable id="important-dell">Penting </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'fastpath'. -->
+    <variable id="Fastpath">Jalur cepat </variable>
+    <variable id="fastpath-dell">Jalur cepat </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'remember'. -->
+    <variable id="Remember">Harap diingat </variable>
+    <variable id="remember-dell">Harap diingat </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'attention'. -->
+    <variable id="Attention">Harap diperhatikan </variable>
+    <variable id="attention-dell">Harap diperhatikan </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'caution'. -->
+    <variable id="Caution">PERHATIAN </variable>
+    <variable id="caution-dell">PERHATIAN</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'danger'. -->
+    <variable id="Danger">Berbahaya </variable>
+    <variable id="danger-dell">Berbahaya</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element       with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <variable id="Warning">PERINGATAN </variable>
+    <variable id="warning-dell">PERINGATAN</variable>
+    <variable id="Warning_Title">Tentang Peringatan</variable>
+    <variable id="Warning_Blurb">PERINGATAN menunjukkan potensi terjadinya kerusakan properti, cedera pada seseorang, atau kematian.</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element       with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+    <variable id="High Voltage">Bahaya Listrik </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element          with 'type' attribute set to 'restriction'. -->
+    <variable id="Restriction">Pembatasan </variable>
+
+    <!-- Text to use for figure titles. Renders as part of <fig>/<title>           elements. -->
+    <variable id="Figure.title">Angka <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for table titles. Renders as part of <table>/<title>           elements. -->
+    <variable id="Table.title">Tabel <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for related links label.          Renders as part of <related-links> element. -->
+    <variable id="Related Links">Tautan Tesrkait</variable>
+
+    <!-- Default cross-reference text prefix. Used to generate reference           text in case it's not specified in source. -->
+    <variable id="Cross-Reference">Referensi Silang ke:</variable>
+
+    <!-- Default content-reference text prefix. Used to generate reference           text in case target cannot be resolved. -->
+    <variable id="Content-Reference">Referensi Isi ke:</variable>
+
+    <!-- Default title text for referenced section title. Used to generate           reference text in case reference has no explicit content and          referenced section has no title. -->
+    <variable id="Untitled section">Bagian Tanpa judul.</variable>
+
+    <!-- Default title text for referenced list item. Used to generate          reference text in case reference has no explicit content and           reference target is a list item. -->
+    <variable id="List item">Butir daftar.</variable>
+
+    <!-- Default title text for referenced footnote. Used to generate           reference text in case reference has no explicit content and           reference target is a footnote. -->
+    <variable id="Foot note">Catatan kaki.</variable>
+
+    <!-- Text to use for a generated label of navigation title. Renders          as part of <navtitle> element. -->
+    <variable id="Navigation title">Judul navigasi</variable>
+
+    <!-- Text to use for a generated label of search title. Renders           as part of <searchtitle> element. -->
+    <variable id="Search title">Judul pencarian</variable>
+
+    <!-- Text to use for chapter titles.-->
+    <variable id="Chapter with number">Bab <param ref-name="number"/></variable>
+
+    <!-- Text to use for appendix titles.-->
+    <variable id="Appendix with number">Lampiran <param ref-name="number"/></variable>
+
+    <!-- Text to use for part titles.-->
+    <variable id="Part with number">Bagian <param ref-name="number"/></variable>
+
+    <!-- Text to use for a label generated from <required-cleanup> element. -->
+    <variable id="Required-Cleanup">[Perlu-Dihapus]</variable>
+
+    <!-- Template for generated page number of a reference           in printed manual. -->
+    <variable id="On the page"> di halaman <param ref-name="pagenum"/></variable>
+    <variable id="On the page EMC"> di halaman <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference          in printed manual, when referenced element has no title. -->
+    <variable id="Page"> halaman <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference          in chm/html, when referenced element has no title. -->
+    <variable id="This link">tautan ini</variable>
+
+    <!-- Image path to use for a note of "note" type. -->
+    <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "attention" type. -->
+    <variable id="attention Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "caution" type. -->
+    <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "danger" type. -->
+    <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "important" type. -->
+    <variable id="important Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "remember" type. -->
+    <variable id="remember Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "restriction" type. -->
+    <variable id="restriction Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "tip" type. -->
+    <variable id="tip Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "other" type. -->
+    <variable id="other Note Image Path">Customization/OpenTopic/common/artwork/hand.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Image Path">Customization/OpenTopic/common/artwork/highvoltage.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "warning" type. -->
+    <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image alt text to use for a note of "note" type. -->
+    <variable id="note Note Alt Text"><variable id="Note"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "attention" type. -->
+    <variable id="attention Note Alt Text"><variable id="Attention"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "caution" type. -->
+    <variable id="caution Note Alt Text"><variable id="Caution"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "danger" type. -->
+    <variable id="danger Note Alt Text"><variable id="Danger"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Alt Text"><variable id="Fastpath"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "important" type. -->
+    <variable id="important Note Alt Text"><variable id="Important"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "remember" type. -->
+    <variable id="remember Note Alt Text"><variable id="Remember"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "restriction" type. -->
+    <variable id="restriction Note Alt Text"><variable id="Restriction"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "tip" type. -->
+    <variable id="tip Note Alt Text"><variable id="Tip"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "other" type. -->
+    <variable id="other Note Alt Text">Hand icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Alt Text"><variable id="High Voltage"/> icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "warning" type. -->
+    <variable id="warning Note Alt Text"><variable id="Warning"/> icon</variable>
+
+
+    <!-- Image alt text to use for a logos. -->
+    <variable id="Logo Alt Text"><param ref-name="author"/> Logo</variable>
+
+
+    <!-- RN New strings for DELL -->
+    <variable id="Regulatory Model">Model Resmi: </variable>
+    <variable id="Regulatory Type">Tipe Resmi: </variable>
+    <variable id="Computer Model">Model Komputer:</variable>
+    <!--         String used for links in end of document in XHTML     -->
+
+    <!-- The title of the links to parent -->
+    <variable id="Parent topic">Topik Utama</variable>
+
+    <!-- The title of the links to next topics -->
+    <variable id="Next topic">Topik Selanjutnya</variable>
+
+    <!-- The title of the links to previous topics -->
+    <variable id="Previous topic">Topik Sebelumnya</variable>
+
+    <!-- The title of the links to child topics -->
+    <variable id="Child topics">Subtopik</variable>
+
+    <!-- The title of the links to Related concepts -->
+    <variable id="Related concepts">Konsep Terkait</variable>
+
+    <!-- The title of the links to Related tasks -->
+    <variable id="Related tasks">Tugas Terkait</variable>
+
+    <!-- The title of the links to Related references -->
+    <variable id="Related references">Referensi Terkait</variable>
+    <variable id="Related reference">Referensi Terkait</variable>
+
+    <!-- The title of the links to Related information -->
+    <variable id="Related information">Informasi Terkait</variable>
+
+    <!--        Strings used in the online-help publishing.     -->
+
+    <!-- The title of the "contents" button in online-help output -->
+    <variable id="Contents button title">Daftar Isi</variable>
+
+    <!-- The title of the "index" button in online-help output -->
+    <variable id="Index button title">Indeks</variable>
+
+    <!-- The separator of multiple index entries in online-help output -->
+    <variable id="Index multiple entries separator">, </variable>
+
+    <!-- The title of the "search" button in online-help output -->
+    <variable id="Search button title">Cari</variable>
+
+    <!-- The title of the "back" button in online-help output -->
+    <variable id="Back button title">Mundur</variable>
+
+    <!-- The title of the "forward" button in online-help output -->
+    <variable id="Forward button title">Maju</variable>
+
+    <!-- The title of the "main page" button in online-help output -->
+    <variable id="Main page button title">Beranda</variable>
+
+    <!-- The title of the "previous page" button in online-help output -->
+    <variable id="Previous page button title">Topik Sebelumnya</variable>
+
+    <!-- The title of the "next page" button in online-help output -->
+    <variable id="Next page button title">Topik Selanjutnya</variable>
+
+    <!-- The "online help" document title prefix in online-help output -->
+    <variable id="Online help prefix">Bantuan Online</variable>
+
+    <!-- The search by index field title in online-help output -->
+    <variable id="Search index field title">Cari kata kunci:</variable>
+
+    <!-- The search by index button title in online-help output -->
+    <variable id="Search index button title">Tampilkan</variable>
+
+    <!-- The search by text field title in online-help output -->
+    <variable id="Search text field title">Cari bantuan untuk:</variable>
+
+    <!-- The search by text button title in online-help output -->
+    <variable id="Search text button title">Cari</variable>
+
+    <!-- The heading for task prerequisites -->
+    <variable id="Prereq Heading">prasyarat</variable>
+    <variable id="task_prereq-dell">prasyarat</variable>
+
+    <!-- The heading for task contexts -->
+    <variable id="Context Heading">tentang tugas ini</variable>
+    <variable id="task_context-dell">tentang tugas ini</variable>
+
+    <!-- The heading for task steps -->
+    <variable id="Steps Heading">langkah</variable>
+    <variable id="task_procedure-dell">langkah</variable>
+
+    <!-- The heading for task examples -->
+    <variable id="Example Heading">contoh</variable>
+    <variable id="task_example-dell">contoh</variable>
+    <variable id="Example Open">contoh</variable>
+
+    <!-- The heading for task postrequisites -->
+    <variable id="Postreq Heading">langkah berikutnya</variable>
+    <variable id="task_postreq-dell">langkah berikutnya</variable>
+
+    <!-- User Interface strings -->
+
+    <variable id="Back">Topik sebelumnya</variable>
+    <variable id="Forward">Topik selanjutnya</variable>
+    <variable id="Glossary Pane">Glosarium</variable>
+    <variable id="Go">Cari</variable>
+    <variable id="Hide Navigation">Sembunyikan navigasi</variable>
+    <variable id="Home">Beranda</variable>
+    <str name="label.home" js="true" php="false">Beranda</str>
+    <variable id="Index Pane">Indeks</variable>
+    <variable id="No Search Performed">Tidak ada pencarian yang dilakukan.</variable>
+    <variable id="No Search Results">Tidak ada hasil yang ditemukan.</variable>
+    <variable id="Print">Cetak</variable>
+    <variable id="Print All">Cetak topik dan subtopik</variable>
+    <variable id="Print Topic">Cetak topik</variable>
+    <variable id="printThisPage">Cetak topik</variable>
+    <variable id="Search">Masukkan istilah yang dicari</variable>
+    <str name="webhelp.search" js="true" php="false">Masukkan istilah yang dicari</str>
+    <variable id="Search Blue">Cari</variable>
+    <variable id="Search Pane">Cari</variable>
+    <variable id="Search Results">Hasil Pencarian</variable>
+    <str name="Search results" js="true" php="false">Hasil Pencarian</str>
+    <variable id="TOC Pane">Konten</variable>
+    <variable id="BreadCrumb Search">Cari</variable>
+    <variable id="BreadCrumb TOC">Daftar Isi</variable>
+    <variable id="Toggle Navigation">Aktifkan/nonaktifkan navigasi</variable>
+    <variable id="Toggle Highlighting">Pindah penyorotan</variable>
+    <variable id="Searched for">Searched for</variable>
+    <variable id="PDF Link">PDF</variable>
+    <variable id="Email">Email Us</variable>
+    <variable id="Email Address">mailto:solutions@suite-sol.com</variable>
+
+    <variable id="Current Release Version">Versi Saat Ini: </variable>
+    <variable id="Previous Release Version">Versi Sebelumnya: </variable>
+    <variable id="Release Type">Tipe Rilis: </variable>
+    <variable id="Major">Utama (MA)</variable>
+    <variable id="Minor">Minor (MI)</variable>
+    <variable id="Service">Layanan (SR)</variable>
+    <variable id="Patch">Patch (P)</variable>
+
+    <variable id="Technote Current Version">Versi Saat Ini: </variable>
+    <variable id="Technote Release Date">Tanggal Rilis: </variable>
+    <variable id="Technote Previous Version">Versi Sebelumnya: </variable>
+    <variable id="Technote Document Number">Nomor Dokumen: </variable>
+    <variable id="Technote Document Rev">Rev. </variable>
+    <variable id="part number">Nomor Komponen (N/K) </variable>
+    <variable id="batterywarning">PERINGATAN BATERAI</variable>
+    <variable id="dsg Updated Date">Diperbarui</variable>
+    <variable id="dsg Software Version">Versi</variable>
+    <variable id="dsg Part Number">Nomor Komponen</variable>
+    <variable id="dsg topics">Topik:</variable>
+
+    <variable id="note-non-brand Image Path">Customization/OpenTopic/common/artwork/note-non-brand.png</variable>
+    <variable id="caution-non-brand Image Path">Customization/OpenTopic/common/artwork/caution-non-brand.png</variable>
+    <variable id="warning-non-brand Image Path">Customization/OpenTopic/common/artwork/warning-non-brand.png</variable>
+
+    <variable id="note Image Path">Customization/OpenTopic/common/artwork/note.svg</variable>
+    <variable id="caution Image Path">Customization/OpenTopic/common/artwork/caution.svg</variable>
+    <variable id="danger Image Path">Customization/OpenTopic/common/artwork/danger.svg</variable>
+    <variable id="warning Image Path">Customization/OpenTopic/common/artwork/warning.svg</variable>
+    <!--Added new variable for PDF A4-->
+	<variable id="continued">(lanjutan)</variable>
+	<variable id="release">Rilis</variable>
+	<variable id="revision">Revisi</variable>
+	<variable id="Version">Versi</variable>
+	<variable id="on page"> pada halaman <param ref-name="pagenum"/></variable>
+
+    <variable id="Highly Restricted Confidential">Sangat Terbatas – Rahasia</variable>
+    <variable id="Restricted Confidential">Terbatas - Rahasia</variable>
+    <variable id="Restricted Internal">Penggunaan Internal -Rahasia</variable>
+
+    <variable id="Abstract">Abstrak</variable>
+	<variable id="Figure toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+	<variable id="Table toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <variable id="LOT-dell">Tabel</variable>
+    <variable id="LOF-dell">Gambar</variable>
+
+    <variable id="#menucascade-separator"> &gt; </variable>
+
+    <!-- Localization prefix and suffix characters -->
+    <variable id="start_cite"></variable>
+    <variable id="end_cite"></variable>
+
+    <variable id="start_var"></variable>
+    <variable id="end_var"></variable>
+
+    <variable id="start_q">&quot;</variable>
+    <variable id="end_q">&quot;</variable>
+
+    <variable id="start_lq"></variable>
+    <variable id="end_lq"></variable>
+
+    <variable id="start_userinput"></variable>
+    <variable id="end_userinput"></variable>
+
+    <variable id="start_option"></variable>
+    <variable id="end_option"></variable>
+
+    <variable id="start_term"></variable>
+    <variable id="end_term"></variable>
+
+    <variable id="start_q_responsive">&#x0201C;</variable> <!-- “ -->
+    <variable id="end_q_responsive">&#x0201D;</variable>  <!-- ” -->
+
+    <variable id="start_option_responsive"></variable>
+    <variable id="end_option_responsive"></variable>
+
+    <variable id="start_uicontrol_responsive"></variable>
+    <variable id="end_uicontrol_responsive"></variable>
+
+    <variable id="start_var_responsive"></variable>
+    <variable id="end_var_responsive"></variable>
+
+    <variable id="start_wintitle_responsive"></variable>
+    <variable id="end_wintitle_responsive"></variable>
+
+    <!--    IB: Add support for TOC 'expand all'/'Collapse all' buttons-->
+    <variable id="Expand all">Perluas semua</variable>
+    <variable id="Collapse all">Ciutkan semua</variable>
+
+</strings>

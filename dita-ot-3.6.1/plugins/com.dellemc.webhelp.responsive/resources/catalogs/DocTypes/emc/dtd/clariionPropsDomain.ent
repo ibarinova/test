@@ -1,0 +1,29 @@
+<!-- ==============================================================
+
+      Conditional attribute domain specialization for CLARiiON content
+      
+      ============================================================ -->
+
+<!ENTITY % storage-systype-props-d-attribute 
+   "storage-systype    CDATA      #IMPLIED" 
+>
+
+<!ENTITY storage-systype-props-d-att
+  "a(props storage-systype)"
+>
+
+<!ENTITY % storage-connection-props-d-attribute 
+   "storage-connection    CDATA      #IMPLIED" 
+>
+
+<!ENTITY storage-connection-props-d-att
+  "a(props storage-connection)"
+>
+
+<!ENTITY % storage-processor-props-d-attribute 
+   "storage-processor    CDATA      #IMPLIED" 
+>
+
+<!ENTITY storage-processor-props-d-att
+  "a(props storage-processor)"
+>

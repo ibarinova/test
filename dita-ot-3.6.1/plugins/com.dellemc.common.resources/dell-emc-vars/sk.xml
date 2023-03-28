@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<strings>
+    <!-- PDF and common strings -->
+
+    <!-- Product name to be placed inside headers etc. -->
+    <variable id="Product Name">Otvorená téma</variable>
+
+    <!-- The footer that appears on odd-numbered pages. -->
+    <variable id="Body odd footer"/>
+
+    <!-- The footer that appears on even-numbered pages. -->
+    <variable id="Body even footer"/>
+
+    <!-- The footer that appears on the first page of a chapter. -->
+    <variable id="Body first footer"/>
+
+    <!-- The header that appears on the first page of a chapter. -->
+    <variable id="Body first header"/>
+
+    <!-- The header that appears on odd-numbered pages. -->
+    <variable id="Body odd header"><param ref-name="prodname"/> | <param ref-name="heading"  /> | <param ref-name="pagenum"  /></variable>
+
+    <!-- The header that appears on even-numbered pages. -->
+    <variable id="Body even header"><param ref-name="pagenum"/> | <param ref-name="prodname"  /> | <param ref-name="heading"  /></variable>
+
+    <!-- The footer that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd footer"/>
+
+    <!-- The footer that appears on Preface even-numbered pages. -->
+    <variable id="Preface even footer"/>
+
+    <!-- The footer that appears on the first page of a Preface -->
+    <variable id="Preface first footer"/>
+
+    <!-- The header that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd header">Úvod | <param ref-name="prodname"/> | <param ref-name="heading"/> | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on Preface even-numbered pages. -->
+    <variable id="Preface even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | Úvod</variable>
+
+    <!-- The header that appears on Preface first page. -->
+    <variable id="Preface first header"/>
+
+    <!-- The footer that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd footer"/>
+
+    <!-- The footer that appears on the even-numbered table of contents pages. -->
+    <variable id="Toc even footer"/>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd header"><param ref-name="prodname"/> | Obsah | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | Obsah</variable>
+
+    <!-- The footer that appears on the odd-numbered index pages. -->
+    <variable id="Index odd footer"/>
+
+    <!-- The footer that appears on the even-numbered index pages. -->
+    <variable id="Index even footer"/>
+
+    <!-- The header that appears on the odd-numbered index pages. -->
+    <variable id="Index odd header"><param ref-name="prodname"/> | Index | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the even-numbered index pages. -->
+    <variable id="Index even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | Index</variable>
+
+    <!-- glj  Phrase appended to chapter title in header to indicate it's a continuation of the chapter -->
+    <variable id="Chapter Continued string">(Pokračovanie)</variable>
+
+    <!-- The formatting used to display ordered lists (e.g., "1., 2." or
+        "1), 2)" -->
+    <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number consumer"><param ref-name="number"/>&#xA0; </variable>
+
+    <!-- The unordered list bullet   -->
+    <variable id="Unordered List bullet 1">&#x25CF;</variable>
+	<variable id="Unordered List bullet 2">&#x25CB;</variable>
+	<variable id="Unordered List bullet 3">&#xFFED;</variable>
+	<variable id="Unordered List bullet 4">&#x002D;</variable>
+    <variable id="Unordered List bullet 5">&#x2022;</variable>
+	<variable id="Ordered List Number 1"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 2"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 3"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 4"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Format 1">1</variable>
+    <variable id="Ordered List Format 2">a</variable>
+    <variable id="Ordered List Format 3">i</variable>
+    <variable id="Ordered List Format 4">i</variable>
+
+    <variable id="Step Number"><param ref-name="number"/>. </variable>
+    <variable id="Step Format">1</variable>
+    <variable id="Substep Number"><param ref-name="number"/>) </variable>
+    <variable id="Substep Format">a</variable>
+
+    <!-- The heading string to put at the top of the Table of Contents -->
+    <variable id="Table of Contents">Obsah</variable>
+
+    <!-- The heading string to put at the top of the Index -->
+    <variable id="Index">Index</variable>
+
+    <variable id="Index Continued String">pokračovanie</variable>
+
+    <!--string before see element-->
+    <variable id="Index See String">, pozri </variable>
+
+    <!--string before see also element-->
+    <variable id="Index See Also String">Pozri aj </variable>
+
+    <!-- The string used to label a chapter within the table of contents. -->
+    <!--<variable id="Table of Contents Chapter">Kapitola <param ref-name="number"  />: </variable>-->
+    <variable id="Table of Contents Chapter"> <param ref-name="number"/> </variable>
+
+    <!-- The string used to label an appendix within the table of contents. -->
+    <variable id="Table of Contents Appendix">Príloha <param ref-name="number"/>: </variable>
+
+    <!-- The string used to label an part within the table of contents. -->
+    <variable id="Table of Contents Part">Časť <param ref-name="number"/>: </variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Preface">Predslov: </variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Notices"></variable>
+
+    <!-- The string used to label an preface in body text. -->
+    <variable id="Preface title">Predslov</variable>
+
+    <!-- The string used to label an notices in body text. -->
+    <variable id="Notices title">Poznámka</variable>
+
+    <!-- The heading to put at the top of a chapter when creating a
+         chapter-level "mini-TOC" -->
+    <variable id="Mini Toc">Témy: </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <variable id="Note">POZNÁMKA</variable>
+    <variable id="note">POZNÁMKA</variable>
+    <variable id="note-dell">POZNÁMKA</variable>
+
+    <variable id="notice-dell">POZNÁMKA</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Tip">TIP</variable>
+    <variable id="tip-dell">TIP</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Important">Dôležité upozornenie</variable>
+    <variable id="important-dell">Dôležité upozornenie</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'fastpath'. -->
+    <variable id="Fastpath">Rýchla cesta</variable>
+    <variable id="fastpath-dell">Rýchla cesta</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'remember'. -->
+    <variable id="Remember">Zapamätajte si</variable>
+    <variable id="remember-dell">Zapamätajte si</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'attention'. -->
+    <variable id="Attention">Pozor</variable>
+    <variable id="attention-dell">Pozor</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'caution'. -->
+    <variable id="Caution">VAROVANIE</variable>
+    <variable id="caution-dell">VAROVANIE</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'danger'. -->
+    <variable id="Danger">Nebezpečenstvo</variable>
+    <variable id="danger-dell">Nebezpečenstvo</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <variable id="Warning">VÝSTRAHA</variable>
+    <variable id="warning-dell">VÝSTRAHA</variable>
+    <variable id="Warning_Title">O výstrahách</variable>
+    <variable id="Warning_Blurb">VÝSTRAHA označuje možnosť škody na majetku, zranenia osôb alebo usmrtenia.</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+    <variable id="High Voltage">Riziko zásahu el. prúdom</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'restriction'. -->
+    <variable id="Restriction">Obmedzenie</variable>
+
+    <!-- Text to use for figure titles. Renders as part of <fig>/<title>
+          elements. -->
+    <variable id="Figure.title">Obrázok <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for table titles. Renders as part of <table>/<title>
+         elements. -->
+    <variable id="Table.title">Tabuľka<param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for related links label.
+         Renders as part of <related-links> element. -->
+    <variable id="Related Links">Súvisiace prepojenia</variable>
+
+    <!-- Default cross-reference text prefix. Used to generate reference
+         text in case it's not specified in source. -->
+    <variable id="Cross-Reference">Krížový odkaz na:</variable>
+
+    <!-- Default content-reference text prefix. Used to generate reference
+         text in case target cannot be resolved. -->
+    <variable id="Content-Reference">Obsahový odkaz na:</variable>
+
+    <!-- Default title text for referenced section title. Used to generate
+         reference text in case reference has no explicit content and
+         referenced section has no title. -->
+    <variable id="Untitled section">Časť bez názvu.</variable>
+
+    <!-- Default title text for referenced list item. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a list item. -->
+    <variable id="List item">Položka zoznamu.</variable>
+
+    <!-- Default title text for referenced footnote. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a footnote. -->
+    <variable id="Foot note">Poznámka pod čiarou.</variable>
+
+    <!-- Text to use for a generated label of navigation title. Renders
+         as part of <navtitle> element. -->
+    <variable id="Navigation title">Názov navigácie</variable>
+
+    <!-- Text to use for a generated label of search title. Renders
+         as part of <searchtitle> element. -->
+    <variable id="Search title">Hľadať názov</variable>
+
+    <!-- Text to use for chapter titles.-->
+    <variable id="Chapter with number">Kapitola <param ref-name="number"/></variable>
+
+    <!-- Text to use for appendix titles.-->
+    <variable id="Appendix with number">Príloha <param ref-name="number"/></variable>
+
+    <!-- Text to use for part titles.-->
+    <variable id="Part with number">Časť <param ref-name="number"/></variable>
+
+    <!-- Text to use for a label generated from <required-cleanup> element. -->
+    <variable id="Required-Cleanup">[Required-Cleanup]</variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual. -->
+    <variable id="On the page">na strane <param ref-name="pagenum"/></variable>
+    <variable id="On the page EMC">na strane <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual, when referenced element has no title. -->
+    <variable id="Page">strana <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in chm/html, when referenced element has no title. -->
+    <variable id="This link">toto prepojenie</variable>
+
+    <!-- Image path to use for a note of "note" type. -->
+    <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "attention" type. -->
+    <variable id="attention Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "caution" type. -->
+    <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution.png</variable>
+
+    <!-- Image path to use for a note of "danger" type. -->
+    <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image path to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "important" type. -->
+    <variable id="important Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "remember" type. -->
+    <variable id="remember Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "restriction" type. -->
+    <variable id="restriction Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "tip" type. -->
+    <variable id="tip Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "other" type. -->
+    <variable id="other Note Image Path">Customization/OpenTopic/common/artwork/hand.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Image Path">Customization/OpenTopic/common/artwork/highvoltage.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "warning" type. -->
+    <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+    <!-- Image alt text to use for a note of "note" type. -->
+    <variable id="note Note Alt Text"><variable id="Note"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "attention" type. -->
+    <variable id="attention Note Alt Text"><variable id="Attention"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "caution" type. -->
+    <variable id="caution Note Alt Text"><variable id="Caution"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "danger" type. -->
+    <variable id="danger Note Alt Text"><variable id="Danger"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Alt Text"><variable id="Fastpath"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "important" type. -->
+    <variable id="important Note Alt Text"><variable id="Important"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "remember" type. -->
+    <variable id="remember Note Alt Text"><variable id="Remember"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "restriction" type. -->
+    <variable id="restriction Note Alt Text"><variable id="Restriction"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "tip" type. -->
+    <variable id="tip Note Alt Text"><variable id="Tip"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "other" type. -->
+    <variable id="other Note Alt Text">Hand icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Alt Text"><variable id="High Voltage"/> icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "warning" type. -->
+    <variable id="warning Note Alt Text"><variable id="Warning"/> icon</variable>
+
+
+    <!-- Image alt text to use for a logos. -->
+    <variable id="Logo Alt Text"><param ref-name="author"/> Logo</variable>
+
+
+    <!-- RN New strings for DELL -->
+    <variable id="Regulatory Model">Regulačný model: </variable>
+    <variable id="Regulatory Type">Regulačný typ: </variable>
+    <variable id="Computer Model">Model počítača:</variable>
+    <!--
+        String used for links in end of document in XHTML
+    -->
+
+    <!-- The title of the links to parent -->
+    <variable id="Parent topic">Nadradená téma</variable>
+
+    <!-- The title of the links to next topics -->
+    <variable id="Next topic">Nasledujúca téma</variable>
+
+    <!-- The title of the links to previous topics -->
+    <variable id="Previous topic">Predchádzajúca téma</variable>
+
+    <!-- The title of the links to child topics -->
+    <variable id="Child topics">Podriadené témy</variable>
+
+    <!-- The title of the links to Related concepts -->
+    <variable id="Related concepts">Súvisiace pojmy</variable>
+
+    <!-- The title of the links to Related tasks -->
+    <variable id="Related tasks">Súvisiace úlohy</variable>
+
+    <!-- The title of the links to Related references -->
+    <variable id="Related references">Súvisiace odkazy</variable>
+    <variable id="Related reference">Súvisiace odkazy</variable>
+
+    <!-- The title of the links to Related information -->
+    <variable id="Related information">Súvisiace informácie</variable>
+
+    <!--
+       Strings used in the online-help publishing.
+    -->
+
+    <!-- The title of the "contents" button in online-help output -->
+    <variable id="Contents button title">Obsah</variable>
+
+    <!-- The title of the "index" button in online-help output -->
+    <variable id="Index button title">Index</variable>
+
+    <!-- The separator of multiple index entries in online-help output -->
+    <variable id="Index multiple entries separator">, </variable>
+
+    <!-- The title of the "search" button in online-help output -->
+    <variable id="Search button title">Hľadať</variable>
+
+    <!-- The title of the "back" button in online-help output -->
+    <variable id="Back button title">Späť</variable>
+
+    <!-- The title of the "forward" button in online-help output -->
+    <variable id="Forward button title">Dopredu</variable>
+
+    <!-- The title of the "main page" button in online-help output -->
+    <variable id="Main page button title">Domov</variable>
+
+    <!-- The title of the "previous page" button in online-help output -->
+    <variable id="Previous page button title">Predchádzajúca téma</variable>
+
+    <!-- The title of the "next page" button in online-help output -->
+    <variable id="Next page button title">Nasledujúca téma</variable>
+
+    <!-- The "online help" document title prefix in online-help output -->
+    <variable id="Online help prefix">Online pomocník</variable>
+
+    <!-- The search by index field title in online-help output -->
+    <variable id="Search index field title">Vyhľadať kľúčové slovo:</variable>
+
+    <!-- The search by index button title in online-help output -->
+    <variable id="Search index button title">Zobraziť</variable>
+
+    <!-- The search by text field title in online-help output -->
+    <variable id="Search text field title">Vyhľadať pomoc pre:</variable>
+
+    <!-- The search by text button title in online-help output -->
+    <variable id="Search text button title">Hľadať</variable>
+
+    <!-- The heading for task prerequisites -->
+    <variable id="Prereq Heading">Požiadavky</variable>
+    <variable id="task_prereq-dell">Požiadavky</variable>
+
+    <!-- The heading for task contexts -->
+    <variable id="Context Heading">O tejto úlohe</variable>
+    <variable id="task_context-dell">O tejto úlohe</variable>
+
+    <!-- The heading for task steps -->
+    <variable id="Steps Heading">Postup</variable>
+    <variable id="task_procedure-dell">Postup</variable>
+
+    <!-- The heading for task examples -->
+    <variable id="Example Heading">Príklad</variable>
+    <variable id="task_example-dell">Príklad</variable>
+    <variable id="Example Open">Príklad</variable>
+
+    <!-- The heading for task postrequisites -->
+    <variable id="Postreq Heading">Ïalší postup</variable>
+    <variable id="task_postreq-dell">Ïalší postup</variable>
+
+    <!-- User Interface strings -->
+
+    <variable id="Back">Predchádzajúca téma</variable>
+    <variable id="Forward">Nasledujúca téma</variable>
+    <variable id="Glossary Pane">Glosár</variable>
+    <variable id="Go">Vyhľadať</variable>
+    <variable id="Hide Navigation">Skryť navigáciu</variable>
+    <variable id="Home">Domov</variable>
+    <str name="label.home" js="true" php="false">Domov</str>
+    <variable id="Index Pane">Index</variable>
+    <variable id="No Search Performed">Nedošlo k žiadnemu vyhľadávaniu.</variable>
+    <variable id="No Search Results">Pri vašom vyhľadávaní sa nenašli žiadne výsledky.</variable>
+    <variable id="Print">Tlačiť</variable>
+    <variable id="Print All">Tlačiť témy a podtémy</variable>
+    <variable id="Print Topic">Tlačiť tému</variable>
+    <variable id="printThisPage">Tlačiť tému</variable>
+    <variable id="Search">Zadajte pojmy pre vyhľadávanie</variable>
+    <str name="webhelp.search" js="true" php="false">Zadajte pojmy pre vyhľadávanie</str>
+    <variable id="Search Blue">Vyhľadávanie</variable>
+    <variable id="Search Pane">Vyhľadať</variable>
+    <variable id="Search Results">Výsledky vyhľadávania</variable>
+    <str name="Search results" js="true" php="false">Výsledky vyhľadávania</str>
+    <variable id="TOC Pane">Obsah</variable>
+    <variable id="BreadCrumb Search">Vyhľadať</variable>
+    <variable id="BreadCrumb TOC">Obsah</variable>
+    <variable id="Toggle Navigation">Prepnúť navigáciu</variable>
+    <variable id="Toggle Highlighting">Prepnúť zvýrazňovanie</variable>
+    <variable id="Searched for">Vyhľadali sa</variable>
+    <variable id="PDF Link">PDF</variable>
+    <variable id="Email">Pošlite nám e-mail</variable>
+    <variable id="Email Address">mailto:solutions@suite-sol.com</variable>
+
+    <variable id="Current Release Version">Aktuálna verzia: </variable>
+    <variable id="Previous Release Version">Predošlá verzia: </variable>
+    <variable id="Release Type">Typ vydanej verzie:</variable>
+    <variable id="Major">Hlavná (MA)</variable>
+    <variable id="Minor">Vedľajšia (MI)</variable>
+    <variable id="Service">Služba (SR)</variable>
+    <variable id="Patch">Oprava (P)</variable>
+
+    <variable id="Technote Current Version">Aktuálna verzia: </variable>
+    <variable id="Technote Release Date">Dátum vydania: </variable>
+    <variable id="Technote Previous Version">Predchádzajúca verzia: </variable>
+    <variable id="Technote Document Number">Číslo dokumentu: </variable>
+    <variable id="Technote Document Rev">Rev. </variable>
+    <variable id="part number">Č. dielu </variable>
+    <variable id="batterywarning">UPOZORNENIE BATÉRIE</variable>
+    <variable id="dsg Updated Date">Aktualizované</variable>
+    <variable id="dsg Software Version">Verzia</variable>
+    <variable id="dsg Part Number">Číslo časti</variable>
+    <variable id="dsg topics">Témy:</variable>
+
+    <variable id="note-non-brand Image Path">Customization/OpenTopic/common/artwork/note-non-brand.png</variable>
+    <variable id="caution-non-brand Image Path">Customization/OpenTopic/common/artwork/caution-non-brand.png</variable>
+    <variable id="warning-non-brand Image Path">Customization/OpenTopic/common/artwork/warning-non-brand.png</variable>
+
+    <variable id="note Image Path">Customization/OpenTopic/common/artwork/note.svg</variable>
+    <variable id="caution Image Path">Customization/OpenTopic/common/artwork/caution.svg</variable>
+    <variable id="danger Image Path">Customization/OpenTopic/common/artwork/danger.svg</variable>
+    <variable id="warning Image Path">Customization/OpenTopic/common/artwork/warning.svg</variable>
+
+    <variable id="Highly Restricted Confidential">Prísne obmedzený prístup – dôverné</variable>
+    <variable id="Restricted Confidential">Obmedzený prístup – dôverné</variable>
+    <variable id="Restricted Internal">Interný dokument – dôverné</variable>
+
+    <variable id="Abstract">Abstrakt</variable>
+
+<!--Added new variable for PDF A4-->
+    <variable id="continued">(pokračovanie)</variable>
+	<variable id="release">Vydanie</variable>
+	<variable id="revision">Revízia</variable>
+	<variable id="Version">Verzia</variable>
+	<variable id="on page"> na strane <param ref-name="pagenum"/></variable>
+	<variable id="Figure toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+	<variable id="Table toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+    <variable id="LOT-dell">Tabuľky</variable>
+    <variable id="LOF-dell">Diagramy</variable>
+
+    <variable id="#menucascade-separator"> &gt; </variable>
+
+    <!-- Localization prefix and suffix characters -->
+    <variable id="start_cite"></variable>
+    <variable id="end_cite"></variable>
+
+    <variable id="start_var"></variable>
+    <variable id="end_var"></variable>
+
+    <variable id="start_q">&quot;</variable>
+    <variable id="end_q">&quot;</variable>
+
+    <variable id="start_lq"></variable>
+    <variable id="end_lq"></variable>
+
+    <variable id="start_userinput"></variable>
+    <variable id="end_userinput"></variable>
+
+    <variable id="start_option"></variable>
+    <variable id="end_option"></variable>
+
+    <variable id="start_term"></variable>
+    <variable id="end_term"></variable>
+
+    <variable id="start_q_responsive">&#x0201C;</variable> <!-- “ -->
+    <variable id="end_q_responsive">&#x0201D;</variable>  <!-- ” -->
+
+    <variable id="start_option_responsive"></variable>
+    <variable id="end_option_responsive"></variable>
+
+    <variable id="start_uicontrol_responsive"></variable>
+    <variable id="end_uicontrol_responsive"></variable>
+
+    <variable id="start_var_responsive"></variable>
+    <variable id="end_var_responsive"></variable>
+
+    <variable id="start_wintitle_responsive"></variable>
+    <variable id="end_wintitle_responsive"></variable>
+
+    <!--    IB: Add support for TOC 'expand all'/'Collapse all' buttons-->
+    <variable id="Expand all">Rozbaliť všetko</variable>
+    <variable id="Collapse all">Zbaliť všetko</variable>
+
+</strings>

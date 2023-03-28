@@ -1,0 +1,69 @@
+<!-- ==============================================================
+
+      Conditional attribute domain specialization for Celerra content
+      
+      ============================================================ -->
+
+<!ENTITY % storage-type-props-d-attribute 
+   "storage-type    CDATA      #IMPLIED" 
+>
+
+<!ENTITY storage-type-props-d-att
+  "a(props storage-type)"
+>
+
+<!ENTITY % storage-systype-props-d-attribute 
+   "storage-systype    CDATA      #IMPLIED" 
+>
+
+<!ENTITY storage-systype-props-d-att
+  "a(props storage-systype)"
+>
+
+<!ENTITY % storage-connection-props-d-attribute 
+   "storage-connection    CDATA      #IMPLIED" 
+>
+
+<!ENTITY storage-connection-props-d-att
+  "a(props storage-connection)"
+>
+
+<!ENTITY % storage-processor-props-d-attribute 
+   "storage-processor    CDATA      #IMPLIED" 
+>
+
+<!ENTITY storage-processor-props-d-att
+  "a(props storage-processor)"
+>
+
+<!ENTITY % devrelease-props-d-attribute 
+   "devrelease    CDATA      #IMPLIED" 
+>
+
+<!ENTITY devrelease-props-d-att
+  "a(props devrelease)"
+>
+
+<!ENTITY % maintrelease-props-d-attribute 
+   "maintrelease    CDATA      #IMPLIED" 
+>
+
+<!ENTITY maintrelease-props-d-att
+  "a(props maintrelease)"
+>
+
+<!ENTITY % failover-software-props-d-attribute 
+   "failover-software    CDATA      #IMPLIED" 
+>
+
+<!ENTITY failover-software-props-d-att
+  "a(props failover-software)"
+>
+
+<!ENTITY % host-status-props-d-attribute 
+   "host-status    CDATA      #IMPLIED" 
+>
+
+<!ENTITY host-status-props-d-att
+  "a(props host-status)"
+>

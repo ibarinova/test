@@ -1,0 +1,20 @@
+.wh_logo {
+    width: 16em;
+}
+
+.wh_logo img {
+    height: 1.8em;
+    width: auto;
+}
+/* 
+ * JIRA : IDPL-13023
+ * RTL DellTechnologies logo width size overrided from 10em to 16em
+ * Purpose: Space between bookmap title and logo was less and logo was much smaller
+ * 
+ */
+html[dir='rtl'] .wh_logo {
+    display: table-cell;
+    width: 16em;
+    padding-left: 10px;
+    padding-right: 0;
+}

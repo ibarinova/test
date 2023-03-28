@@ -1,0 +1,12 @@
+<dummy xmlns:if="ant:if"
+        xmlns:unless="ant:unless">
+    <param name="DRAFT" expression="${args.draft}" if:set="args.draft"/>
+    <param name="ARGS.BU" expression="${args.bu}" if:set="args.bu"/>
+    <param name="dell-brand" expression="${dell-brand}" if:set="dell-brand"/>
+    <param name="include-draft-comments" expression="${include-draft-comments}" if:set="include-draft-comments"/>
+	<param name="include-outfile-mode" expression="${include-outfile-mode}" if:set="include-outfile-mode"/>
+    <param name="ARGS.INPUT.SCRIPT.MAP" expression="${output.dir}/map.js"/>
+    <param name="TRANSTYPE" expression="${transtype}"/>
+    <param name="TEMPDIR" expression="${dita.temp.dir}"/>
+    <param name="MAP_NAME" expression="${dita.input.filename}"/>
+</dummy>
