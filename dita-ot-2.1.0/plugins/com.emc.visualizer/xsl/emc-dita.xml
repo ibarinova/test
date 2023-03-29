@@ -1,0 +1,6 @@
+<properties>
+    <propertie name="dita-json-variable">var data = </propertie>
+    <propertie name="ishcondition-structure-json-variable">var ishData = </propertie>
+    <propertie name="publication-title-variable">var publicationTitle = </propertie>
+    <propertie name="set-of-ishconditions">var setOfIshconditions = </propertie>
+</properties>

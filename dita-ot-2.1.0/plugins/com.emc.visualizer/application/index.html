@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title></title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script type="text/javascript" src="lib/d3.js"></script>
+    <script type="text/javascript" src="lib/jquery-2.2.1.js"></script>
+    <script type="text/javascript" src="lib/underscore.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="lib/jsep.js"></script>
+    <script type="text/javascript" src="src/emc-dita.json.js"></script>
+    <script type="text/javascript" src="src/emc-ishcondition-structure.json.js"></script>
+    <script type="text/javascript" src="js/Application.js"></script>
+    <script type="text/javascript" src="js/CacheEngine.js"></script>
+    <script type="text/javascript" src="js/shared.js"></script>
+    <script type="text/javascript" src="js/ishcondition/ConditionParser.js"></script>
+    <script type="text/javascript" src="js/ishcondition/ConditionProcessor.js"></script>
+    <script type="text/javascript" src="js/ishcondition/IshNodeConditionProcessor.js"></script>
+    <script type="text/javascript" src="js/dom/pageHandlers.js"></script>
+    <script type="text/javascript" src="js/dom/Loader.js"></script>
+    <script type="text/javascript" src="js/chart/SvgLayout.js"></script>
+    <script type="text/javascript" src="js/chart/NodeTooltip.js"></script>
+    <script type="text/javascript" src="js/chart/TreeMarker.js"></script>
+    <script type="text/javascript" src="js/chart/TreeNode.js"></script>
+    <script type="text/javascript" src="js/chart/TreeLink.js"></script>
+    <script type="text/javascript" src="js/chart/TreeChart.js"></script>
+    <script type="text/javascript" src="js/chart/NodeHighlighter.js"></script>
+    <script type="text/javascript" src="js/chart/TreeProxy.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div id="chartZoomBtns">
+        <input type="button" id="zoomOutBtn" class="btn btn-default" value="+"/>
+        <input type="button" id="zoomInBtn" class="btn btn-default" value="-"/>
+    </div>
+    <div class="row top-container">
+        <div class="col-md-8">
+            <div class="row">
+                <div id="chartInfoContainer" class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="button" id="expandBtn" class="btn btn-default text-right" value="Expand All"/>
+                            <input type="button" id="collapseBtn" class="btn btn-default text-right" value="Collapse All"/>
+                        </div>
+                        <label class="col-md-6 text-center js-publication-title"></label>
+
+                        <div class="col-md-2 text-right">
+                            <input type="button" id="resetBtn" class="btn btn-default text-right" value="Reset page"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="svg-container" class="col-md-12 disable-select">
+                </div>
+                <div id="chart-wait-container" class="col-md-12"><div class="loading-text"><p class="text-center">Loading...</p></div></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+            <div class="condition-and-legend-container top-margin">
+                <ul class="nav nav-tabs nav-justified">
+                    <li role="presentation" class="active">
+                        <a href="#conditions-panel" role="tab" data-toggle="tab">Conditions</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#legend-panel" role="tab" data-toggle="tab">Legend</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="conditions-panel">
+                        <div class="row">
+                            <div class="col-md-offset-1 col-md-11" id="conditions-container">
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="legend-panel">
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <ul class="definition-list">
+                                    <li>
+                                        <div class="shape square yellow-bg">B</div>
+                                        - bookmap.
+                                    </li>
+                                    <li>
+                                        <div class="shape square yellow-bg">M</div>
+                                        - map.
+                                    </li>
+                                    <li>
+                                        <div class="shape circle blue-bg">C</div>
+                                        - concept topic.
+                                    </li>
+                                    <li>
+                                        <div class="shape circle green-bg">T</div>
+                                        - task topic.
+                                    </li>
+                                    <li>
+                                        <div class="shape circle orange-bg">R</div>
+                                        - reference topic.
+                                    </li>
+                                    <li>
+                                        <div class="shape circle purple-bg">G</div>
+                                        - glossary topic.
+                                    </li>
+                                    <li>
+                                        <div class="shape circle gray-bg">CLI</div>
+                                        - CLI topic.
+                                    </li>
+                                    <li>
+                                        <div class="shape circle brown-bg">gT</div>
+                                        - generic topic.
+                                    </li>
+                                    <li>
+                                        <div class="shape circle pink-bg">E</div>
+                                        - element.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/reltable.svg" class="i-icon">
+                                        - relationship table.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/chapter.svg" class="i-icon">
+                                        - chapter.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/appendix.svg" class="i-icon">
+                                        - appendix.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/part.svg" class="i-icon">
+                                        - part.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/web.svg" class="i-icon" alt="External xref">
+                                        - xref to an external target.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/email.svg" class="i-icon" alt="Mail xref">
+                                        - mail reference.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/broken_link_icon.svg" class="i-icon" alt="Broken node">
+                                        - broken relationship.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/minus.svg" class="i-icon" alt="Conditionalized element">
+                                        - indicator for hidden elements inside object.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/solid_line.png" class="line-icon" alt="Topicref relationship">
+                                        mapref / topicref relationship.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/dash_dotted_line.png" class="line-icon" alt="Conref relationship">
+                                        conref relationship.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/dashed_line.png" class="line-icon" alt="Reltable relationship">
+                                        reltable relationship.
+                                    </li>
+                                    <li>
+                                        <img src="css/images/dotted_line.png" class="line-icon" alt="Xref to valid target">
+                                        xref to a valid target.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-desc-container">
+                <ul class="nav nav-tabs nav-justified">
+                    <li role="presentation" class="active">
+                        <a href="#attributes-panel" role="tab" data-toggle="tab">Object information</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="attributes-panel">
+
+                        <div class="row">
+                            <div id="attributes-container" class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12 text-left"><b>Reference to selected object</b></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-left">HREF</div>
+                                    <div class="col-md-8"><span id="reference"></span></div>
+                                </div>
+                                <div class="row top-margin">
+                                    <div class="col-md-12 text-left"><b>Object data</b></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-left">ID</div>
+                                    <div class="col-md-8"><span id="guid"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-left">TITLE</div>
+                                    <div class="col-md-8"><span id="topicTitle"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-left">FTITLE</div>
+                                    <div class="col-md-8"><span id="ftitle"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-left">SHORTDESC</div>
+                                    <div class="col-md-8"><span id="shortDesc"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-left">VERSION</div>
+                                    <div class="col-md-8"><span id="lcaVersion"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-left">REVISION</div>
+                                    <div class="col-md-8"><span id="lcaRevision"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-left">STATUS</div>
+                                    <div class="col-md-8"><span id="lcaStatus"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-left">ISHCONDITION</div>
+                                    <div class="col-md-8"><span id="ishcondition"></span></div>
+                                </div>
+                                <div class="row top-margin">
+                                    <div class="col-md-12 text-left"><b>Inner ishcondition attributes</b></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 text-left" id="innerIshconditions"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="summaryModal" class="modal fade" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center"><span class="js-publication-title"></span><br>Publication Summary</h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Close">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="wait-div-container"></div>
+</body>
+</html>

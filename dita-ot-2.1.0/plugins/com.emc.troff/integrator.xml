@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project id="com.emc.troff" default="dita2emctroff">
+    <target name="emctroff.init">
+        <property name="emctroff.plugin.root"   location="${dita.dir}/plugins/com.emc.troff"/>
+        <property name="emctroff.js.dir"        location="${emctroff.plugin.root}/js"/>
+        <property name="emctroff.filenames.xpath"
+                  value="/ishobject/ishfields/ishfield[@name='FTITLE']"/>
+        <property name="emctroff.filenames.strip.regex"
+                  value="^([A-Za-z0-9-]+_){2}"/>
+
+        <property name="args.tablelink.style" value="TITLE"/>
+        <property name="args.figurelink.style" value="TITLE"/>
+
+        <xmlcatalog id="emctroff.dita.catalog">
+            <catalogpath path="${dita.dir}/catalog-dita.xml"/>
+        </xmlcatalog>
+    </target>
+
+    <target name="dita2emctroff" depends="emctroff.init, emctroff-preprocess, dita2troff, emctroff-cleanup"/>
+
+    <!-- Intelliarts Consulting/EMC Troff01 23-jul-2013 The invocation of filename normalization script. Read comments in
+                                                    com.emc.troff/js/normalize-filenames.js source file for the
+                                                    detailed explanation of the algorithm.
+                                                    The script modifies "args.input" property and sets
+                                                    "emctroff.input.dir" property pointing to a temporary directory with
+                                                    the renamed files.  SH -->
+    <target name="emctroff-preprocess">
+        <script language="javascript" src="${emctroff.js.dir}/normalize-filenames.js"/>
+    </target>
+
+    <!--
+        Intelliarts Consulting/EMC Troff01 23-jul-2013 Deleting temporary directory containing the renamed files. SH
+        -->
+    <target name="emctroff-cleanup">
+        <move todir="${dita.temp.dir}/tmp">
+            <fileset dir="${emctroff.input.dir}"/>
+        </move>
+    </target>
+</project>

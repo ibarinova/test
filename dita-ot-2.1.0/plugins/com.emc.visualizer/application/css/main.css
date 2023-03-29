@@ -1,0 +1,250 @@
+html, body {
+    min-height: 100%;
+    font-size: 12px;
+}
+
+.top-container {
+    height: 100vh;
+    position: relative;
+}
+
+.modal {
+    text-align: center;
+    padding: 0 !important;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+div.tooltip-inner {
+    max-width: none;
+}
+
+.item-desc-container {
+    margin-top: 50px;
+}
+
+.tab-content {
+    height: calc(50vh - 100px);
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.definition-list li:nth-child(odd), #attributes-container > div:nth-child(odd) {
+    padding: 10px 0;
+}
+
+#attributes-container {
+    padding: 0 30px;
+}
+
+#conditions-panel, #attributes-panel {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.definition-list {
+    overflow: auto;
+    height: calc(50vh - 100px);
+}
+
+#attributes-panel span, #conditions-panel span {
+    word-wrap: break-word;
+}
+
+#chartInfoContainer {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#chartInfoContainer label {
+    line-height: 34px;
+    word-wrap: break-word;
+}
+
+#svg-container {
+    overflow: auto !important;
+    padding: 0 !important;
+}
+
+.top-margin {
+    margin-top: 25px;
+}
+
+#wait-div-container {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background: rgba(211, 211, 211, .5);
+}
+
+#chart-wait-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.loading-text {
+    display: table;
+    height: 100vh;
+    width: 100%;
+}
+
+.loading-text p {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 26px;
+    color: #707070;
+}
+
+/*SVG styles*/
+
+svg {
+    overflow: visible !important;
+}
+
+.js-node {
+    cursor: pointer;
+}
+
+.js-node text {
+    text-anchor: middle;
+    font: 12px sans-serif;
+    fill-opacity: 1;
+}
+
+.black-border {
+    stroke: black;
+}
+
+.hidden-node {
+    stroke-width: 3px;
+    stroke: blue !important;
+}
+
+.hidden-node ~ image {
+    opacity: .25;
+}
+
+.active-node {
+    stroke-dasharray: none;
+    stroke: red !important;
+    stroke-width: 3px;
+}
+
+.js-link {
+    fill: none;
+    stroke-width: 1px;
+}
+
+.marker {
+    fill: rgb(8, 0, 255);
+    color: rgb(8, 0, 255);
+}
+
+.shape {
+    height: 33px;
+    width: 33px;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+}
+
+.square {
+    border: 2px solid black;
+}
+
+.circle {
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.i-icon {
+    /*height: 30px;*/
+    width: 40px;
+}
+
+.red-bg {
+    background-color: #fc6161;
+}
+
+.yellow-bg {
+    background-color: #ffff66;
+}
+
+.blue-bg {
+    background-color: #6699ff;
+}
+
+.green-bg {
+    background-color: #73c666;
+}
+
+.orange-bg {
+    background-color: #ffa956;
+}
+
+.purple-bg {
+    background-color: #d370d3;
+}
+
+.brown-bg {
+    background-color: #bd7e4a;
+}
+
+.gray-bg {
+    background-color: #d3d3d3;
+}
+
+.line-icon {
+    width: 30px;
+}
+
+.pink-bg {
+    background-color: pink;
+}
+
+.nav-tabs {
+    font-size: 14px;
+}
+
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#chartZoomBtns {
+    position: fixed;
+    top: 60px;
+    left: 15px;
+    z-index: 10;
+}
+
+#chartZoomBtns input {
+    width: 35px;
+    margin-right: 4px;
+}

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<plugin id="com.emc.visualizer">
+    <feature extension="dita.conductor.transtype.check" value="emc-visualizer"/>
+    <feature extension="dita.transtype.print" value="emc-visualizer"/>
+
+    <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+</plugin>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.emc.troff">
+    <feature extension="dita.conductor.transtype.check" value="emctroff"/>
+    <feature extension="dita.conductor.target" file="integrator.xml"/>
+    <feature extension="dita.xsl.troff-ast" file="xsl/com-emc-troff-step1.xsl"/>
+    <feature extension="dita.xsl.troff" file="xsl/com-emc-troff-step2.xsl"/>
+</plugin>

@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<project name="com.emc.visualizer">
+    <target name="dita2emc-visualizer"
+            depends="dita2emc-visualizer.preprocess,
+                    dita2emc-visualizer.init,
+                    dita2references-validator,
+                    dita2emc-visualizer.postprocess,
+					dita2emc-visualizer.cleanup"/>
+
+    <target name="dita2emc-visualizer.preprocess"
+            depends="dita2emc-visualizer.preprocess.init,
+                    dita2emc-visualizer.copy-content,
+                    dita2emc-visualizer-overwrite-build-properties">
+
+    </target>
+
+    <target name="dita2emc-visualizer.preprocess.init">
+        <tstamp>
+            <format property="current.time" pattern="MM_dd__hh_mm"/>
+        </tstamp>
+
+        <property name="dita.plugin.dir" location="${dita.dir}${file.separator}plugins"/>
+        <property name="emc-visualizer.plugin.name" value="com.emc.visualizer"/>
+
+        <property name="emc-visualizer.plugin.dir" location="${dita.plugin.dir}${file.separator}${emc-visualizer.plugin.name}"/>
+        <property name="emc-visualizer.plugin.xsl.dir" location="${emc-visualizer.plugin.dir}${file.separator}xsl"/>
+        <property name="emc-visualizer.plugin.application.dir" location="${emc-visualizer.plugin.dir}${file.separator}application"/>
+
+        <property name="emc-visualizer.preprocess.input.dir" location="${output.dir}${file.separator}preprocess-${current.time}"/>
+        <property name="emc-visualizer.temp.input.dir" location="${output.dir}${file.separator}temp-${current.time}"/>
+
+        <property name="emc-visualizer.json.preprocess.xml" location="${emc-visualizer.plugin.xsl.dir}${file.separator}emc-dita.xml"/>
+        <property name="emc-visualizer.dita-json.xsl" location="${emc-visualizer.plugin.xsl.dir}${file.separator}emc-visualizer.preprocess.dita-json.xsl"/>
+        <property name="emc-visualizer.ishcondition-structure-json.xsl" location="${emc-visualizer.plugin.xsl.dir}${file.separator}emc-visualizer.preprocess.ishcondition-structure-json.xsl"/>
+
+        <dirname property="emc-visualizer.original.sourcepath" file="${args.input}"/>
+        <basename property="emc-visualizer.original.input.map.name" file="${args.input}" />
+
+        <loadresource property="emc-visualizer.temp.input.map.name">
+            <propertyresource name="emc-visualizer.original.input.map.name"/>
+            <filterchain>
+                <tokenfilter>
+                    <filetokenizer/>
+                    <replaceregex pattern="\..*$$" replace="" flags="gi"/>
+                </tokenfilter>
+            </filterchain>
+        </loadresource>
+
+        <loadresource property="emc-visualizer.input.map.extension">
+            <propertyresource name="emc-visualizer.original.input.map.name"/>
+            <filterchain>
+                <tokenfilter>
+                    <filetokenizer/>
+                    <replaceregex pattern=".*\." replace="" flags="gi"/>
+                </tokenfilter>
+            </filterchain>
+        </loadresource>
+
+        <property name="emc-visualizer.temp.input.map"
+                  location="${emc-visualizer.preprocess.input.dir}${file.separator}${emc-visualizer.temp.input.map.name}.${emc-visualizer.input.map.extension}"/>
+    </target>
+
+    <target name="dita2emc-visualizer.copy-content">
+        <copy todir="${emc-visualizer.preprocess.input.dir}" failonerror="false">
+            <fileset dir="${emc-visualizer.original.sourcepath}" includes="**/*.xml"/>
+            <fileset dir="${emc-visualizer.original.sourcepath}" includes="**/*.dita"/>
+            <fileset dir="${emc-visualizer.original.sourcepath}" includes="**/*.ditamap"/>
+            <fileset dir="${emc-visualizer.original.sourcepath}" includes="**/*.met"/>
+        </copy>
+    </target>
+
+    <target name="dita2emc-visualizer-overwrite-build-properties">
+        <copy file="${args.input}" tofile="${emc-visualizer.temp.input.map}"/>
+
+        <script language="javascript">
+            <![CDATA[
+              var tempInputFile = project.getProperty("emc-visualizer.temp.input.map");
+              var ditaTempDir = project.getProperty("emc-visualizer.temp.input.dir");
+              project.setUserProperty( "args.input", tempInputFile);
+              project.setUserProperty( "dita.temp.dir", ditaTempDir);
+            ]]>
+        </script>
+
+        <xslt basedir="${emc-visualizer.preprocess.input.dir}"
+              destdir="${emc-visualizer.preprocess.input.dir}_tmp"
+              style="${emc-visualizer.plugin.xsl.dir}/emc-visualizer.preprocess.clean-content.xsl"
+              includes="*.xml *.dita *.ditamap">
+            <xmlcatalog refid="dita.catalog"/>
+            <globmapper from="*" to="*"/>
+        </xslt>
+
+        <move todir="${emc-visualizer.preprocess.input.dir}">
+            <fileset dir="${emc-visualizer.preprocess.input.dir}_tmp" includes="**/*"/>
+        </move>
+    </target>
+
+    <target name="dita2emc-visualizer.init">
+    </target>
+
+    <target name="dita2emc-visualizer.postprocess" depends="dita2emc-visualizer.dita-json.postprocess,
+                                                            dita2emc-visualizer.ishcondition-structure-json.postprocess,
+                                                            dita2emc-visualizer.prepare.application"/>
+
+    <target name="dita2emc-visualizer.dita-json.postprocess">
+        <xslt in="${emc-visualizer.json.preprocess.xml}"
+              out="${emc-visualizer.temp.input.dir}${file.separator}emc-dita.json.js"
+              style="${emc-visualizer.dita-json.xsl}">
+            <param name="dita-json" expression="${emc-visualizer.temp.input.dir}${file.separator}dita.json"/>
+            <param name="merged-map" expression="${references-validator.merged.map}"/>
+        </xslt>
+    </target>
+
+    <target name="dita2emc-visualizer.ishcondition-structure-json.postprocess">
+        <xslt in="${emc-visualizer.json.preprocess.xml}"
+              out="${emc-visualizer.temp.input.dir}${file.separator}emc-ishcondition-structure.json.js"
+              style="${emc-visualizer.ishcondition-structure-json.xsl}">
+            <param name="ishcondition-structure-json" expression="${emc-visualizer.temp.input.dir}${file.separator}ishcondition-structure.json"/>
+        </xslt>
+    </target>
+
+    <target name="dita2emc-visualizer.prepare.application">
+        <copy todir="${output.dir}">
+            <fileset dir="${emc-visualizer.plugin.application.dir}"/>
+        </copy>
+        <copy file="${emc-visualizer.temp.input.dir}${file.separator}emc-dita.json.js"
+              todir="${output.dir}${file.separator}src"/>
+        <copy file="${emc-visualizer.temp.input.dir}${file.separator}emc-ishcondition-structure.json.js"
+              todir="${output.dir}${file.separator}src"/>
+    </target>
+
+    <target name="dita2emc-visualizer.cleanup">
+        <delete dir="${emc-visualizer.preprocess.input.dir}"/>
+    </target>
+
+</project>

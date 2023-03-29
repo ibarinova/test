@@ -1,0 +1,80 @@
+2016/11/07 Drop 17
+
++ added escaping for special characters (\, ", ', <, >) for main book title;
+
+2016/08/31 Drop 16
+
++ added escaping for special characters (\, ", ', <, >) for title, tooltip and shortdesc;
+
+2016/06/06 Drop 15
+
++ escaped backslash in shortdesc and title;
++ added description for '-' indicator to application legend;
+
+2016/05/31 Drop 14
+
++ fixed issue 'empty broken node when it is marked with '-' icon';
+
+2016/05/24 Drop 13
+
++ moved 'Loading...' text to the chart block center.
+
+2016/05/23 Drop 12
+
++ fixed Expansion issue for collapsed highlighted nodes;
++ fixed issue related to blocking of node actions at the right and bottom position;
++ add 'Loading...' message at start and reset page action;
++ add 'Loading...' text message instead of GIF spinner;
+
+2016/05/17 Drop 11
+
++ fixed hiding of referenced conref elements;
+
+2016/05/16 Drop 10
+
++ add node icon for the conref source topic;
++ legend cleanup;
++ add spinner while D3 calculates and draws chart;
+
+2016/05/11 Drop 9
+
++ reformat conrefs number message;
+
+2016/05/05 Drop 8
+
++ reverted <element/> object presentation to pink circle;
+
+2016/05/04 Drop 7
+
++ add marking for objects with conditionalized inner elements;
++ add opacity 0.25 for hidden internal and external xrefs;
+
+2016/04/29 Drop 6
+
++ add quotes escaping in tooltip and title values;
+
+2016/04/29 Drop 5
+
++ added topic title as tooltip value;
++ changed <E/> shape to circle;
++ modified 'Object information' data order;
+
+2016/04/28 Drop 4
+
++ fixed 'ishcondition' functionality for condition values with single quotes.
+
+2016/04/27 Drop 3
+
++ added 'zooming' and 'panning' functionality;
++ added highlighting functionality.
+
+2016/04/21 Drop 2
+
++ added list of inner isconditions to 'Object information' block;
++ changed element node presentation to <E/> object;
++ Completed 'ishcondition functionality' (change opacity for conditionalized nodes, dynamically mark relationships as
+broken after referenced object was hidden);
+
+2016/04/13 Drop 1
+
++ initial com.emc.visualizer plugin;
