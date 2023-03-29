@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<strings>
+    <!-- PDF and common strings -->
+
+    <!-- Product name to be placed inside headers etc. -->
+    <variable id="Product Name">OpenTopic</variable>
+
+    <!-- The footer that appears on odd-numbered pages. -->
+    <variable id="Body odd footer"/>
+
+    <!-- The footer that appears on even-numbered pages. -->
+    <variable id="Body even footer"/>
+
+    <!-- The footer that appears on the first page of a chapter. -->
+    <variable id="Body first footer"/>
+
+    <!-- The header that appears on the first page of a chapter. -->
+    <variable id="Body first header"/>
+
+    <!-- The header that appears on odd-numbered pages. -->
+    <variable id="Body odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on even-numbered pages. -->
+    <variable id="Body even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/></variable>
+
+    <!-- The footer that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd footer"/>
+
+    <!-- The footer that appears on Preface even-numbered pages. -->
+    <variable id="Preface even footer"/>
+
+    <!-- The footer that appears on the first page of a Preface -->
+    <variable id="Preface first footer"/>
+
+    <!-- The header that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd header">Johdanto&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on Preface even-numbered pages. -->
+    <variable id="Preface even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;Johdanto</variable>
+
+    <!-- The header that appears on Preface first page. -->
+    <variable id="Preface first header"/>
+
+    <!-- The footer that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd footer"/>
+
+    <!-- The footer that appears on the even-numbered table of contents pages. -->
+    <variable id="Toc even footer"/>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;Sisällysluettelo&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;Sisällysluettelo</variable>
+
+    <!-- The footer that appears on the odd-numbered index pages. -->
+    <variable id="Index odd footer"/>
+
+    <!-- The footer that appears on the even-numbered index pages. -->
+    <variable id="Index even footer"/>
+
+    <!-- The header that appears on the odd-numbered index pages. -->
+    <variable id="Index odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;Hakemisto&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the even-numbered index pages. -->
+    <variable id="Index even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;Hakemisto</variable>
+
+    <!-- glj  Phrase appended to chapter title in header to indicate it's a continuation of the chapter -->
+    <variable id="Chapter Continued string">(jatkuu)</variable>
+
+    <!-- The formatting used to display ordered lists (e.g., "1., 2." or
+     "1), 2)" -->
+    <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number consumer"><param ref-name="number"/>&#xA0; </variable>
+
+    <!-- The unordered list bullet   -->
+    <variable id="Unordered List bullet 1">&#x25CF;</variable>
+	<variable id="Unordered List bullet 2">&#x25CB;</variable>
+	<variable id="Unordered List bullet 3">&#xFFED;</variable>
+	<variable id="Unordered List bullet 4">&#x002D;</variable>
+    <variable id="Unordered List bullet 5">&#x2022;</variable>
+	<variable id="Ordered List Number 1"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 2"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 3"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 4"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Format 1">1</variable>
+    <variable id="Ordered List Format 2">a</variable>
+    <variable id="Ordered List Format 3">i</variable>
+    <variable id="Ordered List Format 4">i</variable>
+
+    <variable id="Step Number"><param ref-name="number"/>. </variable>
+    <variable id="Step Format">1</variable>
+    <variable id="Substep Number"><param ref-name="number"/>) </variable>
+    <variable id="Substep Format">a</variable>
+
+    <!-- The heading string to put at the top of the Table of Contents -->
+    <variable id="Table of Contents">Sisällysluettelo</variable>
+
+    <!-- The heading string to put at the top of the Index -->
+    <variable id="Index">Hakemisto</variable>
+
+    <variable id="Index Continued String">jatkuu</variable>
+
+    <!--string before see element-->
+    <variable id="Index See String">, katso </variable>
+
+    <!--string before see also element-->
+    <variable id="Index See Also String">Katso myös </variable>
+
+    <!-- The string used to label a chapter within the table of contents. -->
+    <!--<variable id="Table of Contents Chapter">Luku&#xA0;<param ref-name="number"/>:&#xA0;</variable>-->
+    <variable id="Table of Contents Chapter"> <param ref-name="number"/> </variable>
+
+    <!-- The string used to label an appendix within the table of contents. -->
+    <variable id="Table of Contents Appendix">Liite&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an part within the table of contents. -->
+    <variable id="Table of Contents Part">Osa&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Preface">Esipuhe:&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Notices"></variable>
+
+    <!-- The string used to label an preface in body text. -->
+    <variable id="Preface title">Esipuhe </variable>
+
+    <!-- The string used to label an notices in body text. -->
+    <variable id="Notices title">Huomautus</variable>
+
+    <!-- The heading to put at the top of a chapter when creating a
+         chapter-level "mini-TOC" -->
+    <variable id="Mini Toc">Aiheet:</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <variable id="Note">HUOMAUTUS</variable>
+    <variable id="note">HUOMAUTUS</variable>
+    <variable id="note-dell">HUOMAUTUS</variable>
+
+    <variable id="notice-dell">HUOMAUTUS</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Tip">VIHJE</variable>
+    <variable id="tip-dell">VIHJE</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Important">Tärkeää</variable>
+    <variable id="important-dell">Tärkeää</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'fastpath'. -->
+    <variable id="Fastpath">Pikapolku</variable>
+    <variable id="fastpath-dell">Pikapolku</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'remember'. -->
+    <variable id="Remember">Muista</variable>
+    <variable id="remember-dell">Muista</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'attention'. -->
+    <variable id="Attention">Huomautus</variable>
+    <variable id="attention-dell">Huomautus</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'caution'. -->
+    <variable id="Caution">VAROITUS</variable>
+    <variable id="caution-dell">VAROITUS</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'danger'. -->
+    <variable id="Danger">Vaara</variable>
+    <variable id="danger-dell">Vaara</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <variable id="Warning">VAARA</variable>
+    <variable id="warning-dell">VAARA</variable>
+    <variable id="Warning_Title">Tietoja vaaroista</variable>
+    <variable id="Warning_Blurb">VAARA varoittaa mahdollisesta henkilölle tai omaisuudelle tapahtuvasta vahingosta, vammasta tai jopa hengenvaarasta.</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+    <variable id="High Voltage">Sähköiskun vaara</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'restriction'. -->
+    <variable id="Restriction">Rajoitus</variable>
+
+    <!-- Text to use for figure titles. Renders as part of <fig>/<title>
+          elements. -->
+    <variable id="Figure.title">Kuva <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for table titles. Renders as part of <table>/<title>
+         elements. -->
+    <variable id="Table.title">Taulukko <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for related links label.
+         Renders as part of <related-links> element. -->
+    <variable id="Related Links">Asiaan liittyvät linkit</variable>
+
+    <!-- Default cross-reference text prefix. Used to generate reference
+         text in case it's not specified in source. -->
+    <variable id="Cross-Reference">Ristiviittaus kohteeseen:</variable>
+
+    <!-- Default content-reference text prefix. Used to generate reference
+         text in case target cannot be resolved. -->
+    <variable id="Content-Reference">Sisältöviittaus kohteeseen:</variable>
+
+    <!-- Default title text for referenced section title. Used to generate
+         reference text in case reference has no explicit content and
+         referenced section has no title. -->
+    <variable id="Untitled section">Nimetön osuus</variable>
+
+    <!-- Default title text for referenced list item. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a list item. -->
+    <variable id="List item">Listan kohde</variable>
+
+    <!-- Default title text for referenced footnote. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a footnote. -->
+    <variable id="Foot note">Alaviite.</variable>
+
+    <!-- Text to use for a generated label of navigation title. Renders
+         as part of <navtitle> element. -->
+    <variable id="Navigation title">Navigointinimi</variable>
+
+    <!-- Text to use for a generated label of search title. Renders
+         as part of <searchtitle> element. -->
+    <variable id="Search title">Hakunimi</variable>
+
+    <!-- Text to use for chapter titles.-->
+    <variable id="Chapter with number">Luku <param ref-name="number"/></variable>
+
+    <!-- Text to use for appendix titles.-->
+    <variable id="Appendix with number">Liite <param ref-name="number"/></variable>
+
+    <!-- Text to use for part titles.-->
+    <variable id="Part with number">Osa <param ref-name="number"/></variable>
+
+    <!-- Text to use for a label generated from <required-cleanup> element. -->
+    <variable id="Required-Cleanup">[Required-Cleanup]</variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual. -->
+    <variable id="On the page"> sivulla <param ref-name="pagenum"/></variable>
+    <variable id="On the page EMC"> sivulla <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual, when referenced element has no title. -->
+    <variable id="Page"> sivu  <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in chm/html, when referenced element has no title. -->
+    <variable id="This link">tämä linkki</variable>
+
+    <!-- Image path to use for a note of "note" type. -->
+    <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "attention" type. -->
+    <variable id="attention Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "caution" type. -->
+    <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution.png</variable>
+
+    <!-- Image path to use for a note of "danger" type. -->
+    <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image path to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "important" type. -->
+    <variable id="important Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "remember" type. -->
+    <variable id="remember Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "restriction" type. -->
+    <variable id="restriction Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "tip" type. -->
+    <variable id="tip Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "other" type. -->
+    <variable id="other Note Image Path">Customization/OpenTopic/common/artwork/hand.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Image Path">Customization/OpenTopic/common/artwork/highvoltage.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "warning" type. -->
+    <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image alt text to use for a note of "note" type. -->
+    <variable id="note Note Alt Text"><variable id="Note"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "attention" type. -->
+    <variable id="attention Note Alt Text"><variable id="Attention"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "caution" type. -->
+    <variable id="caution Note Alt Text"><variable id="Caution"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "danger" type. -->
+    <variable id="danger Note Alt Text"><variable id="Danger"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Alt Text"><variable id="Fastpath"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "important" type. -->
+    <variable id="important Note Alt Text"><variable id="Important"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "remember" type. -->
+    <variable id="remember Note Alt Text"><variable id="Remember"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "restriction" type. -->
+    <variable id="restriction Note Alt Text"><variable id="Restriction"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "tip" type. -->
+    <variable id="tip Note Alt Text"><variable id="Tip"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "other" type. -->
+    <variable id="other Note Alt Text">Hand icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Alt Text"><variable id="High Voltage"/> icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "warning" type. -->
+    <variable id="warning Note Alt Text"><variable id="Warning"/> icon</variable>
+
+
+    <!-- Image alt text to use for a logos. -->
+    <variable id="Logo Alt Text"><param ref-name="author"/> Logo</variable>
+
+    <!-- RN New strings for DELL -->
+    <variable id="Regulatory Model">Säädösten mukainen malli: </variable>
+    <variable id="Regulatory Type">Säädösten mukainen tyyppi: </variable>
+    <variable id="Computer Model">Tietokonemalli:</variable>
+    <!--
+        String used for links in end of document in XHTML
+    -->
+
+    <!-- The title of the links to parent -->
+    <variable id="Parent topic">Pääaihe</variable>
+
+    <!-- The title of the links to next topics -->
+    <variable id="Next topic">Seuraava aihe</variable>
+
+    <!-- The title of the links to previous topics -->
+    <variable id="Previous topic">Edellinen aihe</variable>
+
+    <!-- The title of the links to child topics -->
+    <variable id="Child topics">Aliaiheet</variable>
+
+    <!-- The title of the links to Related concepts -->
+    <variable id="Related concepts">Asiaan liittyvät käsitteet</variable>
+
+    <!-- The title of the links to Related tasks -->
+    <variable id="Related tasks">Asiaan liittyvät tehtävät</variable>
+
+    <!-- The title of the links to Related references -->
+    <variable id="Related references">Asiaan liittyvät viitteet</variable>
+    <variable id="Related reference">Asiaan liittyvät viitteet</variable>
+
+    <!-- The title of the links to Related information -->
+    <variable id="Related information">Asiaan liittyvät tiedot</variable>
+
+    <!--
+       Strings used in the online-help publishing.
+    -->
+
+    <!-- The title of the "contents" button in online-help output -->
+    <variable id="Contents button title">Sisältö </variable>
+
+    <!-- The title of the "index" button in online-help output -->
+    <variable id="Index button title">Hakemisto</variable>
+
+    <!-- The separator of multiple index entries in online-help output -->
+    <variable id="Index multiple entries separator">, </variable>
+
+    <!-- The title of the "search" button in online-help output -->
+    <variable id="Search button title">Haku </variable>
+
+    <!-- The title of the "back" button in online-help output -->
+    <variable id="Back button title">Takaisin</variable>
+
+    <!-- The title of the "forward" button in online-help output -->
+    <variable id="Forward button title">Eteenpäin</variable>
+
+    <!-- The title of the "main page" button in online-help output -->
+    <variable id="Main page button title">Kotisivu</variable>
+
+    <!-- The title of the "previous page" button in online-help output -->
+    <variable id="Previous page button title">Edellinen aihe</variable>
+
+    <!-- The title of the "next page" button in online-help output -->
+    <variable id="Next page button title">Seuraava aihe</variable>
+
+    <!-- The "online help" document title prefix in online-help output -->
+    <variable id="Online help prefix">Online-ohje</variable>
+
+    <!-- The search by index field title in online-help output -->
+    <variable id="Search index field title">Etsittävä hakusana:</variable>
+
+    <!-- The search by index button title in online-help output -->
+    <variable id="Search index button title">Näkymä</variable>
+
+    <!-- The search by text field title in online-help output -->
+    <variable id="Search text field title">Etsi ohjetta aiheesta:</variable>
+
+    <!-- The search by text button title in online-help output -->
+    <variable id="Search text button title">Haku</variable>
+
+    <!-- The heading for task prerequisites -->
+    <variable id="Prereq Heading">Edellytykset</variable>
+    <variable id="task_prereq-dell">Edellytykset</variable>
+
+    <!-- The heading for task contexts -->
+    <variable id="Context Heading">Tietoja tehtävästä</variable>
+    <variable id="task_context-dell">Tietoja tehtävästä</variable>
+
+    <!-- The heading for task steps -->
+    <variable id="Steps Heading">Vaiheet</variable>
+    <variable id="task_procedure-dell">Vaiheet</variable>
+
+    <!-- The heading for task examples -->
+    <variable id="Example Heading">Esimerkki</variable>
+    <variable id="task_example-dell">Esimerkki</variable>
+    <variable id="Example Open">Esimerkki</variable>
+
+    <!-- The heading for task postrequisites -->
+    <variable id="Postreq Heading">Seuraavat vaiheet</variable>
+    <variable id="task_postreq-dell">Seuraavat vaiheet</variable>
+
+    <!-- User Interface strings -->
+
+    <variable id="Back">Edellinen aihe</variable>
+    <variable id="Forward">Seuraava aihe</variable>
+    <variable id="Glossary Pane">Sanasto</variable>
+    <variable id="Go">Haku</variable>
+    <variable id="Hide Navigation">Piilota navigointi</variable>
+    <variable id="Home">Etusivu</variable>
+    <str name="label.home" js="true" php="false">Etusivu</str>
+    <variable id="Index Pane">Hakemisto</variable>
+    <variable id="No Search Performed">Yhtään hakua ei ole suoritettu.</variable>
+    <variable id="No Search Results">Haku ei tuottanut tuloksia.</variable>
+    <variable id="Print">Tulosta</variable>
+    <variable id="Print All">Tulosta aiheet ja ala-aiheet</variable>
+    <variable id="Print Topic">Tulosta aihe</variable>
+    <variable id="printThisPage">Tulosta aihe</variable>
+    <variable id="Search">Anna hakutermit</variable>
+    <str name="webhelp.search" js="true" php="false">Anna hakutermit</str>
+    <variable id="Search Blue">Etsi</variable>
+    <variable id="Search Pane">Haku</variable>
+    <variable id="Search Results">Hakutulokset</variable>
+    <str name="Search results" js="true" php="false">Hakutulokset</str>
+    <variable id="TOC Pane">Sisältö</variable>
+    <variable id="BreadCrumb Search">Haku</variable>
+    <variable id="BreadCrumb TOC">Sisältö</variable>
+    <variable id="Toggle Navigation">Navigointivalikko</variable>
+    <variable id="Toggle Highlighting">Vaihda korostukseen ja pois</variable>
+    <variable id="Searched for">Haettiin:</variable>
+    <variable id="PDF Link">PDF</variable>
+    <variable id="Email">Lähetä meille sähköpostia</variable>
+    <variable id="Email Address">mailto:solutions@suite-sol.com</variable>
+
+    <variable id="Current Release Version">Nykyinen versio: </variable>
+    <variable id="Previous Release Version">Edellinen versio: </variable>
+    <variable id="Release Type">Julkaisun tyyppi: </variable>
+    <variable id="Major">Tärkeä (major, MA)</variable>
+    <variable id="Minor">Pieni (minor, MI)</variable>
+    <variable id="Service">Palvelu (service, SR)</variable>
+    <variable id="Patch">Korjaus (patch, P)</variable>
+
+    <variable id="Technote Current Version">Nykyinen versio: </variable>
+    <variable id="Technote Release Date">Julkaisupäivä: </variable>
+    <variable id="Technote Previous Version">Edellinen versio: </variable>
+    <variable id="Technote Document Number">Asiakirjan numero: </variable>
+    <variable id="Technote Document Rev">Tark. </variable>
+    <variable id="part number">Osanro. </variable>
+    <variable id="batterywarning">AKKUVAROITUS</variable>
+
+    <variable id="dsg Updated Date">Päivitetty</variable>
+    <variable id="dsg Software Version">Versio</variable>
+    <variable id="dsg Part Number">Osan numero</variable>
+    <variable id="dsg topics">Aiheet:</variable>
+
+    <variable id="note-non-brand Image Path">Customization/OpenTopic/common/artwork/note-non-brand.png</variable>
+    <variable id="caution-non-brand Image Path">Customization/OpenTopic/common/artwork/caution-non-brand.png</variable>
+    <variable id="warning-non-brand Image Path">Customization/OpenTopic/common/artwork/warning-non-brand.png</variable>
+
+    <variable id="note Image Path">Customization/OpenTopic/common/artwork/note.svg</variable>
+    <variable id="caution Image Path">Customization/OpenTopic/common/artwork/caution.svg</variable>
+    <variable id="danger Image Path">Customization/OpenTopic/common/artwork/danger.svg</variable>
+    <variable id="warning Image Path">Customization/OpenTopic/common/artwork/warning.svg</variable>
+
+    <variable id="Highly Restricted Confidential">Erittäin rajoitettu – Luottamuksellinen</variable>
+    <variable id="Restricted Confidential">Rajoitettu - Luottamuksellinen</variable>
+    <variable id="Restricted Internal">Sisäiseen käyttöön - Luottamuksellinen</variable>
+
+    <variable id="Abstract">Tiivistelmä</variable>
+
+    <variable id="continued">(jatkuu)</variable>
+    <!--Added new variable for PDF A4-->
+	<variable id="continued">(jatkuu)</variable>
+	<variable id="release">Vapauttaa</variable>
+	<variable id="revision">Tarkistusversio</variable>
+	<variable id="Version">Versio</variable>
+	<variable id="on page"> sivulla <param ref-name="pagenum"/></variable>
+	<variable id="Figure toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+	<variable id="Table toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+    <variable id="LOT-dell">Taulukot</variable>
+    <variable id="LOF-dell">Kuvat</variable>
+
+    <variable id="#menucascade-separator"> &gt; </variable>
+
+    <!-- Localization prefix and suffix characters -->
+    <variable id="start_cite"></variable>
+    <variable id="end_cite"></variable>
+
+    <variable id="start_var"></variable>
+    <variable id="end_var"></variable>
+
+    <variable id="start_q">&quot;</variable>
+    <variable id="end_q">&quot;</variable>
+
+    <variable id="start_lq"></variable>
+    <variable id="end_lq"></variable>
+
+    <variable id="start_userinput"></variable>
+    <variable id="end_userinput"></variable>
+
+    <variable id="start_option"></variable>
+    <variable id="end_option"></variable>
+
+    <variable id="start_term"></variable>
+    <variable id="end_term"></variable>
+
+    <variable id="start_q_responsive">&#x0201C;</variable> <!-- “ -->
+    <variable id="end_q_responsive">&#x0201D;</variable>  <!-- ” -->
+
+    <variable id="start_option_responsive"></variable>
+    <variable id="end_option_responsive"></variable>
+
+    <variable id="start_uicontrol_responsive"></variable>
+    <variable id="end_uicontrol_responsive"></variable>
+
+    <variable id="start_var_responsive"></variable>
+    <variable id="end_var_responsive"></variable>
+
+    <variable id="start_wintitle_responsive"></variable>
+    <variable id="end_wintitle_responsive"></variable>
+
+</strings>

@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <!-- PDF and common strings -->
+
+    <!-- Product name to be placed inside headers etc. -->
+    <variable id="Product Name">OpenTopic</variable>
+
+    <!-- The footer that appears on odd-numbered pages. -->
+    <variable id="Body odd footer"/>
+
+    <!-- The footer that appears on even-numbered pages. -->
+    <variable id="Body even footer"/>
+
+    <!-- The footer that appears on the first page of a chapter. -->
+    <variable id="Body first footer"/>
+
+    <!-- The header that appears on the first page of a chapter. -->
+    <variable id="Body first header"/>
+
+    <!-- The header that appears on odd-numbered pages. -->
+    <variable id="Body odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on even-numbered pages. -->
+    <variable id="Body even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/></variable>
+
+    <!-- The footer that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd footer"/>
+
+    <!-- The footer that appears on Preface even-numbered pages. -->
+    <variable id="Preface even footer"/>
+
+    <!-- The footer that appears on the first page of a Preface -->
+    <variable id="Preface first footer"/>
+
+    <!-- The header that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd header">บทนำ&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on Preface even-numbered pages. -->
+    <variable id="Preface even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;บทนำ</variable>
+
+    <!-- The header that appears on Preface first page. -->
+    <variable id="Preface first header"/>
+
+    <!-- The footer that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd footer"/>
+
+    <!-- The footer that appears on the even-numbered table of contents pages. -->
+    <variable id="Toc even footer"/>
+
+    <!-- The header that appears on the odd-numbered table of contents
+         pages. -->
+    <variable id="Toc odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;สารบัญ&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the odd-numbered table of contents
+         pages. -->
+    <variable id="Toc even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;สารบัญ</variable>
+
+    <!-- The footer that appears on the odd-numbered index pages. -->
+    <variable id="Index odd footer"/>
+
+    <!-- The footer that appears on the even-numbered index pages. -->
+    <variable id="Index even footer"/>
+
+    <!-- The header that appears on the odd-numbered index pages. -->
+    <variable id="Index odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;ดัชนี&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the even-numbered index pages. -->
+    <variable id="Index even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;ดัชนี</variable>
+
+    <!-- glj  Phrase appended to chapter title in header to indicate it's a continuation of the chapter -->
+    <variable id="Chapter Continued string">(ต่อหน้าถัดไป)</variable>
+
+    <!-- The formatting used to display ordered lists (e.g., "1., 2." or
+     "1), 2)" -->
+    <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number consumer"><param ref-name="number"/>&#xA0; </variable>
+
+    <!-- The unordered list bullet   -->
+    <variable id="Unordered List bullet 1">&#x25CF;</variable>
+	<variable id="Unordered List bullet 2">&#x25CB;</variable>
+	<variable id="Unordered List bullet 3">&#xFFED;</variable>
+	<variable id="Unordered List bullet 4">&#x002D;</variable>
+    <variable id="Unordered List bullet 5">&#x2022;</variable>
+	<variable id="Ordered List Number 1"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 2"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 3"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 4"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Format 1">1</variable>
+    <variable id="Ordered List Format 2">a</variable>
+    <variable id="Ordered List Format 3">i</variable>
+    <variable id="Ordered List Format 4">i</variable>
+
+    <variable id="Step Number"><param ref-name="number"/>. </variable>
+    <variable id="Step Format">1</variable>
+    <variable id="Substep Number"><param ref-name="number"/>) </variable>
+    <variable id="Substep Format">a</variable>
+
+    <!-- The heading string to put at the top of the Table of Contents -->
+    <variable id="Table of Contents">สารบัญ</variable>
+
+    <!-- The heading string to put at the top of the Index -->
+    <variable id="Index">ดัชนี</variable>
+
+    <variable id="Index Continued String">ต่อหน้าถัดไป</variable>
+
+    <!--string before see element-->
+    <variable id="Index See String">, กรุณาดูที่ </variable>
+
+    <!--string before see also element-->
+    <variable id="Index See Also String">กรุณาดูข้อมูลเพิ่มเติมที่ </variable>
+
+    <!-- The string used to label a chapter within the table of contents. -->
+    <!--<variable id="Table of Contents Chapter">บทที่&#xA0;<param ref-name="number"/>:&#xA0;</variable>-->
+    <variable id="Table of Contents Chapter"> <param ref-name="number"/> </variable>
+
+    <!-- The string used to label an appendix within the table of contents. -->
+    <variable id="Table of Contents Appendix">ภาคผนวก&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an part within the table of contents. -->
+    <variable id="Table of Contents Part">ตอนที่&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Preface">คำนำ:&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Notices"></variable>
+
+    <!-- The string used to label an preface in body text. -->
+    <variable id="Preface title">คำนำ</variable>
+
+    <!-- The string used to label an notices in body text. -->
+    <variable id="Notices title">ข้อสังเกต</variable>
+
+    <!-- The heading to put at the top of a chapter when creating a
+         chapter-level "mini-TOC" -->
+    <variable id="Mini Toc">หัวข้อ: </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <variable id="Note">หมายเหตุ</variable>
+    <variable id="note">หมายเหตุ</variable>
+    <variable id="note-dell">หมายเหตุ</variable>
+
+    <variable id="notice-dell">หมายเหตุ</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Tip">คำแนะนำ</variable>
+    <variable id="tip-dell">คำแนะนำ</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Important">ข้อสำคัญ</variable>
+    <variable id="important-dell">ข้อสำคัญ</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'fastpath'. -->
+    <variable id="Fastpath">Fastpath</variable>
+    <variable id="fastpath-dell">Fastpath</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'remember'. -->
+    <variable id="Remember">ข้อควรจำ</variable>
+    <variable id="remember-dell">ข้อควรจำ</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'attention'. -->
+    <variable id="Attention">ข้อควรระวัง</variable>
+    <variable id="attention-dell">ข้อควรระวัง</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'caution'. -->
+    <variable id="Caution">ข้อควรระวัง</variable>
+    <variable id="caution-dell">ข้อควรระวัง</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'danger'. -->
+    <variable id="Danger">อันตราย</variable>
+    <variable id="danger-dell">อันตราย</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <variable id="Warning">คำเตือน</variable>
+    <variable id="warning-dell">คำเตือน</variable>
+    <variable id="Warning_Title">เกี่ยวกับคำเตือน</variable>
+    <variable id="Warning_Blurb">คำเตือนเป็นการระบุถึงโอกาสที่จะเกิดความเสียหายต่อทรัพย์สิน การบาดเจ็บ หรือการเกิดอันตรายแก่ชีวิต</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+    <variable id="High Voltage">อันตรายจากไฟฟ้า</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+     with 'type' attribute set to 'restriction'. -->
+    <variable id="Restriction">ข้อจำกัด</variable>
+
+    <!-- Text to use for figure titles. Renders as part of <fig>/<title>
+          elements. -->
+    <variable id="Figure.title">รูปที่ <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for table titles. Renders as part of <table>/<title>
+         elements. -->
+    <variable id="Table.title">ตาราง <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for related links label.
+         Renders as part of <related-links> element. -->
+    <variable id="Related Links">ลิงก์ที่เกี่ยวข้อง</variable>
+
+    <!-- Default cross-reference text prefix. Used to generate reference
+         text in case it's not specified in source. -->
+    <variable id="Cross-Reference">ข้อมูลอ้างอิง:</variable>
+
+    <!-- Default content-reference text prefix. Used to generate reference
+         text in case target cannot be resolved. -->
+    <variable id="Content-Reference">อ้างอิงตามเนื้อหา:</variable>
+
+    <!-- Default title text for referenced section title. Used to generate
+         reference text in case reference has no explicit content and
+         referenced section has no title. -->
+    <variable id="Untitled section">ส่วนที่ไม่ได้ระบุชื่อ</variable>
+
+    <!-- Default title text for referenced list item. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a list item. -->
+    <variable id="List item">หัวข้อที่อยู่ในรายการ</variable>
+
+    <!-- Default title text for referenced footnote. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a footnote. -->
+    <variable id="Foot note">เชิงอรรถ</variable>
+
+    <!-- Text to use for a generated label of navigation title. Renders
+         as part of <navtitle> element. -->
+    <variable id="Navigation title">ชื่อเรื่องในรายการค้นหา</variable>
+
+    <!-- Text to use for a generated label of search title. Renders
+         as part of <searchtitle> element. -->
+    <variable id="Search title">ค้นหาจากชื่อเรื่อง</variable>
+
+    <!-- Text to use for chapter titles.-->
+    <variable id="Chapter with number">บทที่ <param ref-name="number"/></variable>
+
+    <!-- Text to use for appendix titles.-->
+    <variable id="Appendix with number">ภาคผนวก <param ref-name="number"/></variable>
+
+    <!-- Text to use for part titles.-->
+    <variable id="Part with number">ตอนที่ <param ref-name="number"/></variable>
+
+    <!-- Text to use for a label generated from <required-cleanup> element. -->
+    <variable id="Required-Cleanup">[Required-Cleanup]</variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual. -->
+    <variable id="On the page"> ตั้งแต่หน้า <param ref-name="pagenum"/></variable>
+    <variable id="On the page EMC"> ตั้งแต่หน้า <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual, when referenced element has no title. -->
+    <variable id="Page"> หน้า <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in chm/html, when referenced element has no title. -->
+    <variable id="This link">ลิงก์นี้</variable>
+
+    <!-- Image path to use for a note of "note" type. -->
+    <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "attention" type. -->
+    <variable id="attention Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "caution" type. -->
+    <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution.png</variable>
+
+    <!-- Image path to use for a note of "danger" type. -->
+    <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image path to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "important" type. -->
+    <variable id="important Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "remember" type. -->
+    <variable id="remember Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "restriction" type. -->
+    <variable id="restriction Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "tip" type. -->
+    <variable id="tip Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "other" type. -->
+    <variable id="other Note Image Path">Customization/OpenTopic/common/artwork/hand.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Image Path">Customization/OpenTopic/common/artwork/highvoltage.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "warning" type. -->
+    <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image alt text to use for a note of "note" type. -->
+    <variable id="note Note Alt Text"><variable id="Note"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "attention" type. -->
+    <variable id="attention Note Alt Text"><variable id="Attention"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "caution" type. -->
+    <variable id="caution Note Alt Text"><variable id="Caution"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "danger" type. -->
+    <variable id="danger Note Alt Text"><variable id="Danger"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Alt Text"><variable id="Fastpath"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "important" type. -->
+    <variable id="important Note Alt Text"><variable id="Important"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "remember" type. -->
+    <variable id="remember Note Alt Text"><variable id="Remember"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "restriction" type. -->
+    <variable id="restriction Note Alt Text"><variable id="Restriction"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "tip" type. -->
+    <variable id="tip Note Alt Text"><variable id="Tip"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "other" type. -->
+    <variable id="other Note Alt Text">Hand icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Alt Text"><variable id="High Voltage"/> icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "warning" type. -->
+    <variable id="warning Note Alt Text"><variable id="Warning"/> icon</variable>
+
+
+    <!-- Image alt text to use for a logos. -->
+    <variable id="Logo Alt Text"><param ref-name="author"/> Logo</variable>
+
+
+    <!-- RN New strings for DELL -->
+    <variable id="Regulatory Model">รุ่นตามข้อบังคับ: </variable>
+    <variable id="Regulatory Type">ประเภทตามข้อบังคับ: </variable>
+    <variable id="Computer Model">รุ่นคอมพิวเตอร์:</variable>
+    <!--
+        String used for links in end of document in XHTML
+    -->
+
+    <!-- The title of the links to parent -->
+    <variable id="Parent topic">หัวข้อหลัก</variable>
+
+    <!-- The title of the links to next topics -->
+    <variable id="Next topic">หัวข้อถัดไป</variable>
+
+    <!-- The title of the links to previous topics -->
+    <variable id="Previous topic">หัวข้อก่อนหน้านี้</variable>
+
+    <!-- The title of the links to child topics -->
+    <variable id="Child topics">หัวข้อย่อย</variable>
+
+    <!-- The title of the links to Related concepts -->
+    <variable id="Related concepts">แนวคิดที่เกี่ยวข้อง</variable>
+
+    <!-- The title of the links to Related tasks -->
+    <variable id="Related tasks">งานที่เกี่ยวข้อง</variable>
+
+    <!-- The title of the links to Related references -->
+    <variable id="Related references">ข้อมูลอ้างอิงที่เกี่ยวข้อง</variable>
+    <variable id="Related reference">ข้อมูลอ้างอิงที่เกี่ยวข้อง</variable>
+
+    <!-- The title of the links to Related information -->
+    <variable id="Related information">ข้อมูลที่เกี่ยวข้อง</variable>
+
+    <!--
+       Strings used in the online-help publishing.
+    -->
+
+    <!-- The title of the "contents" button in online-help output -->
+    <variable id="Contents button title">สารบัญ</variable>
+
+    <!-- The title of the "index" button in online-help output -->
+    <variable id="Index button title">ดัชนี</variable>
+
+    <!-- The separator of multiple index entries in online-help output -->
+    <variable id="Index multiple entries separator">, </variable>
+
+    <!-- The title of the "search" button in online-help output -->
+    <variable id="Search button title">ค้นหา</variable>
+
+    <!-- The title of the "back" button in online-help output -->
+    <variable id="Back button title">ย้อนกลับ</variable>
+
+    <!-- The title of the "forward" button in online-help output -->
+    <variable id="Forward button title">ไปข้างหน้า</variable>
+
+    <!-- The title of the "main page" button in online-help output -->
+    <variable id="Main page button title">หน้าเริ่มต้น</variable>
+
+    <!-- The title of the "previous page" button in online-help output -->
+    <variable id="Previous page button title">หัวข้อก่อนหน้านี้</variable>
+
+    <!-- The title of the "next page" button in online-help output -->
+    <variable id="Next page button title">หัวข้อถัดไป</variable>
+
+    <!-- The "online help" document title prefix in online-help output -->
+    <variable id="Online help prefix">การให้ความช่วยเหลือผ่านทางออนไลน์ (Online Help)</variable>
+
+    <!-- The search by index field title in online-help output -->
+    <variable id="Search index field title">ค้นหาคำสำคัญ:</variable>
+
+    <!-- The search by index button title in online-help output -->
+    <variable id="Search index button title">เรียกดู</variable>
+
+    <!-- The search by text field title in online-help output -->
+    <variable id="Search text field title">ค้นหาความช่วยเหลือสำหรับ:</variable>
+
+    <!-- The search by text button title in online-help output -->
+    <variable id="Search text button title">ค้นหา</variable>
+
+    <!-- The heading for task prerequisites -->
+    <variable id="Prereq Heading">ข้อกำหนดเบื้องต้น</variable>
+    <variable id="task_prereq-dell">ข้อกำหนดเบื้องต้น</variable>
+
+    <!-- The heading for task contexts -->
+    <variable id="Context Heading">เกี่ยวกับภารกิจนี้</variable>
+    <variable id="task_context-dell">เกี่ยวกับภารกิจนี้</variable>
+
+    <!-- The heading for task steps -->
+    <variable id="Steps Heading">ขั้นตอน</variable>
+    <variable id="task_procedure-dell">ขั้นตอน</variable>
+
+    <!-- The heading for task examples -->
+    <variable id="Example Heading">ตัวอย่าง</variable>
+    <variable id="task_example-dell">ตัวอย่าง</variable>
+    <variable id="Example Open">ตัวอย่าง</variable>
+
+    <!-- The heading for task postrequisites -->
+    <variable id="Postreq Heading">ขั้นตอนถัดไป</variable>
+    <variable id="task_postreq-dell">ขั้นตอนถัดไป</variable>
+
+    <!-- User Interface strings -->
+
+    <variable id="Back">หัวข้อก่อนหน้านี้</variable>
+    <variable id="Forward">หัวข้อถัดไป</variable>
+    <variable id="Glossary Pane">อภิธานศัพท์</variable>
+    <variable id="Go">ค้นหา</variable>
+    <variable id="Hide Navigation">ซ่อนการนำทาง</variable>
+    <variable id="Home">หน้าหลัก</variable>
+    <str name="label.home" js="true" php="false">หน้าหลัก</str>
+    <variable id="Index Pane">ดัชนี</variable>
+    <variable id="No Search Performed">ไม่มีการทำรายการค้นหา</variable>
+    <variable id="No Search Results">การค้นหาของคุณไม่พบรายการใด</variable>
+    <variable id="Print">พิมพ์</variable>
+    <variable id="Print All">พิมพ์หัวข้อและหัวข้อย่อย</variable>
+    <variable id="Print Topic">พิมพ์หัวข้อ</variable>
+    <variable id="printThisPage">พิมพ์หัวข้อ</variable>
+    <variable id="Search">ป้อนรายการเพื่อค้นหา</variable>
+    <str name="webhelp.search" js="true" php="false">ป้อนรายการเพื่อค้นหา</str>
+    <variable id="Search Blue">ค้นหา</variable>
+    <variable id="Search Pane">ค้นหา</variable>
+    <variable id="Search Results">ผลการค้นหา</variable>
+    <str name="Search results" js="true" php="false">ผลการค้นหา</str>
+    <variable id="TOC Pane">สารบัญ</variable>
+    <variable id="BreadCrumb Search">ค้นหา</variable>
+    <variable id="BreadCrumb TOC">สารบัญ</variable>
+    <variable id="Toggle Navigation">สลับการนำทาง</variable>
+    <variable id="Toggle Highlighting">เปิด/ปิดการเน้นแถบสี</variable>
+    <variable id="Searched for">ค้นหาสำหรับ</variable>
+    <variable id="PDF Link">PDF</variable>
+    <variable id="Email">ส่งอีเมลถึงเรา</variable>
+    <variable id="Email Address">mailto:solutions@suite-sol.com</variable>
+
+    <variable id="Current Release Version">เวอร์ชันปัจจุบัน: </variable>
+    <variable id="Previous Release Version">เวอร์ชันก่อนหน้า: </variable>
+    <variable id="Release Type">ประเภทที่ออก: </variable>
+    <variable id="Major">สำคัญ (MA)</variable>
+    <variable id="Minor">เล็กน้อย (MI)</variable>
+    <variable id="Service">บริการ (SR)</variable>
+    <variable id="Patch">การแก้ไข (P)</variable>
+
+    <variable id="Technote Current Version">รุ่นล่าสุด: </variable>
+    <variable id="Technote Release Date">วันที่วางจำหน่าย: </variable>
+    <variable id="Technote Previous Version">รุ่นก่อนหน้านี้: </variable>
+    <variable id="Technote Document Number">เลขที่เอกสาร:  </variable>
+    <variable id="Technote Document Rev">ฉบับแก้ไข </variable>
+    <variable id="part number">หมายเลขอะไหล่ (P/N) </variable>
+    <variable id="batterywarning">คำเตือนเกี่ยวกับแบตเตอรี่</variable>
+    <variable id="dsg Updated Date">อัพเดทแล้ว</variable>
+    <variable id="dsg Software Version">รุ่น</variable>
+    <variable id="dsg Part Number">หมายเลขอะไหล่</variable>
+    <variable id="dsg topics">หัวข้อ :</variable>
+
+    <variable id="note-non-brand Image Path">Customization/OpenTopic/common/artwork/note-non-brand.png</variable>
+    <variable id="caution-non-brand Image Path">Customization/OpenTopic/common/artwork/caution-non-brand.png</variable>
+    <variable id="warning-non-brand Image Path">Customization/OpenTopic/common/artwork/warning-non-brand.png</variable>
+
+    <variable id="note Image Path">Customization/OpenTopic/common/artwork/note.svg</variable>
+    <variable id="caution Image Path">Customization/OpenTopic/common/artwork/caution.svg</variable>
+    <variable id="danger Image Path">Customization/OpenTopic/common/artwork/danger.svg</variable>
+    <variable id="warning Image Path">Customization/OpenTopic/common/artwork/warning.svg</variable>
+
+    <variable id="Highly Restricted Confidential">จำกัดการเข้าถึงอย่างสูง – ลับเฉพาะ</variable>
+    <variable id="Restricted Confidential">จำกัดการเข้าถึง - ลับเฉพาะ</variable>
+    <variable id="Restricted Internal">ใช้ภายในองค์กร - ลับเฉพาะ</variable>
+
+    <variable id="Abstract">บทคัดย่อ</variable>
+
+    <variable id="continued">(ต่อ)</variable>
+    <!--Added new variable for PDF A4-->
+	<variable id="continued">(ต่อ)</variable>
+	<variable id="release">วาง จำหน่าย</variable>
+	<variable id="revision">การแก้ไข</variable>
+	<variable id="Version">เวอร์ชัน</variable>
+	<variable id="on page"> ที่หน้า <param ref-name="pagenum"/></variable>
+	<variable id="Figure toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+	<variable id="Table toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+    <variable id="LOT-dell">ตาราง</variable>
+    <variable id="LOF-dell">รูปภาพ</variable>
+
+    <variable id="#menucascade-separator"> &gt; </variable>
+
+    <!-- Localization prefix and suffix characters -->
+    <variable id="start_cite"></variable>
+    <variable id="end_cite"></variable>
+
+    <variable id="start_var"></variable>
+    <variable id="end_var"></variable>
+
+    <variable id="start_q">&quot;</variable>
+    <variable id="end_q">&quot;</variable>
+
+    <variable id="start_lq"></variable>
+    <variable id="end_lq"></variable>
+
+    <variable id="start_userinput"></variable>
+    <variable id="end_userinput"></variable>
+
+    <variable id="start_option"></variable>
+    <variable id="end_option"></variable>
+
+    <variable id="start_term"></variable>
+    <variable id="end_term"></variable>
+
+    <variable id="start_q_responsive">&#x0201C;</variable> <!-- “ -->
+    <variable id="end_q_responsive">&#x0201D;</variable>  <!-- ” -->
+
+    <variable id="start_option_responsive"></variable>
+    <variable id="end_option_responsive"></variable>
+
+    <variable id="start_uicontrol_responsive"></variable>
+    <variable id="end_uicontrol_responsive"></variable>
+
+    <variable id="start_var_responsive"></variable>
+    <variable id="end_var_responsive"></variable>
+
+    <variable id="start_wintitle_responsive"></variable>
+    <variable id="end_wintitle_responsive"></variable>
+
+</strings>

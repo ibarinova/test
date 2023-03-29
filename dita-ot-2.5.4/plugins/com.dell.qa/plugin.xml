@@ -1,0 +1,5 @@
+<plugin id="com.dell.qa">
+<!-- QA extension -->
+<feature extension="dita.conductor.transtype.check" value="dellqa" type="txt"/>
+<feature extension="dita.conductor.target.relative" value="build_dellqa.xml" type="file"/>
+</plugin>

@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<strings>
+    <!-- PDF and common strings -->
+
+
+    <!-- Product name to be placed inside headers etc. -->
+    <variable id="Product Name">Iftaħ is-Suġġett</variable>
+
+    <!-- The footer that appears on odd-numbered pages. -->
+    <variable id="Body odd footer"/>
+
+    <!-- The footer that appears on even-numbered pages. -->
+    <variable id="Body even footer"/>
+
+    <!-- The footer that appears on the first page of a chapter. -->
+    <variable id="Body first footer"/>
+
+    <!-- The header that appears on the first page of a chapter. -->
+    <variable id="Body first header"/>
+
+    <!-- The header that appears on odd-numbered pages. -->
+    <variable id="Body odd header"><param ref-name="prodname"/> | <param ref-name="heading"/> | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on even-numbered pages. -->
+    <variable id="Body even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | <param ref-name="heading"/></variable>
+
+    <!-- The footer that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd footer"/>
+
+    <!-- The footer that appears on Preface even-numbered pages. -->
+    <variable id="Preface even footer"/>
+
+    <!-- The footer that appears on the first page of a Preface -->
+    <variable id="Preface first footer"/>
+
+    <!-- The header that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd header">Introduzzjoni | <param ref-name="prodname"/> | <param ref-name="heading"/> | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on Preface even-numbered pages. -->
+    <variable id="Preface even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | Introduzzjoni</variable>
+
+    <!-- The header that appears on Preface first page. -->
+    <variable id="Preface first header"/>
+
+    <!-- The footer that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd footer"/>
+
+    <!-- The footer that appears on the even-numbered table of contents pages. -->
+    <variable id="Toc even footer"/>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd header"><param ref-name="prodname"/> | TOC | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | TOC</variable>
+
+    <!-- The footer that appears on the odd-numbered index pages. -->
+    <variable id="Index odd footer"/>
+
+    <!-- The footer that appears on the even-numbered index pages. -->
+    <variable id="Index even footer"/>
+
+    <!-- The header that appears on the odd-numbered index pages. -->
+    <variable id="Index odd header"><param ref-name="prodname"/> | Indiċi | <param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the even-numbered index pages. -->
+    <variable id="Index even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | Indiċi</variable>
+
+    <!-- glj  Phrase appended to chapter title in header to indicate it's a continuation of the chapter -->
+    <variable id="Chapter Continued string">(Ikompli)</variable>
+
+    <!-- The formatting used to display ordered lists (e.g., "1., 2." or           "1), 2)" -->
+    <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number consumer"><param ref-name="number"/>&#xA0; </variable>
+
+    <!-- The unordered list bullet   -->
+    <variable id="Unordered List bullet 1">&#x25CF;</variable>
+	<variable id="Unordered List bullet 2">&#x25CB;</variable>
+	<variable id="Unordered List bullet 3">&#xFFED;</variable>
+	<variable id="Unordered List bullet 4">&#x002D;</variable>
+    <variable id="Unordered List bullet 5">&#x2022;</variable>
+	<variable id="Ordered List Number 1"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 2"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 3"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 4"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Format 1">1</variable>
+    <variable id="Ordered List Format 2">a</variable>
+    <variable id="Ordered List Format 3">i</variable>
+    <variable id="Ordered List Format 4">i</variable>
+
+    <variable id="Step Number"><param ref-name="number"/>. </variable>
+    <variable id="Step Format">1</variable>
+    <variable id="Substep Number"><param ref-name="number"/>) </variable>
+    <variable id="Substep Format">a</variable>
+
+    <!-- The heading string to put at the top of the Table of Contents -->
+    <variable id="Table of Contents">Werrej</variable>
+
+    <!-- The heading string to put at the top of the Index -->
+    <variable id="Index">Indiċi</variable>
+
+    <variable id="Index Continued String">ikompli</variable>
+
+    <!--string before see element-->
+    <variable id="Index See String">, Ara </variable>
+
+    <!--string before see also element-->
+    <variable id="Index See Also String">Ara wkoll </variable>
+
+    <!-- The string used to label a chapter within the table of contents. -->
+    <!--<variable id="Table of Contents Chapter">Kapitlu <param ref-name="number"/>: </variable>-->
+    <variable id="Table of Contents Chapter"> <param ref-name="number"/> </variable>
+
+    <!-- The string used to label an appendix within the table of contents. -->
+    <variable id="Table of Contents Appendix">Appendiċi <param ref-name="number"/>: </variable>
+
+    <!-- The string used to label an part within the table of contents. -->
+    <variable id="Table of Contents Part">Parti <param ref-name="number"/>: </variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Preface">Daħla: </variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Notices"></variable>
+
+    <!-- The string used to label an preface in body text. -->
+    <variable id="Preface title">Daħla </variable>
+
+    <!-- The string used to label an notices in body text. -->
+    <variable id="Notices title">Avviż</variable>
+
+    <!-- The heading to put at the top of a chapter when creating a          chapter-level "mini-TOC" -->
+    <variable id="Mini Toc">Suġġetti: </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <variable id="Note">NOTA</variable>
+    <variable id="note">NOTA</variable>
+    <variable id="note-dell">NOTA</variable>
+
+    <variable id="notice-dell">NOTA</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'tip'. -->
+    <variable id="Tip">Suġġeriment</variable>
+    <variable id="tip-dell">Suġġeriment</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element          with 'type' attribute set to 'tip'. -->
+    <variable id="Important">Importanti</variable>
+    <variable id="important-dell">Importanti</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'fastpath'. -->
+    <variable id="Fastpath">Fastpath</variable>
+    <variable id="fastpath-dell">Fastpath</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'remember'. -->
+    <variable id="Remember">Ftakar</variable>
+    <variable id="remember-dell">Ftakar</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'attention'. -->
+    <variable id="Attention">Attenzjoni</variable>
+    <variable id="attention-dell">Attenzjoni</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'caution'. -->
+    <variable id="Caution">TWISSIJA</variable>
+    <variable id="caution-dell">TWISSIJA</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element           with 'type' attribute set to 'danger'. -->
+    <variable id="Danger">Periklu</variable>
+    <variable id="danger-dell">Periklu</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element       with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <variable id="Warning">TWISSIJA</variable>
+    <variable id="warning-dell">TWISSIJA</variable>
+    <variable id="Warning_Title">Dwar il-Perikli</variable>
+    <variable id="Warning_Blurb">TWISSIJA tindika l-potenzjal għal ħsara fil-proprjetà, korriment personali, jew mewt.</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element       with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+    <variable id="High Voltage">Periklu Elettriku</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element          with 'type' attribute set to 'restriction'. -->
+    <variable id="Restriction">Restrizzjoni</variable>
+
+    <!-- Text to use for figure titles. Renders as part of <fig>/<title>           elements. -->
+    <variable id="Figure.title">Figura <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for table titles. Renders as part of <table>/<title>           elements. -->
+    <variable id="Table.title">Tabella <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for related links label.          Renders as part of <related-links> element. -->
+    <variable id="Related Links">Links Relatati</variable>
+
+    <!-- Default cross-reference text prefix. Used to generate reference           text in case it's not specified in source. -->
+    <variable id="Cross-Reference">Cross-Reference ma’:</variable>
+
+    <!-- Default content-reference text prefix. Used to generate reference           text in case target cannot be resolved. -->
+    <variable id="Content-Reference">Kontenut-Referenza ma’:</variable>
+
+    <!-- Default title text for referenced section title. Used to generate           reference text in case reference has no explicit content and          referenced section has no title. -->
+    <variable id="Untitled section">Taqsima Bla Isem.</variable>
+
+    <!-- Default title text for referenced list item. Used to generate          reference text in case reference has no explicit content and           reference target is a list item. -->
+    <variable id="List item">Elenka l-oġġett.</variable>
+
+    <!-- Default title text for referenced footnote. Used to generate           reference text in case reference has no explicit content and           reference target is a footnote. -->
+    <variable id="Foot note">Footnote.</variable>
+
+    <!-- Text to use for a generated label of navigation title. Renders          as part of <navtitle> element. -->
+    <variable id="Navigation title">Isem tan-navigazzjoni</variable>
+
+    <!-- Text to use for a generated label of search title. Renders           as part of <searchtitle> element. -->
+    <variable id="Search title">Fittex l-isem</variable>
+
+    <!-- Text to use for chapter titles.-->
+    <variable id="Chapter with number">Kapitlu  <param ref-name="number"/></variable>
+
+    <!-- Text to use for appendix titles.-->
+    <variable id="Appendix with number">Appendiċi <param ref-name="number"/></variable>
+
+    <!-- Text to use for part titles.-->
+    <variable id="Part with number">Parti <param ref-name="number"/></variable>
+
+    <!-- Text to use for a label generated from <required-cleanup> element. -->
+    <variable id="Required-Cleanup">[Tindif-Meħtieġ]</variable>
+
+    <!-- Template for generated page number of a reference           in printed manual. -->
+    <variable id="On the page"> fuq paġna <param ref-name="pagenum"/></variable>
+    <variable id="On the page EMC"> fuq paġna <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference          in printed manual, when referenced element has no title. -->
+    <variable id="Page"> paġna <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference          in chm/html, when referenced element has no title. -->
+    <variable id="This link">din il-link</variable>
+
+    <!-- Image path to use for a note of "note" type. -->
+    <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "attention" type. -->
+    <variable id="attention Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "caution" type. -->
+    <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution.png</variable>
+
+    <!-- Image path to use for a note of "danger" type. -->
+    <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image path to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "important" type. -->
+    <variable id="important Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "remember" type. -->
+    <variable id="remember Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "restriction" type. -->
+    <variable id="restriction Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "tip" type. -->
+    <variable id="tip Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "other" type. -->
+    <variable id="other Note Image Path">Customization/OpenTopic/common/artwork/hand.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Image Path">Customization/OpenTopic/common/artwork/highvoltage.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "warning" type. -->
+    <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image alt text to use for a note of "note" type. -->
+    <variable id="note Note Alt Text"><variable id="Note"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "attention" type. -->
+    <variable id="attention Note Alt Text"><variable id="Attention"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "caution" type. -->
+    <variable id="caution Note Alt Text"><variable id="Caution"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "danger" type. -->
+    <variable id="danger Note Alt Text"><variable id="Danger"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Alt Text"><variable id="Fastpath"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "important" type. -->
+    <variable id="important Note Alt Text"><variable id="Important"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "remember" type. -->
+    <variable id="remember Note Alt Text"><variable id="Remember"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "restriction" type. -->
+    <variable id="restriction Note Alt Text"><variable id="Restriction"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "tip" type. -->
+    <variable id="tip Note Alt Text"><variable id="Tip"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "other" type. -->
+    <variable id="other Note Alt Text">Hand icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Alt Text"><variable id="High Voltage"/> icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "warning" type. -->
+    <variable id="warning Note Alt Text"><variable id="Warning"/> icon</variable>
+
+
+    <!-- Image alt text to use for a logos. -->
+    <variable id="Logo Alt Text"><param ref-name="author"/> Logo</variable>
+
+
+    <!-- RN New strings for DELL -->
+    <variable id="Regulatory Model">Mudell Regolatorju: </variable>
+    <variable id="Regulatory Type">Tip Regolatorju: </variable>
+    <variable id="Computer Model">Mudell tal-Kompjuter:</variable>
+    <!--         String used for links in end of document in XHTML     -->
+
+    <!-- The title of the links to parent -->
+    <variable id="Parent topic">Suġġett Ewlieni</variable>
+
+    <!-- The title of the links to next topics -->
+    <variable id="Next topic">Suġġett Li Jmiss</variable>
+
+    <!-- The title of the links to previous topics -->
+    <variable id="Previous topic">Suġġett Ta’ Qabel</variable>
+
+    <!-- The title of the links to child topics -->
+    <variable id="Child topics">Suġġetti Sekondarji</variable>
+
+    <!-- The title of the links to Related concepts -->
+    <variable id="Related concepts">Kunċetti Relatati</variable>
+
+    <!-- The title of the links to Related tasks -->
+    <variable id="Related tasks">Xogħol Relatat</variable>
+
+    <!-- The title of the links to Related references -->
+    <variable id="Related references">Referenzi Relatati</variable>
+    <variable id="Related reference">Referenzi Relatati</variable>
+
+    <!-- The title of the links to Related information -->
+    <variable id="Related information">Informazzjoni Relatata</variable>
+
+    <!--        Strings used in the online-help publishing.     -->
+
+    <!-- The title of the "contents" button in online-help output -->
+    <variable id="Contents button title">Kontenut</variable>
+
+    <!-- The title of the "index" button in online-help output -->
+    <variable id="Index button title">Indiċi</variable>
+
+    <!-- The separator of multiple index entries in online-help output -->
+    <variable id="Index multiple entries separator">, </variable>
+
+    <!-- The title of the "search" button in online-help output -->
+    <variable id="Search button title">Fittex</variable>
+
+    <!-- The title of the "back" button in online-help output -->
+    <variable id="Back button title">Lura</variable>
+
+    <!-- The title of the "forward" button in online-help output -->
+    <variable id="Forward button title">’Il Quddiem</variable>
+
+    <!-- The title of the "main page" button in online-help output -->
+    <variable id="Main page button title">Home</variable>
+
+    <!-- The title of the "previous page" button in online-help output -->
+    <variable id="Previous page button title">Suġġett Ta’ Qabel</variable>
+
+    <!-- The title of the "next page" button in online-help output -->
+    <variable id="Next page button title">Suġġett Li Jmiss</variable>
+
+    <!-- The "online help" document title prefix in online-help output -->
+    <variable id="Online help prefix">Għajnuna Online</variable>
+
+    <!-- The search by index field title in online-help output -->
+    <variable id="Search index field title">Fittex għall-keyword:</variable>
+
+    <!-- The search by index button title in online-help output -->
+    <variable id="Search index button title">Ara</variable>
+
+    <!-- The search by text field title in online-help output -->
+    <variable id="Search text field title">Fittex għajnuna għal:</variable>
+
+    <!-- The search by text button title in online-help output -->
+    <variable id="Search text button title">Fittex</variable>
+
+    <!-- The heading for task prerequisites -->
+    <variable id="Prereq Heading">Prerekwiżiti</variable>
+    <variable id="task_prereq-dell">Prerekwiżiti</variable>
+
+    <!-- The heading for task contexts -->
+    <variable id="Context Heading">Dwar dan il-kompitu</variable>
+    <variable id="task_context-dell">Dwar dan il-kompitu</variable>
+
+    <!-- The heading for task steps -->
+    <variable id="Steps Heading">Passi</variable>
+    <variable id="task_procedure-dell">Passi</variable>
+
+    <!-- The heading for task examples -->
+    <variable id="Example Heading">Eżempju</variable>
+    <variable id="task_example-dell">Eżempju</variable>
+    <variable id="Example Open">Eżempju</variable>
+
+    <!-- The heading for task postrequisites -->
+    <variable id="Postreq Heading">Il-passi li Jmissu</variable>
+    <variable id="task_postreq-dell">Il-passi li Jmissu</variable>
+
+    <!-- User Interface strings -->
+
+    <variable id="Back">Is-soġġett ta' qabel</variable>
+    <variable id="Forward">Is-soġġett li jmiss</variable>
+    <variable id="Glossary Pane">Glossarju</variable>
+    <variable id="Go">Fittex</variable>
+    <variable id="Hide Navigation">Aħbi n-navigazzjoni</variable>
+    <variable id="Home">Dar</variable>
+    <str name="label.home" js="true" php="false">Dar</str>
+    <variable id="Index Pane">Indiċi</variable>
+    <variable id="No Search Performed">Ma saret l-ebda tfittxija.</variable>
+    <variable id="No Search Results">It-tfittxija tiegħek ma tat l-ebda riżultat.</variable>
+    <variable id="Print">Ipprintja</variable>
+    <variable id="Print All">Ipprintja s-suġġetti u s-subtopics</variable>
+    <variable id="Print Topic">Ipprintja s-suġġett</variable>
+    <variable id="printThisPage">Ipprintja s-suġġett</variable>
+    <variable id="Search">Daħħal it-termini tat-tfittxija</variable>
+    <str name="webhelp.search" js="true" php="false">Daħħal it-termini tat-tfittxija</str>
+    <variable id="Search Blue">Fittex</variable>
+    <variable id="Search Pane">Tfittxija</variable>
+    <variable id="Search Results">Riżultati tat-Tfittxija</variable>
+    <str name="Search results" js="true" php="false">Riżultati tat-Tfittxija</str>
+    <variable id="TOC Pane">Werrek</variable>
+    <variable id="BreadCrumb Search">Tfittxija</variable>
+    <variable id="BreadCrumb TOC">Werrej</variable>
+    <variable id="Toggle Navigation">Aqbeż għan-navigazzjoni</variable>
+    <variable id="Toggle Highlighting">Toggle highlighting</variable>
+    <variable id="Searched for">Fittixt għal</variable>
+    <variable id="PDF Link">PDF</variable>
+    <variable id="Email">Ibgħatilna Posta Elettronika</variable>
+    <variable id="Email Address">mailto:solutions@suite-sol.com</variable>
+
+    <variable id="Current Release Version">Verżjoni Kurrenti: </variable>
+    <variable id="Previous Release Version">Verżjoni Preċedenti: </variable>
+    <variable id="Release Type">Tip tar-Rilaxx: </variable>
+    <variable id="Major">Maġġuri (MA)</variable>
+    <variable id="Minor">Minuri (MI)</variable>
+    <variable id="Service">Servizz (SR)</variable>
+    <variable id="Patch">Patch (P)</variable>
+
+    <variable id="Technote Current Version">Aktuelna verzija: </variable>
+    <variable id="Technote Release Date">Datum izdavanja: </variable>
+    <variable id="Technote Previous Version">Prethodna verzija: </variable>
+    <variable id="Technote Document Number">Broj dokumenta: </variable>
+    <variable id="Technote Document Rev">Rev. </variable>
+    <variable id="part number">P/N </variable>
+    <variable id="batterywarning">TWISSIJA DWAR IL-BATTERIJA</variable>
+    <variable id="dsg Updated Date">Aġġornat</variable>
+    <variable id="dsg Software Version">Verżjoni</variable>
+    <variable id="dsg Part Number">Numru tal-Parti</variable>
+    <variable id="dsg topics">Suġġetti:</variable>
+
+    <variable id="note-non-brand Image Path">Customization/OpenTopic/common/artwork/note-non-brand.png</variable>
+    <variable id="caution-non-brand Image Path">Customization/OpenTopic/common/artwork/caution-non-brand.png</variable>
+    <variable id="warning-non-brand Image Path">Customization/OpenTopic/common/artwork/warning-non-brand.png</variable>
+
+    <variable id="note Image Path">Customization/OpenTopic/common/artwork/note.svg</variable>
+    <variable id="caution Image Path">Customization/OpenTopic/common/artwork/caution.svg</variable>
+    <variable id="danger Image Path">Customization/OpenTopic/common/artwork/danger.svg</variable>
+    <variable id="warning Image Path">Customization/OpenTopic/common/artwork/warning.svg</variable>
+
+    <variable id="Highly Restricted Confidential">Użu Intern - Kunfidenzjali</variable>
+    <variable id="Restricted Confidential">Ristrett - Kunfidenzjali</variable>
+    <variable id="Restricted Internal">Użu Intern - Kunfidenzjali</variable>
+
+    <variable id="Abstract">Riassunt</variable>
+
+    <variable id="continued">(ikompli)</variable>
+    <!--Added new variable for PDF A4-->
+	<variable id="continued">(ikompli)</variable>
+	<variable id="release">Rilaxx</variable>
+	<variable id="revision">Reviżjoni</variable>
+	<variable id="Version">Verżjoni</variable>
+	<variable id="on page"> f'paġna <param ref-name="pagenum"/></variable>
+	<variable id="Figure toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+	<variable id="Table toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+    <variable id="LOT-dell">Tabelli</variable>
+    <variable id="LOF-dell">Ċifri</variable>
+
+    <variable id="#menucascade-separator"> &gt; </variable>
+
+    <!-- Localization prefix and suffix characters -->
+    <variable id="start_cite"></variable>
+    <variable id="end_cite"></variable>
+
+    <variable id="start_var"></variable>
+    <variable id="end_var"></variable>
+
+    <variable id="start_q">&quot;</variable>
+    <variable id="end_q">&quot;</variable>
+
+    <variable id="start_lq"></variable>
+    <variable id="end_lq"></variable>
+
+    <variable id="start_userinput"></variable>
+    <variable id="end_userinput"></variable>
+
+    <variable id="start_option"></variable>
+    <variable id="end_option"></variable>
+
+    <variable id="start_term"></variable>
+    <variable id="end_term"></variable>
+
+    <variable id="start_q_responsive">&#x0201C;</variable> <!-- “ -->
+    <variable id="end_q_responsive">&#x0201D;</variable>  <!-- ” -->
+
+    <variable id="start_option_responsive"></variable>
+    <variable id="end_option_responsive"></variable>
+
+    <variable id="start_uicontrol_responsive"></variable>
+    <variable id="end_uicontrol_responsive"></variable>
+
+    <variable id="start_var_responsive"></variable>
+    <variable id="end_var_responsive"></variable>
+
+    <variable id="start_wintitle_responsive"></variable>
+    <variable id="end_wintitle_responsive"></variable>
+
+</strings>

@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<strings>
+    <!-- PDF and common strings -->
+
+    <!-- Product name to be placed inside headers etc. -->
+    <variable id="Product Name">פתיחת נושא</variable>
+
+    <!-- The footer that appears on odd-numbered pages. -->
+    <variable id="Body odd footer"/>
+
+    <!-- The footer that appears on even-numbered pages. -->
+    <variable id="Body even footer"/>
+
+    <!-- The footer that appears on the first page of a chapter. -->
+    <variable id="Body first footer"/>
+
+    <!-- The header that appears on the first page of a chapter. -->
+    <variable id="Body first header"/>
+
+    <!-- The header that appears on odd-numbered pages. -->
+    <variable id="Body odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on even-numbered pages. -->
+    <variable id="Body even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/></variable>
+
+    <!-- The footer that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd footer"/>
+
+    <!-- The footer that appears on Preface even-numbered pages. -->
+    <variable id="Preface even footer"/>
+
+    <!-- The footer that appears on the first page of a Preface -->
+    <variable id="Preface first footer"/>
+
+    <!-- The header that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd header">הקדמה&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on Preface even-numbered pages. -->
+    <variable id="Preface even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;הקדמה</variable>
+
+    <!-- The header that appears on Preface first page. -->
+    <variable id="Preface first header"/>
+
+    <!-- The footer that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd footer"/>
+
+    <!-- The footer that appears on the even-numbered table of contents pages. -->
+    <variable id="Toc even footer"/>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;תוכן&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;תוכן</variable>
+
+    <!-- The footer that appears on the odd-numbered index pages. -->
+    <variable id="Index odd footer"/>
+
+    <!-- The footer that appears on the even-numbered index pages. -->
+    <variable id="Index even footer"/>
+
+    <!-- The header that appears on the odd-numbered index pages. -->
+    <variable id="Index odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;אינדקס&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the even-numbered index pages. -->
+    <variable id="Index even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;אינדקס</variable>
+
+    <!-- glj  Phrase appended to chapter title in header to indicate it's a continuation of the chapter -->
+    <variable id="Chapter Continued string">(המשך)</variable>
+
+    <!-- The formatting used to display ordered lists (e.g., "1., 2." or "1), 2)" -->
+    <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number consumer"><param ref-name="number"/>&#xA0; </variable>
+
+    <!-- The unordered list bullet   -->
+    <variable id="Unordered List bullet 1">&#x25CF;</variable>
+	<variable id="Unordered List bullet 2">&#x25CB;</variable>
+	<variable id="Unordered List bullet 3">&#xFFED;</variable>
+	<variable id="Unordered List bullet 4">&#x002D;</variable>
+    <variable id="Unordered List bullet 5">&#x2022;</variable>
+    <variable id="Ordered List Number 1"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 2"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 3"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 4"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Format 1">1</variable>
+    <variable id="Ordered List Format 2">a</variable>
+    <variable id="Ordered List Format 3">i</variable>
+    <variable id="Ordered List Format 4">i</variable>
+
+    <variable id="Step Number"><param ref-name="number"/>. </variable>
+    <variable id="Step Format">1</variable>
+    <variable id="Substep Number"><param ref-name="number"/>) </variable>
+    <variable id="Substep Format">a</variable>
+
+    <!-- The heading string to put at the top of the Table of Contents -->
+    <variable id="Table of Contents">תוכן עניינים</variable>
+
+    <!-- The heading string to put at the top of the Index -->
+    <variable id="Index">אינדקס</variable>
+
+    <variable id="Index Continued String">המשך</variable>
+
+    <!--string before see element-->
+    <variable id="Index See String">, ראה </variable>
+
+    <!--string before see also element-->
+    <variable id="Index See Also String">ראה גם </variable>
+
+    <!-- The string used to label a chapter within the table of contents. -->
+    <!--<variable id="Table of Contents Chapter">פרק&#xA0;<param ref-name="number"/>:&#xA0;</variable>-->
+    <variable id="Table of Contents Chapter"> <param ref-name="number"/> </variable>
+
+    <!-- The string used to label an appendix within the table of contents. -->
+    <variable id="Table of Contents Appendix">נספח&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an part within the table of contents. -->
+    <variable id="Table of Contents Part">חלק&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Preface">מבוא:&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Notices"></variable>
+
+    <!-- The string used to label an preface in body text. -->
+    <variable id="Preface title">מבוא</variable>
+
+    <!-- The string used to label an notices in body text. -->
+    <variable id="Notices title">שים לב</variable>
+
+    <!-- The heading to put at the top of a chapter when creating a
+         chapter-level "mini-TOC" -->
+    <variable id="Mini Toc">נושאים: </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <variable id="Note">הערה</variable>
+    <variable id="note">הערה</variable>
+    <variable id="note-dell">הערה</variable>
+
+    <variable id="notice-dell">הערה</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Tip">עצה</variable>
+    <variable id="tip-dell">עצה</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Important">חשוב</variable>
+    <variable id="important-dell">חשוב</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'fastpath'. -->
+    <variable id="Fastpath">נתיב מהיר</variable>
+    <variable id="fastpath-dell">נתיב מהיר</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'remember'. -->
+    <variable id="Remember">זכור</variable>
+    <variable id="remember-dell">זכור</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'attention'. -->
+    <variable id="Attention">לתשומת לבך</variable>
+    <variable id="attention-dell">לתשומת לבך</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'caution'. -->
+    <variable id="Caution">התראה</variable>
+    <variable id="caution-dell">התראה</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'danger'. -->
+    <variable id="Danger">סכנה</variable>
+    <variable id="danger-dell">סכנה</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <variable id="Warning">אזהרה</variable>
+    <variable id="warning-dell">אזהרה</variable>
+    <variable id="Warning_Title">אודות אזהרות</variable>
+    <variable id="Warning_Blurb">"אזהרה" מציינת אפשרות של נזק לרכוש, פגיעה גופנית או מוות.</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+    <variable id="High Voltage">סכנת חשמל</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'restriction'. -->
+    <variable id="Restriction">הגבלה</variable>
+
+    <!-- Text to use for figure titles. Renders as part of <fig>/<title>
+          elements. -->
+    <variable id="Figure.title">איור <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for table titles. Renders as part of <table>/<title>
+         elements. -->
+    <variable id="Table.title">טבלה <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for related links label.
+         Renders as part of <related-links> element. -->
+    <variable id="Related Links">קישורים קשורים</variable>
+
+    <!-- Default cross-reference text prefix. Used to generate reference
+         text in case it's not specified in source. -->
+    <variable id="Cross-Reference">הפנייה צולבת אל:</variable>
+
+    <!-- Default content-reference text prefix. Used to generate reference
+         text in case target cannot be resolved. -->
+    <variable id="Content-Reference">הפניית תוכן אל:</variable>
+
+    <!-- Default title text for referenced section title. Used to generate
+         reference text in case reference has no explicit content and
+         referenced section has no title. -->
+    <variable id="Untitled section">סעיף ללא כותרת.</variable>
+
+    <!-- Default title text for referenced list item. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a list item. -->
+    <variable id="List item">פריט רשימה</variable>
+
+    <!-- Default title text for referenced footnote. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a footnote. -->
+    <variable id="Foot note">הערת שוליים.</variable>
+
+    <!-- Text to use for a generated label of navigation title. Renders
+         as part of <navtitle> element. -->
+    <variable id="Navigation title">כותרת ניווט</variable>
+
+    <!-- Text to use for a generated label of search title. Renders
+         as part of <searchtitle> element. -->
+    <variable id="Search title">כותרת חיפוש</variable>
+
+    <!-- Text to use for chapter titles.-->
+    <variable id="Chapter with number">פרק <param ref-name="number"/></variable>
+
+    <!-- Text to use for appendix titles.-->
+    <variable id="Appendix with number">נספח <param ref-name="number"/></variable>
+
+    <!-- Text to use for part titles.-->
+    <variable id="Part with number">חלק <param ref-name="number"/></variable>
+
+    <!-- Text to use for a label generated from <required-cleanup> element. -->
+    <variable id="Required-Cleanup">[נדרש ניקוי]</variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual. -->
+    <variable id="On the page"> בעמוד <param ref-name="pagenum"/></variable>
+    <variable id="On the page EMC"> בעמוד <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual, when referenced element has no title. -->
+    <variable id="Page"> עמוד <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in chm/html, when referenced element has no title. -->
+    <variable id="This link">קישור זה</variable>
+
+    <!-- Image path to use for a note of "note" type. -->
+    <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "attention" type. -->
+    <variable id="attention Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "caution" type. -->
+    <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution.png</variable>
+
+    <!-- Image path to use for a note of "danger" type. -->
+    <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image path to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "important" type. -->
+    <variable id="important Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "remember" type. -->
+    <variable id="remember Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "restriction" type. -->
+    <variable id="restriction Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "tip" type. -->
+    <variable id="tip Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "other" type. -->
+    <variable id="other Note Image Path">Customization/OpenTopic/common/artwork/hand.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Image Path">Customization/OpenTopic/common/artwork/highvoltage.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "warning" type. -->
+    <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image alt text to use for a note of "note" type. -->
+    <variable id="note Note Alt Text"><variable id="Note"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "attention" type. -->
+    <variable id="attention Note Alt Text"><variable id="Attention"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "caution" type. -->
+    <variable id="caution Note Alt Text"><variable id="Caution"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "danger" type. -->
+    <variable id="danger Note Alt Text"><variable id="Danger"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Alt Text"><variable id="Fastpath"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "important" type. -->
+    <variable id="important Note Alt Text"><variable id="Important"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "remember" type. -->
+    <variable id="remember Note Alt Text"><variable id="Remember"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "restriction" type. -->
+    <variable id="restriction Note Alt Text"><variable id="Restriction"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "tip" type. -->
+    <variable id="tip Note Alt Text"><variable id="Tip"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "other" type. -->
+    <variable id="other Note Alt Text">Hand icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Alt Text"><variable id="High Voltage"/> icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "warning" type. -->
+    <variable id="warning Note Alt Text"><variable id="Warning"/> icon</variable>
+
+    <!-- Image alt text to use for a logos. -->
+    <variable id="Logo Alt Text"><param ref-name="author"/> Logo</variable>
+
+
+    <!-- RN New strings for DELL -->
+    <variable id="Regulatory Model">דגם תקינה: </variable>
+    <variable id="Regulatory Type">סוג תקינה: </variable>
+    <variable id="Computer Model">דגם מחשב:</variable>
+    <!--
+        String used for links in end of document in XHTML
+    -->
+
+    <!-- The title of the links to parent -->
+    <variable id="Parent topic">נושא אב</variable>
+
+    <!-- The title of the links to next topics -->
+    <variable id="Next topic">נושא הבא</variable>
+
+    <!-- The title of the links to previous topics -->
+    <variable id="Previous topic">נושא קודם</variable>
+
+    <!-- The title of the links to child topics -->
+    <variable id="Child topics">נושאי צאצא</variable>
+
+    <!-- The title of the links to Related concepts -->
+    <variable id="Related concepts">תפיסות קשורות</variable>
+
+    <!-- The title of the links to Related tasks -->
+    <variable id="Related tasks">משימות קשורות</variable>
+
+    <!-- The title of the links to Related references -->
+    <variable id="Related references">הפניות קשורות</variable>
+    <variable id="Related reference">הפניות קשורות</variable>
+
+    <!-- The title of the links to Related information -->
+    <variable id="Related information">מידע קשור</variable>
+
+    <!--
+       Strings used in the online-help publishing.
+    -->
+
+    <!-- The title of the "contents" button in online-help output -->
+    <variable id="Contents button title">תוכן עניינים</variable>
+
+    <!-- The title of the "index" button in online-help output -->
+    <variable id="Index button title">אינדקס</variable>
+
+    <!-- The separator of multiple index entries in online-help output -->
+    <variable id="Index multiple entries separator">, </variable>
+
+    <!-- The title of the "search" button in online-help output -->
+    <variable id="Search button title">חיפוש</variable>
+
+    <!-- The title of the "back" button in online-help output -->
+    <variable id="Back button title">הקודם</variable>
+
+    <!-- The title of the "forward" button in online-help output -->
+    <variable id="Forward button title">הבא</variable>
+
+    <!-- The title of the "main page" button in online-help output -->
+    <variable id="Main page button title">דף ראשי</variable>
+
+    <!-- The title of the "previous page" button in online-help output -->
+    <variable id="Previous page button title">נושא קודם</variable>
+
+    <!-- The title of the "next page" button in online-help output -->
+    <variable id="Next page button title">נושא הבא</variable>
+
+    <!-- The "online help" document title prefix in online-help output -->
+    <variable id="Online help prefix">עזרה מקוונת</variable>
+
+    <!-- The search by index field title in online-help output -->
+    <variable id="Search index field title">חיפוש מילת המפתח:</variable>
+
+    <!-- The search by index button title in online-help output -->
+    <variable id="Search index button title">הצג</variable>
+
+    <!-- The search by text field title in online-help output -->
+    <variable id="Search text field title">חיפוש עזרה עבור:</variable>
+
+    <!-- The search by text button title in online-help output -->
+    <variable id="Search text button title">חיפוש</variable>
+
+    <!-- The heading for task prerequisites -->
+    <variable id="Prereq Heading">תנאים מוקדמים</variable>
+    <variable id="task_prereq-dell">תנאים מוקדמים</variable>
+
+    <!-- The heading for task contexts -->
+    <variable id="Context Heading">אודות משימה זו</variable>
+    <variable id="task_context-dell">אודות משימה זו</variable>
+
+    <!-- The heading for task steps -->
+    <variable id="Steps Heading">שלבים</variable>
+    <variable id="task_procedure-dell">שלבים</variable>
+
+    <!-- The heading for task examples -->
+    <variable id="Example Heading">דוגמה</variable>
+    <variable id="task_example-dell">דוגמה</variable>
+    <variable id="Example Open">דוגמה</variable>
+
+    <!-- The heading for task postrequisites -->
+    <variable id="Postreq Heading">השלבים הבאים</variable>
+    <variable id="task_postreq-dell">השלבים הבאים</variable>
+
+    <!-- User Interface strings -->
+
+    <variable id="Back">נושא קודם</variable>
+    <variable id="Forward">נושא הבא</variable>
+    <variable id="Glossary Pane">מילון מונחים</variable>
+    <variable id="Go">חיפוש</variable>
+    <variable id="Hide Navigation">הסתרת ניווט</variable>
+    <variable id="Home">דף הבית</variable>
+    <str name="label.home" js="true" php="false">דף הבית</str>
+    <variable id="Index Pane">אינדקס</variable>
+    <variable id="No Search Performed">לא בוצע חיפוש.</variable>
+    <variable id="No Search Results">החיפוש לא הניב תוצאות.</variable>
+    <variable id="Print">הדפס</variable>
+    <variable id="Print All">הדפס נושאים ונושאי-משנה</variable>
+    <variable id="Print Topic">הדפס נושא</variable>
+    <variable id="printThisPage">הדפס נושא</variable>
+    <variable id="Search">הזן מלים לחיפוש</variable>
+    <str name="webhelp.search" js="true" php="false">הזן מלים לחיפוש</str>
+    <variable id="Search Blue">חיפוש</variable>
+    <variable id="Search Pane">חיפוש</variable>
+    <variable id="Search Results">תוצאות החיפוש</variable>
+    <str name="Search results" js="true" php="false">תוצאות החיפוש</str>
+    <variable id="TOC Pane">תוכן </variable>
+    <variable id="BreadCrumb Search">חיפוש</variable>
+    <variable id="BreadCrumb TOC">תוכן העניינים</variable>
+    <variable id="Toggle Navigation">הפעל/כבה ניווט</variable>
+    <variable id="Toggle Highlighting">הפעל/כבה סימון</variable>
+    <variable id="Searched for">החיפוש מראה</variable>
+    <variable id="PDF Link">PDF</variable>
+    <variable id="Email">שלח אלינו דוא&quot;ל</variable>
+    <variable id="Email Address">mailto:solutions@suite-sol.com</variable>
+
+    <variable id="Current Release Version">גרסה נוכחית: </variable>
+    <variable id="Previous Release Version">גרסה קודמת: </variable>
+    <variable id="Release Type">סוג הפצה: </variable>
+    <variable id="Major">ראשי (MA)</variable>
+    <variable id="Minor">משני (MI)</variable>
+    <variable id="Service">שירות (SR)</variable>
+    <variable id="Patch">תיקון (P)</variable>
+
+    <variable id="Technote Current Version">גרסה נוכחית: </variable>
+    <variable id="Technote Release Date">תאריך שחרור: </variable>
+    <variable id="Technote Previous Version">גרסה קודמת: </variable>
+    <variable id="Technote Document Number">מסמך מספר: </variable>
+    <variable id="Technote Document Rev">מהדורה </variable>
+    <variable id="part number">מספר חלק </variable>
+    <variable id="batterywarning">אזהרת סוללה</variable>
+    <variable id="dsg Updated Date">מעודכן</variable>
+    <variable id="dsg Software Version">גירסה</variable>
+    <variable id="dsg Part Number">מספר חלק</variable>
+    <variable id="dsg topics">נושאים:</variable>
+
+    <variable id="note-non-brand Image Path">Customization/OpenTopic/common/artwork/note-non-brand.png</variable>
+    <variable id="caution-non-brand Image Path">Customization/OpenTopic/common/artwork/caution-non-brand.png</variable>
+    <variable id="warning-non-brand Image Path">Customization/OpenTopic/common/artwork/warning-non-brand.png</variable>
+
+    <variable id="note Image Path">Customization/OpenTopic/common/artwork/note.svg</variable>
+    <variable id="caution Image Path">Customization/OpenTopic/common/artwork/caution.svg</variable>
+    <variable id="danger Image Path">Customization/OpenTopic/common/artwork/danger.svg</variable>
+    <variable id="warning Image Path">Customization/OpenTopic/common/artwork/warning.svg</variable>
+
+    <variable id="Highly Restricted Confidential">מוגבל מאוד - חסוי</variable>
+    <variable id="Restricted Confidential">מוגבל - חסוי</variable>
+    <variable id="Restricted Internal">לשימוש פנימי - חסוי</variable>
+
+    <variable id="Abstract">תקציר</variable>
+
+<!--Added new variable for PDF A4-->
+    <variable id="continued">(המשך)</variable>
+	<variable id="release">שחרר</variable>
+	<variable id="revision">עדכון</variable>
+	<variable id="Version">גרסה</variable>
+	<variable id="on page"> בעמוד <param ref-name="pagenum"/></variable>
+	<variable id="Figure toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+	<variable id="Table toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+    <variable id="LOT-dell">טבלאות</variable>
+    <variable id="LOF-dell">איורים</variable>
+
+    <variable id="#menucascade-separator"> &gt; </variable>
+
+    <!-- Localization prefix and suffix characters -->
+    <variable id="start_cite"></variable>
+    <variable id="end_cite"></variable>
+
+    <variable id="start_var"></variable>
+    <variable id="end_var"></variable>
+
+    <variable id="start_q">&quot;</variable>
+    <variable id="end_q">&quot;</variable>
+
+    <variable id="start_lq"></variable>
+    <variable id="end_lq"></variable>
+
+    <variable id="start_userinput"></variable>
+    <variable id="end_userinput"></variable>
+
+    <variable id="start_option"></variable>
+    <variable id="end_option"></variable>
+
+    <variable id="start_term"></variable>
+    <variable id="end_term"></variable>
+
+    <variable id="start_q_responsive">&#x0201C;</variable> <!-- “ -->
+    <variable id="end_q_responsive">&#x0201D;</variable>  <!-- ” -->
+
+    <variable id="start_option_responsive"></variable>
+    <variable id="end_option_responsive"></variable>
+
+    <variable id="start_uicontrol_responsive"></variable>
+    <variable id="end_uicontrol_responsive"></variable>
+
+    <variable id="start_var_responsive"></variable>
+    <variable id="end_var_responsive"></variable>
+
+    <variable id="start_wintitle_responsive"></variable>
+    <variable id="end_wintitle_responsive"></variable>
+
+</strings>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is part of the com.citrix.qa project hosted on 
+     Sourceforge.net.-->
+<!-- (c) Copyright Citrix Systems, Inc. All Rights Reserved. -->
+<project name="dita2dellqa" default="dita2dellqa">
+	<property name="transtype" value="dellqa"/>
+	<property name="foo" location="${dita.temp.dir}/../../productdefinition.xml"/>
+	<property name="logger" value="org.apache.tools.ant.XmlLogger"/>
+	<property name="outer.control" value="quiet"/>
+	<!-- <property name="logger" value="org.apache.tools.ant.XmlLogger"/> -->
+	<target name="dita2dellqa" depends="dita2qa"> <!-- change this to depends on json target-->
+	</target>
+		
+	<target name="dita2qa" depends="buildqahtml"> <!-- change this to depends on json target-->
+		<!-- Copy images to the output directory -->
+		<mkdir dir="${output.dir}${file.separator}img"/>
+		<copy todir="${output.dir}${file.separator}img">
+			<fileset dir="${dita.dir}${file.separator}plugins${file.separator}com.dell.qa${file.separator}xsl${file.separator}img">
+			<include name="fail.PNG"/>
+			<include name="failsm.png"/>
+			<include name="pass.PNG"/>
+			<include name="passsm.png"/>
+			<include name="Dell.jpg"/>
+			<include name="Dell1.png"/>
+			<include name="DellTech.png"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	
+	<target name="buildqahtml" depends=" build-init,  customPreprocess,  merge, changeUnicode,  textoutput, dita.readbility,  dita.topics.qa"/>
+	
+	<target name="customPreprocess" depends=" preprocess,preprocessLibraryInfo" />
+	<!-- xhtml output -->
+
+	<target name="merge">
+	  <xslt processor="trax" in="${dita.temp.dir}${file.separator}${dita.map.filename.root}.ditamap"
+      out="${dita.temp.dir}${file.separator}${dita.map.filename.root}_MERGED.xml"
+      classpathref="dost.class.path"
+      style="${dita.dir}${file.separator}plugins/com.dell.qa/xsl/merge.xsl">
+      <!--<xmlcatalog refid="dita.catalog" />-->
+    </xslt>
+	</target>
+	
+	<target name="changeUnicode">
+	<java classname="fileConvert" classpath="${dita.dir}${file.separator}plugins${file.separator}com.dell.qa${file.separator}lib${file.separator}">
+	<arg line="${dita.temp.dir}\..\..\..\productdefinition.xml"/> 
+	<arg line="${dita.temp.dir}${file.separator}conditions.xml"/>
+	</java>
+
+	</target>
+<!--Preprocessing target for Finding Reference,Concept and Task Libraries -->
+
+	<target name="preprocessLibraryInfo">
+		<path id="project.class.path">
+		<fileset dir="${dita.dir}${file.separator}plugins${file.separator}com.dell.qa${file.separator}lib">
+			<include name="*.jar"/>
+		</fileset>
+		</path>
+			<echo>
+				Executing Library Processor.
+				${args.input}
+			</echo>
+			<java classname="com.dell.validator.main.Validator_XMLParser">
+				<classpath refid="project.class.path"/>
+				<arg line="${args.input}" />				
+				<arg line="${dita.temp.dir}${file.separator}libraryinfo.list"/>
+			</java>
+    </target>
+	
+	<!--Preprocessing target for Finding Reference,Concept and Task Libraries -->
+	
+	<target name="textoutput">
+	  	
+		<condition property="args.text.xsl" value="${dita.dir}${file.separator}plugins/com.dell.qa/xsl/text.xsl">
+			<not>
+				<isset property="args.text.xsl"/>
+			</not>
+		</condition>
+		
+		<condition property="out.ext" value=".html">
+			<not>
+				<isset property="out.ext"/>
+			</not>
+		</condition>
+		
+		<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" in="${dita.temp.dir}${file.separator}${dita.map.filename.root}_MERGED.xml" out="${dita.temp.dir}${file.separator}index.txt" extension="${out.ext}" style="${args.text.xsl}"/>
+	</target>
+	
+	<target name="dita.topics.qa" description="Target 1: Build QA output from dita topics">
+		
+		<condition property="out.ext" value=".html">
+			<not>
+				<isset property="out.ext"/>
+			</not>
+		</condition>
+		<condition property="args.xsl" value="${dita.dir}${file.separator}plugins/com.dell.qa/xsl/qascript.xsl">
+			<not>
+				<isset property="args.xsl"/>
+			</not>
+		</condition>
+	
+		<makeurl file="${dita.temp.dir}${file.separator}conditions.xml" property="m2.repository.url"/>
+		
+		<makeurl file="${args.input}" property="metfiles"/>
+		
+		<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" in="${dita.temp.dir}${file.separator}${dita.map.filename.root}_MERGED.xml" out="${output.dir}${file.separator}index.html" extension="${out.ext}" style="${args.xsl}">
+			<param name="DITAEXT" expression="${dita.ext}" if="dita.ext"/>
+			<param name="FILTERFILE" expression="${dita.input.valfile}" if="dita.input.valfile"/>
+			<param name="OUTEXT" expression="${out.ext}" if="out.ext"/>
+			<param name="input" expression="${args.input}" if="args.input"/>
+			<param name="OUTPUTDIR" expression="${output.dir}" if="output.dir"/>
+			<param name="BASEDIR" expression="${basedir}"/>
+			<param name="fileroot" expression="${dita.map.filename.root}"/>
+			<param name="conditionFile" expression="${m2.repository.url}"/>
+			<param name="metfiles" expression="${metfiles}"/>
+			<param name="tempDir" expression="${dita.temp.dir}"/>
+			<param name="pubname" expression="${user.input.dir}${file.separator}ishjobticket.xml"/>
+		</xslt>
+				
+		<!--<antcall target="copy-css"/>-->
+	<delete>
+		    <fileset dir="${output.dir}" includes="*.jpg"/>
+		    <fileset dir="${output.dir}" includes="*.png"/>
+		    <fileset dir="${output.dir}" includes="*.gif"/>
+		    <fileset dir="${output.dir}" includes="*.svg"/>
+		    <fileset dir="${output.dir}" includes="*.eps"/>
+		    <fileset dir="${output.dir}" includes="*.mov"/>
+		    <fileset dir="${output.dir}" includes="*.mp4"/>
+		    <fileset dir="${output.dir}" includes="*.wmv"/>
+		    <fileset dir="${output.dir}" includes="*.avi"/>
+		    <fileset dir="${output.dir}" includes="*.flv"/>
+		    <fileset dir="${output.dir}" includes="*.swf"/>
+		    <fileset dir="${output.dir}" includes="dita.list"/>
+		    <fileset dir="${output.dir}" includes="dita.xml.properties"/>
+			<fileset dir="${output.dir}" includes="log.xsl"/>
+				
+  </delete>
+	</target>	
+  
+	<target name="dita.readbility">
+	<java jar="${dita.dir}${file.separator}plugins${file.separator}com.dell.qa${file.separator}lib${file.separator}flesh.jar" fork="true">
+	<arg line="${dita.temp.dir}${file.separator}index.txt"/> 
+	</java>
+	</target>
+	
+	<target name="reportcopy">
+		<condition property="args.reader.xsl" value="${dita.dir}${file.separator}plugins/com.dell.qa/xsl/reader.xsl">
+			<not>
+				<isset property="args.reader.xsl"/>
+			</not>
+		</condition>
+	     <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" in="${user.input.dir}${file.separator}ishjobticket.xml" out="${output.dir}${file.separator}reader.txt" extension="${out.ext}" style="${args.reader.xsl}">
+			<param name="tempDir" expression="${dita.temp.dir}"/>
+			<param name="OUTPUTDIR" expression="${output.dir}"/>
+			<param name="chapcount" expression="${dita.temp.dir}${file.separator}${dita.map.filename.root}.ditamap"/>
+			<param name="inputdir" expression="${user.input.dir}"/>
+		</xslt>
+	</target>
+	
+</project>

@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<strings>
+    <!-- PDF and common strings -->
+
+    <!-- Product name to be placed inside headers etc. -->
+    <variable id="Product Name">OpenTopic</variable>
+
+    <!-- The footer that appears on odd-numbered pages. -->
+    <variable id="Body odd footer"/>
+
+    <!-- The footer that appears on even-numbered pages. -->
+    <variable id="Body even footer"/>
+
+    <!-- The footer that appears on the first page of a chapter. -->
+    <variable id="Body first footer"/>
+
+    <!-- The header that appears on the first page of a chapter. -->
+    <variable id="Body first header"/>
+
+    <!-- The header that appears on odd-numbered pages. -->
+    <variable id="Body odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on even-numbered pages. -->
+    <variable id="Body even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/></variable>
+
+    <!-- The footer that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd footer"/>
+
+    <!-- The footer that appears on Preface even-numbered pages. -->
+    <variable id="Preface even footer"/>
+
+    <!-- The footer that appears on the first page of a Preface -->
+    <variable id="Preface first footer"/>
+
+    <!-- The header that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd header">소개&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on Preface even-numbered pages. -->
+    <variable id="Preface even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;소개</variable>
+
+    <!-- The header that appears on Preface first page. -->
+    <variable id="Preface first header"/>
+
+    <!-- The footer that appears on the odd-numbered table of contents
+         pages. -->
+    <variable id="Toc odd footer"/>
+
+    <!-- The footer that appears on the even-numbered table of contents
+         pages. -->
+    <variable id="Toc even footer"/>
+
+    <!-- The header that appears on the odd-numbered table of contents
+         pages. -->
+    <variable id="Toc odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;TOC&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the odd-numbered table of contents
+         pages. -->
+    <variable id="Toc even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;TOC</variable>
+
+    <!-- The footer that appears on the odd-numbered index pages. -->
+    <variable id="Index odd footer"/>
+
+    <!-- The footer that appears on the even-numbered index pages. -->
+    <variable id="Index even footer"/>
+
+    <!-- The header that appears on the odd-numbered index pages. -->
+    <variable id="Index odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;색인&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the even-numbered index pages. -->
+    <variable id="Index even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;색인</variable>
+
+    <!-- glj  Phrase appended to chapter title in header to indicate it's a continuation of the chapter -->
+    <variable id="Chapter Continued string">(계속)</variable>
+
+    <!-- The formatting used to display ordered lists (e.g., "1., 2." or
+     "1), 2)" -->
+    <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number consumer"><param ref-name="number"/>&#xA0; </variable>
+
+    <!-- The unordered list bullet   -->
+    <variable id="Unordered List bullet 1">&#x25CF;</variable>
+	<variable id="Unordered List bullet 2">&#x25CB;</variable>
+	<variable id="Unordered List bullet 3">&#xFFED;</variable>
+	<variable id="Unordered List bullet 4">&#x002D;</variable>
+    <variable id="Unordered List bullet 5">&#x2022;</variable>
+    <variable id="Ordered List Number 1"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 2"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 3"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 4"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Format 1">1</variable>
+    <variable id="Ordered List Format 2">a</variable>
+    <variable id="Ordered List Format 3">i</variable>
+    <variable id="Ordered List Format 4">i</variable>
+
+    <variable id="Step Number"><param ref-name="number"/>. </variable>
+    <variable id="Step Format">1</variable>
+    <variable id="Substep Number"><param ref-name="number"/>) </variable>
+    <variable id="Substep Format">a</variable>
+
+    <!-- The heading string to put at the top of the Table of Contents -->
+    <variable id="Table of Contents">목차</variable>
+
+    <!-- The heading string to put at the top of the Index -->
+    <variable id="Index">색인</variable>
+
+    <variable id="Index Continued String">계속</variable>
+
+    <!--string before see element-->
+    <variable id="Index See String">, 참조</variable>
+
+    <!--string before see also element-->
+    <variable id="Index See Also String">또한 참조</variable>
+
+    <!-- The string used to label a chapter within the table of contents. -->
+    <!--<variable id="Table of Contents Chapter">장&#xA0;<param ref-name="number"/>:&#xA0;</variable>-->
+    <variable id="Table of Contents Chapter"> <param ref-name="number"/> </variable>
+
+    <!-- The string used to label an appendix within the table of contents. -->
+    <variable id="Table of Contents Appendix">부록&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an part within the table of contents. -->
+    <variable id="Table of Contents Part">부분&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Preface">서문&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Notices"></variable>
+
+    <!-- The string used to label an preface in body text. -->
+    <variable id="Preface title">서문</variable>
+
+    <!-- The string used to label an notices in body text. -->
+    <variable id="Notices title">주의사항</variable>
+
+    <!-- The heading to put at the top of a chapter when creating a
+         chapter-level "mini-TOC" -->
+    <variable id="Mini Toc">주제: </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <variable id="Note">노트: </variable>
+    <variable id="note">노트: </variable>
+    <variable id="note-dell">노트:</variable>
+
+    <variable id="notice-dell">알림</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Tip">팁: </variable>
+    <variable id="tip-dell">팁: </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Important">중요</variable>
+    <variable id="important-dell">중요</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'fastpath'. -->
+    <variable id="Fastpath">빠른 경로</variable>
+    <variable id="fastpath-dell">빠른 경로</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'remember'. -->
+    <variable id="Remember">저장</variable>
+    <variable id="remember-dell">저장</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'attention'. -->
+    <variable id="Attention">주의</variable>
+    <variable id="attention-dell">주의</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'caution'. -->
+    <variable id="Caution">주의: </variable>
+    <variable id="caution-dell">주의:</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'danger'. -->
+    <variable id="Danger">위험</variable>
+    <variable id="danger-dell">위험</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <variable id="Warning">경고:</variable>
+    <variable id="warning-dell">경고: </variable>
+    <variable id="Warning_Title">경고 정보</variable>
+    <variable id="Warning_Blurb"> 경고는 재산 피해, 부상 또는 사망이 발생될 수 있는 위험 상황을 나타냅니다.</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+    <variable id="High Voltage">전기적 위험</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'restriction'. -->
+    <variable id="Restriction">제한</variable>
+
+    <!-- Text to use for figure titles. Renders as part of <fig>/<title>
+          elements. -->
+    <variable id="Figure.title">그림 <param ref-name="number"/> . <param ref-name="title"/></variable>
+
+    <!-- Text to use for table titles. Renders as part of <table>/<title>
+         elements. -->
+    <variable id="Table.title">표 <param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for related links label.
+         Renders as part of <related-links> element. -->
+    <variable id="Related Links">관련 링크</variable>
+
+    <!-- Default cross-reference text prefix. Used to generate reference
+         text in case it's not specified in source. -->
+    <variable id="Cross-Reference">전후 참조:</variable>
+
+    <!-- Default content-reference text prefix. Used to generate reference
+         text in case target cannot be resolved. -->
+    <variable id="Content-Reference">내용 참조:</variable>
+
+    <!-- Default title text for referenced section title. Used to generate
+         reference text in case reference has no explicit content and
+         referenced section has no title. -->
+    <variable id="Untitled section">제목없음 섹션.</variable>
+
+    <!-- Default title text for referenced list item. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a list item. -->
+    <variable id="List item">리스트 항목.</variable>
+
+    <!-- Default title text for referenced footnote. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a footnote. -->
+    <variable id="Foot note">각주.</variable>
+
+    <!-- Text to use for a generated label of navigation title. Renders
+         as part of <navtitle> element. -->
+    <variable id="Navigation title">탐색 제목</variable>
+
+    <!-- Text to use for a generated label of search title. Renders
+         as part of <searchtitle> element. -->
+    <variable id="Search title">검색 제목</variable>
+
+    <!-- Text to use for chapter titles.-->
+    <variable id="Chapter with number">장 <param ref-name="number"/></variable>
+
+    <!-- Text to use for appendix titles.-->
+    <variable id="Appendix with number">부록<param ref-name="number"/></variable>
+
+    <!-- Text to use for part titles.-->
+    <variable id="Part with number">부분 <param ref-name="number"/></variable>
+
+    <!-- Text to use for a label generated from <required-cleanup> element. -->
+    <variable id="Required-Cleanup">[필수 정리]</variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual. -->
+    <variable id="On the page"> 페이지의 <param ref-name="pagenum"/></variable>
+    <variable id="On the page EMC"> 페이지의 <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual, when referenced element has no title. -->
+    <variable id="Page"> 페이지 <param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in chm/html, when referenced element has no title. -->
+    <variable id="This link">이 링크</variable>
+
+    <!-- Image path to use for a note of "note" type. -->
+    <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "attention" type. -->
+    <variable id="attention Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "caution" type. -->
+    <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution.png</variable>
+
+    <!-- Image path to use for a note of "danger" type. -->
+    <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image path to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "important" type. -->
+    <variable id="important Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "remember" type. -->
+    <variable id="remember Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "restriction" type. -->
+    <variable id="restriction Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "tip" type. -->
+    <variable id="tip Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "other" type. -->
+    <variable id="other Note Image Path">Customization/OpenTopic/common/artwork/hand.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Image Path">Customization/OpenTopic/common/artwork/highvoltage.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "warning" type. -->
+    <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image alt text to use for a note of "note" type. -->
+    <variable id="note Note Alt Text"><variable id="Note"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "attention" type. -->
+    <variable id="attention Note Alt Text"><variable id="Attention"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "caution" type. -->
+    <variable id="caution Note Alt Text"><variable id="Caution"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "danger" type. -->
+    <variable id="danger Note Alt Text"><variable id="Danger"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Alt Text"><variable id="Fastpath"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "important" type. -->
+    <variable id="important Note Alt Text"><variable id="Important"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "remember" type. -->
+    <variable id="remember Note Alt Text"><variable id="Remember"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "restriction" type. -->
+    <variable id="restriction Note Alt Text"><variable id="Restriction"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "tip" type. -->
+    <variable id="tip Note Alt Text"><variable id="Tip"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "other" type. -->
+    <variable id="other Note Alt Text">Hand icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Alt Text"><variable id="High Voltage"/> icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "warning" type. -->
+    <variable id="warning Note Alt Text"><variable id="Warning"/> icon</variable>
+
+
+    <!-- Image alt text to use for a logos. -->
+    <variable id="Logo Alt Text"><param ref-name="author"/> Logo</variable>
+
+
+    <!-- RN New strings for DELL -->
+    <variable id="Regulatory Model">규정 모델: </variable>
+    <variable id="Regulatory Type">규정 유형: </variable>
+    <variable id="Computer Model">컴퓨터 모델:</variable>
+    <!--
+        String used for links in end of document in XHTML
+    -->
+
+    <!-- The title of the links to parent -->
+    <variable id="Parent topic">상위 주제</variable>
+
+    <!-- The title of the links to next topics -->
+    <variable id="Next topic">다음 주제</variable>
+
+    <!-- The title of the links to previous topics -->
+    <variable id="Previous topic">이전 주제</variable>
+
+    <!-- The title of the links to child topics -->
+    <variable id="Child topics">하위 주제</variable>
+
+    <!-- The title of the links to Related concepts -->
+    <variable id="Related concepts">관련 개념</variable>
+
+    <!-- The title of the links to Related tasks -->
+    <variable id="Related tasks">관련 작업</variable>
+
+    <!-- The title of the links to Related references -->
+    <variable id="Related references">관련 참조</variable>
+    <variable id="Related reference">관련 참조</variable>
+
+    <!-- The title of the links to Related information -->
+    <variable id="Related information">관련 정보</variable>
+
+    <!--
+       Strings used in the online-help publishing.
+    -->
+
+    <!-- The title of the "contents" button in online-help output -->
+    <variable id="Contents button title">목차</variable>
+
+    <!-- The title of the "index" button in online-help output -->
+    <variable id="Index button title">색인</variable>
+
+    <!-- The separator of multiple index entries in online-help output -->
+    <variable id="Index multiple entries separator">, </variable>
+
+    <!-- The title of the "search" button in online-help output -->
+    <variable id="Search button title">검색</variable>
+
+    <!-- The title of the "back" button in online-help output -->
+    <variable id="Back button title">뒤로</variable>
+
+    <!-- The title of the "forward" button in online-help output -->
+    <variable id="Forward button title">앞으로</variable>
+
+    <!-- The title of the "main page" button in online-help output -->
+    <variable id="Main page button title">홈</variable>
+
+    <!-- The title of the "previous page" button in online-help output -->
+    <variable id="Previous page button title">이전 주제</variable>
+
+    <!-- The title of the "next page" button in online-help output -->
+    <variable id="Next page button title">다음 주제</variable>
+
+    <!-- The "online help" document title prefix in online-help output -->
+    <variable id="Online help prefix">온라인 도움말</variable>
+
+    <!-- The search by index field title in online-help output -->
+    <variable id="Search index field title">키워드로 검색:</variable>
+
+    <!-- The search by index button title in online-help output -->
+    <variable id="Search index button title"> 보기</variable>
+
+    <!-- The search by text field title in online-help output -->
+    <variable id="Search text field title">검색 도움말:</variable>
+
+    <!-- The search by text button title in online-help output -->
+    <variable id="Search text button title">검색</variable>
+
+    <!-- The heading for task prerequisites -->
+    <variable id="Prereq Heading">전제조건</variable>
+    <variable id="task_prereq-dell">전제조건</variable>
+
+    <!-- The heading for task contexts -->
+    <variable id="Context Heading">이 작업 정보</variable>
+    <variable id="task_context-dell">이 작업 정보</variable>
+
+    <!-- The heading for task steps -->
+    <variable id="Steps Heading">단계</variable>
+    <variable id="task_procedure-dell">단계</variable>
+
+    <!-- The heading for task examples -->
+    <variable id="Example Heading">예</variable>
+    <variable id="task_example-dell">예</variable>
+    <variable id="Example Open">예</variable>
+
+    <!-- The heading for task postrequisites -->
+    <variable id="Postreq Heading">다음 단계</variable>
+    <variable id="task_postreq-dell">다음 단계</variable>
+
+    <!-- User Interface strings -->
+
+    <variable id="Back">이전 주제</variable>
+    <variable id="Forward">다음 주제</variable>
+    <variable id="Glossary Pane">용어집</variable>
+    <variable id="Go">검색</variable>
+    <variable id="Hide Navigation">네비게이션 감추기</variable>
+    <variable id="Home">홈</variable>
+    <str name="label.home" js="true" php="false">홈</str>
+    <variable id="Index Pane">색인</variable>
+    <variable id="No Search Performed">검색이 수행되지 않았습니다.</variable>
+    <variable id="No Search Results">검색 결과가 없습니다.</variable>
+    <variable id="Print">인쇄</variable>
+    <variable id="Print All">주제 및 하위 주제 인쇄</variable>
+    <variable id="Print Topic">주제 인쇄</variable>
+    <variable id="printThisPage">주제 인쇄</variable>
+    <variable id="Search">검색 용어 입력</variable>
+    <str name="webhelp.search" js="true" php="false">검색 용어 입력</str>
+    <variable id="Search Blue">검색</variable>
+    <variable id="Search Pane">검색</variable>
+    <variable id="Search Results">검색 결과</variable>
+    <str name="Search results" js="true" php="false">검색 결과</str>
+    <variable id="TOC Pane">목차</variable>
+    <variable id="BreadCrumb Search">검색</variable>
+    <variable id="BreadCrumb TOC">목차</variable>
+    <variable id="Toggle Navigation">네비게이션 전환</variable>
+    <variable id="Toggle Highlighting">강조 표시 전환</variable>
+    <variable id="Searched for">검색</variable>
+    <variable id="PDF Link">PDF</variable>
+    <variable id="Email">이메일 보내기</variable>
+    <variable id="Email Address">mailto:solutions@suite-sol.com</variable>
+
+    <variable id="Restricted">Dell - 제한 - 기밀</variable>
+    <variable id="Copyright">Dell</variable>
+    <variable id="For Dell Employees">Dell 직원 및 Dell 서비스 제공업체 전용입니다.</variable>
+    <variable id="Legal">법률</variable>
+    <variable id="Contact">연락처</variable>
+
+    <!--IA      Dell EMC consolidation.     Jun-2019    Add EMC Strings - STARTS HERE      IB-->
+    <!-- Comtech Services 10/02/2013 strings for webhelp, webhelp-single, webhelp-mobile -->
+    <str name="label.home" js="true" php="false">홈</str>
+    <str name="expandSections" js="true" php="false">선택 항목 확장</str>
+    <str name="collapseSections" js="true" php="false">선택 항목 축소</str>
+    <str name="webhelp.search" js="true" php="false">검색</str>
+    <str name="Search results" js="true" php="false">검색 결과</str>
+
+    <str name="BacktoTop">위로</str>
+    <str name="TOC">목차</str>
+    <str name="RSA">RSA 기밀 문서</str>
+    <str name="DraftRSA">DRAFT RSA 기밀 문서</str>
+    <str name="Draft">DRAFT 기밀 문서</str>
+    <str name="Content">컨텐츠</str>
+    <str name="oldFrames">프레임 포함</str>
+    <str name="Search">검색</str>
+    <str name="Index">색인</str>
+    <str name="Keywords">키워드</str>
+    <str name="Loading, please wait ...">로드하는 중입니다. 잠시 기다려 주십시오.</str>
+    <str name="Search no results" js="true">0개의 결과 검색됨 -</str>
+    <str name="Results for:" js="true">결과:</str>
+    <str name="There is no page containing all the search terms.">모든 검색어를 포함하는 페이지는
+        없습니다.</str>
+    <str name="Partial results:">부분 결과:</str>
+    <str name="Output generated by">WebHelp 생성:</str>
+    <str name="You must enter at least one character.">한 글자 이상을 입력해야 합니다.</str>
+    <str name="Only first 10 words will be processed.">처음 10 단어만 처리됩니다.</str>
+    <str name="Your browser is not supported. Use of Mozilla Firefox is recommended.">사용자의 브라우저는
+        지원되지 않습니다. Mozilla Firefox를 사용하는 것이 좋습니다.</str>
+    <str name="linkToThis">이 페이지로 링크</str>
+    <str name="ExpandAll">모든 항목 확장</str>
+    <str name="printThisPage">이 페이지 인쇄</str>
+    <str name="CollapseAll">모든 항목 축소</str>
+    <!-- various labels (not author controlled) -->
+    <str name="Figure">그림</str>
+    <str name="Table">표</str>
+    <str name="Next topic">다음 주제</str>
+    <str name="Previous topic">이전 주제</str>
+    <str name="Parent topic">상위 주제</str>
+    <str name="Required cleanup">수정 필요</str>
+    <str name="Draft comment">드래프트 설명</str>
+    <str name="Option">옵션</str>
+    <str name="Description">설명</str>
+    <str name="Optional">옵션</str>
+    <str name="Required">필수</str>
+    <str name="Skip visual syntax diagram">시각적 구문 도표 생략</str>
+    <str name="Read syntax diagram">구문 도표 읽기</str>
+    <str name="Start of change">변경 시작</str>
+    <str name="End of change">변경 끝</str>
+    <str name="Index">색인</str>
+    <str name="Special characters">특수 문자</str>
+    <str name="Numerics">숫자</str>
+    <str name="End notes">미주</str>
+    <str name="Artwork">그림</str>
+    <str name="Syntax">구문</str>
+    <str name="Type">유형</str>
+    <str name="Value">값</str>
+    <!-- Text that goes before a link to a topic -->
+    <str name="intro-to-topic-link"></str>
+
+    <!-- peril notice labels -->
+    <str name="Note">주</str>
+    <str name="Notes">주</str>
+    <str name="Tip">팁</str>
+    <str name="Fastpath">빠른경로</str>
+    <str name="Important">중요사항</str>
+    <str name="Attention">주의</str>
+    <str name="Caution">경고</str>
+    <str name="Danger">위험</str>
+    <str name="Remember">알아두기</str>
+    <str name="Restriction">제한사항</str>
+    <str name="Warning">경고</str>
+
+    <!-- default title text for section level generated sections -->
+    <str name="Contents">목차</str>
+    <str name="Related concepts">관련 개념</str>
+    <str name="Related tasks">관련 태스크</str>
+    <!--    Comment 'Related reference' string because it was added above. IDPL-13249 -->
+<!--    <str name="Related reference">관련 참조</str>-->
+    <str name="Related information">관련 정보</str>
+
+    <str name="Prerequisite">선행 정보</str>
+    <str name="Prerequisites">선행 정보</str>
+    <str name="or">또는</str>
+
+    <!--Task section labels -->
+    <str name="task_context">이 태스크 정보</str>
+    <str name="task_example">예</str>
+    <str name="task_prereq">시작하기 전에</str>
+    <str name="task_postreq">다음에 수행할 작업</str>
+    <str name="task_procedure">프로시저</str>
+    <str name="task_results">결과</str>
+
+    <str name="Copyright">Copyright</str>
+
+    <!-- Symbols -->
+    <str name="OpenQuote">"</str>
+    <str name="CloseQuote">"</str>
+    <str name="ColonSymbol">:</str>
+
+    <!-- emc: autogenerated strings based on paragraph style name -->
+    <str type="webworks" name="child link Open" attribute="bullet-character">Subtopics</str>
+    <str type="webworks" name="Next link" attribute="bullet-character" stylename="Bold">다음 항목: </str>
+    <str type="webworks" name="Previous link" attribute="bullet-character" stylename="Bold">이전 항목: </str>
+    <str type="webworks" name="Related Topic Open" attribute="bullet-character">관련 항목</str>
+    <str type="webworks" name="Related Concepts Open" attribute="bullet-character">관련 개념</str>
+    <str type="webworks" name="Related Reference Open" attribute="bullet-character">관련 참조 항목</str>
+    <str type="webworks" name="Related Tasks Open" attribute="bullet-character">관련 작업</str>
+    <str type="webworks" name="Related Information Open" attribute="bullet-character">관련 정보</str>
+
+    <str type="webworks" name="Postrequisite Open show_hide_open" attribute="bullet-character">사후 요구 사항</str>
+    <str type="webworks" name="Postrequisite Open show_hide_closed" attribute="bullet-character">사후 요구 사항</str>
+    <str type="webworks" name="Postrequisite Open" attribute="bullet-character">사후 요구 사항</str>
+
+    <str type="webworks" name="ReviewerNote" attribute="bullet-character">Reviewers</str>
+    <str type="webworks" name="child link sequence Open" attribute="bullet-character">절차</str>
+    <str type="webworks" name="Steps Open" attribute="bullet-character">절차</str>
+    <str type="webworks" name="Steps show_hide_open Open" attribute="bullet-character">절차</str>
+    <str type="webworks" name="Steps show_hide_closed Open" attribute="bullet-character">절차</str>
+
+    <str type="webworks" name="Single Appendix Heading 1" attribute="bullet-character">부록 </str>
+    <str type="webworks" name="Single Appendix Title" attribute="bullet-character">부록 </str>
+
+    <str type="webworks" name="List optional 1" attribute="paragraph-prefix">(옵션) </str>
+    <str type="webworks" name="List optional 2" attribute="paragraph-prefix">(옵션) </str>
+    <str type="webworks" name="List optional 3" attribute="paragraph-prefix">(옵션) </str>
+    <str type="webworks" name="Step optional 1" attribute="paragraph-prefix">(선택 사항) </str>
+    <str type="webworks" name="SubStep optional 2" attribute="paragraph-prefix">(선택 사항) </str>
+    <str type="webworks" name="Numbered optional 2" attribute="paragraph-prefix">(옵션) </str>
+    <str type="webworks" name="Numbered optional 1" attribute="paragraph-prefix">(옵션) </str>
+    <str type="webworks" name="Numbered optional 3" attribute="paragraph-prefix">(옵션) </str>
+    <str type="webworks" name="child link family Optional" attribute="paragraph-prefix">(옵션) </str>
+    <str type="webworks" name="child link sequence Optional" attribute="paragraph-prefix">(옵션) </str>
+    <str type="webworks" name="child link unordered Optional" attribute="paragraph-prefix">(옵션) </str>
+
+    <str type="webworks" name="Step required 1" attribute="paragraph-prefix">(필수 항목) </str>
+    <str type="webworks" name="SubStep required 2" attribute="paragraph-prefix">(필수 항목) </str>
+
+    <str type="webworks" name="copyright" attribute="paragraph-prefix">Copyright</str>
+    <str type="webworks" name="Prerequisite Open" attribute="bullet-character">시작하기 전에</str>
+    <str type="webworks" name="Result Open" attribute="bullet-character">결과</str>
+    <str type="webworks" name="Context Open" attribute="bullet-character">절차</str>
+    <str type="webworks" name="Example Open" attribute="bullet-character">예제</str>
+    <str type="webworks" name="Example Open show_hide_closed" attribute="bullet-character">예제</str>
+    <str type="webworks" name="Example Open show_hide_open" attribute="bullet-character">예제</str>
+    <str type="webworks" name="Description Open" attribute="bullet-character">설명</str>
+    <str type="webworks" name="Syntax Open" attribute="bullet-character">구문</str>
+    <str type="webworks" name="Arguments Open" attribute="paragraph-prefix">인수</str>
+    <str type="webworks" name="Options Open" attribute="paragraph-prefix">옵션</str>
+    <str type="webworks" name="Parameters Open" attribute="paragraph-prefix">매개 변수</str>
+
+    <!-- EMC	IB5	  25-Aug-2014 	TKT-123: Remove word "Step" generated in WebHelp cross-references -->
+    <!--str type="webworks" name="XREF step" attribute="character-prefix">Step </str>
+    <str type="webworks" name="XREF li" attribute="character-prefix">Step </str-->
+    <str type="webworks" name="XREF figure" attribute="character-prefix">그림 </str>
+    <str type="webworks" name="XREF table" attribute="character-prefix">표 </str>
+    <str type="webworks" name="CLIOptions" attribute="character-prefix">옵션</str>
+    <str type="webworks" name="CLIParameters" attribute="character-prefix">매개 변수</str>
+    <str type="webworks" name="CLIArguments" attribute="character-prefix">인수</str>
+
+    <str type="webworks" name="fastpath Open" attribute="bullet-character">Fastpath</str>
+    <str type="webworks" name="fastpath 1 Open" attribute="bullet-character">Fastpath</str>
+    <str type="webworks" name="fastpath 2 Open" attribute="bullet-character">Fastpath</str>
+    <str type="webworks" name="fastpath 3 Open" attribute="bullet-character">Fastpath</str>
+    <str type="webworks" name="remember Open" attribute="bullet-character">Remember</str>
+    <str type="webworks" name="remember 1 Open" attribute="bullet-character">Remember</str>
+    <str type="webworks" name="remember 2 Open" attribute="bullet-character">Remember</str>
+    <str type="webworks" name="remember 3 Open" attribute="bullet-character">Remember</str>
+    <str type="webworks" name="restriction Open" attribute="bullet-character">Restriction</str>
+    <str type="webworks" name="restriction 1 Open" attribute="bullet-character">Restriction</str>
+    <str type="webworks" name="restriction 2 Open" attribute="bullet-character">Restriction</str>
+    <str type="webworks" name="restriction 3 Open" attribute="bullet-character">Restriction</str>
+    <str type="webworks" name="attention Open" attribute="bullet-character">Attention</str>
+    <str type="webworks" name="attention 1 Open" attribute="bullet-character">Attention</str>
+    <str type="webworks" name="attention 2 Open" attribute="bullet-character">Attention</str>
+    <str type="webworks" name="attention 3 Open" attribute="bullet-character">Attention</str>
+    <!-- EMC IB5 24-Jul-2014 "Option"/"Description" headers on <choicetable> are inconsistent -->
+    <str type="webworks" name="Option" attribute="character-prefix">옵션</str>
+    <str type="webworks" name="Description" attribute="character-prefix">설명</str>
+
+    <!-- Localization prefix and suffix characters -->
+    <str name="start_cite"></str>
+    <str name="end_cite"></str>
+
+    <str name="start_var"></str>
+    <str name="end_var"></str>
+
+    <str name="start_q">&quot;</str>
+    <str name="end_q">&quot;</str>
+
+    <str name="start_lq"></str>
+    <str name="end_lq"></str>
+
+    <str name="start_userinput"></str>
+    <str name="end_userinput"></str>
+
+    <str name="start_option"></str>
+    <str name="end_option"></str>
+
+    <str name="start_term"></str>
+    <str name="end_term"></str>
+
+    <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+
+    <str name="start_option_responsive"></str>
+    <str name="end_option_responsive"></str>
+
+    <str name="start_uicontrol_responsive"></str>
+    <str name="end_uicontrol_responsive"></str>
+
+    <str name="start_var_responsive"></str>
+    <str name="end_var_responsive"></str>
+
+    <str name="start_wintitle_responsive"></str>
+    <str name="end_wintitle_responsive"></str>
+
+    <!-- need to be translated-->
+    <str name="Published">발행: </str>
+    <str name="year">년 </str>
+
+    <str name="on_this_page">이 페이지에서</str>
+    <str name="see_also">관련 항목</str>
+
+    <str name="show_navigation">탐색 표시</str>
+    <str name="hide_navigation">탐색 숨기기</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="danger">위험</variable>
+    <variable id="warning">경고</variable>
+    <variable id="caution">주의</variable>
+    <variable id="notice">알림</variable>
+    <variable id="note">참고:</variable>
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images ENDS HERE- IB-->
+    <!--IA      Dell EMC consolidation.     Jun-2019    Add EMC Strings - ENDS HERE      IB-->
+
+    <variable id="Current Release Version">현재 버전: </variable>
+    <variable id="Previous Release Version">이전 버전: </variable>
+    <variable id="Release Type">릴리스 유형: </variable>
+    <variable id="Major">주 릴리스(MA)</variable>
+    <variable id="Minor">부 릴리스(MI)</variable>
+    <variable id="Service">서비스(SR)</variable>
+    <variable id="Patch">패치(P)</variable>
+
+    <variable id="Technote Current Version">현재 버전: </variable>
+    <variable id="Technote Release Date">발매일: </variable>
+    <variable id="Technote Previous Version">이전 버전: </variable>
+    <variable id="Technote Document Number">문서 번호: </variable>
+    <variable id="Technote Document Rev">개정 </variable>
+    <variable id="part number">P/N </variable>
+    <variable id="batterywarning">배터리 경고</variable>
+    <variable id="dsg Updated Date">업데이트</variable>
+    <variable id="dsg Software Version">버전</variable>
+    <variable id="dsg Part Number">부품 번호</variable>
+    <variable id="dsg topics">주제:</variable>
+
+    <variable id="note-non-brand Image Path">Customization/OpenTopic/common/artwork/note-non-brand.png</variable>
+    <variable id="caution-non-brand Image Path">Customization/OpenTopic/common/artwork/caution-non-brand.png</variable>
+    <variable id="warning-non-brand Image Path">Customization/OpenTopic/common/artwork/warning-non-brand.png</variable>
+
+    <variable id="note Image Path">Customization/OpenTopic/common/artwork/note.svg</variable>
+    <variable id="caution Image Path">Customization/OpenTopic/common/artwork/caution.svg</variable>
+    <variable id="danger Image Path">Customization/OpenTopic/common/artwork/danger.svg</variable>
+    <variable id="warning Image Path">Customization/OpenTopic/common/artwork/warning.svg</variable>
+
+    <variable id="Highly Restricted Confidential">제한 수준 높음 - 기밀</variable>
+    <variable id="Restricted Confidential">제한 수준 - 기밀</variable>
+    <variable id="Restricted Internal">내부용 - 기밀</variable>
+
+    <variable id="Abstract">개요</variable>
+
+    <variable id="continued">(계속)</variable>
+    <!--Added new variable for PDF A4-->
+	<variable id="continued">(계속)</variable>
+	<variable id="release">릴리스</variable>
+	<variable id="revision">개정</variable>
+	<variable id="Version">버전</variable>
+	<variable id="on page"> 페이지 <param ref-name="pagenum"/></variable>
+	<variable id="Figure toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+	<variable id="Table toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+    <variable id="LOT-dell">표</variable>
+    <variable id="LOF-dell">그림</variable>
+
+    <variable id="#menucascade-separator"> &gt; </variable>
+
+</strings>
