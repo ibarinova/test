@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- org.dell.json plugin for MyDell Mobile Output with transtype json-->
+
+<plugin id="org.dell.json">
+    <transtype name="json" extends="json" desc="json">
+	</transtype>
+    <feature extension="dita.conductor.target.relative" file="conductor.xml"/>
+</plugin>

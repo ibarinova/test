@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Dell PBnx Json"
+         xmlns:if="ant:if"
+         xmlns:unless="ant:unless"
+         default="dita2json">
+
+    <target name="dita2json" depends="json.init,
+								build-init,
+								preprocess,
+								html5.topic,
+								dita2json.generate-copy-build,
+								prettyJson,
+								dita2json.move-json-and-images,
+								delete"/>
+
+    <target name="json.init">
+        <condition property="args.xsl" value="${dita.plugin.org.dell.json.dir}${file.separator}xsl${file.separator}dita2jsonImpl.xsl">
+            <not>
+                <isset property="args.xsl"/>
+            </not>
+        </condition>
+	<condition property="out.ext" value=".json">
+      <not>
+        <isset property="args.outext"/>
+      </not>
+    </condition>
+
+        <property name="preprocess.copy-image.skip" value="true"/>
+        <property name="images-subfolder-name" value="image"/>
+
+        <dirname property="args.input.location" file="${args.input}"/>
+    </target>
+
+    <target name="dita2json.generate-copy-build">
+        <mkdir dir="${dita.temp.dir}${file.separator}builds"/>
+
+        <xslt basedir="${dita.temp.dir}"
+              destdir="${dita.temp.dir}${file.separator}builds"
+              includesfile="${dita.temp.dir}${file.separator}${user.input.file.listfile}"
+              classpathref="dost.class.path"
+              style="${dita.plugin.org.dell.json.dir}${file.separator}xsl${file.separator}dita2json-generateCopyBuild.xsl">
+            <param name="images-subfolder-name" expression="${images-subfolder-name}"/>
+            <param name="file-separator" expression="${file.separator}"/>
+            <param name="dita.temp.dir" expression="${dita.temp.dir}"/>
+            <param name="output.dir" expression="${output.dir}"/>
+            <param name="args.input.location" expression="${args.input.location}"/>
+            <mapper type="merge" to="build-copy.xml"/>
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+    </target>
+
+    <target name="dita2json.move-json-and-images">
+        <subant target="dita2json.copy-files">
+            <property name="basedir" location="${dita.temp.dir}${file.separator}builds"/>
+            <fileset dir="${dita.temp.dir}${file.separator}builds" includes="build-copy.xml"/>
+			<fileset dir="${dita.temp.dir}${file.separator}builds" includes="*.json">
+			
+			 </fileset>
+        </subant>
+    </target>
+	<target name="delete">
+	<echo message="${dita.output.dir}"/>
+	<delete dir="${dita.output.dir}${file.separator}faq" includes="faq.json">
+	</delete>
+	</target>
+
+	<target name="prettyJson">
+	<path id="project.class.path">
+    <fileset dir="${dita.dir}${file.separator}plugins${file.separator}org.dell.json${file.separator}lib">
+	<include name="*.jar"/>
+	</fileset>
+	</path>
+        <echo>
+            Executing JSONReading.
+        </echo>
+        <java classname="com.dell.json.formatter.JsonRead">
+            <classpath refid="project.class.path"/>
+			<arg value="${output.dir}\" />
+        </java>
+    </target>
+	<!--Temporarily removed this target from calling, since the pub metadata is available in tridion no need to generate in DITA OT-->
+	<target name="json.metadata">
+      <loadfile property="ditamapfileList" srcFile="${dita.temp.dir}${file.separator}${fullditamapfile}"/>
+		<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" in="${dita.temp.dir}/.job.xml" out="${output.dir}${file.separator}metadata.xml" style="${dita.plugin.org.dell.json.dir}${file.separator}xsl${file.separator}metadata.xsl">
+			<param name="ditamap" expression="${dita.temp.dir}${file.separator}${dita.map.filename.root}.ditamap"/>
+			<param name="OUTEXT" expression="${out.ext}" if="out.ext"/>
+            <param name="job" expression="${user.input.dir}${file.separator}ishjobticket.xml"/>
+			<param name="inputdir" expression="${user.input.dir}"/>
+            <param name="TEMPDIR" expression="${dita.temp.dir}"/>
+            <param name="MAPLIST" expression="${ditamapfileList}"/>
+			<param name="ishjob" expression="${dita.temp.dir}${file.separator}.job.xml"/>
+			<xmlcatalog refid="dita.catalog"/>
+		</xslt>
+    </target>
+	</project>
