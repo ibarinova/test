@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is part of the com.citrix.qa project hosted on 
+     Sourceforge.net.-->
+<!-- (c) Copyright Citrix Systems, Inc. All Rights Reserved. -->
+<project name="dita2qa" default="dita2qa">
+	<property name="transtype" value="qa"/>
+	
+	<property name="validate" value="false"/>
+	<target name="dita2qa" depends="buildqahtml"> <!-- change this to depends on json target-->
+		<!-- Copy images to the output directory -->
+		<mkdir dir="${output.dir}${file.separator}img"/>
+		<copy todir="${output.dir}${file.separator}img">
+			<fileset dir="${dita.dir}${file.separator}plugins${file.separator}com.citrix.qa${file.separator}xsl${file.separator}img">
+			<include name="fail.PNG"/>
+			<include name="failsm.png"/>
+			<include name="pass.PNG"/>
+			<include name="passsm.png"/>
+			</fileset>
+		</copy>
+		<copy todir="${output.dir}">
+			<fileset dir="${dita.dir}${file.separator}plugins${file.separator}com.citrix.qa${file.separator}xsl${file.separator}">
+			
+			<include name="log.xsl"/>
+			
+			<!--
+			<include name="jit-yc.js"/>
+			-->
+			
+			</fileset>
+		</copy>
+		<!-- copy pie chart files -->
+		<copy todir="${output.dir}${file.separator}css">
+			<fileset dir="${dita.dir}${file.separator}plugins${file.separator}com.citrix.qa${file.separator}xsl${file.separator}css">
+			<include name="base.css"/>
+			
+			<!--
+			<include name="PieChart.css"/>
+			-->
+			
+			</fileset>
+		</copy>
+	</target>
+	
+	<!-- insert json target that depends on buildqahtml-->
+	<!--
+	<target name="dita2jit" depends="buildqahtml">
+	<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}chunkedtopic.list" classpathref="dost.class.path" extension=".js" style="${dita.dir}${file.separator}plugins/com.citrix.qa/xsl/dita2jit_pie_chart.xsl" filenameparameter="FILENAME" filedirparameter="FILEDIR"></xslt>
+	</target>
+	-->
+	<!-- 
+	NShadrina 12-2018: TKT-663 Added 3 targets to get readability score: merge, textoutput, dita.readbility
+	-->
+	<target name="buildqahtml" depends=" build-init, injectChunking, preprocess, textoutput, dita.readbility, dita.topics.qa"/>
+	<target name="textoutput">
+	  	
+		<condition property="args.text.xsl" value="${dita.dir}${file.separator}plugins/com.citrix.qa/xsl/text.xsl">
+			<not>
+				<isset property="args.text.xsl"/>
+			</not>
+		</condition>
+		
+		<condition property="out.ext" value=".html">
+			<not>
+				<isset property="out.ext"/>
+			</not>
+		</condition>
+		
+		<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" in="${dita.temp.dir}${file.separator}${dita.map.filename.root}.dita" out="${dita.temp.dir}${file.separator}index.txt" extension="${out.ext}" style="${args.text.xsl}"/>
+	</target>
+	<target name="dita.readbility">
+		<java jar="${dita.dir}${file.separator}plugins${file.separator}com.citrix.qa${file.separator}lib${file.separator}flesh.jar" fork="true">
+		<arg line="${dita.temp.dir}${file.separator}index.txt"/> 
+		</java>
+	</target>
+	<!-- xhtml output -->
+	<target name="dita.topics.qa" description="Target 1: Build QA output from dita topics">
+		<condition property="out.ext" value=".html">
+			<not>
+				<isset property="out.ext"/>
+			</not>
+		</condition>
+		<condition property="args.xsl" value="${dita.dir}${file.separator}plugins/com.citrix.qa/xsl/qascript.xsl">
+			<not>
+				<isset property="args.xsl"/>
+			</not>
+		</condition>
+		
+		<makeurl file="${args.input}" property="metfiles"/>
+		
+		<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}fullditatopic.list" extension="${out.ext}" style="${args.xsl}">
+			<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+			<param name="DITAEXT" expression="${dita.ext}" if="dita.ext"/>
+			<param name="FILTERFILE" expression="${dita.input.valfile}" if="dita.input.valfile"/>
+			<param name="OUTEXT" expression="${out.ext}" if="out.ext"/>
+			<param name="input" expression="${args.input}" if="args.input"/>
+			<param name="inputFolder" expression="${args.input.location}" if="args.input.location"/>
+			<param name="ditaMapGuid" expression="${dita.map.name}" if="dita.map.name"/>
+			<param name="OUTPUTDIR" expression="${output.dir}" if="output.dir"/>
+			<param name="BASEDIR" expression="${basedir}"/>
+			<param name="fileroot" expression="${dita.map.filename.root}"/>
+			<param name="metfiles" expression="${metfiles}"/>
+			<param name="tempDir" expression="${dita.temp.dir}"/>
+		</xslt>
+		<!--
+		<antcall target="copy-css"/>
+		-->
+	
+		  <delete>
+		    <fileset dir="${output.dir}" includes="*.jpg"/>
+		    <fileset dir="${output.dir}" includes="*.png"/>
+		    <fileset dir="${output.dir}" includes="*.gif"/>
+		    <fileset dir="${output.dir}" includes="*.svg"/>
+		    <fileset dir="${output.dir}" includes="*.eps"/>
+		    <fileset dir="${output.dir}" includes="*.mov"/>
+		    <fileset dir="${output.dir}" includes="*.mp4"/>
+		    <fileset dir="${output.dir}" includes="*.wmv"/>
+		    <fileset dir="${output.dir}" includes="*.avi"/>
+		    <fileset dir="${output.dir}" includes="*.flv"/>
+		    <fileset dir="${output.dir}" includes="*.swf"/>
+		    <fileset dir="${output.dir}" includes="dita.list"/>
+		    <fileset dir="${output.dir}" includes="dita.xml.properties"/>
+			<fileset dir="${output.dir}" includes="log.xsl"/>
+			<fileset dir="${output.dir}">
+				<include name="*.html" />
+					<not>
+						<contains text="EMC Standards Review" casesensitive="true"/>
+					</not>
+				
+		   </fileset>
+  		</delete>
+	</target>
+	
+	
+	
+	
+	<target name="reportcopy">
+		<condition property="args.reader.xsl" value="${dita.dir}${file.separator}plugins/com.dell.qa/xsl/reader.xsl">
+			<not>
+				<isset property="args.reader.xsl"/>
+			</not>
+		</condition>
+	     <xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" in="${user.input.dir}${file.separator}ishjobticket.xml" out="${output.dir}${file.separator}reader.txt" extension="${out.ext}" style="${args.reader.xsl}">
+			<param name="tempDir" expression="${dita.temp.dir}"/>
+			<param name="OUTPUTDIR" expression="${output.dir}"/>
+			<param name="chapcount" expression="${dita.temp.dir}${file.separator}${dita.map.filename.root}"/>
+			<param name="inputdir" expression="${user.input.dir}"/>
+		</xslt>
+	</target>
+		
+
+	<target name="dita.inner.topics.qa" unless="noTopic" if="inner.transform" description="Target 2: Build QA output from inner dita topics">
+		<condition property="out.ext" value=".html">
+			<not>
+				<isset property="out.ext"/>
+			</not>
+		</condition>
+		<condition property="args.xsl" value="${dita.dir}${file.separator}plugins/com.citrix.qa/xsl/qascript.xsl">
+			<not>
+				<isset property="args.xsl"/>
+			</not>
+		</condition>
+		<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"/>
+		<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}" filenameparameter="FILENAME" filedirparameter="FILEDIR">
+			<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+			<includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"/>
+			<param name="TRANSTYPE" expression="${transtype}"/>
+			<param name="DITAEXT" expression="${dita.ext}" if="dita.ext"/>
+			<param name="FILTERFILE" expression="${dita.input.valfile.url}" if="dita.input.valfile"/>
+			<param name="GENERATE-TASK-LABELS" expression="${args.gen.task.lbl}" if="args.gen.task.lbl"/>
+			<param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if="args.xhtml.classattr"/>
+			<param name="genDefMeta" expression="${args.gen.default.meta}" if="args.gen.default.meta"/>
+			<param name="OUTEXT" expression="${out.ext}" if="out.ext"/>
+			<param name="BASEDIR" expression="${basedir}"/>
+			<param name="OUTPUTDIR" expression="${output.dir}"/>
+			<param name="input" expression="${args.input}" if="args.input"/>
+			<mapper type="regexp" from="^(${tempdirToinputmapdir.relative.value})(.*?)(\.(xml|dita))$$" to="\2${out.ext}"/>
+			<param name="fileroot" expression="${dita.map.filename.root}"/>
+		</xslt>
+	</target>
+	
+
+	<target name="dita.outer.topics.qa" unless="noTopic" if="outer.transform"  description="Target 3: Build QA output from outer dita topics">
+		<condition property="out.ext" value=".html">
+			<not>
+				<isset property="out.ext"/>
+			</not>
+		</condition>
+		<condition property="args.xsl" value="${dita.dir}${file.separator}plugins/com.citrix.qa/xsl/qascript.xsl">
+			<not>
+				<isset property="args.xsl"/>
+			</not>
+		</condition>
+		<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"/>
+		<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}${file.separator}${uplevels}" includesfile="${dita.temp.dir}${file.separator}${outditafilesfile}" classpathref="dost.class.path" extension="${out.ext}" style="${args.xsl}" filenameparameter="FILENAME" filedirparameter="FILEDIR">
+			<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+			<param name="TRANSTYPE" expression="${transtype}"/>
+			<param name="DITAEXT" expression="${dita.ext}" if="dita.ext"/>
+			<param name="FILTERFILE" expression="${dita.input.valfile.url}" if="dita.input.valfile"/>
+			<param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if="args.xhtml.classattr"/>
+			<param name="genDefMeta" expression="${args.gen.default.meta}" if="args.gen.default.meta"/>
+			<param name="OUTEXT" expression="${out.ext}" if="out.ext"/>
+			<param name="BASEDIR" expression="${basedir}"/>
+			<param name="OUTPUTDIR" expression="${output.dir}"/>
+			<param name="input" expression="${args.input}" if="args.input"/>
+			<param name="fileroot" expression="${dita.map.filename.root}"/>
+		</xslt>
+	</target>
+
+	<target name="injectChunking">
+				
+				
+		         <script language="javascript">
+		         
+					var lang = java.lang;
+					var System = java.util.System;
+		         	
+		                var inputFile = project.getProperty("args.input");		                
+		                var convertedFile=inputFile.replace(".ditamap",".xml");
+		                project.setProperty("convertedFile",convertedFile);
+		                   
+		         </script>
+		
+		<xslt processor="trax" basedir="${args.input.location}" destdir="${args.input.location}" includes="*.ditamap" classpathref="dost.class.path" extension=".xml" style="${dita.dir}${file.separator}plugins/com.citrix.qa/xsl/injectChunking.xsl"></xslt>
+
+  		<move file="${convertedFile}" tofile="${args.input}"/>
+		
+	</target>
+	
+	
+</project>

@@ -1,0 +1,22 @@
+
+#sample ant command
+#the forward slashes in the paths are very important!
+#you also must point this at a bookmap with the .ditamap extension.
+#optionally leave off the clean.temp option if you want the DITA OT to clean up after itself.
+ant -Dargs.input="C:/testbedxml/il_bm_test_bed_emc=GUID-94C67A6C-2123-40E6-A1B6-02726EBE4A4E=3=EN-US=.ditamap" -Dtranstype=qa -Dclean.temp=no
+
+#don't forget to rename the bookmap to *.ditamap
+
+#also, you need to change every file's DOCTYPE to reflect a local path, such as changing:
+#"file:///E:/InfoShare/Web/Author/ASP/DocTypes/dita-oasis/1.2
+# to:
+#"file:///C:/views/ditaot2/plugins/org.oasis-open.dita.v1_2/dtd
+
+
+Example 2:
+bin\ant.bat -Dargs.input="C:/testbednew/il_bm_git4gim=GUID-9904EFA2-2B7F-415C-A350-49D3AD33E6E8=3=EN-US=.ditamap" -Dtranstype=qa -Dclean.temp=no
+bin\ant.bat -Dargs.input="C:/brokenarrow/ba_bookmap=GUID-797B2F14-2F39-4C92-B6C8-6A33E30FBD57=3=EN-US=.ditamap" -Dtranstype=qa -Dclean.temp=no
+
+
+
+bin\dita.bat -f qa -i C://testbedxml//x.ditamap
