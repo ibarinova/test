@@ -1,0 +1,124 @@
+/*
+	EMC SIMPLE XHTML OUTPUT 
+*/
+/* The following sections define modifications to the default DITA-OT styles for Simple XHTML output. */
+.draft{text-align: center; color: #1F4998; font-weight: bold; font-size: 10pt;}
+.footer{}
+.header{}
+.varname{font-style:italic;}
+.choicetable{margin-top: 10px}
+/*Apply CSS class to print symbols*/
+.disc{list-style-type:disc;}
+.square{list-style-type:square;}
+.ndash {list-style-type:none; margin-left:0px;}
+ul.ndash > li:before { content: '\2014\00a0\00a0' }
+dd.dd > p.p{margin-top: 0px;}
+.table, .simpletable, .stentry, .sthead {border-color: black; margin-bottom: 8px;}
+.li, .substep, .itemgroup{margin-bottom: 8px; margin-top: 8px;}
+.cli_value{ font-weight: bold; margin-bottom: 8px; margin-left: 16pt; margin-top: 8px;}
+.cli_desc{  margin-bottom: 8px; margin-left: 32pt; margin-top: 8px;}
+.cli_syntax, .cli_description, .cli_example, .cli_prereq{ margin-bottom: 8px; margin-top: 8px;}
+.cli_label { margin-bottom: 8px;}
+.choicetable  > thead >tr >th , .chdesc, .choption, .choicetable{border-color: black; border-style: solid;  border-width: 1px;}
+.fntable {margin-left: 36pt; margin-bottom: 8px;}
+.fn {margin-bottom: 4px;}
+.fn a {text-decoration: none}
+.figcap{ font-style:italic; font-weight: bold; }
+.b{font-weight: bold;}
+.relinfotitle{
+  border-bottom-color: #1F4998;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  color: #1F4998;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-top: 16px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 0px;
+  padding-top: 5px;
+  width: 250px;
+  }
+div.relinfo > div > a.link {
+  /*background-image: url("blue_arrow.gif");*/
+  /*background-position: 0px 3px;*/
+  /*background-repeat: no-repeat;*/
+  line-height: 14px;
+  margin-bottom: 8px;
+  /*margin-left: 24px;*/
+  margin-right: 8px;
+  margin-top: 8px;
+  /*padding-left: 16px;*/
+}
+.userinput{font-weight: bold; font-family:courier, fixed, monospace;}
+.option {font-style:normal;}
+.codeph{ font-family: 'Courier New' , Courier, monospace;}
+/* EMC 	IB6 	21-Oct-2014 	TKT-167:Consistently format lines controlled by @colsep and @rowsep attributes in tables */
+.row-topcellborder{
+    border:none;
+    border-right:hidden;
+    border-bottom:none
+}
+
+.admonition td:first-of-type{
+  padding-left: 0;
+  padding-right: 5px;
+  border-right: 3px solid rgb(5,125,183);
+}
+
+.admonition.danger td:first-of-type{
+  border-right: 3px solid rgb(255,102,0);
+}
+
+.admonition.warning td:first-of-type{
+  border-right: 3px solid rgb(206,32,40);
+}
+
+.admonition.caution td:first-of-type{
+  border-right: 3px solid rgb(240,174,29);
+}
+
+.admonition-body p{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.admonition-body .bold {
+  font-weight: bold;
+}
+
+.admonition-label {
+  font-weight: bold;
+  color: rgb(5,125,183);
+  border-bottom: none;
+  border-top: none;
+}
+
+.admonition-label.danger {
+  color: rgb(255,102,0);
+}
+
+.admonition-label.caution {
+  color: rgb(240,174,29);
+}
+
+.admonition-label.warning {
+  color: rgb(206,32,40);
+}
+
+.admonition-image-container {
+}
+
+.admonition-image {
+  width: 24px;
+  max-width: inherit;
+}
+
+.admonition.note {
+}
+
+.admonition {
+  border-bottom: none;
+  border-top: none;
+  display: block;
+}

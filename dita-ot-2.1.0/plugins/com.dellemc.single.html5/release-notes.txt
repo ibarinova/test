@@ -1,0 +1,29 @@
+Drop_2 02.13.19
+
+Insert 'DRAFT CONFIDENTIAL' watermark by transtype value instead of 'args.draft' property.
+    xsl/
+        dita2dellemc-single.xsl
+    xsl/xhtml/
+        dita2htmlImpl-emc.xsl
+    release-notes.txt
+
+
+Drop_1 01.10.19
+
+Add new com.dellemc.single.html5 plugin which extends existing com.dellemc.xhtml and generates single-page HTML5 output.
+
+Added :
+com.dellemc.single.html5/
+    xsl/
+        plugin-preprocess/
+            prepare-single-content.xsl
+        xslhtml/
+            dita2htmlImpl-emc.xsl
+            dita-utilities.xsl
+            rel-links.xsl
+            taskdisplay.xsl
+        dita2dellemc-single.xsl
+    build.xml
+    integrator.xml
+    plugin.xml
+    release-notes.txt

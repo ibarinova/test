@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Dell Single HTML5 Draft File" default="dita2dellemc-single-draft">
+
+	<target name="dita2dellemc-single-draft.init">
+		<property name="args.draft" value="yes"/>
+	</target>
+
+	<target name="dita2dellemc-single-draft" depends="dita2dellemc-single-draft.init, dita2dellemc-single"/>
+
+</project>

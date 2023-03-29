@@ -1,0 +1,51 @@
+Drop_5 03.13.19
+    + IDPL-5502: Admonitions in PDF and HTML5 outputs is bold.
+
+    com.dellemc.xhtml/xsl/xslhtml/dita2htmlImpl-emc.xsl
+
+
+Drop_4 01.10.19
+
+Modified :
+    com.dellemc.xhtml/xsl/xslhtml/dita2htmlImpl-emc.xsl
+    com.dellemc.xhtml/xsl/xslhtml/rel-links.xsl
+    com.dellemc.xhtml/xsl/xslhtml/taskdisplay.xsl :
+        + Fixed wrong <fn> processing.
+    com.dellemc.xhtml/css/emccustom.css :
+        + Fixed wrong <fn> processing.
+
+
+Drop_3 12.13.18
+
+Modified :
+    com.dellemc.xhtml/xsl/map2htmtoc/map2htmtocImpl-emc.xsl :
+        + Fixed value of <header>/<title> element. Remove <span> from it.
+    com.dellemc.xhtml/xsl/xslhtml/dita2htmlImpl-emc.xsl :
+        + Fixed wrong element display with twisties. Hide block if element has @outputclass = 'show_hide'.
+        + Fixed missed section title if used twisties.
+    com.dellemc.xhtml/xsl/xslhtml/taskdisplay.xsl :
+        + Fixed wrong element display with twisties. Hide block if element has @outputclass = 'show_hide'.
+
+Drop_2 12.12.18
+
+Added :
+com.dellemc.xhtml/release_notes.txt
+com.emc.common.resources/images/low/caution.png
+com.emc.common.resources/images/low/caution.svg
+com.emc.common.resources/images/low/danger.png
+com.emc.common.resources/images/low/danger.svg
+com.emc.common.resources/images/low/note.png
+com.emc.common.resources/images/low/note.svg
+com.emc.common.resources/images/low/warning.png
+com.emc.common.resources/images/low/warning.svg
+
+Modified :
+    com.dellemc.xhtml/build.xml :
+        + Fixed issue with missing images from com.emc.common.resources plugin;
+        + Fixed wrong processing of <keydef> elements. Copy files with <keydef> elements to temp input directory;
+    com.dellemc.xhtml/xsl/xslhtml/rel-links.xsl :
+        + Fixed wrong related links processing.
+    com.dellemc.xhtml/xsl/preprocess/removeBridge.xsl :
+        + Fixed wrong processing of <keydef> elements. Generate conref file list;
+    com.dellemc.xhtml/xsl/map2htmtoc/map2htmtocImpl-emc.xsl :
+        + Fixed wrong processing of <keydef> elements. Remove 'resource-only' topicrefs from TOC';

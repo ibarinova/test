@@ -1,0 +1,11 @@
+Drop_1 01.10.19
+
+Add new com.dellemc.single.html5.draft plugin which extends existing com.dellemc.single.html5
+and generates DRAFT version of single-page HTML5 output.
+
+Added :
+com.dellemc.single.html5.draft/
+    build.xml
+    integrator.xml
+    plugin.xml
+    release-notes.txt

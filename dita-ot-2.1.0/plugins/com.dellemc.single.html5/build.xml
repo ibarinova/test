@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Dell Single HTML5 File" default="dita2dellemc-single">
+
+	<target name="dita2dellemc-single.init">
+		<property name="html-version" value="html5"/>
+
+		<property name="dellemc-single.preprocess-xsl.dir" value="${dita.plugin.com.dellemc.single.html5.dir}/xsl/plugin-preprocess"/>
+		<property name="dellemc-single.xsl.dir" value="${dita.plugin.com.dellemc.single.html5.dir}/xsl"/>
+		<property name="dellemc-single.customization.style" value="${dellemc-single.xsl.dir}/dita2dellemc-single.xsl"/>
+
+		<dirname property="args.input.location" file="${args.input}"/>
+		<basename property="dita.input.filename" file="${args.input}"/>
+		<condition property="input-suffix" value=".ditamap" else=".xml">
+			<contains string="${dita.input.filename}" substring=".ditamap"/>
+		</condition>
+		<basename property="dita.map.name" file="${dita.input.filename}" suffix="${input-suffix}"/>
+
+		<property name="dellemc-single.preprocess.work.dir" location="${args.input.location}${file.separator}workdir"/>
+		<property name="dellemc-single.preprocess.tmp.work.dir" location="${dellemc-single.preprocess.work.dir}${file.separator}tmp"/>
+	</target>
+
+	<target name="dita2dellemc-single" depends="dita2dellemc-single.init,
+												dellemc-single.preprocess,
+												build-init,
+												preprocess,
+												xhtml.init,
+												xhtml.image-metadata,
+												dita.inner.topics.html.common-dellemc-single,
+												copy-dellemc-single-resources,
+												dita2dellemc-single.cleanup" />
+<!--
+	<target name="dita2dellemc-single" depends="dita2dellemc-single.init,
+												dellemc-single.preprocess,
+												build-init,
+												preprocess,
+												xhtml.init,
+												xhtml.image-metadata,
+												dita.inner.topics.html.common-dellemc-single,
+												copy-css,
+												copy-xhtml-resources-emc,
+												dita2dellemc-xhtml.cleanup,
+												zipfile-xhtml" />
+-->
+
+	<target name="dellemc-single.preprocess" depends="dellemc-single.preprocess.copy-input-content,
+                                                        dellemc-single.preprocess.override-args-input,
+                                                        dellemc-single.preprocess.prepare-content"/>
+
+	<target name="dellemc-single.preprocess.copy-input-content">
+		<dirname property="orig.args.input.location" file="${args.input}"/>
+
+		<copy todir="${dellemc-single.preprocess.work.dir}">
+			<fileset dir="${orig.args.input.location}"/>
+		</copy>
+	</target>
+
+	<target name="dellemc-single.preprocess.override-args-input">
+		<basename property="dellemc-single.args.filename" file="${args.input}" />
+
+		<property name="dellemc-single.temp.input.map"
+				  location="${dellemc-single.preprocess.work.dir}${file.separator}${dellemc-single.args.filename}"/>
+		<script language="javascript">
+			<![CDATA[
+              project.setUserProperty( "args.input", project.getProperty("dellemc-single.temp.input.map"));
+            ]]>
+		</script>
+	</target>
+
+	<target name="dellemc-single.preprocess.prepare-content">
+		<mkdir dir="${dellemc-single.preprocess.tmp.work.dir}"/>
+
+		<basename property="dita.input.filename" file="${args.input}" />
+
+		<xslt processor="trax"
+			  style="${dellemc-single.preprocess-xsl.dir}${file.separator}prepare-single-content.xsl"
+			  in="${args.input}"
+			  out="${dellemc-single.preprocess.tmp.work.dir}/${dita.input.filename}">
+			<param name="INPUT-DIR" expression="${args.input.location}" />
+			<xmlcatalog refid="dell.emc.catalog"/>
+		</xslt>
+		<move todir="${dellemc-single.preprocess.work.dir}" overwrite="true">
+			<fileset dir="${dellemc-single.preprocess.tmp.work.dir}"/>
+		</move>
+
+	</target>
+
+	<target name="dita.inner.topics.html.common-dellemc-single">
+		<xslt
+				in="${dita.temp.dir}/${dita.map.name}.dita"
+				out="${output.dir}/index.html"
+				classpathref="dost.class.path"
+				style="${dellemc-single.customization.style}"
+				filenameparameter="FILENAME"
+				filedirparameter="FILEDIR">
+			<excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+			<param name="TRANSTYPE" expression="${transtype}" />
+			<param name="FILTERFILE" expression="${dita.input.valfile.url}" if="dita.input.valfile" />
+			<param name="CSS" expression="${args.css.file}" if="args.css.file" />
+			<param name="CSSPATH" expression="${user.csspath}" if="user.csspath" />
+			<param name="HDF" expression="${args.hdf}" if="args.hdf" />
+			<param name="HDR" expression="${args.hdr}" if="args.hdr" />
+			<param name="FTR" expression="${args.ftr}" if="args.ftr" />
+			<param name="DRAFT" expression="${args.draft}" if="args.draft" />
+			<param name="ARTLBL" expression="${args.artlbl}" if="args.artlbl" />
+			<param name="GENERATE-TASK-LABELS" expression="${args.gen.task.lbl}" if="args.gen.task.lbl" />
+			<param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if="args.xhtml.classattr"/>
+			<param name="NOPARENTLINK" expression="${args.hide.parent.link}" if="args.hide.parent.link"/>
+			<param name="include.rellinks" expression="${include.rellinks}"/>
+			<param name="BREADCRUMBS" expression="${args.breadcrumbs}" if="args.breadcrumbs"/>
+			<param name="INDEXSHOW" expression="${args.indexshow}" if="args.indexshow" />
+			<param name="genDefMeta" expression="${args.gen.default.meta}" if="args.gen.default.meta" />
+			<param name="OUTEXT" expression="${out.ext}" if="out.ext" />
+			<param name="BASEDIR" expression="${basedir}"/>
+			<param name="OUTPUTDIR" expression="${output.dir}"/>
+			<param name="DBG" expression="${args.debug}" if="args.debug"/>
+
+			<param name="MAP" expression="${dita.temp.dir}/${dita.input.filename}"/>
+			<param name="dita-css" expression="${dita-css}" if="dita-css"/>
+			<param name="bidi-dita-css" expression="${bidi-dita-css}" if="bidi-dita-css"/>
+			<param name="temp-dir" expression="${dita.temp.dir}" />
+			<xmlcatalog refid="dita.catalog"/>
+		</xslt>
+	</target>
+
+	<target name="copy-dellemc-single-resources">
+		<property name="emc-html-resources.plugin" location="${dita.plugin.dir}${file.separator}com.emc.common.resources"/>
+		<copy todir="${output.dir}">
+			<fileset dir="${emc-html-resources.plugin}/images/low">
+				<include name="caution.svg"/>
+				<include name="danger.svg"/>
+				<include name="note.svg"/>
+				<include name="warning.svg"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="dita2dellemc-single.cleanup">
+		<move todir="${dita.temp.dir}/tmp">
+			<fileset dir="${dellemc-single.preprocess.work.dir}"/>
+		</move>
+	</target>
+
+</project>

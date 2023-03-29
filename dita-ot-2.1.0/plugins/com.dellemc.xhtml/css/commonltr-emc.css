@@ -1,0 +1,647 @@
+/*
+ | This file is part of the DITA Open Toolkit project hosted on 
+ | Sourceforge.net. See the accompanying license.txt file for 
+ | applicable licenses.
+*/
+
+/*
+ | (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved.
+ */
+ 
+/*
+ |	NOTE: 	This file is copied from the plugins\com.oxygenxml.webhelp\oxygen-webhelp\resources\css. 
+ |			DO NOT MODIFY THIS FILE.
+ |  		Add all the XHTML customizations to the custom.css
+*/
+
+html,
+body{
+    /*  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;*/
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:8pt;
+    line-height:12pt;
+    padding-bottom:1%;
+}
+
+.unresolved{
+    background-color:skyblue;
+}
+.noTemplate{
+    background-color:yellow;
+}
+
+.base{
+    background-color:#ffffff;
+}
+
+/* Add space for top level topics */
+.nested0{
+    margin-top:1em;
+}
+
+/* div with class=p is used for paragraphs that contain blocks, to keep the XHTML valid */
+.p{
+    margin-top:1em
+}
+
+/* Default of italics to set apart figure captions */
+.figcap{
+    font-style:italic
+}
+.figdesc{
+    font-style:normal
+}
+
+/* Use @frame to create frames on figures */
+.figborder{
+    border-style:solid;
+    padding-left:3px;
+    border-width:2px;
+    padding-right:3px;
+    margin-top:1em;
+    border-color:Silver;
+}
+.figsides{
+    border-left:2px solid;
+    padding-left:3px;
+    border-right:2px solid;
+    padding-right:3px;
+    margin-top:1em;
+    border-color:Silver;
+}
+.figtop{
+    border-top:2px solid;
+    margin-top:1em;
+    border-color:Silver;
+}
+.figbottom{
+    border-bottom:2px solid;
+    border-color:Silver;
+}
+.figtopbot{
+    border-top:2px solid;
+    border-bottom:2px solid;
+    margin-top:1em;
+    border-color:Silver;
+}
+
+/* Most link groups are created with <div>. Ensure they have space before and after. */
+.ullinks{
+    list-style-type:none
+}
+.ulchildlink{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.olchildlink{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.linklist{
+    margin-bottom:6pt
+}
+.linklistwithchild{
+    margin-left:1.5em;
+    margin-bottom:6pt
+}
+.sublinklist{
+    margin-left:1.5em;
+    margin-bottom:6pt
+}
+.relconcepts{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.reltasks{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.relref{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.relinfo{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.breadcrumb{
+    font-size:smaller;
+    margin-bottom:6pt
+}
+dt.prereq{
+    margin-left:20px;
+}
+
+/* Set heading sizes, getting smaller for deeper nesting */
+/* Comtech 08132013 updated title color/size/underline */
+.topictitle1{
+    margin-top:0pt;
+    margin-bottom:12pt;
+    color:#1F4998;
+    font-size:12pt;
+    border-bottom:1pt solid #1F4998;
+    padding-bottom:6pt;
+    padding-top:6pt;
+}
+.topictitle2{
+    margin-top:1pc;
+    margin-bottom:.45em;
+    font-size:1.17em;
+}
+.topictitle3{
+    margin-top:1pc;
+    margin-bottom:.17em;
+    font-size:1.17em;
+    font-weight:bold;
+}
+.topictitle4{
+    margin-top:.83em;
+    font-size:1.17em;
+    font-weight:bold;
+}
+.topictitle5{
+    font-size:1.17em;
+    font-weight:bold;
+}
+.topictitle6{
+    font-size:1.17em;
+    font-style:italic;
+}
+.sectiontitle{
+    margin-top:1em;
+    margin-bottom:0em;
+    color:black;
+    font-size:1.17em;
+    font-weight:bold;
+}
+.section{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.example{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+div.tasklabel{
+    margin-top:1em;
+    margin-bottom:6pt;
+}
+h2.tasklabel,
+h3.tasklabel,
+h4.tasklabel,
+h5.tasklabel,
+h6.tasklabel{
+    font-size:100%;
+}
+
+/* All note formats have the same default presentation */
+/* EMC	  IB5	21-Aug-2014		TKT-130: Admonition graphics should appear consistent with WebWorks */
+.note{
+	border-bottom:1px solid black;
+	border-top:1px solid black;
+	display: inline-block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px; 
+	line-height: 14px; 	
+}
+.notetext{
+    margin-top:1em;
+    margin-bottom: .5em;
+	display: inline-block;
+}
+.notetitle{
+    font-weight:bold;
+    color:blue;
+	display: inline-block;
+}
+.notelisttitle{
+    font-weight:bold
+}
+.tip{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.tiptitle{
+    font-weight:bold;
+}
+.fastpath{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.fastpathtitle{
+    font-weight:bold
+}
+.important{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.importanttitle{
+    font-weight:bold
+}
+.remember{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.remembertitle{
+    font-weight:bold
+}
+.restriction{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.restrictiontitle{
+    font-weight:bold
+}
+.attention{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.attentiontitle{
+    font-weight:bold
+}
+.danger{
+	border-bottom:1px solid black;
+	display: inline-block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px; 
+	line-height: 14px;	
+}
+.dangertitle{
+    font-weight:bold;
+}
+.dangertext{
+    margin-top:1em;
+    margin-bottom: .5em;
+	font-weight:bold;
+}
+.caution{
+	border-bottom:1px solid black;
+	display: inline-block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px; 
+	line-height: 14px;	
+}
+.cautiontitle{
+    font-weight:bold;
+}
+.cautiontext{
+    margin-top:1em;
+    margin-bottom: .5em;
+	font-weight:bold;
+}
+.warning{
+	border-bottom:1px solid black;
+	display: inline-block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px; 
+	line-height: 14px;	
+}
+.warningtext{
+    margin-top:1em;
+    margin-bottom: .5em;
+	font-weight:bold;
+}
+.warningtitle{
+    font-weight:bold;
+}
+.notice{
+	border-bottom:1px solid black;
+	display: inline-block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px; 
+	line-height: 14px;
+}
+.noticetext{
+    margin-top:1em;
+    margin-bottom: .5em;
+}
+.noticetitle{
+    font-weight:bold;
+    /*text-align:center;*/
+}
+/* Simple lists do not get a bullet */
+ul.simple{
+    list-style-type:none
+}
+
+/* Used on the first column of a table, when rowheader="firstcol" is used */
+.firstcol{
+    font-weight:bold;
+}
+
+/* Various basic phrase styles */
+.bold{
+    font-weight:bold;
+}
+.boldItalic{
+    font-weight:bold;
+    font-style:italic;
+}
+.italic{
+    font-style:italic;
+}
+.underlined{
+    text-decoration:underline;
+}
+.uicontrol,
+.wintitle{
+    font-weight:bold;
+}
+.parmname{
+    font-weight:bold;
+}
+/*.kwd{
+    font-weight:bold;
+}*/
+.defkwd{
+    font-weight:bold;
+    text-decoration:underline;
+}
+/*.var,*/
+.cite{
+    font-style:italic;
+}
+.shortcut{
+    text-decoration:underline;
+}
+
+/*.cmdname{
+    font-family:courier, fixed, monospace;
+}*/
+.option{
+    font-family:courier, fixed, monospace;
+}
+.parmname{
+    font-family:courier, fixed, monospace;
+    font-weight:normal;
+}
+
+
+/* Default of bold for definition list terms */
+.dlterm{
+    font-weight:bold;
+}
+
+/* Use CSS to expand lists with @compact="no" */
+.dltermexpand{
+    font-weight:bold;
+    margin-top:1em;
+}
+*[compact = "yes"] > li{
+    margin-top:0em;
+}
+*[compact = "no"] > li{
+    margin-top:.53em;
+}
+.liexpand{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.sliexpand{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.dlexpand{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.ddexpand{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.stepexpand{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+.substepexpand{
+    margin-top:1em;
+    margin-bottom:6pt
+}
+
+/* Align images based on @align on topic/image */
+div.imageleft{
+    text-align:left
+}
+div.imagecenter{
+    text-align:center
+}
+div.imageright{
+    text-align:right
+}
+div.imagejustify{
+    text-align:justify
+}
+
+/* The cell border can be turned on with
+   {border-right:solid}
+   This value creates a very thick border in Firefox (does not match other tables)
+
+   Firefox works with 
+   {border-right:solid 1pt}
+   but this causes a barely visible line in IE */
+.cellrowborder{
+    border-left:none;
+    border-top:none;
+    border-right:solid 1px;
+    border-bottom:solid 1px
+}
+.row-nocellborder{
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-right:hidden;
+    border-bottom:solid 1px
+}
+.cell-norowborder{
+    border-top:none;
+    border-bottom:none;
+    border-left:none;
+    border-bottom:hidden;
+    border-right:solid 1px
+}
+.nocellnorowborder{
+    border:none;
+    border-right:hidden;
+    border-bottom:hidden
+}
+
+/*pre.screen{
+    padding:5px 5px 5px 5px;
+    border:outset;
+    background-color:#CCCCCC;
+    margin-top:2px;
+    margin-bottom:2px;
+    white-space:pre
+}
+.codeblock{
+    border:1pt solid #1F4998;
+    resize:both;
+    overflow:auto;
+    font-family:monospace;
+}*/
+.systemoutput{
+    font-weight:bold;
+}
+span.filepath{
+    font-family:courier, fixed, monospace;
+}
+.filepath,
+.apiname{
+font-family:courier, fixed, monospace;
+}
+
+
+/* OXYGEN PATCH START - EXM-18359 */
+body{
+    margin-left:5px;
+    margin-top:5px;
+}
+/* OXYGEN PATCH END - EXM-18359 */
+
+/* OXYGEN PATCH START - EXM-18138 */
+span.uicontrol > img{
+    padding-right:5px;
+}
+/* OXYGEN PATCH END - EXM-18138 */
+
+/* OXYGEN PATCH START EXM-17248 - Center figure captions. */
+div.fignone p.figcap{
+    display:block;
+    text-align:left;
+    font-weight:bold;
+    padding:2px 10px 5px 10px;
+}
+
+div.fignone p.figcapcenter{
+    display:block;
+    text-align:center;
+    font-weight:bold;
+    padding:2px 10px 5px 10px;
+}
+
+div.fignone p.figcapright{
+    display:block;
+    text-align:right;
+    font-weight:bold;
+    padding:2px 10px 5px 10px;
+}
+
+div.fignone p.figcapjustify{
+    display:block;
+    text-align:justify;
+    font-weight:bold;
+    padding:2px 10px 5px 10px;
+}
+
+div.fignone img{
+    padding-top:5px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+/*Comtech 08/15/2013  Added below CSS classes to account for EMC required markup.  Classes are set by default in HTML transform, but specific style classes needed to be added*/
+sup{
+    vertical-align:top;
+    position:relative;
+    top:-0.5em;
+}
+
+table{
+    font-size:8pt;
+}
+.entry{
+    vertical-align:top;
+}
+thead{
+    background-color:#EFF5FA;
+}
+.proptypehd,.propvaluehd,.propdeschd{
+    background-color:#EFF5FA;
+}
+span.tablecap{
+    font-weight:bold;
+}
+caption{
+    font-size:8pt;
+    margin-bottom:6pt;
+    text-align:left;
+}
+/* OXYGEN PATCH END EXM-17248 */
+.show_hide_expanded:hover{
+    background-color:#ffffff;
+    border:0px solid #e0e0e0;
+    margin-left:0px;
+}
+
+.show_hide_expanded{
+    background-color:#ffffff;
+    border:0px solid #e0e0e0;
+    margin-left:0px;
+}
+
+.collapsible{
+    margin-top:5px;
+}
+
+.collapsible a:link{
+    color:#666666;
+}
+
+.collapsible a img{
+    border:none;
+}
+
+.collapsible > div{
+    border-left:1px dashed #c0c0c0;
+    margin:2px;
+}
+
+.collapsible > div > div{
+    padding:6px;
+}
+
+.collapsible a{
+    color:#3465a4;
+    text-decoration:none;
+    font-weight:bold;
+}
+/*  EMC		HTML5	10-Jul-2014  	kwd, cmdname, synph should be monospace font */
+.kwd,
+.cmdname,
+.synph{
+	font-family: 'Courier New' , Courier, monospace;
+}
+/* Below styles should be consistent with the WebWorks */
+pre,
+.screen,
+.codeblock,
+.msgblock{
+    border:none;
+    padding:0pt;
+    white-space:pre;
+    font-family: 'Courier New' , Courier, monospace;
+	background-color: #f0f0f0;
+    overflow:auto;
+	margin-bottom: 16px;
+	margin-right: 0px;
+	margin-top: 16px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	padding-right: 0px;
+	padding-top: 8px;
+}

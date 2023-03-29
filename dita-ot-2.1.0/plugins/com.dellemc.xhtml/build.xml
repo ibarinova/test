@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+    <!--  Simple XHTML  -->
+    <target name="dita2xhtml-emc">
+        <antcall target="dita2dellemc-xhtml"/>
+    </target>
+
+    <!--  Simple XHTML Draft(EMC) -->
+    <target name="dita2xhtml-emc-draft">
+        <antcall target="dita2dellemc-xhtml"/>
+    </target>
+
+    <!--  Simple XHTML (RSA) -->
+    <target name="dita2xhtml-emc-rsa">
+        <antcall target="dita2dellemc-xhtml"/>
+    </target>
+
+    <!--  Simple XHTML Draft(RSA) -->
+    <target name="dita2xhtml-emc-rsa-draft">
+        <antcall target="dita2dellemc-xhtml"/>
+    </target>
+
+    <target name="dita2dellemc-xhtml" depends="dita2dellemc-xhtml.init,
+                                            dita2dellemc-xhtml.preprocess,
+                                            dita2xhtml.init,
+                                            build-init,
+                                            preprocess,
+                                            xhtml.init,
+                                            xhtml.image-metadata,
+                                            dita.inner.topics.html.common-dellemc,
+                                            dita.map.xhtml.toc-dellemc,
+                                            copy-css,
+                                            copy-xhtml-resources-emc,
+                                            dita2dellemc-xhtml.cleanup,
+                                            zipfile-xhtml"/>
+
+    <target name="dita2dellemc-xhtml.init">
+        <property name="dita.plugin.dir" location="${dita.dir}/plugins"/>
+
+        <property name="dellemc-xhtml.plugin" location="${dita.plugin.dir}${file.separator}com.dellemc.xhtml"/>
+        <property name="dellemc-xhtml.css.dir" location="${dellemc-xhtml.plugin}${file.separator}css"/>
+        <property name="dellemc-xhtml.resources.dir" location="${dellemc-xhtml.plugin}${file.separator}resources"/>
+        <property name="dellemc-xhtml.xsl.dir" location="${dellemc-xhtml.plugin}${file.separator}xsl"/>
+        <property name="dellemc-xhtml.preprocess.dir" location="${dellemc-xhtml.xsl.dir}${file.separator}preprocess"/>
+
+        <property name="dellemc-xhtml.customization.style" location="${dellemc-xhtml.xsl.dir}${file.separator}dita2dellemc-xhtml.xsl"/>
+        <property name="dellemc-map-xhtml.customization.style" location="${dellemc-xhtml.xsl.dir}${file.separator}map2html-coverImpl-dellemc.xsl"/>
+        <property name="dellemc-xhtml.updateXref.style" location="${dellemc-xhtml.preprocess.dir}${file.separator}updateXref.xsl"/>
+        <property name="dellemc-xhtml.createFtitle.style" location="${dellemc-xhtml.preprocess.dir}${file.separator}createFtitle.xsl"/>
+        <property name="dellemc-xhtml.removeBridge.style" location="${dellemc-xhtml.preprocess.dir}${file.separator}removeBridge.xsl"/>
+
+        <dirname property="args.input.location" file="${args.input}"/>
+
+        <property name="dellemc-xhtml.temp.input.dir" location="${args.input.location}${file.separator}tmp"/>
+        <property name="dellemc-xhtml.temp.input.file" location="${dellemc-xhtml.temp.input.dir}${file.separator}${dita.input.filename}"/>
+
+        <property name="html-version" value="xhtml"/>
+
+        <property name="dita-css" value="commonltr-emc.css"/>
+        <property name="bidi-dita-css" value="commonrtl-emc.css"/>
+
+        <property name="args.xhtml.toc" value="index"/>
+        <property name="args.copycss" value="yes"/>
+        <property name="args.css" value="emccustom.css"/>
+        <property name="args.css.file" value="emccustom.css"/>
+        <property name="args.gen.task.lbl" value="YES"/>
+        <property name="args.tablelink.style" value="TITLE"/>
+        <property name="args.figurelink.style" value="TITLE"/>
+        <!--<property name="args.outext" value=".htm"/>-->
+        <condition property="emc-out-extension" value="${args.outext}" else=".html">
+            <isset property="args.outext"/>
+        </condition>
+        <property name="out.ext" value="${emc-out-extension}"/>
+    </target>
+
+    <path id="dellemc-xhtml.classpath">
+        <pathelement location="${dita.dir}/lib/**/*.jar"/>
+    </path>
+
+    <path id="dell.emc.catalog.path">
+        <pathelement location="../../data/dita-catalogs/dell-catalogs/catalog.xml"/>
+    </path>
+
+    <xmlcatalog id="dell.emc.catalog">
+        <catalogpath path="${dita.dir}/catalog-dita.xml"/>
+        <!--<catalogpath refid="dell.emc.catalog.path"/>-->
+    </xmlcatalog>
+
+
+    <target name="dita2dellemc-xhtml.preprocess" depends="dita2dellemc-xhtml.updateXref,
+                                                        dita2dellemc-xhtml.createFtitle,
+                                                        dita2dellemc-xhtml.removeBridgePreface,
+                                                        dita2dellemc-xhtml.makePublication,
+                                                        dita2dellemc-xhtml.override-args-input">
+
+    </target>
+
+    <target name="dita2dellemc-xhtml.updateXref">
+        <xslt processor="trax" basedir="${args.input.location}" destdir="${args.input.location}/temp1" includes="*.xml" extension=".xml"
+              classpath="dellemc-xhtml.classpath"  style="${dellemc-xhtml.updateXref.style}">
+            <param name="OUTPUTDIR" expression="${output.dir}"/>
+            <param name="INPUTDIR" expression="${args.input.location}"/>
+            <xmlcatalog refid="dell.emc.catalog"/>
+        </xslt>
+
+        <echo>Finished updating xref to FTITLE files </echo>
+    </target>
+
+    <target name="dita2dellemc-xhtml.createFtitle">
+        <xslt processor="trax" basedir="${args.input.location}/temp1" destdir="${args.input.location}/temp2" includes="*.xml" extension=".xml.bck"
+              classpathref="dellemc-xhtml.classpath"  style="${dellemc-xhtml.createFtitle.style}">
+            <param name="ARGS.INPUT.DIR" expression="${args.input.location}"/>
+            <param name="INPUTDIR" expression="${args.input.location}/temp1"/>
+            <param name="OUTPUTDIR" expression="${args.input.location}/temp2"/>
+            <xmlcatalog refid="dell.emc.catalog"/>
+        </xslt>
+
+        <echo>Finished creating the FTITLE files </echo>
+        <delete>
+            <fileset dir="${args.input.location}/temp2">
+                <include name="**/*.xml.bck"></include>
+            </fileset>
+        </delete>
+    </target>
+
+    <target name="dita2dellemc-xhtml.removeBridgePreface">
+        <!-- Remove bridge topics and set href filenames in map to ftitles -->
+        <xslt processor="trax" basedir="${args.input.location}" destdir="${args.input.location}/temp3" includes="*.ditamap"
+              classpathref="dellemc-xhtml.classpath" extension=".ditamap"
+              style="${dellemc-xhtml.removeBridge.style}">
+            <param name="OUTPUTDIR" expression="${args.input.location}/temp3"/>
+            <param name="INPUTDIR" expression="${args.input.location}"/>
+            <xmlcatalog refid="dell.emc.catalog"/>
+        </xslt>
+
+        <echo>Finished Renaming GUIDs to FTITLE</echo>
+    </target>
+
+    <target name="dita2dellemc-xhtml.makePublication">
+        <copy todir="${dellemc-xhtml.temp.input.dir}">
+            <!-- copy required publication files-->
+            <fileset dir="${args.input.location}">
+                <include name="*.report.xml"/>
+                <include name="eventdata.xml"/>
+                <include name="baseline*.xml"/>
+                <include name="ishjobticket.xml"/>
+            </fileset>
+            <!-- copy publication images-->
+            <fileset dir="${args.input.location}">
+                <include name="**/*.png"/>
+                <include name="**/*.svg"/>
+                <include name="**/*.jpg"/>
+            </fileset>
+            <!-- copy publication dita maps-->
+            <fileset dir="${args.input.location}/temp3"/>
+            <!-- copy publication dita xml files-->
+            <fileset dir="${args.input.location}/temp2"/>
+        </copy>
+
+        <copy todir="${dellemc-xhtml.temp.input.dir}">
+            <fileset dir="${args.input.location}">
+                <includesfile name="${args.input.location}/conreffiles.txt" />
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="dita2dellemc-xhtml.override-args-input">
+        <script language="javascript">
+            <![CDATA[
+              project.setUserProperty( "args.input", project.getProperty("dellemc-xhtml.temp.input.file"));
+            ]]>
+        </script>
+    </target>
+
+    <target name="dita.inner.topics.html.common-dellemc" unless="noTopic" if="inner.transform">
+        <xslt basedir="${dita.temp.dir}"
+              destdir="${output.dir}" includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
+              reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+              classpathref="dost.class.path"
+              extension="${out.ext}" style="${dellemc-xhtml.customization.style}"
+              filenameparameter="FILENAME"
+              filedirparameter="FILEDIR">
+            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+            <param name="TRANSTYPE" expression="${transtype}" />
+            <param name="FILTERFILE" expression="${dita.input.valfile.url}" if="dita.input.valfile" />
+            <param name="CSS" expression="${args.css.file}" if="args.css.file" />
+            <param name="CSSPATH" expression="${user.csspath}" if="user.csspath" />
+            <param name="HDF" expression="${args.hdf}" if="args.hdf" />
+            <param name="HDR" expression="${args.hdr}" if="args.hdr" />
+            <param name="FTR" expression="${args.ftr}" if="args.ftr" />
+            <param name="DRAFT" expression="${args.draft}" if="args.draft" />
+            <param name="ARTLBL" expression="${args.artlbl}" if="args.artlbl" />
+            <param name="GENERATE-TASK-LABELS" expression="${args.gen.task.lbl}" if="args.gen.task.lbl" />
+            <param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if="args.xhtml.classattr"/>
+            <param name="NOPARENTLINK" expression="${args.hide.parent.link}" if="args.hide.parent.link"/>
+            <param name="include.rellinks" expression="${include.rellinks}"/>
+            <param name="BREADCRUMBS" expression="${args.breadcrumbs}" if="args.breadcrumbs"/>
+            <param name="INDEXSHOW" expression="${args.indexshow}" if="args.indexshow" />
+            <param name="genDefMeta" expression="${args.gen.default.meta}" if="args.gen.default.meta" />
+            <param name="OUTEXT" expression="${out.ext}" if="out.ext" />
+            <param name="BASEDIR" expression="${basedir}"/>
+            <param name="OUTPUTDIR" expression="${output.dir}"/>
+            <param name="DBG" expression="${args.debug}" if="args.debug"/>
+            <!--<dita:extension id="dita.conductor.xhtml.param" behavior="org.dita.dost.platform.InsertAction"/>-->
+            <!--<dita:extension id="dita.conductor.html.param" behavior="org.dita.dost.platform.InsertAction"/>-->
+            <!--New,To generate&copy all dita files in the inputmap.dir,not all files in dita.temp.dir -->
+            <!-- Added CSS file based on emc, rsa or mozy BU -->
+            <param name="dita-css" expression="${dita-css}" if="dita-css"/>
+            <param name="bidi-dita-css" expression="${bidi-dita-css}" if="bidi-dita-css"/>
+            <param name="temp-dir" expression="${dita.temp.dir}" />
+            <mapper type="regexp"
+                    from="^(${tempdirToinputmapdir.relative.value})(.*?)(\.(\w+))$$"
+                    to="\2${out.ext}"/>
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+    </target>
+
+    <target name="dita.map.xhtml.toc-dellemc"
+            unless="noMap"
+            description="Build HTML TOC file">
+        <local name="xhtml.toc.output.dir"/>
+        <condition property="xhtml.toc.output.dir" value="${output.dir}" else="${_dita.map.output.dir}">
+            <isset property="inner.transform"/>
+        </condition>
+        <xslt
+                basedir="${dita.temp.dir}"
+                destdir="${xhtml.toc.output.dir}"
+                includesfile="${dita.temp.dir}${file.separator}${user.input.file.listfile}"
+                classpathref="dost.class.path"
+                style="${dellemc-map-xhtml.customization.style}">
+            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+            <param name="OUTEXT" expression="${out.ext}" if="out.ext" />
+            <param name="contenttarget" expression="${args.xhtml.contenttarget}" if="args.xhtml.contenttarget"/>
+            <param name="CSS" expression="${args.css.file}" if="args.css.file" />
+            <param name="CSSPATH" expression="${user.csspath}" if="user.csspath" />
+            <param name="OUTPUTCLASS" expression="${args.xhtml.toc.class}" if="args.xhtml.toc.class" />
+            <param name="INPUTDIR" expression="${inputDir}"/>
+            <!-- add DRAFT if args.draft is set to yes -->
+            <param name="DRAFT" expression="${args.draft}"/>
+            <!-- add catch for args.bu='rsa' or 'mozy' style sheet -->
+            <param name="ARGS.BU" expression="${args.bu}"/>
+            <!-- Added CSS file based on emc, rsa or mozy BU -->
+            <param name="dita-css" expression="${dita-css}" if="dita-css"/>
+            <param name="bidi-dita-css" expression="${bidi-dita-css}" if="bidi-dita-css"/>
+            <param name="TEMPDIR" expression="${dita.temp.dir}"/>
+            <!--<dita:extension id="dita.conductor.xhtml.toc.param" behavior="org.dita.dost.platform.InsertAction"/>-->
+            <mergemapper to="${args.xhtml.toc}${out.ext}"/>
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+    </target>
+
+    <target name="copy-xhtml-resources-emc">
+        <!-- Copy the CSS files to the output folder -->
+        <copy todir="${output.dir}">
+            <fileset dir="${dellemc-xhtml.css.dir}">
+                <include name="**/*.css"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${output.dir}">
+            <fileset dir="${dellemc-xhtml.resources.dir}/artwork">
+                <include name="**/expanded.gif"/>
+                <include name="**/collapse.gif"/>
+                <include name="blue_arrow.gif"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy the admonition image files to the output folder -->
+        <property name="emc-html-resources.plugin" location="${dita.plugin.dir}${file.separator}com.emc.common.resources"/>
+        <copy todir="${output.dir}">
+            <fileset dir="${emc-html-resources.plugin}/images/low">
+                <include name="caution.svg"/>
+                <include name="danger.svg"/>
+                <include name="note.svg"/>
+                <include name="warning.svg"/>
+            </fileset>
+        </copy>
+
+        <!--todo: copy images-->
+        <copy todir="${output.dir}">
+            <fileset dir="${args.input.location}" includesfile="${dita.temp.dir}/${imagefile}" />
+        </copy>
+
+        <!-- Copy the twisty javascript and CSS file to the output folder -->
+        <copy todir="${output.dir}">
+            <fileset dir="${dellemc-xhtml.resources.dir}/twisty">
+                <include name="**/twisty.js"/>
+                <include name="**/twisty.css"/>
+                <include name="**/twisty-print.css"/>
+                <exclude name="**/.svn"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="dita2dellemc-xhtml.cleanup">
+        <move todir="${dita.temp.dir}/tmp">
+            <fileset dir="${dellemc-xhtml.temp.input.dir}"/>
+        </move>
+        <delete>
+            <fileset dir="${output.dir}">
+                <include name="commonrtl.css"/>
+                <include name="commonltr.css"/>
+            </fileset>
+            <fileset dir="${args.input.location}/temp3"/>
+            <fileset dir="${args.input.location}/temp2"/>
+            <fileset dir="${args.input.location}/temp1"/>
+        </delete>
+    </target>
+
+    <target name="zipfile-xhtml">
+        <zip destfile="${output.dir}/${dita.map.filename.root}.zip">
+            <!-- Bug fix: Exclude log file from the ZIP file -->
+            <fileset dir="${output.dir}">
+                <exclude name="**/*.log"/>
+                <exclude name="**/dita.list"/>
+                <exclude name="**/dita.xml.properties"/>
+            </fileset>
+        </zip>
+    </target>
+
+</project>
