@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="dita2distribution" default="dita2distribution">
+	<property name="dita2distribution" value="distribution"/>
+	<target name="dita2distribution" depends=" build-init, preprocess, distribution.metadata">
+	
+<!--<fileset dir="${output.dir}" id="foobar">
+     
+     <include name="*.bat" unless="@{myattr}"/>
+     <include name="*.zip"/>
+    </fileset>-->
+	<!--<copy todir="${output.dir}">
+        <fileset dir="${basedir}/${sourceDir}" includes="*.zip"/>
+    </copy>-->
+	<!--<zip destfile="${output.dir}\${dita.map.filename.root}.zip" basedir="${output.dir}">
+	  <include name="*.zip"/>
+	</zip>-->
+	</target>
+
+<target name="distribution.metadata">
+      <loadfile property="ditamapfileList" srcFile="${dita.temp.dir}${file.separator}${fullditamapfile}"/>
+		<xslt processor="trax" basedir="${dita.temp.dir}" destdir="${output.dir}" in="${dita.temp.dir}/.job.xml" out="${output.dir}${file.separator}metadata.xml" style="${dita.plugin.com.dellemc.distribution.dir}${file.separator}xsl${file.separator}metadata.xsl">
+			<param name="ditamap" expression="${dita.temp.dir}${file.separator}${dita.map.filename.root}.ditamap"/>
+			<param name="OUTEXT" expression="${out.ext}" if="out.ext"/>
+            <param name="job" expression="${user.input.dir}${file.separator}ishjobticket.xml"/>
+			<param name="inputdir" expression="${user.input.dir}"/>
+            <param name="TEMPDIR" expression="${dita.temp.dir}"/>
+            <param name="MAPLIST" expression="${ditamapfileList}"/>
+			<param name="ishjob" expression="${dita.temp.dir}${file.separator}.job.xml"/>
+			<xmlcatalog refid="dita.catalog"/>
+		</xslt>
+    </target>
+	
+</project>

@@ -1,0 +1,5 @@
+<plugin id="com.dellemc.distribution">
+<!-- QA extension -->
+<feature extension="dita.conductor.transtype.check" value="distribution" type="txt"/>
+<feature extension="dita.conductor.target.relative" value="build_distribution.xml" type="file"/>
+</plugin>

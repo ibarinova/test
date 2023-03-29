@@ -1,0 +1,3 @@
+<plugin id="com.dellemc.common.resources">
+  <feature extension="dita.xsl.strings" file="dell-emc-vars/dellemc-vars.xml"/>
+</plugin>

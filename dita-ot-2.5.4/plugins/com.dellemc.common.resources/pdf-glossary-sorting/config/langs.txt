@@ -1,0 +1,41 @@
+ar-sa
+bg
+cs
+da
+de
+el
+en-gb
+en-us
+es-xl
+es-xm - not localized
+et
+fi
+fr
+he
+hr - glossentries are not localized. Only 44 topics have @xml:lang='hr' (I'm not sure they are localized) and other 66 topics have @xml:lang='en-us'.
+hu
+in
+it
+ja
+km - 66 topics have @xml:lang='en-us', 44 topics have @xml:lang='km', glossentries are not localized
+ko
+lt
+lv
+nl
+no-no
+pl
+pt
+pt-br
+ro
+ru
+sk
+sl
+sr - not localized
+sv
+th
+tr
+uk
+vi
+zh-cn
+zh-hk - not localized
+zh-tw
