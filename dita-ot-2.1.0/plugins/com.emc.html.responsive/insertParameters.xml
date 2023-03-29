@@ -1,0 +1,5 @@
+<dummy>
+    <param name="properties-xml" expression="${html5-responsive.properties.file}"/>
+    <param name="temp-dir" expression="${dita.temp.dir}"/>
+    <param name="out-extension" expression="${emc-out-extension}"/>
+</dummy>

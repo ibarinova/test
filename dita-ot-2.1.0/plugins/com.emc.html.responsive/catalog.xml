@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+
+    <public publicId="-//OASIS//DTD DITA Map//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/map.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.x Map//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/map.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.2 Map//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/map.dtd"/>
+
+    <public publicId="-//OASIS//DTD DITA BookMap//EN" uri="../org.oasis-open.dita.v1_2/dtd/bookmap/dtd/bookmap.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.x BookMap//EN" uri="../org.oasis-open.dita.v1_2/dtd/bookmap/dtd/bookmap.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.2 BookMap//EN" uri="../org.oasis-open.dita.v1_2/dtd/bookmap/dtd/bookmap.dtd"/>
+    <public publicId="-//OASIS//ELEMENTS DITA BookMap//EN" uri="../org.oasis-open.dita.v1_2/dtd/bookmap/dtd/bookmap.mod"/>
+    <public publicId="-//OASIS//ELEMENTS DITA 1.x BookMap//EN" uri="../org.oasis-open.dita.v1_2/dtd/bookmap/dtd/bookmap.mod"/>
+    <public publicId="-//OASIS//ELEMENTS DITA 1.2 BookMap//EN" uri="../org.oasis-open.dita.v1_2/dtd/bookmap/dtd/bookmap.mod"/>
+    <public publicId="-//OASIS//ENTITIES DITA BookMap//EN" uri="../org.oasis-open.dita.v1_2/dtd/bookmap/dtd/bookmap.ent"/>
+    <public publicId="-//OASIS//ENTITIES DITA 1.x BookMap//EN" uri="../org.oasis-open.dita.v1_2/dtd/bookmap/dtd/bookmap.ent"/>
+    <public publicId="-//OASIS//ENTITIES DITA 1.2 BookMap//EN" uri="../org.oasis-open.dita.v1_2/dtd/bookmap/dtd/bookmap.ent"/>
+
+    <public publicId="-//OASIS//DTD DITA Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/task.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.x Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/task.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.2 Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/task.dtd"/>
+    <public publicId="-//OASIS//DTD DITA General Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/generalTask.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.x General Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/generalTask.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.2 General Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/generalTask.dtd"/>
+    <public publicId="-//OASIS//ELEMENTS DITA Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/task.mod"/>
+    <public publicId="-//OASIS//ELEMENTS DITA 1.x Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/task.mod"/>
+    <public publicId="-//OASIS//ELEMENTS DITA 1.2 Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/task.mod"/>
+    <public publicId="-//OASIS//ENTITIES DITA Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/task.ent"/>
+    <public publicId="-//OASIS//ENTITIES DITA 1.x Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/task.ent"/>
+    <public publicId="-//OASIS//ENTITIES DITA 1.2 Task//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/task.ent"/>
+
+    <public publicId="-//OASIS//DTD DITA Topic//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/topic.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.x Topic//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/topic.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.2 Topic//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/topic.dtd"/>
+
+    <public publicId="-//OASIS//DTD DITA Reference//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.x Reference//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.2 Reference//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.dtd"/>
+    <public publicId="-//OASIS//ELEMENTS DITA Reference//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.mod"/>
+    <public publicId="-//OASIS//ELEMENTS DITA 1.x Reference//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.mod"/>
+    <public publicId="-//OASIS//ELEMENTS DITA 1.2 Reference//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.mod"/>
+    <public publicId="-//OASIS//ENTITIES DITA Reference//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.ent"/>
+    <public publicId="-//OASIS//ENTITIES DITA 1.x Reference//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.ent"/>
+    <public publicId="-//OASIS//ENTITIES DITA 1.2 Reference//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/reference.ent"/>
+
+    <public publicId="-//OASIS//DTD DITA Concept//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/concept.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.x Concept//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/concept.dtd"/>
+    <public publicId="-//OASIS//DTD DITA 1.2 Concept//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/concept.dtd"/>
+    <public publicId="-//OASIS//ELEMENTS DITA Concept//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/concept.mod"/>
+    <public publicId="-//OASIS//ELEMENTS DITA 1.x Concept//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/concept.mod"/>
+    <public publicId="-//OASIS//ELEMENTS DITA 1.2 Concept//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/concept.mod"/>
+    <public publicId="-//OASIS//ENTITIES DITA Concept//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/concept.ent"/>
+    <public publicId="-//OASIS//ENTITIES DITA 1.x Concept//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/concept.ent"/>
+    <public publicId="-//OASIS//ENTITIES DITA 1.2 Concept//EN" uri="../org.oasis-open.dita.v1_2/dtd/technicalContent/dtd/concept.ent"/>
+
+</catalog>

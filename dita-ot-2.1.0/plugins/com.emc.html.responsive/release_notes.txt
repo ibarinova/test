@@ -1,0 +1,184 @@
+NOTE: IDPL-5014 - Fortify flag on EMC.com output: "Avoid dynamic code intepretation".
+    'scripts/emc.js' was flagged by Fortify. It was used for old EMC.COM site and outdated now.
+    This file as well as 'templates/genericEMCTemplate_ix.html' can be removed in order to pass Fortify scan.
+    Also, some code should be removed from 'xsl/dita2html5-responsive-common.xsl' (line:60)
+    where link to this script sets to <head> element.
+_____________________________________________________________________________________________________
+Drop 2019/03/14
+xsl/dita2html5-responsive.xsl
+    + IDPL-5502: Admonitions in PDF and HTML5 outputs is bold. Remove bold for first node in admonition.
+
+Drop 2019/01/10
+css/emc-techdoc.css
+    + Fixed Admonition table width inside Steps
+
+Drop 2018/12/13
+css/emc-techdoc.css
+    + Change the look and feel for all admonitions.
+js/emc-html5-responsive-generate-hash.js
+    + Add support for 'importClass' in JAVA10;
+xsl/
+    + Add support for DELL 'task-label' othermeta parameter. Do not add task labels ONLY if 'task-labels' <othermeta> value equal 'no';
+    + Fixed missed processing of <keyref>s in <mainbook> and TOC titles.
+    + Change the look and feel for all admonitions.
+
+Drop 2017/04/19
++ Fixed: TKT-440 - (Optional) does not appear in task steps for EMC.com HTML output.
+
+Drop 2017/04/18
++ Fixed: TKT-538 - formatting elements applied to topic titles are reflected in EMC.com HTML.
+
+Drop 2017/04/12
++ Fixed: TKT-537 - Indents for figure captions and figures differ between EMC.com HTML and HTML5 Web Help.
++ Fixed TKT-560 - EMC.com HTML output format does not resolve keydef when included in frontmatter.
++ Fixed: TKT-566 - JavaScript needs to be added to map.js in EMC.com HTML.
+
+Drop 2016/11/17
+
++ Fixed toc.html extension it JS.
+
+Drop 2016/11/16
+
++ Set 'out.ext' property in order it wasn't overridden by other xhtml-related plugins.
+
+Drop 2016/03/09
+
++ Implemented selection of correct output file extension depending on set args.outext ant property. (default is '
+.html').
+
+Drop 2016/03/03
+
++ Context-sensitive help links do not link to topics.
+
+Drop 2016/02/29
+
++ scrollbar in left navigation doesn't scroll to bottom;
++ weird scroll bar issue
++ center page in browser window (for landing pages).
+
+Drop 2016/02/23
+
++ choice tables in mobile output;
++ center page in browser window.
+
+Drop 2016/02/22
+
++ Publication landing page link request;
++ 2.1.2.2 Standard desktop (changed breakpoint to 1262 because of issue related to vertical scrollbars);
++ 2.4 Scroll bar enhancements.
+
+Drop 2016/02/17
+
++ 2.1.2.2 Standard desktop (changed breakpoint to 1279).
+
+Drop 2016/02/01
+
++ dita2html5-responsive.postprocess Ant target should not run for all OT output formats;
+
+Drop 2016/01/29
+
++ Support for context help (map.js file);
++ BRD Req. 3.13 - <keyword> elements specified in chapter-level <topic> topics do not appear in the generated HTML page;
++ Transform should support standard DITA keyrefs.
+
+Drop 2016/01/25
+
++ Scale heading font sizes based on display size;
++ Content page list does not expand/collapse properly.
+
+Drop 2016/01/20
+
++ Fixed: "On this page" list should not overlay page footer content;
++ Implemented: "2.1.2	Responsive design behavior modifications";
+
+Drop 2015/12/18
+
++ emc-techdoc.js error possibly causing PDF link to fail;
++ missed scrollbar for table entries if word width more than cell width (Firefox, IE).
+
+Drop 2015/12/16
+
++ Publishing failures for localized outputs;
++ Page elements not picking up localized string.
+
+Drop 2015/12/11
+
++ Garbled text in <screen>.
+
+Drop 2015/12/10
+
++ 3.10 Font size regression
++ Fixed space above top-level page heading and show/hide navigation
++ Table and "onthispage"
++ 3.11.6.1 ordered lists
++ 3.11.16 Task topic sections
+
+Drop 2015/12/09
+
++ 3.11.3 Additional footnote issues;
++ Integration issues with EMC.com page template.
+
+Drop 2015/12/07
+
++ 3.9.10 Content page navigation;
++ 3.6 Classification file missing topic info for non-top-level topics;
++ 3.11.11 and 3.11.12.
+
+Drop 2015/12/03
+
++ 3.11.15 Streaming video;
++ 3.11.5 Increase the spacing between lines of the <lines> element;
++ 3.9.10 Publication content page navigation. Fixed hierarchy;
++ 3.9.9 Related links. Added left indent for 'See also' list;
++ 3.11.17 Tables;
++ 3.2 Chapter pages for NoChap publications issues.
+
+Drop 2015/12/01
+
++ 3.11.16 Task topic sections
++ 3.5 Landing page file name
+
+Drop 2015/11/30
+
++ 3.11.16 labels for task elements
++ 3.11.17 Tables
++ 3.11.2 Code block
++ 3.11.6 Lists
++ 3.2 Chapter pages for NoChap publications;
++ 3.6 Add classification file header info
++ 3.6.1 Classification file name
++ 3.9.9 Related links
++ 3.11.14.1 Figure captions
++ 3.11.10 Paragraphs linespacing
++ 3.9.10 Publication content page navigation
+- extra closing tag after admonitions
+
+Drop 2015/11/25
+
++ fixed footnote processing (trello issue '3.11.3 Footnotes');
++ ff-meta-web-pro font face to css;
+- navigation section for single chapter publication;
+
+Drop 2015/11/23
+
++ Fixed '3.1 Log file error messages' issue;
++ Fixed '3.4 HTML5 validation errors' issue;
++ Fixed '3.9.1 "onthispage" issues' issue;
++ Fixed '3.11.6 list elements' issue;
++ Fixed '3.12.13 font of <option>' issue;
++ Fixed '3.5 Landing page file name' issue;
++ Fixed '3.9.10 Revers Show/Hide navigation arrows' issue;
+
+Drop 2015/11/18
+
++ twisties for <p>, <ol>, <ul> and <steps> elements;
+
+Drop 2015/11/17
+
++ normalize.css;
++ respond.js;
++ compatibility with IE8;
++ twisties for <section>, <example>, <table> and <fig> elements;
+
+Drop 2015/11/11
+Initial release.

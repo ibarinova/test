@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<project name="com.emc.html.responsive">
+    <tstamp>
+        <format property="current.time" pattern="YYYYMMddHHmmss"/>
+    </tstamp>
+
+    <property name="dita.plugin.dir" location="${dita.dir}/plugins"/>
+
+    <property name="html5-responsive.plugin.name" value="com.emc.html.responsive"/>
+    <property name="emc-resources.plugin.name" value="com.emc.common.resources"/>
+
+    <property name="html5-responsive.plugin" location="${dita.plugin.dir}${file.separator}${html5-responsive.plugin.name}"/>
+    <property name="emc-html-resources.plugin" location="${dita.plugin.dir}${file.separator}${emc-resources.plugin.name}"/>
+    <property name="html5-responsive.css.dir" location="${html5-responsive.plugin}${file.separator}css"/>
+    <property name="html5-responsive.template.dir" location="${html5-responsive.plugin}${file.separator}templates"/>
+    <property name="html5-responsive.js.dir" location="${html5-responsive.plugin}${file.separator}js"/>
+    <property name="html5-responsive.scripts.dir" location="${html5-responsive.plugin}${file.separator}scripts"/>
+    <property name="html5-responsive.xsl.dir" location="${html5-responsive.plugin}${file.separator}xsl"/>
+
+    <property name="html5-responsive.customization.style" location="${html5-responsive.xsl.dir}${file.separator}dita2html5-responsive.xsl"/>
+    <property name="html5-responsive.preprocess.style" location="${html5-responsive.xsl.dir}${file.separator}dita2html5-responsive-preprocess.xsl"/>
+    <property name="html5-responsive.preprocess.chapters.style" location="${html5-responsive.xsl.dir}${file.separator}dita2html5-responsive-chapters-preprocess.xsl"/>
+    <property name="html5-responsive.postprocess.style" location="${html5-responsive.xsl.dir}${file.separator}dita2html5-responsive-postprocess.xsl"/>
+    <property name="html5-responsive.related-links.style" location="${html5-responsive.xsl.dir}${file.separator}dita2html5-responsive-related-links.xsl"/>
+    <property name="html5-responsive.properties.style" location="${html5-responsive.xsl.dir}${file.separator}dita2html5-responsive-generate-properties.xsl"/>
+    <property name="html5-responsive.classification.file.style" location="${html5-responsive.xsl.dir}${file.separator}dita2html5-responsive-generate-classification-file.xsl"/>
+    <property name="html5-responsive.context.sensitive.help.style" location="${html5-responsive.xsl.dir}${file.separator}dita2html5-responsive-generate-context-sensitive-help.xsl"/>
+
+    <dirname property="build.dir.location" file="${dita.dir}"/>
+    <dirname property="args.input.location" file="${args.input}"/>
+    <basename property="dita.input.filename" file="${args.input}" />
+    <condition property="input-suffix" value=".ditamap" else=".xml">
+        <contains string="${dita.input.filename}" substring=".ditamap"/>
+    </condition>
+    <basename property="dita.map.name" file="${dita.input.filename}" suffix="${input-suffix}" />
+
+    <property name="html5-responsive.plugin.xmlCatalog"
+              location="${dita.plugin.dir}${file.separator}${html5-responsive.plugin.name}${file.separator}catalog.xml"/>
+
+    <property name="html5-responsive.temp.input.dir" location="${args.input.location}${file.separator}tmp"/>
+    <property name="html5-responsive.temp.input.file" location="${html5-responsive.temp.input.dir}${file.separator}${dita.input.filename}"/>
+    <property name="html5-responsive.preprocessed.input.file" location="${html5-responsive.temp.input.dir}${file.separator}preprocess-${dita.input.filename}"/>
+
+    <property name="html5-responsive.properties.file" value="${html5-responsive.temp.input.dir}/properties.xml"/>
+
+    <path id="html5-responsive.classpath">
+        <pathelement location="${dita.dir}/lib/saxon.jar"/>
+        <pathelement location="${dita.dir}/lib/xml-resolver.jar"/>
+    </path>
+
+    <target name="dita2html5-responsive" depends="dita2html5-responsive.init,
+                                                dita2html5-responsive.preprocess,
+                                                dita2xhtml.init,
+                                                build-init,
+                                                preprocess,
+                                                dita2html5-responsive.postprocess,
+                                                xhtml.topics,
+                                                dita.map.xhtml,
+                                                copy-css,
+                                                dita2html5-responsive.cleanup"/>
+
+    <target name="dita2html5-responsive.init">
+        <property name="html-version" value="html5"/>
+        <property name="args.outext" value=".htm"/>
+        <property name="args.xsl" value="${html5-responsive.customization.style}"/>
+        <!-- Note: 'toc' filename is used in JS script.
+            If you change 'toc' value to another one - modify it in scripts/emc-techdoc.js line 65.-->
+        <property name="args.xhtml.toc" value="toc"/>
+        <condition property="emc-out-extension" value="${args.outext}" else=".html">
+            <isset property="args.outext"/>
+        </condition>
+        <property name="out.ext" value="${emc-out-extension}"/>
+    </target>
+
+    <target name="dita2html5-responsive.preprocess" depends="dita2html5-responsive.copy-input-content,
+                                                        dita2html5-responsive.remove-chunk-attrs,
+                                                        dita2html5-responsive.transform-bookmap-to-map,
+                                                        dita2html5-responsive.overwrite-args-input,
+                                                        dita2html5-responsive.generate-properties-xml,
+                                                        dita2html5-responsive.generate-SHA-1-hash,
+                                                        dita2html5-responsive.preprocess-chapters,
+                                                        dita2html5-responsive.generate-classification-file,
+                                                        dita2html5-responsive.generate-context-sensitive-help">
+    </target>
+
+    <target name="dita2html5-responsive.copy-input-content">
+        <copy todir="${html5-responsive.temp.input.dir}" failonerror="false">
+            <fileset dir="${args.input.location}" includes="**/*"/>
+        </copy>
+    </target>
+
+    <target name="dita2html5-responsive.remove-chunk-attrs">
+        <replaceregexp
+                replace="\1"
+                match="(\&lt;[\s|\w|\W|_|\^|\$|\||`|~|\+|=|\-]+)chunk=&quot;\w+-?\w+&quot;"
+                flags="g"
+                byline="true">
+
+            <fileset dir="${html5-responsive.temp.input.dir}">
+                <include name="**/*.xml"/>
+            </fileset>
+        </replaceregexp>
+    </target>
+
+    <target name="dita2html5-responsive.transform-bookmap-to-map">
+        <java classname="net.sf.saxon.Transform"
+              classpathref="html5-responsive.classpath"
+              fork="true"
+              failonerror="true">
+            <arg line="-s:${html5-responsive.temp.input.file}"/>
+            <arg line="-o:${html5-responsive.preprocessed.input.file}"/>
+            <arg line="-xsl:${html5-responsive.preprocess.style}"/>
+            <arg line='-x:"org.apache.xml.resolver.tools.ResolvingXMLReader"'/>
+            <arg line='-y:"org.apache.xml.resolver.tools.ResolvingXMLReader"'/>
+            <arg line='-r:"org.apache.xml.resolver.tools.CatalogResolver"'/>
+            <arg line='"out-extension=${emc-out-extension}"'/>
+            <sysproperty key="xml.catalog.files" value="${html5-responsive.plugin.xmlCatalog}"/>
+        </java>
+    </target>
+
+    <target name="dita2html5-responsive.overwrite-args-input">
+        <move file="${html5-responsive.preprocessed.input.file}" tofile="${html5-responsive.temp.input.file}"
+             failonerror="true"/>
+    </target>
+
+    <target name="dita2html5-responsive.generate-properties-xml">
+        <java classname="net.sf.saxon.Transform"
+              classpathref="html5-responsive.classpath"
+              fork="true"
+              failonerror="true">
+            <arg line='-s:${html5-responsive.temp.input.file}'/>
+            <arg line='-o:${html5-responsive.properties.file}'/>
+            <arg line='-xsl:${html5-responsive.properties.style}'/>
+            <arg line='-x:"org.apache.xml.resolver.tools.ResolvingXMLReader"'/>
+            <arg line='-y:"org.apache.xml.resolver.tools.ResolvingXMLReader"'/>
+            <arg line='-r:"org.apache.xml.resolver.tools.CatalogResolver"'/>
+            <arg line='"args.input.name=${dita.input.filename}"'/>
+            <arg line='"out-extension=${emc-out-extension}"'/>
+            <sysproperty key="xml.catalog.files" value="${html5-responsive.plugin.xmlCatalog}"/>
+        </java>
+    </target>
+
+    <target name="dita2html5-responsive.generate-SHA-1-hash">
+        <script language="javascript" src="${html5-responsive.js.dir}/emc-html5-responsive-generate-hash.js"/>
+    </target>
+
+    <target name="dita2html5-responsive.preprocess-chapters">
+        <mkdir dir="${html5-responsive.temp.input.dir}/chapters"/>
+        <java classname="net.sf.saxon.Transform"
+              classpathref="html5-responsive.classpath"
+              fork="true"
+              failonerror="true">
+            <arg line="-s:${html5-responsive.properties.file}"/>
+            <arg line="-xsl:${html5-responsive.preprocess.chapters.style}"/>
+            <arg line='-x:"org.apache.xml.resolver.tools.ResolvingXMLReader"'/>
+            <arg line='-y:"org.apache.xml.resolver.tools.ResolvingXMLReader"'/>
+            <arg line='-r:"org.apache.xml.resolver.tools.CatalogResolver"'/>
+            <arg line='"temp-dir=${html5-responsive.temp.input.dir}/chapters"'/>
+            <arg line='"input-dir=${html5-responsive.temp.input.dir}"'/>
+            <sysproperty key="xml.catalog.files" value="${html5-responsive.plugin.xmlCatalog}"/>
+        </java>
+        <move todir="${html5-responsive.temp.input.dir}">
+            <fileset dir="${html5-responsive.temp.input.dir}/chapters"/>
+        </move>
+    </target>
+
+    <target name="dita2html5-responsive.generate-classification-file">
+        <java classname="net.sf.saxon.Transform"
+              classpathref="html5-responsive.classpath"
+              fork="true"
+              failonerror="true">
+            <arg line='-s:${html5-responsive.properties.file}'/>
+            <arg line='-xsl:${html5-responsive.classification.file.style}'/>
+            <arg line='-x:"org.apache.xml.resolver.tools.ResolvingXMLReader"'/>
+            <arg line='-y:"org.apache.xml.resolver.tools.ResolvingXMLReader"'/>
+            <arg line='-r:"org.apache.xml.resolver.tools.CatalogResolver"'/>
+            <arg line='"outputDir=${output.dir}"'/>
+            <arg line='"timeStamp=${current.time}"'/>
+            <sysproperty key="xml.catalog.files" value="${html5-responsive.plugin.xmlCatalog}"/>
+        </java>
+    </target>
+
+    <target name="dita2html5-responsive.generate-context-sensitive-help">
+        <java classname="net.sf.saxon.Transform"
+              classpathref="html5-responsive.classpath"
+              fork="true"
+              failonerror="true">
+            <arg line='-s:${args.input}'/>
+            <arg line='-xsl:${html5-responsive.context.sensitive.help.style}'/>
+            <arg line='-x:"org.apache.xml.resolver.tools.ResolvingXMLReader"'/>
+            <arg line='-y:"org.apache.xml.resolver.tools.ResolvingXMLReader"'/>
+            <arg line='-r:"org.apache.xml.resolver.tools.CatalogResolver"'/>
+            <arg line='"outputDir=${output.dir}"'/>
+            <arg line='"inputDir=${html5-responsive.temp.input.dir}"'/>
+            <arg line='"properties-xml=${html5-responsive.properties.file}"'/>
+            <arg line='"out-extension=${emc-out-extension}"'/>
+            <sysproperty key="xml.catalog.files" value="${html5-responsive.plugin.xmlCatalog}"/>
+        </java>
+    </target>
+
+    <target name="dita2html5-responsive.postprocess" depends="dita2html5-responsive.copy-meta-files,
+                                                        dita2html5-responsive.copy-resources,
+                                                        dita2html5-responsive.replace-chapters-id,
+                                                        dita2html5-responsive.process-related-links">
+    </target>
+
+    <target name="dita2html5-responsive.copy-meta-files">
+        <copy todir="${dita.temp.dir}" failonerror="false">
+            <fileset dir="${args.input.location}">
+                <include name="${dita.map.name}.met"/>
+                <include name="properties.xml"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="dita2html5-responsive.copy-resources">
+        <copy todir="${output.dir}" failonerror="false">
+            <fileset dir="${html5-responsive.scripts.dir}">
+                <include name="**/*.js"/>
+            </fileset>
+        </copy>
+        <copy todir="${output.dir}" failonerror="false">
+            <fileset dir="${html5-responsive.css.dir}">
+                <include name="**/*.css"/>
+            </fileset>
+        </copy>
+        <copy todir="${output.dir}" failonerror="false">
+            <fileset dir="${html5-responsive.template.dir}">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+        <copy todir="${output.dir}" failonerror="false">
+            <fileset dir="${emc-html-resources.plugin}/images/low" includes="**/*"/>
+        </copy>
+    </target>
+
+    <target name="dita2html5-responsive.replace-chapters-id">
+        <property name="temp.dita.temp.dir" location="${dita.temp.dir}/temp"/>
+        <mkdir dir="${dita.temp.dir}/temp"/>
+
+        <xslt basedir="${dita.temp.dir}"
+              includes="**/*.htm"
+              destdir="${temp.dita.temp.dir}"
+              extension=".htm"
+              style="${html5-responsive.postprocess.style}" >
+            <param name="propertiesXml" expression="${html5-responsive.properties.file}"/>
+        </xslt>
+        <xslt basedir="${dita.temp.dir}"
+              includes="**/*.html"
+              destdir="${temp.dita.temp.dir}"
+              extension=".html"
+              style="${html5-responsive.postprocess.style}" >
+            <param name="propertiesXml" expression="${html5-responsive.properties.file}"/>
+        </xslt>
+        <xslt basedir="${dita.temp.dir}"
+              includes="**/*.xml"
+              destdir="${temp.dita.temp.dir}"
+              extension=".xml"
+              style="${html5-responsive.postprocess.style}" >
+            <param name="propertiesXml" expression="${html5-responsive.properties.file}"/>
+        </xslt>
+        <xslt basedir="${dita.temp.dir}"
+              includes="**/*.ditamap"
+              destdir="${temp.dita.temp.dir}"
+              extension=".ditamap"
+              style="${html5-responsive.postprocess.style}" >
+            <param name="propertiesXml" expression="${html5-responsive.properties.file}"/>
+        </xslt>
+
+        <move todir="${dita.temp.dir}">
+            <fileset dir="${temp.dita.temp.dir}"/>
+        </move>
+    </target>
+
+    <target name="dita2html5-responsive.process-related-links">
+        <property name="temp.dita.temp.dir" location="${dita.temp.dir}/temp"/>
+        <mkdir dir="${dita.temp.dir}/temp"/>
+
+        <xslt basedir="${dita.temp.dir}"
+              includes="**/*.htm"
+              destdir="${temp.dita.temp.dir}"
+              extension=".htm"
+              style="${html5-responsive.related-links.style}" >
+            <param name="propertiesXml" expression="${html5-responsive.properties.file}"/>
+        </xslt>
+        <xslt basedir="${dita.temp.dir}"
+              includes="**/*.html"
+              destdir="${temp.dita.temp.dir}"
+              extension=".html"
+              style="${html5-responsive.related-links.style}" >
+            <param name="propertiesXml" expression="${html5-responsive.properties.file}"/>
+        </xslt>
+
+        <move todir="${dita.temp.dir}">
+            <fileset dir="${temp.dita.temp.dir}"/>
+        </move>
+    </target>
+
+    <target name="dita2html5-responsive.cleanup">
+        <delete dir="${html5-responsive.temp.input.dir}"/>
+        <delete>
+            <fileset dir="${output.dir}">
+                <include name="commonrtl.css"/>
+                <include name="commonltr.css"/>
+            </fileset>
+        </delete>
+    </target>
+
+</project>

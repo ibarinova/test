@@ -1,0 +1,33 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <!-- 
+    Revision History
+    ================     
+    EMC      PDFGlossary    9-Jul-2013   Added customization(gloss-sort-as tag) for the Glossary
+  -->
+	
+	<group xml:base="dtd/">
+		<public publicId="-//EMC//DTD DITA Glossary Entry//EN" uri="emcglossentry.dtd"></public>
+		<public publicId="-//EMC//DTD DITA 1.x Glossary Entry//EN" uri="emcglossentry.dtd"></public>
+		<public publicId="-//EMC//DTD DITA 1.2 Glossary Entry//EN" uri="emcglossentry.dtd"></public>
+		
+		<public publicId="-//EMC//ELEMENTS DITA Glossary Entry//EN" uri="emcglossentry.mod"></public>
+		<public publicId="-//EMC//ELEMENTS DITA 1.x Glossary Entry//EN" uri="emcglossentry.mod"></public>
+		<public publicId="-//EMC//ELEMENTS DITA 1.2 Glossary Entry//EN" uri="emcglossentry.mod"></public>
+		
+		<public publicId="-//EMC//ENTITIES DITA Glossary Entry//EN" uri="emcglossentry.ent"></public>
+		<public publicId="-//EMC//ENTITIES DITA 1.x Glossary Entry//EN" uri="emcglossentry.ent"></public>
+		<public publicId="-//EMC//ENTITIES DITA 1.2 Glossary Entry//EN" uri="emcglossentry.ent"></public>
+		
+		<public publicId="-//EMC//DTD DITA Glossary//EN" uri="emcglossary.dtd"></public>
+		<public publicId="-//EMC//DTD DITA 1.x Glossary//EN" uri="emcglossary.dtd"></public>
+		<public publicId="-//EMC//DTD DITA 1.2 Glossary//EN" uri="emcglossary.dtd"></public>
+		
+		<public publicId="-//EMC//ELEMENTS DITA Glossary//EN" uri="emcglossary.mod"></public>
+		<public publicId="-//EMC//ELEMENTS DITA 1.x Glossary//EN" uri="emcglossary.mod"></public>
+		<public publicId="-//EMC//ELEMENTS DITA 1.2 Glossary//EN" uri="emcglossary.mod"></public>
+		
+		<public publicId="-//EMC//ENTITIES DITA Glossary//EN" uri="emcglossary.ent"></public>
+		<public publicId="-//EMC//ENTITIES DITA 1.x Glossary//EN" uri="emcglossary.ent"></public>
+		<public publicId="-//EMC//ENTITIES DITA 1.2 Glossary//EN" uri="emcglossary.ent"></public>	
+	</group>
+</catalog>

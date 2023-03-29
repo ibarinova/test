@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<plugin id="com.emc.html.responsive">
+    <require plugin="org.dita.xhtml"/>
+    <require plugin="com.emc.common.resources" />
+
+    <feature extension="dita.conductor.transtype.check" value="html5-responsive"/>
+    <feature extension="dita.transtype.print" value="html5-responsive"/>
+
+    <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+
+    <feature extension="dita.specialization.catalog.relative" file="catalog.xml"/>
+
+    <feature extension="dita.xsl.mappull" file="xsl/dita2html5-responsive-mappull.xsl"/>
+
+    <feature extension="dita.xsl.html.cover" file="xsl/dita2html5-responsive-landing-page.xsl"/>
+    <feature extension="dita.conductor.xhtml.param" file="insertParameters.xml"/>
+    <feature extension="dita.conductor.xhtml.toc.param" file="insertParameters.xml"/>
+</plugin>
