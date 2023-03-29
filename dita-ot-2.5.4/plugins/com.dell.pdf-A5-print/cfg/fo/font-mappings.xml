@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+
+<font-mappings>
+    <font-table>
+        <aliases>
+            <alias name="serif">Sans</alias>
+        </aliases>
+        <aliases>
+            <alias name="sans-serif">Sans</alias>
+        </aliases>
+        <aliases>
+            <alias name="sans-bold">SansBold</alias>
+        </aliases>
+        <aliases>
+            <alias name="monospace">Monospaced</alias>
+        </aliases>
+        <aliases>
+            <alias name="Helvetica">Normal</alias>
+        </aliases>
+        <aliases>
+            <alias name="Courier">Monospaced</alias>
+        </aliases>
+
+        <logical-font name="Sans">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Light, DellReplica, Arial, DellReplica-Regular, Microsoft YaHei, Limon S1, Malgun Gothic, Meiryo UI, Microsoft JhengHei, SimHei</font-face>
+            </physical-font>
+            <physical-font char-set="Thai">
+                <font-face>Cordia New</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="SymbolsSuperscript">
+                <font-face>DellReplica-Light</font-face>
+                <font-stretch>smaller</font-stretch>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="SansBold">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Regular, Arial, DellReplica, Microsoft YaHei, Limon S1, Malgun Gothic, Meiryo UI, Microsoft JhengHei, SimHei</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Thai">
+                <font-face>Cordia New</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="Monospaced">
+            <physical-font char-set="default">
+                <font-face>Courier New, DellReplica-Light, Zurich TL Condensed</font-face>
+            </physical-font>
+            <physical-font char-set="Monospaced">
+                <font-face>Courier New</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="RightArrow">
+            <physical-font char-set="default">
+                <font-face>Times New Roman</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="barcode">
+            <physical-font char-set="default">
+                <font-face>free3of9</font-face>
+            </physical-font>
+        </logical-font>
+    </font-table>
+</font-mappings>

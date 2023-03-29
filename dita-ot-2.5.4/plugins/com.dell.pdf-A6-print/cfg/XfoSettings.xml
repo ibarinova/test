@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<formatter-config>
+    <formatter-settings default-page-width="8.27in" default-page-height="11.69in" default-font-size="10pt" normal-line-height="1.2"
+        default-color="#000000" border-thin-width="1pt" border-medium-width="3pt" border-thick-width="5pt" pxpi="96" default-lang="" default-CJK="jpn" 
+        pair-kerning="false" latin-ligature="false" punctuation-trim="true" text-autospace="true" fixed-width-space-treatment="true" 
+        thin-space-width="0.2" hair-space-width="0.1" vertical-underline-side="auto" punctuation-spacing="0.5" text-autospace-width="0.25" 
+        table-auto-layout-limit="100" default-from-page-master-region="false" text-kashida-space="1" two-pass-formatting="false" 
+        table-is-reference-area="false" HyphenationOption="true" 
+        PrinterOrientation="auto" PscriptPassThrough="true" printer-marks-line-length="28.3465pt" printer-marks-zero-margin="8.50394pt"/>
+    <pdf-settings tagged-pdf="false" 
+        embed-all-fonts="true" error-on-embed-fault="true" error-on-missing-glyph="false" encryption-level="128" 
+        printing-allowed="high-resolution" no-changing="false" no-content-copying="false" no-adding-or-changing-comments="false" no-fill-form="false" 
+        no-accessibility="false" no-assemble-doc="false" 
+        EPS-processor="ghostscript" ghostscript="C:\Program Files (x86)\gs\gs8.54\bin\gswin32.exe"
+        signature="false"/>
+    <text-settings/>
+    <xslt-settings msxml="true"/>
+    <rxe-settings/>
+</formatter-config>

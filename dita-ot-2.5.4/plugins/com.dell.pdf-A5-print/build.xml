@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Dell PDF A5 (Print)"
+		 default="dita2dell-pdf-a5-print">
+
+	<target name="dita2dell-pdf-a5-print" depends="dita2dell-pdf-preprocess,
+													dita2dell-pdf-a5-print.init,
+													dita2pdf2"/>
+
+	<target name="dita2dell-pdf-a5-print.init">
+		<echo> ___________________________________________________________________________</echo>
+		<echo>| </echo>
+		<echo>|		Selected Dell brand 				= '${dell-brand}'</echo>
+		<echo>|		Selected Dell restricted access 	= '${restriction-value}'</echo>
+		<echo>|		Selected Include metadata 			= '${include-metadata}'</echo>
+		<echo>|		Selected Include draft-comments 	= '${include-draft-comments}'</echo>
+		<echo>|		Selected Include GUIDs 				= '${include-guids}'</echo>
+		<echo>|		Publication is multilingual			= '${combine-languages}'</echo>
+		<echo>|		Language combination				= '${language-combination}'</echo>
+		<echo>|		Export start document				= '${export-start-document}'</echo>
+		<echo>|	</echo>
+		<echo> ___________________________________________________________________________</echo>
+
+		<property name="customization.dir" location="${dita.plugin.com.dell.pdf-A5-print.dir}/cfg"/>
+		<property name="pdf.formatter" value="ah"/>
+		<property name="preprocess.copy-html.skip" value="yes"/>
+		<property name="args.gen.task.lbl" value="YES"/>
+	</target>
+
+</project>

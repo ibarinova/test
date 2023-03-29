@@ -1,0 +1,12 @@
+<dummy>
+    <param name="dell-brand" expression="${dell-brand}"/>
+    <param name="restricted-access" expression="${restriction-value}"/>
+    <param name="include-metadata" expression="${include-metadata}"/>
+    <param name="include-draft-comments" expression="${include-draft-comments}"/>
+    <param name="include-guids" expression="${include-guids}"/>
+    <param name="combine-languages" expression="${combine-languages}"/>
+    <param name="language-combination" expression="${language-combination}"/>
+    <param name="merged-multilingual-map" expression="${merged-multilingual-map}"/>
+    <param name="export-start-document" expression="${export-start-document}"/>
+    <param name="TEMP-DIR" expression="${dita.temp.dir}"/>
+</dummy>
