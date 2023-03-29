@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.dell.pdf-A4-online">
+	<require plugin="org.dita.pdf2"/>
+
+	<feature extension="dita.conductor.transtype.check"
+			 value="dell-pdf-a4-online"
+			 desc="Dell PDF A4 (Online)"/>
+
+	<feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+
+	<feature extension="dita.conductor.pdf2.param" file="insertParameters.xml"/>
+</plugin>

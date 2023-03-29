@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Dell PDF Common Preprocess"
+		 default="dita2dell-pdf-preprocess">
+
+	<target name="dita2dell-pdf-preprocess" depends="dita2dell-pdf-preprocess.init,
+														dita2dell-pdf-preprocess.generate-properties"/>
+
+	<target name="dita2dell-pdf-preprocess.init">
+		<property name="dell-pdf-preprocess.xsl.dir" location="${dita.plugin.com.dell.pdf.preprocess.dir}/xsl"/>
+		<property name="dell-pdf.properties" location="${dita.temp.dir}/dell-pdf.properties"/>
+		<dirname property="orig.args.input.location" file="${args.input}"/>
+		<basename property="orig.args.input.name" file="${args.input}" />
+		<property name="fixJobXML" value="true"/>
+		<property name="filterAudience" value="true"/>
+	</target>
+
+	<target name="dita2dell-pdf-preprocess.generate-properties">
+		<!-- Generate properties file which contains required metadata -->
+		<xslt style="${dell-pdf-preprocess.xsl.dir}${file.separator}generate-properties-file.xsl"
+			  in="${dell-pdf-preprocess.xsl.dir}${file.separator}dummy.xml"
+			  out="${dita.temp.dir}${file.separator}dummy.xml">
+			<param name="TEMP-DIR" expression="${dita.temp.dir}"/>
+			<param name="INPUT-DIR" expression="${orig.args.input.location}"/>
+			<param name="INPUT-NAME" expression="${orig.args.input.name}"/>
+			<param name="PROP-FILE-NAME" expression="dell-pdf.properties"/>
+			<param name="MERGED-MAP-NAME" expression="merged-multilingual-map.xml"/>
+			<xmlcatalog refid="dita.catalog"/>
+		</xslt>
+		<property file="${dell-pdf.properties}"/>
+		<!--
+			Available properties:
+			'dell-brand'
+			'restriction-value'
+			'include-metadata'
+			'include-draft-comments'
+			'include-guids'
+			'combine-languages'
+			'language-combination'
+			'merged-multilingual-map'
+			'export-start-document'
+			-->
+	</target>
+
+	<target name="dita2dell-pdf-a4-online.fix-job-xml-file-format" if="fixJobXML">
+		<!--		Replaceregexp code works in the DITA-OT-3.4+ only. In 2.5.4 format attribute has 'html' value instead of 'dita '.-->
+		<!--		<replaceregexp file="${dita.temp.dir}/.job.xml" match="format=&quot;dita &quot;" byline="true" flags="g" replace="format=&quot;dita&quot;"/>-->
+
+		<xslt in="${dita.temp.dir}/.job.xml" out="${dita.temp.dir}/.job1.xml" style="${dell-pdf-preprocess.xsl.dir}/fix-job-xml.xsl"/>
+		<move file="${dita.temp.dir}/.job1.xml" tofile="${dita.temp.dir}/.job.xml"/>
+	</target>
+
+	<target name="dita2dell-pdf-preprocess.filter-audience" if="filterAudience">
+		<copy file="${dita.temp.dir}/${merged.file}" tofile="${dita.temp.dir}/${merged.file}_orig.xml"/>
+
+		<xslt in="${dita.temp.dir}/${merged.file}" out="${dita.temp.dir}/${merged.file}.xml" style="${dell-pdf-preprocess.xsl.dir}/filter-audience.xsl">
+			<param name="combine-languages" expression="${combine-languages}"/>
+		</xslt>
+		<move file="${dita.temp.dir}/${merged.file}.xml" tofile="${dita.temp.dir}/${merged.file}"/>
+	</target>
+
+</project>

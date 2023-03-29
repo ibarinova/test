@@ -1,0 +1,9 @@
+<dummy>
+    <param name="dell-brand" expression="${dell-brand}"/>
+    <param name="restricted-access" expression="${restriction-value}"/>
+	<param name="watermark-access" expression="${watermark-value}"/>
+    <param name="include-metadata" expression="${include-metadata}"/>
+    <param name="include-draft-comments" expression="${include-draft-comments}"/>
+    <param name="include-guids" expression="${include-guids}"/>
+    <param name="args.input.location" expression="${args.input.location}"/>
+</dummy>

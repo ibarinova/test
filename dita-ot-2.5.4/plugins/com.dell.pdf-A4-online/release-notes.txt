@@ -1,0 +1,7 @@
+06.21.2019
+
+    + IDPL-6917: Add initial plugin for Dell PDF A4 (online) output.
+
+12.01.2020
+
+Test comment for deployment

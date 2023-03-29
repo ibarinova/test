@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.dell.pdf.preprocess">
+	<require plugin="org.dita.xhtml"/>
+
+	<feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+	<feature extension="depend.preprocess.debug-filter.pre" value="dita2dell-pdf-a4-online.fix-job-xml-file-format"/>
+	<feature extension="depend.org.dita.pdf2.init.pre" value="dita2dell-pdf-preprocess.filter-audience"/>
+</plugin>

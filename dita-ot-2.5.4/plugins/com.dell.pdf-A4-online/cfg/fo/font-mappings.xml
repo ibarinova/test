@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+
+<font-mappings>
+    <font-table>
+        <aliases>
+            <alias name="serif">Sans</alias>
+        </aliases>
+        <aliases>
+            <alias name="sans-serif">Sans</alias>
+        </aliases>
+        <aliases>
+            <alias name="sans-reg">SansRegular</alias>
+        </aliases>
+        <aliases>
+            <alias name="sans-bold">SansBold</alias>
+        </aliases>
+        <aliases>
+            <alias name="monospace">Monospaced</alias>
+        </aliases>
+        <aliases>
+            <alias name="Helvetica">Normal</alias>
+        </aliases>
+        <aliases>
+            <alias name="Courier">Monospaced</alias>
+        </aliases>
+        <aliases>
+            <alias name="univers">Univers</alias>
+        </aliases>
+        <aliases>
+            <alias name="alienware">Alienware</alias>
+        </aliases>
+
+        <logical-font name="Arial">
+            <physical-font char-set="default">
+                <font-face>Arial, Arial MT, Arial CE, Arial Tur</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="Sans">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Light, DellReplica, Arial, DellReplica-Regular, Microsoft YaHei, DaunPenh, Limon S1, Malgun Gothic, Meiryo UI, Microsoft JhengHei, SimHei</font-face>
+            </physical-font>
+            <physical-font char-set="Thai">
+                <font-face>Cordia New</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="SymbolsSuperscript">
+                <font-face>DellReplica-Light</font-face>
+                <font-stretch>smaller</font-stretch>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="SansRegular">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Regular, DellReplica, Arial, Microsoft YaHei, DaunPenh, Limon S1, Malgun Gothic, Meiryo UI, Microsoft JhengHei, SimHei</font-face>
+            </physical-font>
+            <physical-font char-set="Thai">
+                <font-face>Cordia New</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="SymbolsSuperscript">
+                <font-face>DellReplica-Light</font-face>
+                <font-stretch>smaller</font-stretch>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="SansBold">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Bold, Arial, DellReplica, Microsoft YaHei, DaunPenh, Limon S1, Malgun Gothic, Meiryo UI, Microsoft JhengHei, SimHei</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Thai">
+                <font-face>Cordia New</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="Monospaced">
+            <physical-font char-set="default">
+                <font-face>Courier New, DellReplica-Light, Zurich TL Condensed, Malgun Gothic, Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Monospaced">
+                <font-face>Courier New, DellReplica-Light, Zurich TL Condensed, Malgun Gothic, Microsoft YaHei</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="RightArrow">
+            <physical-font char-set="default">
+                <font-face>Times New Roman</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="barcode">
+            <physical-font char-set="default">
+                <font-face>free3of9</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="Univers">
+            <physical-font char-set="default">
+                <font-face>Univers 57 Condensed, Arial CE, Arial Tur, DFP Hei Std GB W3 Traditional Chinese, DF Maru Gothic Std W5 Japanese, FranklinGothicMedium CTT compress, Limon S1, P5 BrowalliaUPC Regular, SimHei Regular, Zurich TL Condensed, Malgun Gothic, Microsoft YaHei</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="Alienware">
+            <physical-font char-set="default">
+                <font-face>Alienware, Arial, DaunPenh, Limon S1, Museo Sans For Dell 500, Malgun Gothic, Meiryo UI, Microsoft JhengHei, SimHei, Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Hong Kong Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Traditional Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Thai">
+                <font-face>Cordia New</font-face>
+            </physical-font>
+            <physical-font char-set="Turkish">
+                <font-face>Arial</font-face>
+                <font-stretch>83%</font-stretch>
+            </physical-font>
+            <physical-font char-set="Polish">
+                <font-face>Arial</font-face>
+                <font-stretch>83%</font-stretch>
+            </physical-font>
+        </logical-font>
+
+    </font-table>
+</font-mappings>
