@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.emc.pdf">
+    <require plugin="org.dita.pdf2"/>
+    <feature extension="package.support.name" value="EMC EOS2 Information Experience Technology"/>
+    <feature extension="package.support.email" value="LCA.Support@emc.com"/>
+    <feature extension="package.version" value="2.0.0"/>
+    <feature extension="dita.conductor.transtype.check" value="emcpdf"/>
+    <feature extension="dita.transtype.print" value="emcpdf"/>
+    <feature extension="dita.xsl.strings" file="cfg/common/vars/strings.xml"/>
+    <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+    <feature extension="org.dita.pdf2.xsl.topicmerge" file="cfg/common/topicmergeImpl-custom.xsl"/>
+    <feature extension="org.dita.pdf2.catalog.relative" file="cfg/catalog.xml"/>
+</plugin>

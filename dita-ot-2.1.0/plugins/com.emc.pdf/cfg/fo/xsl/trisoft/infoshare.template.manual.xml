@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<!-- ============================================================== -->
+	<page-setup>
+		<papersize page-width="210mm" page-height="297mm"/><!-- A4 -->
+		<margins margin-bottom="20mm" margin-left="20mm" margin-right="20mm" margin-top="20mm"/>
+		<orientation portrait="yes"/>
+		<cover background-image="cover-A4.png"/>
+		<footer extent="12pt"/>
+		<header extent="12pt"/>
+		<param name="insert.coverpage">yes</param>
+		<param name="insert.toc">yes</param>
+		<param name="insert.index">yes</param>
+		<param name="insert.lof">no</param>
+		<param name="generate.topicrefs">yes</param>
+		<param name="insert.elementlabels">yes</param>
+		<!-- set-up toc -->
+		<param name="toc.numbering">yes</param><!-- indicates whether a toc is needed (yes / no) -->
+		<param name="toc.level">3</param><!-- indicates how many levels will be included in the toc (1..5) -->		
+		<param name="toc.shortdescription">no</param><!-- indicates whether a shortdesc should be extracted from the topic and displayed in the toc (yes / no) -->
+		<!-- set-up page -->
+		<param name="force-page-count">end-on-even</param><!-- allowable value: end-on-even -->
+		<param name="column-count">1</param><!-- indicates the number of columns on the page -->
+		<!-- set-up cover page -->
+		<param name="documentsubtitle">User Manual</param>
+		<param name="logo">company.logo.jpg</param>
+		<!-- set-up indentation -->
+		<param name="indent.basic">24</param>
+		<param name="indent.extra">24</param>
+	</page-setup>
+	<!-- ============================================================== -->
+	<styles>
+		<style name="admon">
+			<formatting name="font-weight">bold</formatting>
+		</style>
+		<style name="block">
+			<formatting name="start-indent">24pt</formatting>
+		</style>
+		<style name="blocklabel">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="keep-with-next">always</formatting>
+			<formatting name="line-height">12pt</formatting>
+			<formatting name="space-before">0.6em</formatting>
+			<formatting name="start-indent">0pt</formatting>
+		</style>
+		<style name="change-bar-insert">
+			<formatting name="change-bar-style">solid</formatting>
+			<formatting name="change-bar-color">green</formatting>
+			<formatting name="change-bar-width">1pt</formatting>
+			<formatting name="change-bar-placement">start</formatting>
+<!--			<formatting name="change-bar-offset">33mm</formatting>-->
+		</style>
+		<style name="change-bar-new">
+			<formatting name="change-bar-style">solid</formatting>
+			<formatting name="change-bar-color">blue</formatting>
+			<formatting name="change-bar-width">1pt</formatting>
+			<formatting name="change-bar-placement">start</formatting>
+<!--			<formatting name="change-bar-offset">33mm</formatting>-->
+		</style>
+		<style name="change-bar-delete">
+			<formatting name="change-bar-style">solid</formatting>
+			<formatting name="change-bar-color">red</formatting>
+			<formatting name="change-bar-width">1pt</formatting>
+			<formatting name="change-bar-placement">start</formatting>
+<!--			<formatting name="change-bar-offset">35mm</formatting>-->
+		</style>
+		<style name="choicetable">
+			<formatting name="background-color">white</formatting>
+			<formatting name="font-size">8pt</formatting>
+			<formatting name="space-before">5pt</formatting>
+			<formatting name="space-after">5pt</formatting>
+			<formatting name="table-layout">fixed</formatting>
+			<formatting name="width">100%</formatting>
+		</style>
+		<style name="cover.title">
+			<formatting name="color">white</formatting>
+			<formatting name="font-size">30pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="margin-left">20pt</formatting>
+			<formatting name="margin-right">20pt</formatting>
+			<formatting name="margin-top">350pt</formatting>
+			<formatting name="line-height">140%</formatting>
+			<formatting name="text-align">left</formatting>
+		</style>
+		<style name="doc.metadata">
+			<formatting name="color">white</formatting>
+			<formatting name="font-size">6pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="margin-left">20pt</formatting>
+			<formatting name="margin-right">20pt</formatting>
+			<formatting name="text-align">left</formatting>
+		</style>
+		<style name="draft-comment">
+			<!--<formatting name="background-color">#FF99FF</formatting>-->
+            <formatting name="background-color">red</formatting>
+			<formatting name="border-color">black</formatting>
+			<formatting name="border-style">solid</formatting>
+			<formatting name="border-width">thin</formatting>
+			<formatting name="color">#CC3333</formatting>
+		</style>
+		<style name="draft-watermark">
+			<formatting name="color">#C6C6C6</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="position">absolute</formatting>
+			<formatting name="top">20pt</formatting>
+			<formatting name="width">100%</formatting>
+		</style>		
+		<style name="footer.even">
+			<formatting name="font-size">8pt</formatting>
+			<formatting name="line-height">8pt</formatting>
+			<formatting name="text-align">left</formatting>
+		</style>
+		<style name="footer.odd">
+			<formatting name="font-size">8pt</formatting>
+			<formatting name="line-height">8pt</formatting>
+			<formatting name="text-align">right</formatting>
+		</style>
+		<style name="footnote">
+			<formatting name="font-size">8pt</formatting>
+			<formatting name="start-indent">0pt</formatting>
+		</style>
+		<style name="frameall">
+			<formatting name="border-color">black</formatting>
+			<formatting name="border-style">solid</formatting>
+			<formatting name="border-width">0.1pt</formatting>
+			<formatting name="space-after">12pt</formatting>
+			<formatting name="space-before">12pt</formatting>
+		</style>
+		<style name="framebottom">
+			<formatting name="border-bottom-color">black</formatting>
+			<formatting name="border-bottom-style">solid</formatting>
+			<formatting name="border-bottom-width">1pt</formatting>
+		</style>
+		<style name="frametop">
+			<formatting name="border-top-color">black</formatting>
+			<formatting name="border-top-style">solid</formatting>
+			<formatting name="border-top-width">1pt</formatting>
+		</style>
+		<style name="header.odd">
+			<formatting name="font-size">8pt</formatting>
+			<formatting name="line-height">8pt</formatting>
+			<formatting name="text-align">right</formatting>
+		</style>
+		<style name="header.even">
+			<formatting name="font-size">8pt</formatting>
+			<formatting name="line-height">8pt</formatting>
+			<formatting name="text-align">left</formatting>
+		</style>
+		<style name="index">
+			<!-- no formatting defined -->
+		</style>
+		<style name="topic">
+			<formatting name="break-before">page</formatting>
+		</style>
+		<style name="heading1" id="heading1">
+			<!--formatting name="break-before">page</formatting-->
+			<!-- don't enable property - leads to empty page -->
+			<formatting name="font-size">16pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="keep-with-next">always</formatting>
+			<formatting name="margin-top">0pt</formatting>
+			<formatting name="margin-bottom">10pt</formatting>
+			<formatting name="padding-top">5pt</formatting>
+		</style>
+		<style name="heading2">
+			<!--formatting name="break-before">page</formatting-->
+			<!-- don't enable property - leads to empty page  -->
+			<formatting name="font-size">12pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="keep-with-next">always</formatting>
+			<formatting name="margin-bottom">5pt</formatting>
+			<formatting name="padding-top">5pt</formatting>
+		</style>
+			<style name="heading3">
+			<!--formatting name="break-before">page</formatting-->
+			<!-- don't enable property - leads to empty page  -->
+			<formatting name="font-size">12pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="keep-with-next">always</formatting>
+			<formatting name="margin-bottom">2pt</formatting>
+			<formatting name="padding-top">5pt</formatting>
+		</style>
+			<style name="heading4">
+			<!--formatting name="break-before">page</formatting-->
+			<!-- don't enable property - leads to empty page  -->
+			<formatting name="font-size">11pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="keep-with-next">always</formatting>
+			<formatting name="padding-top">5pt</formatting>
+			<formatting name="start-indent">0pt</formatting>
+		</style>
+		<style name="heading5">
+			<!--formatting name="break-before">page</formatting-->
+			<!-- don't enable property - leads to empty page  -->
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="keep-with-next">always</formatting>
+			<formatting name="padding-top">5pt</formatting>
+			<formatting name="start-indent">0pt</formatting>
+		</style>
+		<style name="heading6">
+			<!--formatting name="break-before">page</formatting-->
+			<!-- don't enable property - leads to empty page  -->
+			<formatting name="font-size">1Opt</formatting>
+			<formatting name="font-style">italic</formatting>
+			<formatting name="keep-with-next">always</formatting>
+			<formatting name="padding-top">5pt</formatting>
+			<formatting name="start-indent">0pt</formatting>
+		</style>
+		<style name="hyperlink">
+			<formatting name="color">green</formatting>
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="text-decoration">none</formatting>
+			<formatting name="start-indent">0pt</formatting>
+		</style>
+		<style name="lq">
+			<formatting name="border-color">black</formatting>
+			<formatting name="border-style">solid</formatting>
+			<formatting name="border-width">thin</formatting>
+			<formatting name="end-indent">44pt</formatting>
+			<formatting name="font-size">9pt</formatting>
+			<formatting name="padding-left">6pt</formatting>
+			<formatting name="space-before">10pt</formatting>
+			<formatting name="space-after">10pt</formatting>
+			<formatting name="start-indent">20pt</formatting>
+			<formatting name="text-align">left</formatting>
+		</style>
+		<style name="section.title">
+			<formatting name="color">black</formatting>
+			<formatting name="font-size">11pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="keep-with-next">always</formatting>
+			<formatting name="space-before">1em</formatting>
+		</style>
+		<style name="toc1">
+			<formatting name="font-size">12pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="margin-top">12pt</formatting>
+			<formatting name="text-align-last">justify</formatting>
+		</style>
+		<style name="toc2">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="start-indent">10pt</formatting>
+			<formatting name="text-align-last">justify</formatting>
+		</style>
+		<style name="toc3">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="start-indent">20pt</formatting>
+			<formatting name="text-align-last">justify</formatting>
+		</style>
+		<style name="toc4">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="start-indent">30pt</formatting>
+			<formatting name="text-align-last">justify</formatting>
+		</style>
+		<style name="toc5">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="start-indent">40pt</formatting>
+			<formatting name="text-align-last">justify</formatting>
+		</style>
+		<style name="toc.section">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="keep-with-next">always</formatting>
+			<formatting name="margin-bottom">6pt</formatting>
+			<formatting name="margin-top">6pt</formatting>
+			<formatting name="start-indent">24pt</formatting>
+			<formatting name="text-align-last">justify</formatting>
+		</style>
+		<style name="toc.shortdesc">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="margin-bottom">6pt</formatting>
+			<formatting name="margin-right">12pt</formatting>
+			<formatting name="margin-top">6pt</formatting>
+			<formatting name="start-indent">24pt</formatting>
+		</style>
+		<style name="toctitle">
+			<formatting name="font-size">16pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="margin-top">0pc</formatting>
+			<formatting name="margin-bottom">1.4pc</formatting>
+			<formatting name="padding-top">1.4pc</formatting>
+		</style>
+		<style name="shortdesc">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="font-style">italic</formatting>
+			<formatting name="start-indent">24pt</formatting>
+		</style>
+		<style name="topic.xtitlealts">
+			<formatting name="background-color">#f0f0d0</formatting>
+			<formatting name="border-style">solid</formatting>
+			<formatting name="border-color">black</formatting>
+			<formatting name="border-width">thin</formatting>
+			<formatting name="start-indent">0pt</formatting>
+		</style>
+		<style name="note">
+			<formatting name="font-size">10pt</formatting>
+			<!--formatting name="start-indent">72pt</formatting-->
+			<!-- must be inherited -->
+		</style>
+		<style name="li">
+			<formatting name="font-size">10pt</formatting>
+			<!-- formatting name="start-indent">72pt</formatting -->
+		</style>
+		<style name="list">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="start-indent">24pt</formatting>
+		</style>
+		<style name="dd.cell">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="space-before">0.3em</formatting>
+			<formatting name="space-after">0.5em</formatting>
+			<formatting name="start-indent">2em</formatting>
+			<!--formatting name="end-indent">24pt + 0.5em</formatting-->
+		</style>
+		<style name="dt">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+			<formatting name="text-indent">0em</formatting>
+			<formatting name="end-indent">72pt</formatting>
+		</style>
+		<style name="dd">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="space-before">0.3em</formatting>
+			<formatting name="space-after">0.5em</formatting>
+			<formatting name="start-indent">96pt</formatting>
+			<formatting name="end-indent">24pt</formatting>
+		</style>
+		<style name="pre">
+			<!--formatting name="start-indent">inherit</formatting-->
+			<formatting name="space-before">1.2em</formatting>
+			<formatting name="space-after">0.8em</formatting>
+			<formatting name="white-space-treatment">preserve</formatting>
+			<formatting name="white-space-collapse">false</formatting>
+			<formatting name="linefeed-treatment">preserve</formatting>
+			<formatting name="wrap-option">wrap</formatting>
+			<formatting name="background-color">#f0f0f0</formatting>
+			<formatting name="font-family">Courier New</formatting>
+			<formatting name="line-height">106%</formatting>
+			<formatting name="font-size">9pt</formatting>
+			<formatting name="start-indent">24pt</formatting>
+		</style>
+		<style name="lines">
+			<formatting name="font-size">10pt</formatting>
+			<formatting name="space-before">0.8em</formatting>
+			<formatting name="space-after">0.8em</formatting>
+			<formatting name="white-space-treatment">preserve</formatting>
+			<formatting name="white-space-collapse">false</formatting>
+			<formatting name="linefeed-treatment">preserve</formatting>
+			<formatting name="wrap-option">wrap</formatting>
+		</style>
+		<style name="fig">
+			<formatting name="border-bottom">12pt  solid white</formatting>
+			<formatting name="border-top">12pt  solid white</formatting>
+			<formatting name="start-indent">24pt</formatting>
+		</style>
+		<style name="figure.title">
+			<!-- unused-->
+			<formatting name="text-align">center</formatting>
+			<formatting name="space-before">3pt</formatting>
+			<formatting name="start-indent">0pt</formatting>
+			<formatting name="end-indent">24pt</formatting>
+		</style>
+		<style name="maptitle">
+			<formatting name="font-size">16pt</formatting>
+			<formatting name="font-weight">bold</formatting>
+		</style>
+		<style name="mapabstract">
+			<formatting name="margin-top">3pc</formatting>
+			<formatting name="margin-bottom">3pc</formatting>
+			<formatting name="margin-left">6pc</formatting>
+			<formatting name="margin-right">6pc</formatting>
+		</style>
+		<style name="table.data">
+			<formatting name="background-color">white</formatting>
+			<formatting name="font-size">8pt</formatting>
+			<formatting name="space-before">10pt</formatting>
+			<formatting name="space-after">10pt</formatting>
+			<formatting name="table-layout">fixed</formatting>
+			<formatting name="width">100%</formatting>
+		</style>
+		<style name="table.data.caption">
+			<formatting name="start-indent">inherit</formatting>
+			<formatting name="font-weight">bold</formatting>
+		</style>
+		<style name="table.data.tbody">
+			<formatting name="background-color">white</formatting>
+		</style>
+		<style name="table.data.td">
+			<!--formatting name="background-color">grey</formatting-->
+			<formatting name="padding">1pt</formatting>
+		</style>
+		<style name="table.data.tf">
+			<formatting name="color">green</formatting>
+			<formatting name="padding">2pt</formatting>
+		</style>
+		<style name="table.data.th">
+			<formatting name="color">black</formatting>
+			<!--formatting name="background-color">silver</formatting-->
+			<formatting name="padding">2pt</formatting>
+			<formatting name="text-align">center</formatting>
+			<formatting name="font-weight">bold</formatting>
+		</style>
+	</styles>
+	<!-- ============================================================== -->
+	<fonts>
+		<font xml:lang="en">Arial Unicode MS</font>
+		<font xml:lang="zh">SimSun</font>
+		<font xml:lang="ja">MS Mincho</font>
+		<font xml:lang="ko">Batang</font>
+		<font xml:lang="ar">Arabic Transparant</font>
+	</fonts>
+	<!-- ============================================================== -->
+</template>

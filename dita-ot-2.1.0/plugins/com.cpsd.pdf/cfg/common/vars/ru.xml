@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Russian -->
+<!--
+    Revision History
+    ================
+	EMC 		IB4   25-Mar-2014   Remove Data Domain portal from copyright text
+	EMC 		IB4   14-Apr-2014   Updated variable: start-cite and end-cite, q-begin, q-end
+	EMC 	    IB5   21-Aug-2014 	TKT-139: Make "Option"/"Description" headers on <choicetable> consistent for noted output
+	EMC 		IB5   21-Aug-2014   TKT-55: Fix unordered list formatting within tables inside a substep.
+	EMC 		IB5   26-Aug-2014   TKT-55: Fix unordered list formatting within tables inside a substep.
+	EMC			IB8	  16-Oct-2015	TKT-328: Add "Published in the USA"
+	EMC			IB8	  16-Oct-2015	TKT-165: Localize formatting of term
+	EMC			IB10  17-May-2016	TKT-417: Removed comma between publish date’s month and year
+	DELL   			14-Sept-2018	TKT-660: Change in copyright statement to add company names 
+ -->
+
+<vars xmlns="http://www.idiominc.com/opentopic/vars">
+  <!-- The unordered list bullet   -->
+  <variable id="Unordered List bullet">u</variable>
+  <!-- IB5 20-Aug-2014 TKT 55: Fix unordered list formatting within tables inside a substep. -->
+  <!--
+  <variable id="Unordered List bullet level1">u</variable>
+  <variable id="Unordered List bullet level2">l</variable>
+  -->
+  <variable id="Unordered List bullet level1">l</variable>
+  <variable id="Unordered List bullet level2">n</variable>
+  <variable id="Unordered List bullet level3">&#x2013;</variable>
+  <variable id="checkbox bullet">&#x25A1;</variable>
+  <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+
+  <!-- The header that appears on odd-numbered pages. -->
+  <variable id="Body odd header">
+    <param ref-name="heading"/>
+  </variable>
+
+  <!-- The header that appears on even-numbered pages. -->
+  <variable id="Body even header">
+    <param ref-name="heading"/>
+  </variable>
+
+  <!-- The footer that appears on odd-numbered pages. -->
+  <variable id="Body odd footer">
+    <param ref-name="heading" />&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<param ref-name="pagenum" />
+  </variable>
+
+  <!-- The footer that appears on even-numbered pages. -->
+  <variable id="Body even footer">
+    <param ref-name="prod_name" />&#xa0;<param ref-name="version" />&#xa0;<param ref-name="category" />
+  </variable>
+
+  <!--The footer that appears on odd-numbered index pages.-->
+  <variable id="Index odd footer">
+    <param ref-name="prod_name" />&#xa0;<param ref-name="version" />&#xa0;<param ref-name="category" />
+  </variable>
+
+  <!-- The footer that appears on the first page of a chapter. -->
+  <variable id="Body first footer">
+    <param ref-name="heading" />
+  </variable>
+
+  <!--a space-->
+  <variable id="space">&#xa0;</variable>
+
+  <!-- Text to use for figure xrefs.-->
+  <variable id="Figure Num">Рис. <param ref-name="number"/></variable>
+
+  <!-- Text to use for table xrefs.-->
+  <variable id="Table Num">Таблица <param ref-name="number"/>&#xA0;</variable>
+
+  <!--Text to use for topic xrefs-->
+  <variable id="On page">&#xA0;на с. <param ref-name="pagenum"/></variable>
+  <variable id="Page">&#xA0;на с. <param ref-name="pagenum"/></variable>
+
+  <!-- Text to use for chapter titles.-->
+  <variable id="Chapter with number">Глава&#xA0;<param ref-name="number"/></variable>
+
+  <!-- Text to use for appendix titles.-->
+  <variable id="Appendix with number">Приложение&#xA0;<param ref-name="number"/></variable>
+
+  <!-- The string used to label a chapter within the table of contents. -->
+  <variable id="Table of Contents Chapter">
+    Глава&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <!-- The string used to label an appendix within the table of contents. -->
+  <variable id="Table of Contents Appendix">
+    Приложение&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <!--index-->
+  <variable id="Index">Индекс</variable>
+  <variable id="Index See String">, См. </variable>
+  <variable id="Index See Also String">См. также </variable>
+
+  <!--glossary-->
+  <variable id="Glossary">Глоссарий</variable>
+  <variable id="Glossary See String">См. </variable>
+  <variable id="Glossary See Also String">См. также </variable>
+
+  <!-- The string used to label table of contents. -->
+  <variable id="Table of Contents">Содержание</variable>
+
+
+  <!-- The string used to label an preface within the table of contents. -->
+  <variable id="Table of Contents Preface">Предисловие</variable>
+
+  <!-- The string used to label the List of Tables heading. -->
+  <variable id="List of Tables">Таблицы</variable>
+
+  <!-- NS/EMC Apr-2013 Fixed translation (consistent with Webworks) -->
+  <!-- The string used to label the List of Figures heading. -->
+  <variable id="List of Figures">Список рисунков</variable>
+
+  <!--Separator used for dlentry-->
+  <variable id="dlentry separator">&#xA0;&#x2014;&#xA0;</variable>
+
+  <!-- The string used for table numbers in the List of Tables. -->
+  <variable id="Table number">
+    <param ref-name="number"></param>
+  </variable>
+
+  <!-- The string used for figure numbers in the List of Figures. -->
+  <variable id="Figure number">
+    <param ref-name="number"></param>
+  </variable>
+
+  <!-- TAD/EMC Aug-2012 Update the word Version from the front cover to be localized -->
+  <variable id="version frontpage">
+    версия&#xA0;<param ref-name="version" />
+  </variable>
+
+  <!--Suite/EMC   Nochap   22-Aug-2012 Release number - AW-->
+  <!-- TAD/EMC Aug-2012 Adding translation using Google Translate -->
+  <variable id="version frontpage nochap">
+    номер&#xA0;выпуска&#xA0;<param ref-name="version" />
+  </variable>
+
+
+  <!-- NS/EMC Apr-2013 Fixed translation (consistent with Webworks) -->
+  <!-- Text to use for figure title number -->
+  <variable id="Figure">
+    Рис.&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <!-- Text to use for table title number -->
+  <variable id="Table">
+    Таблица&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <!-- Text to use for example title number -->
+  <variable id="Example">
+    Пример&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <variable id="Continued">&#xA0;(продолжение)</variable>
+
+  <!--copyright statements-->
+  <!-- Balaji Mani PDF Bundle 8-Feb-2013: Updated the date range for RU output -->
+  <!-- eshenh 10-Feb-2014: fixing broken merge for Product Insert Sheet -->
+  <!-- EMC			IB8	  16-Oct-2015	TKT-328: Add "Published in the USA" -->
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding Delete "Published in ..." -->
+    <variable id="Copyright_stat1">
+     © &#xA0;<param ref-name="owner"/>&#xA0;<param ref-name="year"/>&#xA0;г. Все права защищены.
+  </variable>
+
+  <!-- Balaji Mani 25-Feb-2013: updated the pulished word -->
+  <!-- EMC		IB10	17-May-2016		TKT-417: Removed comma between publish date’s month and year NS-->
+  <variable id="Copyright_stat2">
+    Опубликовано в&#xA0;<param ref-name="month_published"/>&#xA0;<param ref-name="year_published"/>&#xA0;r.
+  </variable>
+
+  	<!--Suite/EMC   Nochap   11-Sep-2012 nochap published date statement - AW-->
+	<!-- EMC		IB10	17-May-2016		TKT-417: Removed comma between publish date’s month and year NS-->
+	<variable id="Copyright_stat2_nochap">
+		<param ref-name="month_published"/>&#xA0;<param ref-name="year_published"/>&#xA0;r.
+	</variable>
+
+ <!-- Dell EMC James			29-Nov-2016	Dell Rebranding   -->
+  <variable id="Copyright_stat3">
+    По сведениям Dell информация, содержащаяся в этой публикации, является правильной на дату публикации. Данная информация может измениться без уведомления.
+  </variable>
+
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding   -->
+  <variable id="Copyright_stat4">
+    СОДЕРЖАЩАЯСЯ В ДАННОЙ ПУБЛИКАЦИИ ИНФОРМАЦИЯ ПРЕДОСТАВЛЯЕТСЯ НА УСЛОВИЯХ «КАК ЕСТЬ». DELL НЕ ПРЕДОСТАВЛЯЕТ НИКАКИХ УСЛОВИЙ ИЛИ ГАРАНТИЙ В ОТНОШЕНИИ УКАЗАННОЙ ИНФОРМАЦИИ И ОТКАЗЫВАЕТСЯ ОТ ПОДРАЗУМЕВАЕМЫХ ГАРАНТИЙ КОММЕРЧЕСКОЙ ЦЕННОСТИ И ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. ИСПОЛЬЗОВАНИЕ, КОПИРОВАНИЕ И РАСПРОСТРАНЕНИЕ ЛЮБОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ DELL, ОПИСАННОГО В ДАННОЙ ПУБЛИКАЦИИ, ТРЕБУЕТ НАЛИЧИЯ СООТВЕТСТВУЮЩЕЙ ЛИЦЕНЗИИ.
+  </variable>
+
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding changes. -->
+  <!-- DELL   					14-Sept-2018	TKT-660: Change in copyright statement to add company names -->
+  <variable id="Copyright_stat5">
+    Dell Technologies, Dell, EMC, Dell EMC и другие товарные знаки являются товарными знаками компании Dell Inc. или ее дочерних компаний. Другие товарные знаки, упомянутые здесь, являются собственностью их владельцев. Опубликовано в России.
+  </variable>
+
+  <!-- TAD/EMC Aug-2012 Updating the copyright statement to include the link to the new EMC Online Support Site instead of Powerlink -->
+  <!-- Dana IB2 					Fix Issue #279: Support URL does not render as a blue link on the PDF copyright page-->
+  <!-- EMC 	IB4 	25-Mar-2014 	Issue #400: Remove Data Domain portal from copyright text -->
+  <!-- Dell EMC James			28-Nov-2016	Dell Rebranding changes to remove stat6 from statement by commenting it out. -->
+  <!-- <variable id="Copyright_stat6">
+    Самая последняя документация для продуктов ЕМС доступна на портале онлайн-поддержки (<param ref-name="support_emc"/>).
+  </variable> -->
+
+  <!-- EMC TAD June-2011: Fixed contact information based on Neusoft updates -->
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding changes. Replace "EMC Corporation" with "Dell EMC" -->
+  <variable id="Copyright_stat7">
+    Представительство EMC в России и СНГ
+  </variable>
+
+  <variable id="Copyright_stat7a">
+    Представительство EMC в России и СНГ
+  </variable>
+
+  <!-- EMC TAD June-2011: Fixed contact information based on Neusoft updates -->
+  <variable id="Copyright_stat8">Россия &#xA0;125284 Москва &#xA0;Беговая ул., д. 3, стр. 1 &#xA0;Бизнес-центр «Nordstar Tower», 30 этаж</variable>
+
+  <!-- EMC TAD June-2011: Fixed contact information based on Neusoft updates -->
+  <variable id="Copyright_stat9">тел. +7 (495) 785-6622 &#xA0;факс +7 (495) 785-6625</variable>
+
+  <!-- EMC TAD June-2011: Fixed contact information based on Neusoft updates -->
+  <!-- Dell EMC James			28-Nov-2016	Dell Rebranding changes. Replace  http://russia.emc.com -->
+  <variable id="Copyright_stat10">
+    www.DellEMC.com/ru-ru/index.htm
+  </variable>
+
+  <variable id="Copyright_stat10a">
+    www.DellEMC.com/ru-ru/index.htm
+  </variable>
+
+  <!-- EMC		ProductInsert	21-Jan-2014  Copyright statements for RSA  START -->
+  <variable id="Copyright_stat11">
+    RSA, логотип RSA и EMC являются зарегистрированными товарными знаками или товарными знаками корпорации EMC в США и/или других странах. Все другие товарные знаки, упомянутые здесь, являются собственностью их владельцев.
+  </variable>
+  <!-- EMC		ProductInsert	21-Jan-2014  Copyright statements for RSA END -->
+
+  <!-- Suite Dec-2011: added variables for table continuation notation -->
+  <!-- EMC TAD June-2011: Fixed continuation text to be in Russian -->
+  <variable id="continued A">&#xA0;(продолжал страница&#xA0;</variable>
+  <variable id="continued C">&#xA0;из&#xA0;<param ref-name="totalPages"/>)</variable>
+
+  <!-- Suite Dec-2011: added variable for draft heading -->
+  <variable id="draft">ПРОЕКТ</variable>
+  <!-- Suite/EMC - 15-Aug-2012 - Temporary variable for Beta heading - AW -->
+  <!-- TAD/EMC Aug-2012 Added localized version -->
+  <variable id="beta">БЕТА</variable>
+
+  <!-- cli variables from EMC -->
+  <variable id="emc_cli_prereq_title">Перед началом</variable>
+  <variable id="emc_cli_description_title">ОПИСАНИЕ</variable>
+  <variable id="emc_cli_syntax_title">СИНТАКСИС</variable>
+  <variable id="emc_cli_options_title">ВАРИАНТЫ</variable>
+  <variable id="emc_cli_params_title">ПАРАМЕТРЫ</variable>
+  <variable id="emc_cli_args_title">АРГУМЕНТЫ</variable>
+  <variable id="emc_cli_example_title">ПРИМЕР</variable>
+  <variable id="emc_cli_multiexample_title">ПРИМЕР # <param ref-name="xmpnum"/></variable>
+  <variable id="emc_cli_backend_output_title">Вывод</variable>
+  <variable id="emc_cli_postreq_title">После окончания</variable>
+  <variable id="emc_codeph_newline">&#xA;</variable>
+
+  <!-- Suite/EMC   SOW5  07-Feb-2012   EMC/RSA confidential for headers - ck -->
+  <variable id="EMC Confidential">Конфиденциально, только для EMC</variable>
+  <variable id="RSA Confidential">Конфиденциально, только для RSA</variable>
+  <!-- Intelliarts Consulting   DellEMC Rebranding    10-Oct-2016   DELL EMC Confidential - IB-->
+  <!-- Dell EMC: James Smith   DellEMC Rebranding    29-Nov-2016   DELL EMC Confidential localized -->
+  <variable id="DELL EMC Confidential">КОНФИДЕНЦИАЛЬНО, ТОЛЬКО ДЛЯ DELL EMC</variable>
+
+  <!-- Suite/EMC   SOW5  07-Feb-2012   Paths for note images - ck -->
+  <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note_RU.eps</variable>
+  <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution_RU.eps</variable>
+  <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/danger_RU.eps</variable>
+  <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning_RU.eps</variable>
+  <variable id="notice Note Image Path">Customization/OpenTopic/common/artwork/notice_RU.eps</variable>
+
+  <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+  <variable id="danger">ОПАСНО</variable>
+  <variable id="warning">ПРЕДУПРЕЖДЕНИЕ</variable>
+  <variable id="caution">ОСТОРОЖНО</variable>
+  <variable id="notice">Внимание</variable>
+  <variable id="note">Примечание:</variable>
+  <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images ENDS HERE- IB-->
+
+  <!-- Suite/EMC   SOW6  14-Jun-2012   Quotations - ck -->
+  <variable id="q-begin">&#171;</variable>
+  <variable id="q-end">&#187;</variable>
+
+  <!-- Suite/EMC   SOW6  11-Mar-2012   Quotations - ck -->
+  <variable id="start-quote"></variable>
+  <variable id="end-quote"></variable>
+
+  <!-- Suite/EMC   SOW6  13-Mar-2012   Citations - ck -->
+  <variable id="start-cite">&#171;</variable>
+  <variable id="end-cite">&#187;</variable>
+
+  <!-- EMC		IB8		16-Oct-2015		TKT-165: Localize formatting of term -->
+  <variable id="start-term"></variable>
+  <variable id="end-term"></variable>
+
+  <!-- NS/EMC   Apr-2013   Fixed Postreq -->
+  <!-- Suite/EMC   SOW7  14-Feb-2013   Labels for task sections - AW -->
+  <!-- Temporary variables -->
+  <variable id="Task Prereq">Перед началом</variable>
+  <variable id="Task Context">Процедура</variable>
+  <variable id="Task Steps">Процедура</variable>
+  <variable id="Task Result">Результат</variable>
+  <variable id="Task Example">Пример</variable>
+  <variable id="Task Postreq">После окончания</variable>
+
+   <!-- Balaji Mani PDF Bundle 25-Feb-2013: update new variable for lq -->
+  <variable id="lq-open">&#x00AB;</variable>
+  <variable id="lq-close">&#x00BB;</variable>
+
+  <!-- Balaji Mani 1-Apr-2013: added without coloan to process the TOC part -->
+  <variable id="Table of Contents Part">часть&#xA0;<param ref-name="number"/>&#xA0;</variable>
+
+  <!-- Balaji Mani 1-Apr-2013: Text to use for part titles.-->
+    <variable id="Part with number">часть <param ref-name="number"/></variable>
+
+   <variable id="gloss-q-begin">&#x201C;</variable>
+  <variable id="gloss-q-end">&#x201D;</variable>
+
+  <!-- EMC IB5 21-Aug-2014 TKT-139: Make "Option"/"Description" headers on <choicetable> consistent for noted output -->
+  <variable id="Option">Функция</variable>
+  <variable id="Description">Описание</variable>
+
+  <!--Label for a step with importance="optional" or "required" -->
+  <variable id="Optional Step">(Дополнительно) </variable>
+  <variable id="Required Step">(Обязательно) </variable>
+
+  <variable id="#menucascade-separator"> &gt; </variable>
+
+    <variable id="Abstract">Аннотация</variable>
+
+  <!-- IA   Tridion upgrade    Oct-2018   Add support for DELL Regulatory Model / Type values - IB-->
+  <variable id="Regulatory Model">Regulatory Model: <param ref-name="value"/></variable>
+  <variable id="Regulatory Type">Regulatory Type: <param ref-name="value"/></variable>
+
+  <!-- IA   Tridion upgrade    Oct-2018   Add support for DELLRESTRICTED property.
+                                        Add specific watermarks for cover page and footer STARTS HERE.  - IB-->
+  <variable id="Dell EMC Confidential footer watermark">Конфиденциальная информация Dell EMC</variable>
+  <variable id="Dell EMC Confidential Restricted footer watermark">Конфиденциальная информация Dell EMC с ограниченным доступом</variable>
+
+  <variable id="Dell EMC Confidential Restricted footer desc">Только для авторизованных специалистов</variable>
+  <variable id="Dell EMC Confidential footer desc">с ограничениями на использование</variable>
+  <variable id="Dell EMC Internal footer desc">Только для внутреннего использования</variable>
+
+  <variable id="Dell EMC Confidential Restricted">Конфиденциальная информация Dell EMC с ограниченным доступом. Только для авторизованных специалистов.</variable>
+  <variable id="Dell EMC Confidential">Конфиденциальная информация Dell EMC с ограничениями на использование.</variable>
+  <variable id="Dell EMC Internal">Конфиденциальная информация Dell EMC только для внутреннего использования.</variable>
+
+  <variable id="Dell RSA Confidential footer watermark">Конфиденциальная информация RSA</variable>
+  <variable id="Dell RSA Confidential Restricted footer watermark">Конфиденциальная информация RSA с ограниченным доступом</variable>
+
+  <variable id="Dell RSA Confidential Restricted footer desc">Только для авторизованных специалистов</variable>
+  <variable id="Dell RSA Confidential footer desc">с ограничениями на использование</variable>
+  <variable id="Dell RSA Internal footer desc">Только для внутреннего использования</variable>
+
+  <variable id="Dell RSA Confidential Restricted">Конфиденциальная информация RSA с ограниченным доступом. Только для авторизованных специалистов.</variable>
+  <variable id="Dell RSA Confidential">Конфиденциальная информация RSA с ограничениями на использование.</variable>
+  <variable id="Dell RSA Internal">Конфиденциальная информация RSA только для внутреннего использования.</variable>
+  <!-- IA   Tridion upgrade    Oct-2018   Add support for DELLRESTRICTED property.
+                                      Add specific watermarks for cover page and footer ENDS HERE.  - IB-->
+</vars>

@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Chinese (Simplified) -->
+<!--
+    Revision History
+    ================
+	EMC 		IB4   25-Mar-2014   Remove Data Domain portal from copyright text
+	EMC 		IB4   14-Apr-2014   Updated variable: Task Prereq
+	EMC	  		IB5   20-Aug-2014	Fix <year><month> order in copyright
+	EMC 	    IB5   21-Aug-2014 	TKT-139: Make "Option"/"Description" headers on <choicetable> consistent for noted output
+	EMC 		IB5   21-Aug-2014   TKT-55: Fix unordered list formatting within tables inside a substep.
+	EMC 		IB5   26-Aug-2014   TKT-55: Fix unordered list formatting within tables inside a substep.
+	EMC			IB8	  16-Oct-2015	TKT-165: Localize formatting of term
+	DELL   			14-Sept-2018	TKT-660: Change in copyright statement to add company names 
+ -->
+
+<vars xmlns="http://www.idiominc.com/opentopic/vars">
+  <!-- The unordered list bullet   -->
+  <variable id="Unordered List bullet">u</variable>
+  <!-- IB5 20-Aug-2014 TKT 55: Fix unordered list formatting within tables inside a substep. -->
+  <!--
+  <variable id="Unordered List bullet level1">u</variable>
+  <variable id="Unordered List bullet level2">l</variable>
+  -->
+  <variable id="Unordered List bullet level1">l</variable>
+  <variable id="Unordered List bullet level2">n</variable>
+  <variable id="Unordered List bullet level3">&#x2013;</variable>
+  <variable id="checkbox bullet">&#x25A1;</variable>
+  <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+
+  <!-- The header that appears on odd-numbered pages. -->
+  <variable id="Body odd header">
+    <param ref-name="heading"/>
+  </variable>
+
+  <!-- The header that appears on even-numbered pages. -->
+  <variable id="Body even header">
+    <param ref-name="heading"/>
+  </variable>
+
+  <!-- The footer that appears on odd-numbered pages. -->
+  <variable id="Body odd footer">
+    <param ref-name="heading" />&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<param ref-name="pagenum" />
+  </variable>
+
+  <!-- The footer that appears on even-numbered pages. -->
+  <variable id="Body even footer">
+    <param ref-name="prod_name" />&#xa0;<param ref-name="version" />&#xa0;<param ref-name="category" />
+  </variable>
+
+  <!--The footer that appears on odd-numbered index pages.-->
+  <variable id="Index odd footer">
+    <param ref-name="prod_name" />&#xa0;<param ref-name="version" />&#xa0;<param ref-name="category" />
+  </variable>
+
+  <!-- The footer that appears on the first page of a chapter. -->
+  <variable id="Body first footer">
+    <param ref-name="heading" />
+  </variable>
+
+  <!--a space-->
+  <variable id="space">&#xa0;</variable>
+
+  <!-- Text to use for figure xrefs.-->
+  <variable id="Figure Num">图 <param ref-name="number"/></variable>
+
+  <!-- Text to use for table xrefs.-->
+  <variable id="Table Num">表 <param ref-name="number"/>&#xA0;</variable>
+
+  <!--Text to use for topic xrefs-->
+  <variable id="On page">（第 <param ref-name="pagenum"/> 页）</variable>
+  <variable id="Page">（第 <param ref-name="pagenum"/> 页）</variable>
+
+  <!-- Text to use for chapter titles.-->
+  <variable id="Chapter with number">第<param ref-name="number"/>章</variable>
+
+  <!-- Text to use for appendix titles.-->
+  <variable id="Appendix with number">附录<param ref-name="number"/></variable>
+
+  <!-- The string used to label a chapter within the table of contents. -->
+  <variable id="Table of Contents Chapter">第<param ref-name="number"/>章</variable>
+
+  <!-- The string used to label an appendix within the table of contents. -->
+  <variable id="Table of Contents Appendix">附录<param ref-name="number"/>
+  </variable>
+
+  <!--index-->
+  <variable id="Index">索引</variable>
+  <variable id="Index See String">，请参见 </variable>
+  <variable id="Index See Also String">另请参见 </variable>
+
+  <!--glossary-->
+  <variable id="Glossary">词汇表</variable>
+  <variable id="Glossary See String">请参见</variable>
+  <variable id="Glossary See Also String">另请参见</variable>
+
+  <!-- The string used to label table of contents. -->
+  <variable id="Table of Contents">目录</variable>
+
+  <!-- The string used to label an preface within the table of contents. -->
+  <variable id="Table of Contents Preface">前言</variable>
+
+  <!-- The string used to label the List of Tables heading. -->
+  <variable id="List of Tables">表</variable>
+
+  <!-- The string used to label the List of Figures heading. -->
+  <variable id="List of Figures">图</variable>
+
+  <!--Separator used for dlentry-->
+  <variable id="dlentry separator">&#xA0;&#x2014;&#xA0;</variable>
+
+  <!-- The string used for table numbers in the List of Tables. -->
+  <variable id="Table number">
+    <param ref-name="number"></param>
+  </variable>
+
+  <!-- The string used for figure numbers in the List of Figures. -->
+  <variable id="Figure number">
+    <param ref-name="number"></param>
+  </variable>
+
+  <!-- TAD/EMC Aug-2012 updated the word Version on the front page to be localized. -->
+  <variable id="version frontpage">
+    版本&#xA0;<param ref-name="version" />
+  </variable>
+
+  <!--Suite/EMC   Nochap   22-Aug-2012 Release number - AW-->
+  <!-- TAD/EMC Aug-2012 added localized version -->
+  <variable id="version frontpage nochap">
+    发行数量&#xA0;<param ref-name="version" />
+  </variable>
+
+	<!--Suite/EMC   Nochap   11-Sep-2012 nochap published date statement - AW-->
+	<!-- EMC	  IB5    20-Aug-2014	Fix <year><month> order in copyright -->
+	<variable id="Copyright_stat2_nochap">
+		<param ref-name="year_published"/>年&#xA0;<param ref-name="month_published"/>
+	</variable>
+
+  <!-- Text to use for figure title number -->
+  <variable id="Figure">
+    图&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <!-- Text to use for table title number -->
+  <variable id="Table">
+    表&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <!-- Text to use for example title number -->
+  <variable id="Example">
+    示例&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <variable id="Continued">&#xA0;（续）</variable>
+
+  <!--copyright statements-->
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding Delete "Published in ..." -->
+  <variable id="Copyright_stat1">
+    版权所有 ©&#xA0;<param ref-name="year" />&#xA0;<param ref-name="owner" />&#xA0;保留所有权利。
+  </variable>
+  <!-- EMC	  IB5    20-Aug-2014	Fix <year><month> order in copyright -->
+  <variable id="Copyright_stat2">
+    发布日期:&#xA0;<param ref-name="year_published"/>年&#xA0;<param ref-name="month_published"/>
+  </variable>
+
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding   -->
+  <variable id="Copyright_stat3">
+    戴尔确信本出版物在发布之日内容准确无误。本出版物中的信息可随时更改而不另行通知。
+  </variable>
+
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding   -->
+  <variable id="Copyright_stat4">
+    本出版物的内容按“原样”提供。戴尔对本出版物的内容不提供任何形式的陈述或担保，明确拒绝对有特定目的的适销性或适用性进行默示担保。使用、复制或分发本出版物所描述的任何戴尔软件都要有相应的软件许可证。
+  </variable>
+
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding   -->
+  <!-- DELL   					14-Sept-2018	TKT-660: Change in copyright statement to add company names -->
+  <variable id="Copyright_stat5">
+    Dell Technologies、Dell、EMC、Dell EMC 和其他商标为 Dell Inc. 或其子公司的商标。其他商标可能是其各自所有者的资产。中国印刷。
+  </variable>
+
+  <!-- TAD/EMC Aug-2012 Updated the copyright statement to reference EMC's new Online Support Website, instead of Powerlink -->
+  <!-- Dana IB2 					Fix Issue #279: Support URL does not render as a blue link on the PDF copyright page-->
+  <!-- EMC 	IB4 	25-Mar-2014 	Issue #400: Remove Data Domain portal from copyright text -->
+  <!-- Dell EMC James			28-Nov-2016	Dell Rebranding changes to remove stat6 from statement by commenting it out. -->
+  <!-- <variable id="Copyright_stat6">
+    有关产品系列的最新法规文档，请访问 EMC 在线支持 (<param ref-name="support_emc"/>)。
+  </variable> -->
+
+  <!-- EMC TAD June-2012: Fixing contact information based on Neusoft updates -->
+  <variable id="Copyright_stat7">
+    易安信电脑系统（中国）有限公司
+  </variable>
+
+  <!-- IA   Tridion upgrade    Nov-2018   Update Copyright corporation contacts information - IB-->
+  <variable id="Copyright_stat7a">Dell EMC</variable>
+
+  <!-- EMC TAD June-2012: Fixing contact information based on Neusoft updates -->
+  <variable id="Copyright_stat8">
+    北京市朝阳区朝阳门外大街 18 号&#xA0;丰联广场大厦 5 层 511 单元&#xA0;邮编：100020
+  </variable>
+
+  <!-- EMC TAD June-2012: Fixing contact information based on Neusoft updates -->
+  <variable id="Copyright_stat9">
+    电话：（8610）8438 6000&#xA0;传真：（8610）8453 8174&#xA0;售前服务热线：400 650 6006
+  </variable>
+
+  <!-- EMC TAD June-2012: Fixing contact information based on Neusoft updates -->
+  <!-- Dell EMC James			28-Nov-2016	Dell Rebranding changes. Replace  网站：http://china.EMC.com -->
+  <variable id="Copyright_stat10">
+   www.EMC.com/zh-cn/index.htm
+  </variable>
+
+  <variable id="Copyright_stat10a">
+   www.EMC.com/zh-cn/index.htm
+  </variable>
+
+  <!-- EMC		ProductInsert	21-Jan-2014  Copyright statements for RSA  START -->
+  <variable id="Copyright_stat11">
+	RSA、RSA 徽标和 EMC 是 EMC Corporation 在美国和/或其他国家/地区的注册商标或商标。此处使用的所有其他商标均为其各自所有者的资产。
+  </variable>
+  <!-- EMC		ProductInsert	21-Jan-2014  Copyright statements for RSA END -->
+
+  <!-- Suite Dec-2011: added variables for table continuation notation -->
+  <variable id="continued A">&#xA0;（续，第&#xA0;</variable>
+  <variable id="continued C">&#xA0;页，共&#xA0;<param ref-name="totalPages"/> 页）</variable>
+
+
+  <!-- Suite Dec-2011: added variable for draft heading -->
+  <variable id="draft">草稿</variable>
+  <!-- Suite/EMC - 15-Aug-2012 - Temporary variable for Beta heading - AW -->
+  <!-- TAD/EMC Aug-2012 Added localized version -->
+  <variable id="beta">测试版</variable>
+
+  <!-- cli variables from EMC -->
+  <variable id="emc_cli_prereq_title">准备工作</variable>
+  <variable id="emc_cli_description_title">描述</variable>
+  <variable id="emc_cli_syntax_title">语法</variable>
+  <variable id="emc_cli_options_title">选项</variable>
+  <variable id="emc_cli_params_title">参数</variable>
+  <variable id="emc_cli_args_title">变量</variable>
+  <variable id="emc_cli_example_title">示例</variable>
+  <variable id="emc_cli_multiexample_title">示例 # <param ref-name="xmpnum"/></variable>
+  <variable id="emc_cli_backend_output_title">输出</variable>
+  <variable id="emc_cli_postreq_title">后续工作</variable>
+  <variable id="emc_codeph_newline">&#xA;</variable>
+
+  <!-- Suite/EMC   SOW5  07-Feb-2012   EMC/RSA confidential for headers - ck -->
+  <variable id="EMC Confidential">EMC 保密资料</variable>
+  <variable id="RSA Confidential">RSA 保密资料</variable>
+  <!-- Intelliarts Consulting   DellEMC Rebranding    10-Oct-2016   DELL EMC Confidential - IB-->
+  <!-- Dell EMC: James Smith   DellEMC Rebranding    29-Nov-2016   DELL EMC Confidential localized -->
+  <variable id="DELL EMC Confidential">DELL EMC 保密资料</variable>
+
+  <!-- Suite/EMC   SOW5  07-Feb-2012   Paths for note images - ck -->
+  <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note_ZH-CN.eps</variable>
+  <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution_ZH-CN.eps</variable>
+  <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/danger_ZH-CN.eps</variable>
+  <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning_ZH-CN.eps</variable>
+  <variable id="notice Note Image Path">Customization/OpenTopic/common/artwork/notice_ZH-CN.eps</variable>
+
+  <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+  <variable id="danger">危险</variable>
+  <variable id="warning">警告</variable>
+  <variable id="caution">小心</variable>
+  <variable id="notice">注意</variable>
+  <variable id="note">注意：</variable>
+  <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images ENDS HERE- IB-->
+
+  <!-- Suite/EMC   SOW6  14-Jun-2012   Quotations - ck -->
+  <!-- Balaji Mani 8-Feb-2013: Updated as single byte quote 301D to 201C and 301E to 201D -->
+  <variable id="q-begin">&#x201C;</variable>
+  <variable id="q-end">&#x201D;</variable>
+
+  <!-- Suite/EMC   SOW6  11-Mar-2012   Quotations - ck -->
+  <!-- Balaji Mani 8-Feb-2013: Updated as single byte quote 301D to 201C and 301E to 201D -->
+  <variable id="start-quote">&#x201C;</variable>
+  <variable id="end-quote">&#x201D;</variable>
+
+  <!-- Suite/EMC   SOW6  13-Mar-2012   Citations - ck -->
+  <variable id="start-cite">《</variable>
+  <variable id="end-cite">》</variable>
+
+  <!-- EMC		IB8		16-Oct-2015		TKT-165: Localize formatting of term -->
+  <variable id="start-term">&#x201C;</variable><!-- “ -->
+  <variable id="end-term">&#x201D;</variable><!-- ” -->
+
+  <!-- Suite/EMC   SOW7  14-Feb-2013   Labels for task sections - AW -->
+  <variable id="Task Prereq">准备工作</variable>
+  <variable id="Task Context">关于此任务</variable>
+  <variable id="Task Steps">过程</variable>
+  <variable id="Task Result">结果</variable>
+  <variable id="Task Example">示例</variable>
+  <variable id="Task Postreq">后续工作</variable>
+
+  <!-- The string used to label an part within the table of contents. -->
+  <variable id="Table of Contents Part">第<param ref-name="number" />部分</variable>
+
+  <!-- Text to use for part titles.-->
+  <variable id="Part with number">第<param ref-name="number" />部分</variable>
+
+  <!-- Balaji Mani PDF Bundle 25-Feb-2013: update new variable for lq -->
+  <variable id="lq-open"></variable>
+  <variable id="lq-close"></variable>
+
+	<!-- EMC 14-Jun-2013 PDF Bundle Glossary requirement -->
+   	<variable id="gloss-q-begin">&#x201C;</variable>
+  	<variable id="gloss-q-end">&#x201D;</variable>
+
+  <!-- EMC IB5 21-Aug-2014 TKT-139: Make "Option"/"Description" headers on <choicetable> consistent for noted output -->
+  <variable id="Option">选项</variable>
+  <variable id="Description">描述</variable>
+
+  <!--Label for a step with importance="optional" or "required" -->
+  <variable id="Optional Step">(可选) </variable>
+  <variable id="Required Step">(必需) </variable>
+
+  <variable id="#menucascade-separator"> &gt; </variable>
+
+  <variable id="Abstract">摘要</variable>
+
+  <!-- IA   Tridion upgrade    Oct-2018   Add support for DELL Regulatory Model / Type values - IB-->
+  <variable id="Regulatory Model">Regulatory Model: <param ref-name="value"/></variable>
+  <variable id="Regulatory Type">Regulatory Type: <param ref-name="value"/></variable>
+
+  <!-- IA   Tridion upgrade    Oct-2018   Add support for DELLRESTRICTED property.
+                                        Add specific watermarks for cover page and footer STARTS HERE.  - IB-->
+  <variable id="Dell EMC Confidential footer watermark">Dell EMC 机密信息</variable>
+  <variable id="Dell EMC Confidential Restricted footer watermark">Dell EMC 机密信息，使用受限</variable>
+
+  <variable id="Dell EMC Confidential Restricted footer desc">仅限获得授权的人员访问</variable>
+  <variable id="Dell EMC Confidential footer desc">具有保密使用限制</variable>
+  <variable id="Dell EMC Internal footer desc">仅限内部使用</variable>
+
+  <variable id="Dell EMC Confidential Restricted">Dell EMC 机密信息，使用受限。 仅限获得授权的人员访问。</variable>
+  <variable id="Dell EMC Confidential">Dell EMC 机密信息。 具有保密使用限制。</variable>
+  <variable id="Dell EMC Internal">Dell EMC 机密信息。 仅限内部使用。</variable>
+
+  <variable id="Dell RSA Confidential footer watermark">RSA 机密信息</variable>
+  <variable id="Dell RSA Confidential Restricted footer watermark">RSA 机密信息，使用受限</variable>
+
+  <variable id="Dell RSA Confidential Restricted footer desc">仅限获得授权的人员访问</variable>
+  <variable id="Dell RSA Confidential footer desc">具有保密使用限制</variable>
+  <variable id="Dell RSA Internal footer desc">仅限内部使用</variable>
+
+  <variable id="Dell RSA Confidential Restricted">RSA 机密信息，使用受限。 仅限获得授权的人员访问。</variable>
+  <variable id="Dell RSA Confidential">RSA 机密信息。 具有保密使用限制。</variable>
+  <variable id="Dell RSA Internal">RSA 机密信息。 仅限内部使用。</variable>
+  <!-- IA   Tridion upgrade    Oct-2018   Add support for DELLRESTRICTED property.
+                                      Add specific watermarks for cover page and footer ENDS HERE.  - IB-->
+</vars>

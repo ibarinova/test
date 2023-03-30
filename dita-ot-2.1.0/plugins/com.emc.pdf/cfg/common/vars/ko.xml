@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Korean -->
+<!--
+    Revision History
+    ================
+	EMC 		IB4   25-Mar-2014   Remove Data Domain portal from copyright text
+	EMC			IB4	  02-Apr-2014	Updated the EMC address for copyright
+	EMC	  		IB5   20-Aug-2014	Fix <year><month> order in copyright
+	EMC 	    IB5   21-Aug-2014 	TKT-139: Make "Option"/"Description" headers on <choicetable> consistent for noted output
+	EMC 		IB5   21-Aug-2014   TKT-55: Fix unordered list formatting within tables inside a substep.
+	EMC 		IB5   26-Aug-2014   TKT-55: Fix unordered list formatting within tables inside a substep.
+	EMC			IB8	  16-Oct-2015	TKT-328: Add "Published in the USA"
+	EMC			IB8	  16-Oct-2015	TKT-165: Localize formatting of term
+	DELL   			  14-Sept-2018	TKT-660: Change in copyright statement to add company names
+ -->
+
+<vars xmlns="http://www.idiominc.com/opentopic/vars">
+  <!-- The unordered list bullet   -->
+  <variable id="Unordered List bullet">u</variable>
+  <!-- IB5 20-Aug-2014 TKT 55: Fix unordered list formatting within tables inside a substep. -->
+  <!--
+  <variable id="Unordered List bullet level1">u</variable>
+  <variable id="Unordered List bullet level2">l</variable>
+  -->
+  <variable id="Unordered List bullet level1">l</variable>
+  <variable id="Unordered List bullet level2">n</variable>
+  <variable id="Unordered List bullet level3">&#x2013;</variable>
+  <variable id="checkbox bullet">&#x25A1;</variable>
+  <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+
+  <!-- The header that appears on odd-numbered pages. -->
+  <variable id="Body odd header">
+    <param ref-name="heading"/>
+  </variable>
+
+  <!-- The header that appears on even-numbered pages. -->
+  <variable id="Body even header">
+    <param ref-name="heading"/>
+  </variable>
+
+  <!-- The footer that appears on odd-numbered pages. -->
+  <variable id="Body odd footer">
+    <param ref-name="heading" />&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<param ref-name="pagenum" />
+  </variable>
+
+  <!-- The footer that appears on even-numbered pages. -->
+  <variable id="Body even footer">
+    <param ref-name="prod_name" />&#xa0;<param ref-name="version" /><param ref-name="category" />
+  </variable>
+
+  <!--The footer that appears on odd-numbered index pages.-->
+  <variable id="Index odd footer">
+    <param ref-name="prod_name" />&#xa0;<param ref-name="version" />&#xa0;<param ref-name="category" />
+  </variable>
+
+  <!-- The footer that appears on the first page of a chapter. -->
+  <variable id="Body first footer">
+    <param ref-name="heading" />
+  </variable>
+
+  <!--a space-->
+  <variable id="space">&#xa0;</variable>
+
+  <!-- Text to use for figure xrefs.-->
+  <variable id="Figure Num">그림&#xA0;<param ref-name="number"/></variable>
+
+  <!-- Text to use for table xrefs.-->
+  <variable id="Table Num">표&#xA0;<param ref-name="number"/>&#xA0;</variable>
+
+  <!--Text to use for topic xrefs-->
+  <variable id="On page">(<param ref-name="pagenum"/>페이지)</variable>
+  <variable id="Page">(<param ref-name="pagenum"/>페이지)</variable>
+
+  <!-- Text to use for chapter titles.-->
+  <variable id="Chapter with number"><param ref-name="number"/>장</variable>
+
+  <!-- Text to use for appendix titles.-->
+  <variable id="Appendix with number">부록<param ref-name="number"/></variable>
+
+  <!-- The string used to label a chapter within the table of contents. -->
+  <!-- Balaji Mani 18-Apr-2013: Removed the space between number and chapter -->
+  <variable id="Table of Contents Chapter"><param ref-name="number"/>장</variable>
+
+  <!-- The string used to label an appendix within the table of contents. -->
+  <variable id="Table of Contents Appendix">부록&#xA0;<param ref-name="number"/></variable>
+
+  <!--index-->
+  <variable id="Index">색인</variable>
+  <variable id="Index See String">, 참조 </variable>
+  <variable id="Index See Also String">관련 항목 </variable>
+
+  <!--glossary-->
+  <variable id="Glossary">용어 설명</variable>
+  <variable id="Glossary See String"> 참조 </variable>
+  <variable id="Glossary See Also String">관련 항목: </variable>
+
+  <!-- The string used to label table of contents. -->
+  <variable id="Table of Contents">목차</variable>
+
+  <!-- The string used to label an preface within the table of contents. -->
+  <variable id="Table of Contents Preface">서론</variable>
+
+  <!-- The string used to label the List of Tables heading. -->
+  <variable id="List of Tables">표</variable>
+
+  <!-- The string used to label the List of Figures heading. -->
+  <variable id="List of Figures">그림</variable>
+
+  <!--Separator used for dlentry-->
+  <variable id="dlentry separator">&#xA0;&#x2014;&#xA0;</variable>
+
+  <!-- The string used for table numbers in the List of Tables. -->
+  <variable id="Table number">
+    <param ref-name="number"></param>
+  </variable>
+
+  <!-- The string used for figure numbers in the List of Figures. -->
+  <variable id="Figure number">
+    <param ref-name="number"></param>
+  </variable>
+
+  <!-- TAD/EMC Aug-2012 Fixing the word Version on the front cover to localize it -->
+  <variable id="version frontpage">
+    <param ref-name="version" />&#xA0;버전
+  </variable>
+
+  <!--Suite/EMC   Nochap   22-Aug-2012 Release number - AW-->
+  <!-- TAD/EMC Aug-2012 Adding localized version of the word BETA -->
+  <variable id="version frontpage nochap">
+    릴리스번호&#xA0;<param ref-name="version" />
+  </variable>
+
+  <!-- Text to use for figure title number -->
+  <variable id="Figure">
+    그림&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <!-- Text to use for table title number -->
+  <variable id="Table">
+    표&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <!-- Text to use for example title number -->
+  <variable id="Example">
+    예제&#xA0;<param ref-name="number"/>
+  </variable>
+
+  <variable id="Continued">&#xA0;(계속)</variable>
+
+  <!--copyright statements-->
+  <!-- EMC			IB8	  16-Oct-2015	TKT-328: Add "Published in the USA" -->
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding Delete "Published in ..." -->
+  <variable id="Copyright_stat1">
+    Copyright ©&#xA0;<param ref-name="year"/>&#xA0;<param ref-name="owner"/> All rights reserved.
+  </variable>
+
+  <!-- EMC	  IB5    20-Aug-2014	Fix <year><month> order in copyright -->
+  <variable id="Copyright_stat2">
+    발행:&#xA0;<param ref-name="year_published"/>년&#xA0;<param ref-name="month_published"/>
+  </variable>
+
+  <!-- NS/EMC Apr-2013 Added entire variable -->
+  <!-- EMC	  IB5    20-Aug-2014	Fix <year><month> order in copyright -->
+  <variable id="Copyright_stat2_nochap">
+    <param ref-name="year_published"/>년&#xA0;<param ref-name="month_published"/>
+  </variable>
+
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding   -->
+  <!-- IA   Tridion upgrade    Nov-2018   Update Copyrights - IB-->
+  <variable id="Copyright_stat3">Dell은 본 발행물의 정보가 해당 발행일 현재 정확한 것으로 간주합니다. 모든 정보는 통지 없이 변경될 수 있습니다.</variable>
+
+
+
+ <!-- Dell EMC James			29-Nov-2016	Dell Rebranding   -->
+  <!-- IA   Tridion upgrade    Nov-2018   Update Copyrights - IB-->
+  <variable id="Copyright_stat4">본 발행물의 정보는 '있는 그대로' 제공됩니다. Dell은 본 발행물의 정보와 관련하여 어떠한 진술이나 보증도 하지 않으며, 특히 상품성이나 특정 목적을 위한 적합성에 대하여 어떠한 묵시적인 보증도 부인합니다. 본 발행물에 설명된 Dell 소프트웨어를 사용, 복사 및 배포하려면 해당 소프트웨어 라이센스가 필요합니다.</variable>
+
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding changes. -->
+  <!-- DELL   					14-Sept-2018	TKT-660: Change in copyright statement to add company names -->
+  <!-- IA   Tridion upgrade    Nov-2018   Update Copyrights - IB-->
+  <variable id="Copyright_stat5">Dell, EMC 및 기타 상표는 Dell Inc. 또는 해당 자회사의 상표입니다. 기타 모든 상표는 해당 소유주의 자산일 수 있습니다.</variable>
+
+  <!-- NS/EMC Apr-2013 Added Data Domain statement. -->
+  <!-- TAD/EMC Aug-2012 Fixing the copyright statement to point to EMC's new Online Support Website instead of Powerlink -->
+  <!-- Dana IB2 					Fix Issue #279: Support URL does not render as a blue link on the PDF copyright page-->
+  <!-- EMC 	IB4 	25-Mar-2014 	Issue #400: Remove Data Domain portal from copyright text -->
+  <!-- Dell EMC James			28-Nov-2016	Dell Rebranding changes to remove stat6 from statement by commenting it out. -->
+  <!-- <variable id="Copyright_stat6">
+    사용 중인 제품군에 대한 최신 규제 관련 문서를 보려면 EMC 온라인 지원 웹 사이트(<param ref-name="support_emc"/>)를 확인하십시오.
+  </variable> -->
+
+  <!-- EMC TAD June-2011: Fixed contact information with Neusoft updates -->
+  <!-- Dell EMC James			29-Nov-2016	Dell Rebranding changes. Replace "EMC Corporation" with "Dell EMC" -->
+  <variable id="Copyright_stat7">
+    한국이엠씨컴퓨터시스템즈(주)
+  </variable>
+
+  <!-- IA   Tridion upgrade    Nov-2018   Update Copyright corporation contacts information - IB-->
+  <variable id="Copyright_stat7a">한국이엠씨컴퓨터시스템즈 주식회사</variable>
+
+  <!-- EMC TAD June-2011: Fixed contact information with Neusoft updates -->
+  <!-- EMC	IB4	  02-Apr-2014	Updated the KO EMC office address -->
+  <!-- IA   Tridion upgrade    Nov-2018   Update Copyright corporation contacts information - IB-->
+  <variable id="Copyright_stat8">서울특별시 강남구 테헤란로 152, 17층(역삼동, 강남파이낸스센터) (우편번호: 06236)</variable>
+
+  <!-- EMC TAD June-2011: Fixed contact information with Neusoft updates -->
+  <!-- EMC	IB4	  02-Apr-2014	Updated the KO EMC office address  -->
+  <!-- IA   Tridion upgrade    Nov-2018   Update Copyright corporation contacts information - IB-->
+  <variable id="Copyright_stat9">대표 전화: (02)2125-7000, 구입/상담 문의: 080-775-7000</variable>
+
+  <!-- EMC TAD June-2011: Fixed contact information with Neusoft updates -->
+  <!-- Dell EMC James			28-Nov-2016	Dell Rebranding changes. Replace  웹 사이트: http://korea.emc.com -->
+  <variable id="Copyright_stat10">
+   	www.DellEMC.com/ko-kr/index.htm
+  </variable>
+
+  <variable id="Copyright_stat10a">
+   	www.DellEMC.com/ko-kr/index.htm
+  </variable>
+
+  <!-- EMC		ProductInsert	21-Jan-2014  Copyright statements for RSA  START -->
+  <variable id="Copyright_stat11">
+    RSA, RSA 로고 및 EMC는 미국 및 기타 국가에서 EMC Corporation의 등록 상표 또는 상표입니다. 본 문서에 사용된 기타 모든 상표는 해당 소유주의 자산입니다.
+  </variable>
+  <!-- EMC		ProductInsert	21-Jan-2014  Copyright statements for RSA END -->
+
+  <!-- Suite Dec-2011: added variables for table continuation notation -->
+  <variable id="continued A">&#xA0;(계속, 페이지&#xA0;</variable>
+  <variable id="continued C">&#xA0;/&#xA0;<param ref-name="totalPages"/>)</variable>
+
+  <!-- Suite Dec-2011: added variable for draft heading -->
+  <variable id="draft">초안</variable>
+  <!-- Suite/EMC - 15-Aug-2012 - Temporary variable for Beta heading - AW -->
+  <variable id="beta">베타</variable>
+
+  <!-- cli variables from EMC -->
+  <variable id="emc_cli_prereq_title">시작하기 전에</variable>
+  <variable id="emc_cli_description_title">설명</variable>
+  <variable id="emc_cli_syntax_title">구문</variable>
+  <variable id="emc_cli_options_title">옵션</variable>
+  <variable id="emc_cli_params_title">매개 변수</variable>
+  <variable id="emc_cli_args_title">인수</variable>
+  <variable id="emc_cli_example_title">예제</variable>
+  <variable id="emc_cli_multiexample_title">예제 # <param ref-name="xmpnum"/></variable>
+  <variable id="emc_cli_backend_output_title">출력</variable>
+  <variable id="emc_cli_postreq_title">>완료 후</variable>
+  <variable id="emc_codeph_newline">&#xA;</variable>
+
+  <!-- Suite/EMC   SOW5  07-Feb-2012   EMC/RSA confidential for headers - ck -->
+  <variable id="EMC Confidential">EMC 기밀 문서</variable>
+  <variable id="RSA Confidential">RSA 기밀 문서</variable>
+  <!-- Intelliarts Consulting   DellEMC Rebranding    10-Oct-2016   DELL EMC Confidential - IB-->
+  <!-- Dell EMC: James Smith   DellEMC Rebranding    29-Nov-2016   DELL EMC Confidential localized -->
+  <variable id="DELL EMC Confidential">DELL EMC 기밀 문서</variable>
+
+  <!-- Suite/EMC   SOW5  07-Feb-2012   Paths for note images - ck -->
+  <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note_KO.eps</variable>
+  <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution_KO.eps</variable>
+  <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/danger_KO.eps</variable>
+  <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning_KO.eps</variable>
+  <variable id="notice Note Image Path">Customization/OpenTopic/common/artwork/notice_KO.eps</variable>
+
+  <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+  <variable id="danger">위험</variable>
+  <variable id="warning">경고</variable>
+  <variable id="caution">주의</variable>
+  <variable id="notice">알림</variable>
+  <variable id="note">참고:</variable>
+  <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images ENDS HERE- IB-->
+
+  <!-- Suite/EMC   SOW6  14-Jun-2012   Quotations - ck -->
+  <variable id="q-begin">&#x201C;</variable>
+  <variable id="q-end">&#x201D;</variable>
+
+  <!-- Suite/EMC   SOW6  11-Mar-2012   Quotations - ck -->
+  <variable id="start-quote"></variable>
+  <variable id="end-quote"></variable>
+
+  <!-- Suite/EMC   SOW6  13-Mar-2012   Citations - ck -->
+  <variable id="start-cite"></variable>
+  <variable id="end-cite"></variable>
+
+  <!-- EMC		IB8		16-Oct-2015		TKT-165: Localize formatting of term -->
+  <variable id="start-term"></variable>
+  <variable id="end-term"></variable>
+
+  <!-- Suite/EMC   SOW7  14-Feb-2013   Labels for task sections - AW -->
+  <!-- Temporary variables -->
+  <variable id="Task Prereq">시작하기 전에</variable>
+  <variable id="Task Context">절차</variable>
+  <variable id="Task Steps">절차</variable>
+  <variable id="Task Result">결과</variable>
+  <variable id="Task Example">예제</variable>
+  <variable id="Task Postreq">사후 요구 사항</variable>
+
+  <!-- Balaji Mani PDF Bundle 25-Feb-2013: update new variable for lq -->
+  <variable id="lq-open"></variable>
+  <variable id="lq-close"></variable>
+
+  <!-- The string used to label an part within the table of contents. -->
+  <variable id="Table of Contents Part"><param ref-name="number"/>부</variable>
+
+  <!-- Text to use for part titles.-->
+  <variable id="Part with number"><param ref-name="number"/>부</variable>
+
+	<!-- EMC 14-Jun-2013 PDF Bundle Glossary requirement -->
+  <variable id="gloss-q-begin">&#x201C;</variable>
+  <variable id="gloss-q-end">&#x201D;</variable>
+
+  <!-- EMC IB5 21-Aug-2014 TKT-139: Make "Option"/"Description" headers on <choicetable> consistent for noted output -->
+  <variable id="Option">옵션</variable>
+  <variable id="Description">설명</variable>
+
+  <!--Label for a step with importance="optional" or "required" -->
+  <variable id="Optional Step">(선택 사항) </variable>
+  <variable id="Required Step">(필수 항목) </variable>
+
+  <variable id="#menucascade-separator"> &gt; </variable>
+
+    <variable id="Abstract">요약</variable>
+
+  <!-- IA   Tridion upgrade    Oct-2018   Add support for DELL Regulatory Model / Type values - IB-->
+  <variable id="Regulatory Model">Regulatory Model: <param ref-name="value"/></variable>
+  <variable id="Regulatory Type">Regulatory Type: <param ref-name="value"/></variable>
+
+  <!-- IA   Tridion upgrade    Oct-2018   Add support for DELLRESTRICTED property.
+                                        Add specific watermarks for cover page and footer STARTS HERE.  - IB-->
+  <variable id="Dell EMC Confidential footer watermark">Dell EMC 기밀 정보</variable>
+  <variable id="Dell EMC Confidential Restricted footer watermark">Dell EMC 기밀 정보 - 대외비</variable>
+
+  <variable id="Dell EMC Confidential Restricted footer desc">승인된 관계자만 접근 가능</variable>
+  <variable id="Dell EMC Confidential footer desc">기밀 정보 이용 제한 규정이 적용됨</variable>
+  <variable id="Dell EMC Internal footer desc">내부용</variable>
+
+  <variable id="Dell EMC Confidential Restricted">Dell EMC 기밀 정보 - 대외비. 승인된 관계자만 접근 가능.</variable>
+  <variable id="Dell EMC Confidential">Dell EMC 기밀 정보. 기밀 정보 이용 제한 규정이 적용됨.</variable>
+  <variable id="Dell EMC Internal">Dell EMC 기밀 정보. 내부용.</variable>
+
+  <variable id="Dell RSA Confidential footer watermark">RSA 기밀 정보</variable>
+  <variable id="Dell RSA Confidential Restricted footer watermark">RSA 기밀 정보 - 대외비</variable>
+
+  <variable id="Dell RSA Confidential Restricted footer desc">승인된 관계자만 접근 가능</variable>
+  <variable id="Dell RSA Confidential footer desc">기밀 정보 이용 제한 규정이 적용됨</variable>
+  <variable id="Dell RSA Internal footer desc">내부용</variable>
+
+  <variable id="Dell RSA Confidential Restricted">RSA 기밀 정보 - 대외비. 승인된 관계자만 접근 가능.</variable>
+  <variable id="Dell RSA Confidential">RSA 기밀 정보. 기밀 정보 이용 제한 규정이 적용됨.</variable>
+  <variable id="Dell RSA Internal">RSA 기밀 정보. 내부용.</variable>
+  <!-- IA   Tridion upgrade    Oct-2018   Add support for DELLRESTRICTED property.
+                                      Add specific watermarks for cover page and footer ENDS HERE.  - IB-->
+</vars>

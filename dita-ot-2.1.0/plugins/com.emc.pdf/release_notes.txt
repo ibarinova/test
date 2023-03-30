@@ -1,0 +1,328 @@
+Drop_46 18/09/19
+    + IDPL-7080: PDF, PDF Draft, PDF Beta, CPSD PDF: Appendix does not properly number.
+            Use 'Appendix' title without number if bokkmap contains ONLY ONE Appendix.
+    + IDPL-6466: PDFs and HTML5 Web Help:<draft-comment> output change request -- as Disposition: / Status: to Draft comment.
+    + IDPL-7826: Change draft comment color.
+    + IDPL-8259: Enable Draft comments publishing for PDF Beta.
+
+Drop_45 23/07/19
+    + IDPL-5200: Numbering issue in Step Section. Process stepsection as section body without number.
+
+Drop_44 20/06/19
+    + IDPL-6915: If the version in the bookmap has a "0", it should not appear in the footer.
+
+Drop_43 29/04/19
+    + IDPL-6106: Images appear smaller in Tridion PDFs.
+
+Drop_42 14/03/19
+    + IDPL-5503: Large graphics run off the page in PDF layouts.
+
+    cfg/fo/xsl/commons-custom.xsl
+
+Drop_41 14/03/19
+    + IDPL-5502: Admonitions in PDF and HTML5 outputs is bold.
+
+    cfg/fo/xsl/commons-custom.xsl
+
+Drop_40 03/07/19
+    + IDPL-5477: Adapt 3 PDF output formats to support CPSD documenation.
+
+    cfg/fo/attrs/
+        basic-settings-custom.xsl
+        commons-attr-custom.xsl
+    cfg/fo/xsl/
+        commons-custom.xsl
+        toc-custom.xsl
+    layout-masters-custom.xsl
+    release_notes.txt
+	
+Drop_39 02/27/19
+    + IDPL-5318: Add using of <othermeta name="shorttitle"> for page footers.
+    + IDPL-5335: Draft Comments are publishing when Include Draft Comments checkbox is clear.
+    + IDPL-5333: Changes to Restricted footers.
+
+    release_notes.txt
+    cfg/common/vars/**.xml
+    cfg/fo/attrs/
+        front-matter-attr-custom.xsl
+        static-content-attr-custom.xsl
+    cfg/fo/xsl/
+        commons-custom.xsl
+        static-content-custom.xsl
+
+
+Drop_38 02/13/19
+    + IDPL-5030: Change color formatting for section <title>. Add space below section header.
+    + IDPL-5188: DELLRESTRICTED options not populating when selected.
+        Changed publication property name from 'DELLRESTRICTED' to 'FDELLEMCRESTRICTED'
+    + IDPL-5196: PDF Document Properties contains only <mainbooktitle> (and not <mainbooktitle> + " " + <booktitlealt>).
+
+    release_notes.txt
+    cfg/fo/attrs/
+        commons-attr-custom.xsl
+        tables-attr-custom.xsl
+        basic-settings-custom.xsl
+    cfg/fo/xsl/
+        root-processing-custom.xsl
+
+
+Drop_37 2019/02
+cfg/fo/xsl/commons-custom.xsl
+    + IDPL-5180 - Make "Note" the default in PDF for any non-supported admonitions.
+        Add support for 'warning', 'danger', 'caution', 'noticec' and 'note' admonitions.
+cfg/common/vars/cs.xml
+    + IDPL-5171 - Change to location in CS PDF copyright statemen.
+cfg/fo/attrs/static-content-custom.xsl
+    + IDPL-5182 - Spacing on PDF footers may need adjustment. Normalize space in footer title for localized content.
+
+
+Drop_36 2019/02
+cfg/fo/attrs/commons-attr-custom.xsl
+    + IDPL-5030: Change color formatting for section <title>.
+
+Drop_35 2019/01
+cfg/fo/xsl/
+    commons-custom.xsl
+    reference-elements-custom.xsl
+    tables-custom.xsl
+        + IDPL-4879 - Using outputclass=rotated for landscape. Revert implemented behavior for 'rotated' @outputclass. Leave only 'landscape'.
+        + IDPL-4881 - PDF outputs do not show draft functionality.
+    task-elements-custom.xsl
+        + IDPL-4878 - <context> tag in PDF lacks an "About this Task" heading. Fixed space after heading.
+    basic-settings-custom.xsl
+        + IDPL-4881 - PDF outputs do not show draft functionality.
+
+Drop_34 2019/01
+cfg/fo/xsl/
+    toc-custom.xsl
+    commons-custom.xsl
+        + IDPL-4737 - Chapter 1 not showing up in a doc. Remove it from TOC.
+    static-content-custom.xsl
+        + IDPL-4691 - PDF footer only displays <booktitlealt>. Should display <mainbooktitle> + <booktitlealt>.
+
+Drop_33 2019/01
+cfg/fo/xsl/
+    task-elements-custom.xsl
+        + IDPL-4878 - Add 'About this Task' heading for <task>/<context> tag.
+    commons-custom.xsl
+    reference-elements-custom.xsl
+    tables-custom.xsl
+        + IDPL-4879 - Using outputclass=rotated for landscape.
+
+Drop_32 2018/12
+cfg/common/vars/*.xml
+    + Fixed 'backquote' issue in copyrights. Replaced quote character with unicode;
+    + Add variables for admonition images;
+    + Add variables for admonition text;
+    + Add variables for 'Regulatory model/Type' strings;
+    + Add variables for 'DELL RESTRICTED' watermarks;
+    + Update Copyrights corporation contacts information for DE, ES, IT, JA, KO, NL, PT, ZH languages;
+    + Update Copyrights for Korean PDF output;
+
+cfg/common/artwork
+    + Add images for Admonitions:
+        + caution.png
+        + caution.svg
+        + danger.png
+        + danger.svg
+        + note.png
+        + note.svg
+        + warning.png
+        + warning.svg
+
+cfg/fo/attrs
+    basic-settings-custom.xsl
+        + Set Dell EMC brand as default;
+        + Add specific variables for 'mini-toc' and 'task-labels' <othermeta> elements;
+        + Add specific variables for 'DELLINCLUDEGUIDS' and 'DELLRESTRICTED' Dell properties;
+    commons-attr-custom.xsl
+        + Add attribute-sets for new Admonition view;
+        + Add attribute set for topic GUID block;
+    front-matter-attr-custom.xsl
+        + Add attribute-sets for <shortdesc> container;
+        + Add attribute-sets for <booktitlealt> container;
+        + Add attribute-sets for 'Regulatory Model/Type' container;
+        + Add attribute-sets for 'DELLRESTRICTED watermark' container;
+    static-content-attr-custom.xsl
+        + Add attribute-sets for 'DELLRESTRICTED watermark' footer container;
+    sw-domain-attr-custom.xsl
+        + Set italic font style for <varname> for all languages (TKT-409)
+    tables-attr-custom.xsl
+        + replaced font-size inside tables with 'default-table-font-size' variable;
+    ui-domain-attr-custom.xsl
+        + Fixed font size for <wintitle> inside tables;
+
+cfg/fo/xsl
+    commons-custom.xsl
+        + Remove 'Chapter 1' (Appendix, Part) from the chapter cover page if there is only one chapter in PDF;
+        + Add support for DELL 'mini-toc' othermeta parameter;
+        + Add support for DELL 'task-labels' othermeta parameter;
+        + Implemented new Admonitions representation;
+        + Add support for 'DELLINCLUDEGUIDS' parameter;
+    front-matter-custom.xsl
+        + Upgraded cover page view (Use <booktitlealt> instead of <category> value;
+                Use <mainbooktitle> instead of <seriae> and <prodname> values;
+                Add shortdesc on cover page;
+                Add Date value
+                Moved duplicated code of <version> processing to named template
+        + Add support for DELL Regulatory Model / Type values;
+        + Add support for 'DELLRESTRICTED' property.
+        - Remove Date from copyrights.
+    static-content-custom.xsl
+        + Add support for 'DELLRESTRICTED' property.
+        + Replace Footer <category> or 'current title' with <booktitlealt> value;
+    tables-custom.xsl
+        + Fixed table bottom border if @frame = 'none';
+    task-elements-custom.xsl
+        + Add support for DELL 'task-labels' othermeta parameter;
+
+Drop_31 2018/10/10
++ Fixed <draft-comment> issue. Added turning-on/off draft-comments depending on 'args.draft' parameter value.
+
+Drop_30 2017/07/17
++ TKT-409 - Remove quotation marks for varname and option.
+
+Drop_29 2017/05/03
++ TKT-525, 522 - Normalize space.after for tables in lists.
+
+Drop_28 2017/05/02
++ TKT-525, 522 - Normalize left alignment for tables and figures in lists.
++ TKT-525, 522 - Increase space before tables and figures in lists.
+
+Drop_27 2017/04/21
++ Fixed: TKT-542 - <tm> element in bm metadata displays much smaller in post-12/5/16 PDF outputs.
+
+Drop_26 2017/04/19
++ Fixed: TKT-525 - table should left align and stay in column even in nested list.
++ Fixed: TKT-522 - Tables and figures in steps must left align to the text in the associated step or substep element, even if nested.
+
+Drop_25 2017/04/12
++ Fixed: TKT-526 - (PDF) table continuation labels should appear only when table is continued. Removed empty row if footnotes don't exist.
+
+Drop_24 2017/03/30
++ fixed 'Version should show on Solutions title page if the value does not equal zero'.
+
+Drop_23 2017/03/23
++ Exclude version data from Solutions PDF frontmatter if version equal '0' or '0.0'.
+
+Drop_22 2017/03/21
++ Fixed missed copyright for Solutions PDF
+
+Drop_21 2017/03/17
++ Use <mainbooktitle> for Solutions PDF even page footers;
+
+Drop_20 2017/03/15
++ Decrease <category> font size for Solutions PDF front matter.
++ Add 'DRAFT', 'BETA' and 'CONFIDENTIAL' blocks to front matter headers for Solutions PDF.
+
+Drop_19 2017/03/10
++ Add new page layout for Solutions PDF cover page;
++ Add English version to all localized var files for 'Abstract' string.
+
+Drop_18 2016/11/28
+
++ Fixed font-family selection for 'EN-US' content regardless of publication language. EN-US content should always use default 'Dell-Replica' font.
+
+Drop_17 2016/11/22
+
++ Fixed: Wrong selecting of font-face for Asian languages if font-family in attribute-set has <alias> value instead of <logical-font> name.
+
+Drop_17 2016/11/22
+
++ set specific Asian fonts instead of default 'Courier New' for Asian symbols in monospaced elements. English should be Courier New. Affected JA, KO. ZH-CN and ZH-TW languages.
+
+Drop_16 2016/11/21
++ Fixed: RU <systemoutput> should be Courier New but it is Arial Bold;
++ Changed font size for copyrights from 9pt to 7.5pt.
++ Changed font size for <tm> from 7.5pt to 6.25pt.
+
+Drop_15 2016/11/18
+
++ Fixed Barcode font for Asian languages.
++ Fixed Monospaced text for ZH-TW, ZH-CN, JA and KO languages.
++ Merged font-mapping files to one.
++ Cleanup font-mapping.xml (remove old comments and commented code peaces).
+
+Drop_14 2016/11/15
+
++ Replace 'Tahoma' instances to 'Arial' for 'RU' language.
++ Replace Simplified Chinese 'MS YaHei' instances to 'Microsoft YaHei'.
+
+Drop_13 2016/11/14
+
++ Move back localized changes.
++ Use default BRAND value if 'FEMCBRAND' ishfield presents but is empty.
+
+Drop_12 2016/11/11
+
++ Replaced Simplified Chinese 'SimHei' instances to 'MS Yahei'.
+
+Drop_11 2016/11/11
+
++ Changed default brand from Dell to EMC.
++ Replaced Simplified Chinese 'SimHei' instances to 'MS Yahei'.
+
+Drop_10 2016/10/25
+
++ Changed color of date for NoChap PDFs from black to gray.
++ Changed color of category for RSA NoChap PDFs from red to gray.
+
+Drop_9 2016/10/25
+
+- Remove Drop_8 changes;
+
+Drop_8 2016/10/24
+
++ 6.4.2	Fonts for localized PDF output.
+
+Drop_7 2016/10/24
+
++   Separate Copyright Company name and URL for different publication brands.
+
+Drop_6 2016/10/20
+
++ Update copyrights and address block.
+
+Drop_5 2016/10/19
+
++ add correct dell_emc_mozy_cover.svg
+
+Drop_4 2016/10/18
+
++ Add barcode for multi-chapters publications if @outputclass contains 'barcode'.
++ Add new version of dell_emc_cover.svg and legacy_emc_cover.svg with correct blue color.
++ Add correct color for dell and rsa 'nochap' front-matter title, category, prodname, series, version, edition and text.
+
+
+Drop_3 2016/10/17
+
++ Modify 'Copyright_stat5' variable for EN publications;
++ Increase bottom margin for frontmatter page for nochap publications (mini TOC overlaid bottom logo);
++ Add case ignoring for BRAND values.
+
+
+Drop_2 2016/10/10
+
++ Add new 'DELL EMC Confidential' variable to var-files.
++ Add transformation which will use new variable for DellEMC and Mozy Beta and Draft publications.
++ Change font color for DellEMC and Mozy publications.
++ Change publication title color from EMC blue to DellEMC blue.
++ Add code documentation;
+
+Drop_1 2016/10/07
+
++ Update the PDF transforms to specify that Dell EMC is the default brand, if no brand is selected.
++ Update the PDF transforms to recognize the new brand values specified in the Brand configuration.
++ Update the PDF transforms to apply the brand attribute to PDF Beta output.
++ Update the PDF transforms so that the value of the BRAND attribute overrides the value of �outputclass=�rsa�� for the <bookmap> element.
++ Remove the �rsa� attribute value from the RSA bookmap templates.
++ Set up correct position of title and page margins for DellEMC multichapters and single chapter publications.
++ Update the PDF transforms so that the copyright text provided by the vars files is the default copyright notice for all PDF brands unless the <notices> element contains a topic reference.
++ Remove the Copyright_stat6 from the en.xml var file.
++ Replace all instances of MetaNormaLF-Roman with DellReplica-Regular.
++ Replace all instances of MetaMediumLF-Roman with DellReplica-Bold.
+
++ release_notes.txt
++ dell_emc_cover.svg
++ dell_emc_mozy_cover.svg
+

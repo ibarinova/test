@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<!--
+  Revision History
+  ================
+  Comtech/EMC AdvTraining 24-Jan-2013 Add Barcode39 font mapping.
+  Suite/EMC   SOW6  11-Mar-2012   Added loacalized fonts
+  Suite/EMC   SOW5  24-Apr-2012   Sans: change from 'MetaNormal-Roman' to 'MetaNormalLF-Roman'
+  Suite/EMC   SOW7  19-Feb-2013   Added font-mappings for symbols to handle superscripting
+  Balaji Mani       25-Feb-2013   All russain text is displaying in Tahoma
+  Balaji Mani       25-Feb-2013   Added MonospacedNew
+  Balaji Mani       25-Feb-2013   To remove small caps from dl, updated MetaNormalLF-Caps to MetaNormalLF-Roman in SansLFCaps.
+  Chaya Somanchi	25-Oct-2013   Replaced all the two instances of MetaCondBold-Roman font to MetaMediumLF-Roman font.
+  Chaya Somanchi	05-Nov-2013	  Commented "MonospacedNew" logical font and changed the default font face "Courier" to "Courier New" for the "Monospaced" logical font
+  EMC		  IB4	18-Apr-2014	  Updated the Korean font to NanumGothic
+  Intelliarts Consulting   DellEMC Rebranding    10-Oct-2016   Replace 'MetaNormalLF-Roman' instances to 'DellReplica-Regular' - IB
+  Intelliarts Consulting   DellEMC Rebranding    10-Oct-2016   Replace 'MetaMediumLF-Roman' instances to 'DellReplica-Bold' - IB
+  Intelliarts Consulting   DellEMC Rebranding    24-Oct-2016   Replace Japanece 'MS PGothic' instances to 'Meiryo UI' - IB
+  Intelliarts Consulting   DellEMC Rebranding    24-Oct-2016   Replace Korean 'NanumGothic' instances to 'Malgun Gothic' - IB
+  Intelliarts Consulting   DellEMC Rebranding    24-Oct-2016   Replace Traditional Chinese 'Arial Unicode MS' instances to 'Microsoft JhengHei' - IB
+  Intelliarts Consulting   DellEMC Rebranding    11-Nov-2016   Replace Simplified Chinese 'SimHei' instances to 'MS YaHei' - IB
+  Intelliarts Consulting   DellEMC Rebranding    15-Nov-2016   Replace Simplified Chinese 'MS YaHei' instances to 'Microsoft YaHei' - IB
+  Intelliarts Consulting   DellEMC Rebranding    18-Nov-2016   Merged all font-mapping files to one (removed separate file for RU and CS languages).  - IB
+  Intelliarts Consulting   DellEMC Rebranding    18-Nov-2016   Cleanup font-mapping file (remove old comments and commented code peaces).   - IB
+  Intelliarts Consulting   DellEMC Rebranding    18-Nov-2016   Deleted specific <physical-font>s for Japanese, Korean, Chinese languages from 'Monospaced' logical font.   - IB
+  Intelliarts Consulting   DellEMC Rebranding    21-Nov-2016   Deleted specific <physical-font>s for Russian language from 'SansCondBoldRoman-Bold' logical font because it duplicates default <physical-font> and is needless.   - IB
+  Intelliarts Consulting   DellEMC Rebranding    21-Nov-2016   Deleted 'MonospacedBold' logical font because it is not used anymore.   - IB
+  Intelliarts Consulting   DellEMC Rebranding    22-Nov-2016   Add 'Meiryo UI' font-face for Japanese language to 'Monospaced' logical-font.   - IB
+  Intelliarts Consulting   DellEMC Rebranding    22-Nov-2016   Add 'Malgun Gothic' font-face for Korean language to 'Monospaced' logical-font.   - IB
+  Intelliarts Consulting   DellEMC Rebranding    22-Nov-2016   Add 'Microsoft YaHei' font-face for Simplified Chinese language to 'Monospaced' logical-font.   - IB
+  Intelliarts Consulting   DellEMC Rebranding    22-Nov-2016   Add 'Microsoft JhengHei' font-face for Traditional Chinese language to 'Monospaced' logical-font.   - IB
+-->
+
+<font-mappings>
+    <font-table>
+        <!-- Backwards compatibility aliases -->
+        <aliases>
+            <alias name="serif">Serif</alias>
+        </aliases>
+        <aliases>
+            <alias name="sans-serif">Sans</alias>
+        </aliases>
+        <aliases>
+            <alias name="monospace">Monospaced</alias>
+        </aliases>
+        <aliases>
+            <alias name="Helvetica">Normal</alias>
+        </aliases>
+        <aliases>
+            <alias name="Courier">Monospaced</alias>
+        </aliases>
+
+        <logical-font name="Barcode39">
+            <physical-font char-set="default">
+                <font-face>Free 3 of 9</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="Sans">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Regular</font-face>
+            </physical-font>
+            <!--ja-->
+            <physical-font char-set="Japanese">
+                <font-face>Meiryo UI</font-face>
+            </physical-font>
+            <!--ko-->
+            <physical-font char-set="Korean">
+                <font-face>Malgun Gothic</font-face>
+            </physical-font>
+            <!--ru-->
+            <physical-font char-set="Russian">
+                <font-face>Arial</font-face>
+            </physical-font>
+            <!--zh_CN-->
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <!--zh_TW-->
+            <physical-font char-set="Traditional Chinese">
+                <font-face>Microsoft JhengHei</font-face>
+            </physical-font>
+            <!-- Suite/EMC   SOW7  19-Feb-2013   Added font-mappings for symbols to handle superscripting START - rs -->
+            <physical-font char-set="SymbolsSuperscript">
+                <font-face>DellReplica-Regular</font-face>
+                <baseline-shift>20%</baseline-shift>
+                <override-size>smaller</override-size>
+            </physical-font>
+            <physical-font char-set="SymbolsService">
+                <font-face>DellReplica-Regular</font-face>
+            </physical-font>
+            <!-- Suite/EMC   SOW7  19-Feb-2013   Added font-mappings for symbols to handle superscripting END - rs -->
+        </logical-font>
+
+        <logical-font name="SansLFCaps">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Regular</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>Meiryo UI</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>Malgun Gothic</font-face>
+            </physical-font>
+            <physical-font char-set="Russian">
+                <font-face>Arial</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Traditional Chinese">
+                <font-face>Microsoft JhengHei</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="SansLFRoman">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Regular</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>Meiryo UI</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>Malgun Gothic</font-face>
+            </physical-font>
+            <physical-font char-set="Russian">
+                <font-face>Arial</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Traditional Chinese">
+                <font-face>Microsoft JhengHei</font-face>
+            </physical-font>
+            <!-- Suite/EMC   SOW7  19-Feb-2013   Added font-mappings for symbols to handle superscripting START - rs -->
+            <physical-font char-set="SymbolsSuperscript">
+                <font-face>DellReplica-Regular</font-face>
+                <baseline-shift>20%</baseline-shift>
+                <override-size>smaller</override-size>
+            </physical-font>
+            <physical-font char-set="SymbolsService">
+                <font-face>DellReplica-Regular</font-face>
+            </physical-font>
+            <!-- Suite/EMC   SOW7  19-Feb-2013   Added font-mappings for symbols to handle superscripting END - rs -->
+        </logical-font>
+
+        <logical-font name="SansMediumLFRoman">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Bold</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>Meiryo UI</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>Malgun Gothic</font-face>
+            </physical-font>
+            <physical-font char-set="Russian">
+                <font-face>Arial</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Traditional Chinese">
+                <font-face>Microsoft JhengHei</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="SansBoldLFRoman">
+            <physical-font char-set="default">
+                <font-face>MetaBoldLF-Roman</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>Meiryo UI</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>Malgun Gothic</font-face>
+            </physical-font>
+            <physical-font char-set="Russian">
+                <font-face>TimesCyr</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Traditional Chinese">
+                <font-face>Microsoft JhengHei</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="SansCondBoldRoman">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Bold</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>Meiryo UI</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>Malgun Gothic</font-face>
+            </physical-font>
+            <physical-font char-set="Russian">
+                <font-face>Arial</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Traditional Chinese">
+                <font-face>Microsoft JhengHei</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="SansMediumLFCaps">
+            <physical-font char-set="default">
+                <font-face>DellReplica-Bold</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>Meiryo UI</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>Malgun Gothic</font-face>
+            </physical-font>
+            <physical-font char-set="Russian">
+                <font-face>Arial</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Traditional Chinese">
+                <font-face>Microsoft JhengHei</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="Monospaced">
+            <physical-font char-set="default">
+                <font-face>Courier New</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>Meiryo UI</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>Malgun Gothic</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Traditional Chinese">
+                <font-face>Microsoft JhengHei</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="Wingdings">
+            <physical-font char-set="default">
+                <font-face>Wingdings</font-face>
+            </physical-font>
+        </logical-font>
+
+        <!--There are no serif fonts in this project.  The following just "takes over" anything declared as serif.-->
+        <logical-font name="Serif">
+            <physical-font char-set="default">
+                <font-face>MetaCondBook-Roman</font-face>
+            </physical-font>
+            <physical-font char-set="Japanese">
+                <font-face>Meiryo UI</font-face>
+            </physical-font>
+            <physical-font char-set="Korean">
+                <font-face>Malgun Gothic</font-face>
+            </physical-font>
+            <physical-font char-set="Russian">
+                <font-face>Arial</font-face>
+            </physical-font>
+            <physical-font char-set="Simplified Chinese">
+                <font-face>Microsoft YaHei</font-face>
+            </physical-font>
+            <physical-font char-set="Traditional Chinese">
+                <font-face>MingLiU</font-face>
+            </physical-font>
+        </logical-font>
+
+        <logical-font name="SansCondBoldRoman-Bold">
+            <physical-font char-set="default">
+                <font-face>Arial-Bold</font-face>
+            </physical-font>
+        </logical-font>
+    </font-table>
+</font-mappings>
