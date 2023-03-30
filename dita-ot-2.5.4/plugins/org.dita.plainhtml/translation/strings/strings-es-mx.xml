@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on
+Sourceforge.net. See the accompanying license.txt file for
+applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="es-mx"> <!-- Spanish -->
+<!-- Comtech Services 10/02/2013 strings for webhelp, webhelp-single, webhelp-mobile -->
+ 
+<!-- various labels (not author controlled) -->
+<str name="Figure">Figura</str>
+<str name="Table">Tabla</str>
+<str name="Next topic">Tema siguiente</str>
+<str name="Previous topic">Tema anterior</str>
+<str name="Parent topic">Tema principal</str>
+<str name="Required cleanup">Por revisar</str>
+<str name="Draft comment">Borrador: comentarios</str>
+<str name="Option">Opción</str>
+<str name="Description">Descripción</str>
+<str name="Optional">Opcional</str>
+<str name="Required">Necesario</str>
+<str name="Skip visual syntax diagram">Omitir el esquema de sintaxis visual</str>
+<str name="Read syntax diagram">Leer el esquema de sintaxis</str>
+<str name="Start of change">Inicio del cambio</str>
+<str name="End of change">Fin del cambio</str>
+<str name="Index">Índice</str>
+<str name="Special characters">Caracteres Especiales</str>
+<str name="Numerics">Números</str>
+<str name="End notes">Notas al pie</str>
+<str name="Artwork">Gráficos e imágenes</str>
+<str name="Syntax">Sintaxis</str>
+<str name="Type">Tipo</str>
+<str name="Value">Valor</str>
+
+<!-- Text that goes before a link to a topic -->
+<str name="intro-to-topic-link">apartado</str>
+
+<!-- peril notice labels -->
+<str name="dellps_Note">Nota</str>
+<str name="dellps_Notes">Notas</str>
+<str name="dellps_Tip">Consejo</str>
+<str name="dellps_Fastpath">Vía de acceso rápida</str>
+<str name="dellps_Important">Importante</str>
+<str name="dellps_Attention">Atención</str>
+<str name="dellps_Caution">PRECAUCIÓN</str>
+<str name="dellps_Danger">PELIGRO</str>
+<str name="dellps_Remember">Recuerde</str>
+<str name="dellps_Restriction">Restricción</str>
+<str name="dellps_Warning">Aviso</str>
+
+<!-- default title text for section level generated sections -->
+<str name="Contents">Contenido</str>
+<str name="dellps_Related concepts">Conceptos relacionados</str>
+<str name="dellps_Related tasks">Tareas relacionadas</str>
+<str name="dellps_Related reference">Referencia relacionada</str>
+<str name="dellps_Related information">Información relacionada</str>
+
+
+<!--Task section labels -->
+<str name="dellps_task_prereq">Antes de empezar</str>
+<str name="dellps_task_context">Por qué y cuándo se efectúa esta tarea</str>
+<str name="dellps_task_example">Ejemplo</str>
+<str name="dellps_task_postreq">Qué hacer a continuación</str>
+<str name="dellps_task_procedure">Procedimiento</str>
+<str name="dellps_task_results">Resultados</str>
+
+
+</strings>

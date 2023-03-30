@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="fi-FI">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Alkuun</str>
+ <str name="TOC">Sisällysluettelo</str>
+ <str name="Content">Sisältö</str>
+ <str name="Search">Haku</str>
+ <str name="Index">Hakemisto</str>
+ <str name="Keywords">Avainsanat</str>
+ <str name="linkToThis">Linkki tälle sivulle</str>
+ <str name="ExpandAll">Laajenna kaikki aiheet</str>
+ <str name="printThisPage">Tulosta tämä sivu</str>
+ <str name="CollapseAll">Kutista kaikki aiheet</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Kuva</str>
+ <str name="Table">Taulukko</str>
+ <str name="Next topic">Seuraava aihe</str>
+ <str name="Previous topic">Aiempi aihe</str>
+ <str name="Parent topic">Ylemmän tason aihe</str>
+ <str name="Option">Asetus</str>
+ <str name="Description">Kuvaus</str>
+ <str name="Optional">Valinnainen</str>
+ <str name="Required">Pakollinen</str>
+ <str name="Index">Hakemisto</str>
+ <str name="Artwork">Kuva</str>
+ <str name="Syntax">Syntaksi</str>
+ <str name="Type">Tyyppi</str>
+ <str name="Value">Arvo</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Sisältö</str>
+ <str name="dellps_Related concepts">Aiheeseen liittyvät käsitteet</str>
+ <str name="dellps_Related tasks">Aiheeseen liittyvät tehtävät</str>
+ <str name="dellps_Related reference">Aiheeseen liittyvä viite</str>
+ <str name="dellps_Related information">Aiheeseen liittyviä tietoja</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Tietoja tehtävästä</str>
+ <str name="dellps_task_example">Esimerkki</str>
+ <str name="dellps_task_postreq">Seuraavat vaiheet</str>
+ <str name="dellps_task_prereq">Edellytykset</str>
+ <str name="dellps_task_procedure">Vaiheet</str>
+ <str name="dellps_task_results">Tulokset</str>
+
+ <str name="Copyright">Tekijänoikeus</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> sivulla </str>
+ <str name="Related Links">Aiheeseen liittyvää</str>
+ <str name="List item">Luettelokohta.</str>
+ <str name="Foot note">Alaviite.</str>
+ <str name="Page"> sivu </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Julkaisu </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Tällä sivulla</str>
+    <str name="see_also">Katso myös</str>
+
+    <str name="show_navigation">Näytä siirtymistoiminto</str>
+    <str name="hide_navigation">Piilota siirtymistoiminto</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">VAARA:</variable>
+    <variable id="dellps_warning">VAROITUS:</variable>
+    <variable id="dellps_caution">MUISTUTUS:</variable>
+    <variable id="dellps_notice">HUOMAUTUS:</variable>
+    <variable id="dellps_note">HUOMAA:</variable>
+  
+</strings>

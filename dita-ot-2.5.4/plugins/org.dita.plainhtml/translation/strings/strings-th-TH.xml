@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="th-TH">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">กลับไปที่ด้านบน</str>
+ <str name="TOC">ตารางสารบัญ</str>
+ <str name="Content">สารบัญ</str>
+ <str name="Search">ค้นหา</str>
+ <str name="Index">ดัชนี</str>
+ <str name="Keywords">คำสำคัญ</str>
+ <str name="linkToThis">ลิงก์ไปยังหน้านี้</str>
+ <str name="ExpandAll">ขยายหัวข้อทั้งหมด</str>
+ <str name="printThisPage">พิมพ์หน้านี้</str>
+ <str name="CollapseAll">ยุบหัวข้อทั้งหมด</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">รูปภาพ</str>
+ <str name="Table">ตาราง</str>
+ <str name="Next topic">หัวข้อถัดไป</str>
+ <str name="Previous topic">หัวข้อก่อนหน้า</str>
+ <str name="Parent topic">หัวข้อหลัก</str>
+ <str name="Option">ตัวเลือก</str>
+ <str name="Description">คำอธิบาย</str>
+ <str name="Optional">ตัวเลือก</str>
+ <str name="Required">จำเป็น</str>
+ <str name="Index">ดัชนี</str>
+ <str name="Artwork">อาร์ตเวิร์ค</str>
+ <str name="Syntax">ซินแทกซ์</str>
+ <str name="Type">ประเภท</str>
+ <str name="Value">ค่า</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">สารบัญ</str>
+ <str name="dellps_Related concepts">แนวคิดที่เกี่ยวข้อง</str>
+ <str name="dellps_Related tasks">งานที่เกี่ยวข้อง</str>
+ <str name="dellps_Related reference">แหล่งอ้างอิงที่เกี่ยวข้อง</str>
+ <str name="dellps_Related information">ข้อมูลที่เกี่ยวข้อง</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">เกี่ยวกับงานนี้</str>
+ <str name="dellps_task_example">ตัวอย่าง</str>
+ <str name="dellps_task_postreq">ขั้นตอนต่อไป</str>
+ <str name="dellps_task_prereq">สิ่งจำเป็น</str>
+ <str name="dellps_task_procedure">ขั้นตอน</str>
+ <str name="dellps_task_results">Results</str>
+
+ <str name="Copyright">ลิขสิทธิ์</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> ที่หน้า </str>
+ <str name="Related Links">ลิงก์ที่เกี่ยวข้อง</str>
+ <str name="List item">รายการสินค้า</str>
+ <str name="Foot note">คำอธิบายเพิ่มเติม</str>
+ <str name="Page"> หน้า </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">เผยแพร่แล้ว </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">ในหน้านี้</str>
+    <str name="see_also">ดูเพิ่มเติม</str>
+
+    <str name="show_navigation">แสดงการนำทาง</str>
+    <str name="hide_navigation">ซ่อนการนำทาง</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">อันตราย:</variable>
+    <variable id="dellps_warning">คำเตือน:</variable>
+    <variable id="dellps_caution">ข้อควรระวัง:</variable>
+    <variable id="dellps_notice">ข้อสังเกต:</variable>
+    <variable id="dellps_note">หมายเหตุ:</variable>
+  
+</strings>

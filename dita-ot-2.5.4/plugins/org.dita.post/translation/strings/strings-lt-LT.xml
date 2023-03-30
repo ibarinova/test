@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="lt-LT">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Grįžti į viršų</str>
+ <str name="TOC">Turinys</str>
+ <str name="Content">Turinys</str>
+ <str name="Search">Ieškoti</str>
+ <str name="Index">Rodyklė</str>
+ <str name="Keywords">Reikšminiai žodžiai</str>
+ <str name="linkToThis">Saitas į šį puslapį</str>
+ <str name="ExpandAll">Išplėsti visas temas</str>
+ <str name="printThisPage">Spausdinti šį puslapį</str>
+ <str name="CollapseAll">Suskleisti visas temas</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Paveikslėlis</str>
+ <str name="Table">Lentelė</str>
+ <str name="Next topic">Kita tema</str>
+ <str name="Previous topic">Ankstesnė tema</str>
+ <str name="Parent topic">Pagrindinė tema</str>
+ <str name="Option">Parinktis</str>
+ <str name="Description">Aprašas</str>
+ <str name="Optional">Pasirinktinai</str>
+ <str name="Required">Būtina</str>
+ <str name="Index">Rodyklė</str>
+ <str name="Artwork">Meno kūrinys</str>
+ <str name="Syntax">Sintaksė</str>
+ <str name="Type">Tipas</str>
+ <str name="Value">Reikšmė</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Turinys</str>
+ <str name="dellps_Related concepts">Susijusios sąvokos</str>
+ <str name="dellps_Related tasks">Susijusios užduotys</str>
+ <str name="dellps_Related reference">Susijusi nuoroda</str>
+ <str name="dellps_Related information">Susijusi informacija</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Apie šią užduotį</str>
+ <str name="dellps_task_example">Pavyzdys</str>
+ <str name="dellps_task_postreq">Kiti veiksmai</str>
+ <str name="dellps_task_prereq">Būtinos sąlygos</str>
+ <str name="dellps_task_procedure">Veiksmai</str>
+ <str name="dellps_task_results">Rezultatai</str>
+
+ <str name="Copyright">Autorių teisės</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> puslapyje </str>
+ <str name="Related Links">Susiję saitai</str>
+ <str name="List item">Sąrašo elementas.</str>
+ <str name="Foot note">Puslapio išnaša.</str>
+ <str name="Page"> puslapis </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Publikuota </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Šiame puslapyje</str>
+    <str name="see_also">Taip pat žr.</str>
+
+    <str name="show_navigation">Rodyti naršymo sritį</str>
+    <str name="hide_navigation">Slėpti naršymo sritį</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">PAVOJUS:</variable>
+    <variable id="dellps_warning">ĮSPĖJIMAS:</variable>
+    <variable id="dellps_caution">ATSARGIAI:</variable>
+    <variable id="dellps_notice">PRANEŠIMAS:</variable>
+    <variable id="dellps_note">PASTABA:</variable>
+  
+</strings>

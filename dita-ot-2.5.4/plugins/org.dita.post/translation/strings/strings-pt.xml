@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<strings>
+    <!-- PDF and common strings -->
+
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <str name="dellps_note">NOTA:</str>
+
+    <str name="dellps_notice">AVISO</str>
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <str name="dellps_tip">Sugestão: </str>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <str name="dellps_important">Importante</str>
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'fastpath'. -->
+    <str name="dellps_fastpath">Atalho</str>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'remember'. -->
+    <str name="dellps_remember">Lembrar-se</str>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'attention'. -->
+    <str name="dellps_attention">Atenção</str>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'caution'. -->
+    <str name="dellps_caution">AVISO:</str>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'danger'. -->
+    <str name="dellps_danger">Perigo</str>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <str name="dellps_warning">ADVERTÊNCIA: </str>
+    
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+
+    <!-- The title of the links to Related concepts -->
+    <str name="dellps_Related concepts">Conceitos relacionados</str>
+
+    <!-- The title of the links to Related tasks -->
+    <str name="dellps_Related tasks">Tarefas relacionadas</str>
+
+    <!-- The title of the links to Related references -->
+    <str name="dellps_Related references">Referência relacionada</str>
+
+    <!-- The title of the links to Related information -->
+    <str name="dellps_Related information">Informações relacionadas</str>
+
+    <!--
+       Strings used in the online-help publishing.
+    -->
+
+    <!-- The title of the "contents" button in online-help output -->
+    <str name="dellps_Contents button title">Índice</str>
+
+    <!-- The title of the "index" button in online-help output -->
+    <str name="dellps_Index button title">Índice remissivo</str>
+
+    <!-- The title of the "search" button in online-help output -->
+
+    <!-- The heading for task prerequisites -->
+    <str name="dellps_task_prereq">Pré-requisitos</str>
+
+    <!-- The heading for task contexts -->
+    <str name="dellps_task_context">Sobre esta tarefa</str>
+
+    <!-- The heading for task steps -->
+    <str name="dellps_task_procedure">Passo</str>
+
+    <!-- The heading for task examples -->
+    <str name="dellps_task_example">Exemplo</str>
+
+    <!-- The heading for task postrequisites -->
+    <str name="dellps_task_postreq">Passos seguintes</str>
+
+    <str name="dellps_Figure">Figura</str>
+    <str name="dellps_Table">Tabela</str>
+    <str name="dellps_Next topic">Próximo tópico</str>
+    <str name="dellps_Previous topic">Tópico anterior</str>
+    <str name="dellps_Parent topic">Tópico pai</str>
+	<!-- Glossary Constants -->
+	<str name="Glossary">Glossário</str>
+	<str name="GlossaryShortDesc">Este glossário inclui os termos utilizados neste documento.</str>
+</strings>

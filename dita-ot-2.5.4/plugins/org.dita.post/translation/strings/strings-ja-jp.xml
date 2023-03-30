@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on
+    Sourceforge.net. See the accompanying license.txt file for
+    applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="ja-jp">        <!-- Japanese -->
+<!-- Comtech Services 10/02/2013 strings for webhelp, webhelp-single, webhelp-mobile -->
+<!-- various labels (not author controlled) -->
+<str name="Figure">図</str>
+<str name="Table">表</str>
+<str name="Next topic">次のトピック</str>
+<str name="Previous topic">前のトピック</str>
+<str name="Parent topic">親トピック</str>
+<str name="Required cleanup">クリーンアップ要求</str>
+<str name="Draft comment">ドラフト注釈</str>
+<str name="Option">オプション</str>
+<str name="Description">説明</str>
+<str name="Optional">オプション</str>
+<str name="Required">必須</str>
+<str name="Skip visual syntax diagram">構文図をスキップする</str>
+<str name="Read syntax diagram">構文図を読む</str>
+<str name="Start of change">変更の始まり</str>
+<str name="End of change">変更の終わり</str>
+<str name="Index">索引</str>
+<str name="Special characters">特殊文字</str>
+<str name="Numerics">数字</str>
+<str name="End notes">脚注</str>
+<str name="Artwork">アートワーク</str>
+<str name="Syntax">構文</str>
+<str name="Type">タイプ</str>
+<str name="Value">値</str>
+<!-- Text that goes before a link to a topic -->
+<str name="intro-to-topic-link"></str>
+
+<!-- peril notice labels -->
+    <str name="dellps_note">注:</str>
+    <str name="dellps_notes">注:</str>
+    <str name="dellps_tip">ヒント:</str>
+    <str name="dellps_fastpath">ファースト・パス:</str>
+    <str name="dellps_important">重要:</str>
+    <str name="dellps_attention">重要:</str>
+    <str name="dellps_caution">注意:</str>
+    <str name="dellps_danger">危険:</str>
+    <str name="dellps_remember">要確認:</str>
+    <str name="dellps_restriction">制約事項:</str>
+    <str name="dellps_warning">警告:</str>
+
+<!-- default title text for section level generated sections -->
+	<str name="dellps_Contents">目次</str>
+    <str name="dellps_Related concepts">関連概念</str>
+    <str name="dellps_Related tasks">関連タスク</str>
+    <str name="dellps_Related reference">関連資料</str>
+    <str name="dellps_Related information">関連情報</str>
+
+
+<!--Task section labels -->
+<str name="dellps_task_context">このタスクについて</str>
+    <str name="dellps_task_example">例</str>
+    <str name="dellps_task_prereq">前提条件</str>
+    <str name="dellps_task_postreq">次の手順</str>
+    <str name="dellps_task_procedure">手順</str>
+    <str name="dellps_task_results">タスクの結果</str>
+
+	<!-- Glossary Constants -->
+	<str name="Glossary">用語集</str>
+	<str name="GlossaryShortDesc">この用語集には、このドキュメントで使用されている用語が含まれています。</str>
+</strings>

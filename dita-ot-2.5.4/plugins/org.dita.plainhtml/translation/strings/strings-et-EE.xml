@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="et-EE">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Tagasi üles</str>
+ <str name="TOC">Sisukord</str>
+ <str name="Content">Sisu</str>
+ <str name="Search">Otsing</str>
+ <str name="Index">Indeks</str>
+ <str name="Keywords">Otsingusõnad</str>
+ <str name="linkToThis">Link sellele lehele</str>
+ <str name="ExpandAll">Laienda kõiki teemasid</str>
+ <str name="printThisPage">Prindi see lehekülg</str>
+ <str name="CollapseAll">Kahanda kõiki teemasid</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Joonis</str>
+ <str name="Table">Tabel</str>
+ <str name="Next topic">Järgmine teema</str>
+ <str name="Previous topic">Eelmine teema</str>
+ <str name="Parent topic">Peateema</str>
+ <str name="Option">Valik</str>
+ <str name="Description">Kirjeldus</str>
+ <str name="Optional">Valikuline</str>
+ <str name="Required">Kohustuslik</str>
+ <str name="Index">Indeks</str>
+ <str name="Artwork">Kunstiteos</str>
+ <str name="Syntax">Lauseehitus</str>
+ <str name="Type">Tüüp</str>
+ <str name="Value">Väärtus</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Sisu</str>
+ <str name="dellps_Related concepts">Seotud kontseptsioonid</str>
+ <str name="dellps_Related tasks">Seotud tööd</str>
+ <str name="dellps_Related reference">Seotud viide</str>
+ <str name="dellps_Related information">Seotud teave</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Sellest tööst</str>
+ <str name="dellps_task_example">Näide</str>
+ <str name="dellps_task_postreq">Järgmised sammud</str>
+ <str name="dellps_task_prereq">Eeltingimused</str>
+ <str name="dellps_task_procedure">Sammud</str>
+ <str name="dellps_task_results">Tulemused</str>
+
+ <str name="Copyright">Autoriõigus</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> leheküljel </str>
+ <str name="Related Links">Seotud lingid</str>
+ <str name="List item">Nimekirja element.</str>
+ <str name="Foot note">Allmärkus.</str>
+ <str name="Page"> lk </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Avaldatud </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Sellel leheküljel</str>
+    <str name="see_also">Vt lisaks</str>
+
+    <str name="show_navigation">Näita navigatsiooni</str>
+    <str name="hide_navigation">Peida navigatsioon</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">OHTLIK:</variable>
+    <variable id="dellps_warning">HOIATUS:</variable>
+    <variable id="dellps_caution">ETTEVAATUST:</variable>
+    <variable id="dellps_notice">TEADE:</variable>
+    <variable id="dellps_note">MÄRGE:</variable>
+  
+</strings>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="ro-RO">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Înapoi sus</str>
+ <str name="TOC">Cuprins</str>
+ <str name="Content">Conținut</str>
+ <str name="Search">Căutare</str>
+ <str name="Index">Index</str>
+ <str name="Keywords">Cuvinte cheie</str>
+ <str name="linkToThis">Link la această pagină</str>
+ <str name="ExpandAll">Extindeți toate subiectele</str>
+ <str name="printThisPage">Imprimați această pagină</str>
+ <str name="CollapseAll">Restrângeți toate subiectele</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Figură</str>
+ <str name="Table">Tabel</str>
+ <str name="Next topic">Subiectul următor</str>
+ <str name="Previous topic">Subiectul anterior</str>
+ <str name="Parent topic">Subiect părinte</str>
+ <str name="Option">Opțiune</str>
+ <str name="Description">Descriere</str>
+ <str name="Optional">Opțional</str>
+ <str name="Required">Obligatoriu</str>
+ <str name="Index">Index</str>
+ <str name="Artwork">Imagine</str>
+ <str name="Syntax">Sintaxă</str>
+ <str name="Type">Tip</str>
+ <str name="Value">Valoare</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Cuprins</str>
+ <str name="dellps_Related concepts">Concepte corelate</str>
+ <str name="dellps_Related tasks">Sarcini corelate</str>
+ <str name="dellps_Related reference">Referință corelată</str>
+ <str name="dellps_Related information">Informații corelate</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Despre această sarcină</str>
+ <str name="dellps_task_example">Exemplu</str>
+ <str name="dellps_task_postreq">Pașii următori</str>
+ <str name="dellps_task_prereq">Cerințe prealabile</str>
+ <str name="dellps_task_procedure">Pași</str>
+ <str name="dellps_task_results">Rezultate</str>
+
+ <str name="Copyright">Drepturi de autor</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> la pagina </str>
+ <str name="Related Links">Linkuri corelate</str>
+ <str name="List item">Element din listă.</str>
+ <str name="Foot note">Notă de subsol.</str>
+ <str name="Page"> pagina </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Publicat </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Pe această pagină</str>
+    <str name="see_also">Consultați și</str>
+
+    <str name="show_navigation">Afișați bara de navigare</str>
+    <str name="hide_navigation">Ascundeți bara de navigare</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">PERICOL:</variable>
+    <variable id="dellps_warning">AVERTISMENT:</variable>
+    <variable id="dellps_caution">ATENȚIONARE:</variable>
+    <variable id="dellps_notice">ANUNȚ:</variable>
+    <variable id="dellps_note">NOTĂ:</variable>
+  
+</strings>

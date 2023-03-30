@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="uk-UA">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Угору</str>
+ <str name="TOC">Зміст</str>
+ <str name="Content">Вміст</str>
+ <str name="Search">Пошук</str>
+ <str name="Index">Вказівник</str>
+ <str name="Keywords">Ключові слова</str>
+ <str name="linkToThis">Посилання на цю сторінку</str>
+ <str name="ExpandAll">Розкрити всі теми</str>
+ <str name="printThisPage">Друкувати цю сторінку</str>
+ <str name="CollapseAll">Згорнути всі теми</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Рисунок</str>
+ <str name="Table">Таблиця</str>
+ <str name="Next topic">Наступна тема</str>
+ <str name="Previous topic">Попередня тема</str>
+ <str name="Parent topic">Батьківська тема</str>
+ <str name="Option">Параметр</str>
+ <str name="Description">Опис</str>
+ <str name="Optional">Необов’язково</str>
+ <str name="Required">Обов’язково</str>
+ <str name="Index">Вказівник</str>
+ <str name="Artwork">Ілюстрація</str>
+ <str name="Syntax">Синтаксис</str>
+ <str name="Type">Тип</str>
+ <str name="Value">Значення</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Зміст</str>
+ <str name="dellps_Related concepts">Пов’язані поняття</str>
+ <str name="dellps_Related tasks">Пов’язані завдання</str>
+ <str name="dellps_Related reference">Пов’язане посилання</str>
+ <str name="dellps_Related information">Пов’язана інформація</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Про це завдання</str>
+ <str name="dellps_task_example">Приклад</str>
+ <str name="dellps_task_postreq">Подальші кроки</str>
+ <str name="dellps_task_prereq">Попередні вимоги</str>
+ <str name="dellps_task_procedure">Кроки</str>
+ <str name="dellps_task_results">Результати</str>
+
+ <str name="Copyright">Авторські права</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> на сторінці </str>
+ <str name="Related Links">Пов’язані посилання</str>
+ <str name="List item">Пункт списку.</str>
+ <str name="Foot note">Виноска.</str>
+ <str name="Page"> сторінка </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Опубліковано </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">На цій сторінці</str>
+    <str name="see_also">Див. також</str>
+
+    <str name="show_navigation">Показати навігаційні елементи</str>
+    <str name="hide_navigation">Приховати навігаційні елементи</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">НЕБЕЗПЕКА:</variable>
+    <variable id="dellps_warning">ПОПЕРЕДЖЕННЯ:</variable>
+    <variable id="dellps_caution">ЗАСТЕРЕЖЕННЯ:</variable>
+    <variable id="dellps_notice">ЗАУВАЖЕННЯ:</variable>
+    <variable id="dellps_note">ПРИМІТКА:</variable>
+	
+	<!-- Glossary Constants -->
+	<str name="Glossary">Глосарій</str>
+	<str name="GlossaryShortDesc">Цей глосарій містить терміни, які використовуються в поточному документі.</str> 
+</strings>

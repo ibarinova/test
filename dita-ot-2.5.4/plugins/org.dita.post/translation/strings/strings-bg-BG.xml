@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="bg-BG">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Обратно към начало</str>
+ <str name="TOC">Таблица със съдържание</str>
+ <str name="Content">Съдържание</str>
+ <str name="Search">Търсене</str>
+ <str name="Index">Показател</str>
+ <str name="Keywords">Ключови думи</str>
+ <str name="linkToThis">Връзка към тази страница</str>
+ <str name="ExpandAll">Разширяване на всички теми</str>
+ <str name="printThisPage">Отпечатване на тази страница</str>
+ <str name="CollapseAll">Свиване на всички теми</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Фигура</str>
+ <str name="Table">Таблица</str>
+ <str name="Next topic">Следваща тема</str>
+ <str name="Previous topic">Предишна тема</str>
+ <str name="Parent topic">Основна тема</str>
+ <str name="Option">Опция</str>
+ <str name="Description">Описание</str>
+ <str name="Optional">По избор</str>
+ <str name="Required">Задължително</str>
+ <str name="Index">Показател</str>
+ <str name="Artwork">Произведение</str>
+ <str name="Syntax">Синтаксис</str>
+ <str name="Type">Тип</str>
+ <str name="Value">Стойност</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Съдържание</str>
+ <str name="dellps_Related concepts">Свързани понятия</str>
+ <str name="dellps_Related tasks">Свързани задачи</str>
+ <str name="dellps_Related reference">Свързана справка</str>
+ <str name="dellps_Related information">Свързана информация</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Относно тази задача</str>
+ <str name="dellps_task_example">Пример</str>
+ <str name="dellps_task_postreq">Следващи стъпки</str>
+ <str name="dellps_task_prereq">Предпоставки</str>
+ <str name="dellps_task_procedure">Стъпки</str>
+ <str name="dellps_task_results">Резултати</str>
+
+ <str name="Copyright">Авторско право</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> на стр. </str>
+ <str name="Related Links">Свързани връзки</str>
+ <str name="List item">Елемент от списъка.</str>
+ <str name="Foot note">Бележка под линия.</str>
+ <str name="Page"> стр. </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Публикувано </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">На тази страница</str>
+    <str name="see_also">Вижте още</str>
+
+    <str name="show_navigation">Показване на навигация</str>
+    <str name="hide_navigation">Скриване на навигация</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">ОПАСНОСТ:</variable>
+    <variable id="dellps_warning">ВНИМАНИЕ:</variable>
+    <variable id="dellps_caution">ПРЕДУПРЕЖДЕНИЕ:</variable>
+    <variable id="dellps_notice">СЪОБЩЕНИЕ:</variable>
+    <variable id="dellps_note">БЕЛЕЖКА:</variable>
+  
+</strings>

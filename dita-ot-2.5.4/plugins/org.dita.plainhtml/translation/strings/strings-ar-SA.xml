@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="ar-SA">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">العودة إلى الأعلى</str>
+ <str name="TOC">جدول المحتويات</str>
+ <str name="Content">المحتوى</str>
+ <str name="Search">البحث</str>
+ <str name="Index">الفهرس</str>
+ <str name="Keywords">كلمات أساسية</str>
+ <str name="linkToThis">ارتباط إلى هذه الصفحة</str>
+ <str name="ExpandAll">توسيع كل المواضيع</str>
+ <str name="printThisPage">طباعة هذه الصفحة</str>
+ <str name="CollapseAll">طي كل المواضيع</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">الشكل</str>
+ <str name="Table">الجدول</str>
+ <str name="Next topic">الموضوع التالي</str>
+ <str name="Previous topic">الموضوع السابق</str>
+ <str name="Parent topic">الموضوع الأصل</str>
+ <str name="Option">الخيار</str>
+ <str name="Description">الوصف</str>
+ <str name="Optional">اختياري</str>
+ <str name="Required">مطلوب</str>
+ <str name="Index">الفهرس</str>
+ <str name="Artwork">عمل فني</str>
+ <str name="Syntax">بناء الجملة</str>
+ <str name="Type">النوع</str>
+ <str name="Value">القيمة</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">المحتويات</str>
+ <str name="dellps_Related concepts">المفاهيم ذات الصلة</str>
+ <str name="dellps_Related tasks">المهام ذات الصلة</str>
+ <str name="dellps_Related reference">المرجع ذو الصلة</str>
+ <str name="dellps_Related information">المعلومات ذات الصلة</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">حول هذه المهمة</str>
+ <str name="dellps_task_example">مثال</str>
+ <str name="dellps_task_postreq">الخطوات التالية</str>
+ <str name="dellps_task_prereq">المتطلب الأساسي</str>
+ <str name="dellps_task_procedure">الخطوات</str>
+ <str name="dellps_task_results">النتائج</str>
+
+ <str name="Copyright">حقوق النشر</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> في الصفحة </str>
+ <str name="Related Links">الارتباطات ذات الصلة</str>
+ <str name="List item">عنصر القائمة.</str>
+ <str name="Foot note">الحاشية السفلية.</str>
+ <str name="Page"> الصفحة </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">تم النشر </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">في هذه الصفحة</str>
+    <str name="see_also">انظر أيضًا</str>
+
+    <str name="show_navigation">إظهار التنقل</str>
+    <str name="hide_navigation">إخفاء التنقل</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">خطر:</variable>
+    <variable id="dellps_warning">تحذير:</variable>
+    <variable id="dellps_caution">تنبيه:</variable>
+    <variable id="dellps_notice">إشعار:</variable>
+    <variable id="dellps_note">ملاحظة:</variable>
+  
+</strings>

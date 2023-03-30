@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="vi-VN">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Quay lại đầu trang</str>
+ <str name="TOC">Mục lục</str>
+ <str name="Content">Nội dung</str>
+ <str name="Search">Tìm kiếm</str>
+ <str name="Index">Chỉ mục</str>
+ <str name="Keywords">Từ khóa</str>
+ <str name="linkToThis">Liên kết đến trang này</str>
+ <str name="ExpandAll">Mở rộng tất cả chủ đề</str>
+ <str name="printThisPage">In trang này</str>
+ <str name="CollapseAll">Thu gọn tất cả chủ đề</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Hình</str>
+ <str name="Table">Bảng</str>
+ <str name="Next topic">Chủ đề tiếp theo</str>
+ <str name="Previous topic">Chủ đề trước</str>
+ <str name="Parent topic">Chủ để chính</str>
+ <str name="Option">Tùy chọn</str>
+ <str name="Description">Mô tả</str>
+ <str name="Optional">Không bắt buộc</str>
+ <str name="Required">Bắt buộc</str>
+ <str name="Index">Chỉ mục</str>
+ <str name="Artwork">Hình ảnh</str>
+ <str name="Syntax">Cú pháp</str>
+ <str name="Type">Loại</str>
+ <str name="Value">Giá trị</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Nội dung</str>
+ <str name="dellps_Related concepts">Khái niệm liên quan</str>
+ <str name="dellps_Related tasks">Tác vụ liên quan</str>
+ <str name="dellps_Related reference">Tham chiếu liên quan</str>
+ <str name="dellps_Related information">Thông tin liên quan</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Giới thiệu về tác vụ này</str>
+ <str name="dellps_task_example">Ví dụ</str>
+ <str name="dellps_task_postreq">Bước tiếp theo</str>
+ <str name="dellps_task_prereq">Điều kiện tiên quyết</str>
+ <str name="dellps_task_procedure">Bước</str>
+ <str name="dellps_task_results">Kết quả</str>
+
+ <str name="Copyright">Bản quyền</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> trên trang </str>
+ <str name="Related Links">Liên kết liên quan</str>
+ <str name="List item">Mục trong danh sách</str>
+ <str name="Foot note">Chân trang.</str>
+ <str name="Page"> trang </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Đã xuất bản </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Trên trang này</str>
+    <str name="see_also">Xem thêm</str>
+
+    <str name="show_navigation">Hiển thị điều hướng</str>
+    <str name="hide_navigation">Ẩn điều hướng</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">NGUY HIỂM:</variable>
+    <variable id="dellps_warning">CẢNH BÁO:</variable>
+    <variable id="dellps_caution">CHÚ Ý:</variable>
+    <variable id="dellps_notice">THÔNG BÁO:</variable>
+    <variable id="dellps_note">LƯU Ý:</variable>
+	<!-- Glossary Constants -->
+	<str name="Glossary">Bảng thuật ngữ</str>
+	<str name="GlossaryShortDesc">Bảng thuật ngữ này bao gồm các thuật ngữ được sử dụng trong tài liệu này.</str>
+</strings>

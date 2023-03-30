@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="nb-NO">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Tilbake til toppen</str>
+ <str name="TOC">Innholdsfortegnelse</str>
+ <str name="Content">Innhold</str>
+ <str name="Search">Søk</str>
+ <str name="Index">Indeks</str>
+ <str name="Keywords">Nøkkelord</str>
+ <str name="linkToThis">Kobling til denne siden</str>
+ <str name="ExpandAll">Vis alle emner</str>
+ <str name="printThisPage">Skriv ut denne siden</str>
+ <str name="CollapseAll">Skjul alle emner</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Figur</str>
+ <str name="Table">Tabell</str>
+ <str name="Next topic">Neste emne</str>
+ <str name="Previous topic">Forrige emne</str>
+ <str name="Parent topic">Overordnet emne</str>
+ <str name="Option">Alternativ</str>
+ <str name="Description">Beskrivelse</str>
+ <str name="Optional">Valgfritt</str>
+ <str name="Required">Obligatorisk</str>
+ <str name="Index">Indeks</str>
+ <str name="Artwork">Bilde</str>
+ <str name="Syntax">Syntaks</str>
+ <str name="Type">Type</str>
+ <str name="Value">Verdi</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Innhold</str>
+ <str name="dellps_Related concepts">Relaterte konsepter</str>
+ <str name="dellps_Related tasks">Relaterte oppgaver</str>
+ <str name="dellps_Related reference">Relatert referanse</str>
+ <str name="dellps_Related information">Relatert informasjon</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Om denne oppgaven</str>
+ <str name="dellps_task_example">Eksempel</str>
+ <str name="dellps_task_postreq">Neste trinn</str>
+ <str name="dellps_task_prereq">Forutsetninger</str>
+ <str name="dellps_task_procedure">Trinn</str>
+ <str name="dellps_task_results">Resultater</str>
+
+ <str name="Copyright">Opphavsrett</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> på side </str>
+ <str name="Related Links">Relaterte koblinger</str>
+ <str name="List item">Listeelement.</str>
+ <str name="Foot note">Fotnote.</str>
+ <str name="Page"> side </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Utgitt </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">På denne siden</str>
+    <str name="see_also">Se også</str>
+
+    <str name="show_navigation">Vis navigering</str>
+    <str name="hide_navigation">Skjul navigering</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">FARE:</variable>
+    <variable id="dellps_warning">ADVARSEL:</variable>
+    <variable id="dellps_caution">FORSIKTIG:</variable>
+    <variable id="dellps_notice">MERK:</variable>
+    <variable id="dellps_note">MERK:</variable>
+  
+</strings>

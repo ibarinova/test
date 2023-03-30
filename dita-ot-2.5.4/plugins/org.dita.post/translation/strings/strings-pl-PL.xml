@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="pl-PL">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Powrót do góry</str>
+ <str name="TOC">Spis treści</str>
+ <str name="Content">Zawartość</str>
+ <str name="Search">Wyszukiwanie</str>
+ <str name="Index">Skorowidz</str>
+ <str name="Keywords">Słowa kluczowe</str>
+ <str name="linkToThis">Łącze do tej strony</str>
+ <str name="ExpandAll">Rozwiń wszystkie tematy</str>
+ <str name="printThisPage">Wydrukuj tę stronę</str>
+ <str name="CollapseAll">Zwiń wszystkie tematy</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Rysunek</str>
+ <str name="Table">Tabela</str>
+ <str name="Next topic">Następny temat</str>
+ <str name="Previous topic">Poprzedni temat</str>
+ <str name="Parent topic">Temat nadrzędny</str>
+ <str name="Option">Opcja</str>
+ <str name="Description">Opis</str>
+ <str name="Optional">Opcja</str>
+ <str name="Required">Wymagane</str>
+ <str name="Index">Skorowidz</str>
+ <str name="Artwork">Grafika</str>
+ <str name="Syntax">Składnia</str>
+ <str name="Type">Typ</str>
+ <str name="Value">Wartość</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Spis treści</str>
+ <str name="dellps_Related concepts">Powiązane pojęcia</str>
+ <str name="dellps_Related tasks">Powiązane zadania</str>
+ <str name="dellps_Related reference">Powiązane materiały referencyjne</str>
+ <str name="dellps_Related information">Powiązane informacje</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Informacje o tym zadaniu</str>
+ <str name="dellps_task_example">Przykład</str>
+ <str name="dellps_task_postreq">Kolejne kroki</str>
+ <str name="dellps_task_prereq">Wymagania wstępne</str>
+ <str name="dellps_task_procedure">Kroki</str>
+ <str name="dellps_task_results">Wyniki</str>
+
+ <str name="Copyright">Prawa autorskie</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> na stronie </str>
+ <str name="Related Links">Powiązane łącza</str>
+ <str name="List item">Element listy.</str>
+ <str name="Foot note">Przypis.</str>
+ <str name="Page"> str. </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Opublikowano </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Na tej stronie</str>
+    <str name="see_also">Patrz też</str>
+
+    <str name="show_navigation">Pokaż nawigację</str>
+    <str name="hide_navigation">Ukryj nawigację</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">NIEBEZPIECZEŃSTWO:</variable>
+    <variable id="dellps_warning">OSTRZEŻENIE:</variable>
+    <variable id="dellps_caution">UWAGA:</variable>
+    <variable id="dellps_notice">POWIADOMIENIE:</variable>
+    <variable id="dellps_note">UWAGA:</variable>
+	<!-- Glossary Constants -->
+	<str name="Glossary">Słownik</str>
+	<str name="GlossaryShortDesc">Ten słownik zawiera terminy użyte w tym dokumencie.</str>
+</strings>

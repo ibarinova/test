@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="id-ID">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Kembali ke Atas</str>
+ <str name="TOC">Daftar Isi</str>
+ <str name="Content">Konten</str>
+ <str name="Search">Cari</str>
+ <str name="Index">Indeks</str>
+ <str name="Keywords">Kata Kunci</str>
+ <str name="linkToThis">Tautkan ke halaman ini</str>
+ <str name="ExpandAll">Perluas Semua Topik</str>
+ <str name="printThisPage">Cetak halaman ini</str>
+ <str name="CollapseAll">Ciutkan Semua Topik</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Gambar</str>
+ <str name="Table">Tabel</str>
+ <str name="Next topic">Topik berikutnya</str>
+ <str name="Previous topic">Topik sebelumnya</str>
+ <str name="Parent topic">Topik utama</str>
+ <str name="Option">Opsi</str>
+ <str name="Description">Deskripsi</str>
+ <str name="Optional">Opsional</str>
+ <str name="Required">Diperlukan</str>
+ <str name="Index">Indeks</str>
+ <str name="Artwork">Karya Seni</str>
+ <str name="Syntax">Sintaks</str>
+ <str name="Type">Jenis</str>
+ <str name="Value">Nilai</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Konten</str>
+ <str name="dellps_Related concepts">Konsep terkait</str>
+ <str name="dellps_Related tasks">Tugas terkait</str>
+ <str name="dellps_Related reference">Referensi terkait</str>
+ <str name="dellps_Related information">Informasi terkait</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Tentang tugas ini</str>
+ <str name="dellps_task_example">Contoh</str>
+ <str name="dellps_task_postreq">Langkah berikutnya</str>
+ <str name="dellps_task_prereq">Prasyarat</str>
+ <str name="dellps_task_procedure">Langkah</str>
+ <str name="dellps_task_results">Hasil</str>
+
+ <str name="Copyright">Hak Cipta</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> pada halaman </str>
+ <str name="Related Links">Tautan Terkait</str>
+ <str name="List item">Cantumkan item.</str>
+ <str name="Foot note">Catatan kaki.</str>
+ <str name="Page"> halaman </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Diterbitkan </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Pada halaman ini</str>
+    <str name="see_also">Lihat juga</str>
+
+    <str name="show_navigation">Tampilkan navigasi</str>
+    <str name="hide_navigation">Sembunyikan navigasi</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">BAHAYA:</variable>
+    <variable id="dellps_warning">PERINGATAN:</variable>
+    <variable id="dellps_caution">PERHATIAN:</variable>
+    <variable id="dellps_notice">PEMBERITAHUAN:</variable>
+    <variable id="dellps_note">CATATAN:</variable>
+	<!-- Glossary Constants -->
+	<str name="Glossary">Glosarium</str>
+	<str name="GlossaryShortDesc">Glosarium ini mencakup istilah yang digunakan dalam dokumen ini.</str>
+</strings>

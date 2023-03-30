@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="sl-SI">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Nazaj na vrh</str>
+ <str name="TOC">Kazalo vsebine</str>
+ <str name="Content">Vsebina</str>
+ <str name="Search">Iskanje</str>
+ <str name="Index">Stvarno kazalo</str>
+ <str name="Keywords">Ključne besede</str>
+ <str name="linkToThis">Povezava do te strani</str>
+ <str name="ExpandAll">Razširi vse teme</str>
+ <str name="printThisPage">Natisni to stran</str>
+ <str name="CollapseAll">Strni vse teme</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Slika</str>
+ <str name="Table">Tabela</str>
+ <str name="Next topic">Naslednja tema</str>
+ <str name="Previous topic">Prejšnja tema</str>
+ <str name="Parent topic">Nadrejena tema</str>
+ <str name="Option">Možnost</str>
+ <str name="Description">Opis</str>
+ <str name="Optional">Izbirno</str>
+ <str name="Required">Zahtevano</str>
+ <str name="Index">Stvarno kazalo</str>
+ <str name="Artwork">Slika</str>
+ <str name="Syntax">Skladnja</str>
+ <str name="Type">Vrsta</str>
+ <str name="Value">Vrednost</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Vsebina</str>
+ <str name="dellps_Related concepts">Povezani pojmi</str>
+ <str name="dellps_Related tasks">Povezana opravila</str>
+ <str name="dellps_Related reference">Povezane reference</str>
+ <str name="dellps_Related information">Povezane informacije</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">O tem opravilu</str>
+ <str name="dellps_task_example">Primer</str>
+ <str name="dellps_task_postreq">Naslednji koraki</str>
+ <str name="dellps_task_prereq">Pred postopkom</str>
+ <str name="dellps_task_procedure">Koraki</str>
+ <str name="dellps_task_results">Rezultati</str>
+
+ <str name="Copyright">Avtorske pravice</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> na strani </str>
+ <str name="Related Links">Povezane povezave</str>
+ <str name="List item">Element seznama.</str>
+ <str name="Foot note">Opomba.</str>
+ <str name="Page"> stran </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Izdano </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Na tej strani</str>
+    <str name="see_also">Oglejte si tudi</str>
+
+    <str name="show_navigation">Prikaži krmarjenje</str>
+    <str name="hide_navigation">Skrij krmarjenje</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">NEVARNOST:</variable>
+    <variable id="dellps_warning">OPOZORILO:</variable>
+    <variable id="dellps_caution">PREVIDNO:</variable>
+    <variable id="dellps_notice">OBVESTILO:</variable>
+    <variable id="dellps_note">OPOMBA:</variable>
+	<!-- Glossary Constants -->
+	<str name="Glossary">Glosar</str>
+	<str name="GlossaryShortDesc">V tem glosarju so izrazi, uporabljeni v tem dokumentu.</str>
+</strings>

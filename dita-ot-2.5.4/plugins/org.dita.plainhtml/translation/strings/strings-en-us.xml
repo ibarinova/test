@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="en-us">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Back to Top</str>
+ <str name="TOC">Table of Contents</str>
+ <str name="Content">Content</str>
+ <str name="Search">Search</str>
+ <str name="Index">Index</str>
+ <str name="Keywords">Keywords</str>
+ <str name="linkToThis">Link to this page</str>
+ <str name="ExpandAll">Expand All Topics</str>
+ <str name="printThisPage">Print this page</str>
+ <str name="CollapseAll">Collapse All Topics</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Figure</str>
+ <str name="Table">Table</str>
+ <str name="Next topic">Next topic</str>
+ <str name="Previous topic">Previous topic</str>
+ <str name="Parent topic">Parent topic</str>
+ <str name="Option">Option</str>
+ <str name="Description">Description</str>
+ <str name="Optional">Optional</str>
+ <str name="Required">Required</str>
+ <str name="Index">Index</str>
+ <str name="Artwork">Artwork</str>
+ <str name="Syntax">Syntax</str>
+ <str name="Type">Type</str>
+ <str name="Value">Value</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Contents</str>
+ <str name="dellps_Related concepts">Related concepts</str>
+ <str name="dellps_Related tasks">Related tasks</str>
+ <str name="dellps_Related reference">Related reference</str>
+ <str name="dellps_Related information">Related information</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">About this task</str>
+ <str name="dellps_task_example">Example</str>
+ <str name="dellps_task_postreq">Next steps</str>
+ <str name="dellps_task_prereq">Prerequisites</str>
+ <str name="dellps_task_procedure">Steps</str>
+ <str name="dellps_task_results">Results</str>
+
+ <str name="Copyright">Copyright</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> on page </str>
+ <str name="Related Links">Related Links</str>
+ <str name="List item">List item.</str>
+ <str name="Foot note">Footnote.</str>
+ <str name="Page"> page </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Published </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">On this page</str>
+    <str name="see_also">See also</str>
+
+    <str name="show_navigation">Show navigation</str>
+    <str name="hide_navigation">Hide navigation</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">DANGER</variable>
+    <variable id="dellps_warning">WARNING</variable>
+    <variable id="dellps_caution">CAUTION</variable>
+    <variable id="dellps_notice">NOTICE</variable>
+    <variable id="dellps_note">NOTE</variable>
+  
+</strings>

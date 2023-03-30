@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="sk-SK">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Naspäť nahor</str>
+ <str name="TOC">Obsah</str>
+ <str name="Content">Obsah</str>
+ <str name="Search">Vyhľadávanie</str>
+ <str name="Index">Register</str>
+ <str name="Keywords">Kľúčové slová</str>
+ <str name="linkToThis">Prepojenie na túto stranu</str>
+ <str name="ExpandAll">Rozbaliť všetky témy</str>
+ <str name="printThisPage">Vytlačiť túto stranu</str>
+ <str name="CollapseAll">Zbaliť všetky témy</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Obrázok</str>
+ <str name="Table">Tabuľka</str>
+ <str name="Next topic">Ďalšia téma</str>
+ <str name="Previous topic">Predchádzajúca téma</str>
+ <str name="Parent topic">Nadradená téma</str>
+ <str name="Option">Možnosti</str>
+ <str name="Description">Popis</str>
+ <str name="Optional">Voliteľné</str>
+ <str name="Required">Požadované</str>
+ <str name="Index">Register</str>
+ <str name="Artwork">Grafický objekt</str>
+ <str name="Syntax">Syntax</str>
+ <str name="Type">Typ</str>
+ <str name="Value">Hodnota</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Obsah</str>
+ <str name="dellps_Related concepts">Súvisiace pojmy</str>
+ <str name="dellps_Related tasks">Súvisiace úlohy</str>
+ <str name="dellps_Related reference">Súvisiaci odkaz</str>
+ <str name="dellps_Related information">Súvisiaca informácia</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">O tejto úlohe</str>
+ <str name="dellps_task_example">Príklad</str>
+ <str name="dellps_task_postreq">Ďalšie kroky</str>
+ <str name="dellps_task_prereq">Prípravné úkony</str>
+ <str name="dellps_task_procedure">Kroky</str>
+ <str name="dellps_task_results">Výsledky</str>
+
+ <str name="Copyright">Autorské práva</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> na strane </str>
+ <str name="Related Links">Súvisiace prepojenia</str>
+ <str name="List item">Položka zoznamu.</str>
+ <str name="Foot note">Poznámka pod čiarou.</str>
+ <str name="Page"> strana </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Uverejnené </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Na tejto strane</str>
+    <str name="see_also">Pozri tiež</str>
+
+    <str name="show_navigation">Zobraziť navigáciu</str>
+    <str name="hide_navigation">Skryť navigáciu</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">NEBEZPEČENSTVO:</variable>
+    <variable id="dellps_warning">VAROVANIE:</variable>
+    <variable id="dellps_caution">UPOZORNENIE:</variable>
+    <variable id="dellps_notice">OZNÁMENIE:</variable>
+    <variable id="dellps_note">POZNÁMKA:</variable>
+  
+</strings>

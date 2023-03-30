@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="tr-TR">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Başa Dön</str>
+ <str name="TOC">İçindekiler</str>
+ <str name="Content">İçerik</str>
+ <str name="Search">Ara</str>
+ <str name="Index">Dizin</str>
+ <str name="Keywords">Anahtar sözcükler</str>
+ <str name="linkToThis">Bu sayfanın bağlantısı</str>
+ <str name="ExpandAll">Tüm Konuları Genişlet</str>
+ <str name="printThisPage">Bu sayfayı yazdır</str>
+ <str name="CollapseAll">Tüm Konuları Daralt</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Şekil</str>
+ <str name="Table">Tablo</str>
+ <str name="Next topic">Sonraki konu</str>
+ <str name="Previous topic">Önceki konu</str>
+ <str name="Parent topic">Ana konu</str>
+ <str name="Option">Seçenek</str>
+ <str name="Description">Açıklama</str>
+ <str name="Optional">İsteğe bağlı</str>
+ <str name="Required">Gerekli</str>
+ <str name="Index">Dizin</str>
+ <str name="Artwork">Görsel</str>
+ <str name="Syntax">Söz dizimi</str>
+ <str name="Type">Tip</str>
+ <str name="Value">Değer</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">İçindekiler</str>
+ <str name="dellps_Related concepts">İlgili konseptler</str>
+ <str name="dellps_Related tasks">İlgili görevler</str>
+ <str name="dellps_Related reference">İlgili referans</str>
+ <str name="dellps_Related information">İlgili Bilgiler</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Bu görev hakkında</str>
+ <str name="dellps_task_example">Örnek</str>
+ <str name="dellps_task_postreq">Sonraki adımlar</str>
+ <str name="dellps_task_prereq">Ön koşullar</str>
+ <str name="dellps_task_procedure">Adımlar</str>
+ <str name="dellps_task_results">____Results (Sonuçlar)____</str>
+
+ <str name="Copyright">Telif Hakkı</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> sayfa </str>
+ <str name="Related Links">İlgili Bağlantılar</str>
+ <str name="List item">Liste öğesi.</str>
+ <str name="Foot note">Dipnot.</str>
+ <str name="Page"> sayfa </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Şu tarihte yayımlandı: </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Bu sayfada</str>
+    <str name="see_also">Ayrıca bkz.</str>
+
+    <str name="show_navigation">Navigasyonu göster</str>
+    <str name="hide_navigation">Navigasyonu gizle</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">TEHLİKE:</variable>
+    <variable id="dellps_warning">UYARI:</variable>
+    <variable id="dellps_caution">DİKKAT:</variable>
+    <variable id="dellps_notice">BİLDİRİM:</variable>
+    <variable id="dellps_note">NOT:</variable>
+  
+</strings>

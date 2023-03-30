@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="hi-IN">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">शीर्ष पर वापस जाएं</str>
+ <str name="TOC">सामग्री-सूची</str>
+ <str name="Content">सामग्री</str>
+ <str name="Search">खोजें</str>
+ <str name="Index">अनुक्रमणिका</str>
+ <str name="Keywords">कीवर्ड</str>
+ <str name="linkToThis">इस पेज से लिंक करें</str>
+ <str name="ExpandAll">सभी विषयों का विस्तार करें</str>
+ <str name="printThisPage">इस पेज को प्रिंट करें</str>
+ <str name="CollapseAll">सभी विषयों को संक्षिप्त करें</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">आकृति</str>
+ <str name="Table">तालिका</str>
+ <str name="Next topic">अगला विषय</str>
+ <str name="Previous topic">पिछला विषय</str>
+ <str name="Parent topic">मुख्य विषय</str>
+ <str name="Option">विकल्प</str>
+ <str name="Description">विवरण</str>
+ <str name="Optional">वैकल्पिक</str>
+ <str name="Required">आवश्यक</str>
+ <str name="Index">अनुक्रमणिका</str>
+ <str name="Artwork">आर्टवर्क</str>
+ <str name="Syntax">सिंटेक्स</str>
+ <str name="Type">प्रकार</str>
+ <str name="Value">मान</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">सामग्रियां</str>
+ <str name="dellps_Related concepts">संबंधित अवधारणाएं</str>
+ <str name="dellps_Related tasks">संबंधित कार्य</str>
+ <str name="dellps_Related reference">संबंधित संदर्भ</str>
+ <str name="dellps_Related information">संबंधित जानकारी</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">इस कार्य के बारे में</str>
+ <str name="dellps_task_example">उदाहरण</str>
+ <str name="dellps_task_postreq">अगले चरण</str>
+ <str name="dellps_task_prereq">आवश्यक शर्तें</str>
+ <str name="dellps_task_procedure">चरण</str>
+ <str name="dellps_task_results">परिणाम</str>
+
+ <str name="Copyright">कॉपीराइट</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> पेज पर </str>
+ <str name="Related Links">संबंधित लिंक</str>
+ <str name="List item">आइटम सूची.</str>
+ <str name="Foot note">फुटनोट.</str>
+ <str name="Page"> पेज </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">प्रकाशित </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">इस पेज पर</str>
+    <str name="see_also">यह भी देखें</str>
+
+    <str name="show_navigation">नेविगेशन दिखाएं</str>
+    <str name="hide_navigation">नेविगेशन छिपाएं</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">खतरा:</variable>
+    <variable id="dellps_warning">चेतावनी:</variable>
+    <variable id="dellps_caution">सावधान:</variable>
+    <variable id="dellps_notice">सूचना:</variable>
+    <variable id="dellps_note">नोट:</variable>
+  
+</strings>

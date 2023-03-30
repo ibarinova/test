@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="lv-LV">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Atpakaļ uz augšu</str>
+ <str name="TOC">Satura rādītājs</str>
+ <str name="Content">Saturs</str>
+ <str name="Search">Meklēšana</str>
+ <str name="Index">Rādītājs</str>
+ <str name="Keywords">Atslēgvārdi</str>
+ <str name="linkToThis">Saite uz šo lapu</str>
+ <str name="ExpandAll">Izvērst visas tēmas</str>
+ <str name="printThisPage">Drukāt šo lapu</str>
+ <str name="CollapseAll">Sakļaut visas tēmas</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Attēls</str>
+ <str name="Table">Tabula</str>
+ <str name="Next topic">Nākamā tēma</str>
+ <str name="Previous topic">Iepriekšējā tēma</str>
+ <str name="Parent topic">Galvenā tēma</str>
+ <str name="Option">Opcija</str>
+ <str name="Description">Apraksts</str>
+ <str name="Optional">Izvēles</str>
+ <str name="Required">Obligāti</str>
+ <str name="Index">Rādītājs</str>
+ <str name="Artwork">Vizuālais noformējums</str>
+ <str name="Syntax">Sintakse</str>
+ <str name="Type">Veids</str>
+ <str name="Value">Vērtība</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Saturs</str>
+ <str name="dellps_Related concepts">Saistītie koncepti</str>
+ <str name="dellps_Related tasks">Saistītie uzdevumi</str>
+ <str name="dellps_Related reference">Saistītās atsauces</str>
+ <str name="dellps_Related information">Saistītā informācija</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Par šo uzdevumu</str>
+ <str name="dellps_task_example">Piemērs</str>
+ <str name="dellps_task_postreq">Nākamās darbības</str>
+ <str name="dellps_task_prereq">Prasības</str>
+ <str name="dellps_task_procedure">Darbības</str>
+ <str name="dellps_task_results">Rezultāti</str>
+
+ <str name="Copyright">Autortiesības</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> lpp. </str>
+ <str name="Related Links">Saistītās saites</str>
+ <str name="List item">Saraksta ieraksts.</str>
+ <str name="Foot note">Zemsvītras piezīme.</str>
+ <str name="Page"> lpp. </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Publicēts </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Šajā lapā</str>
+    <str name="see_also">Skatīt arī</str>
+
+    <str name="show_navigation">Rādīt navigāciju</str>
+    <str name="hide_navigation">Slēpt navigāciju</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">BĪSTAMI:</variable>
+    <variable id="dellps_warning">BRĪDINĀJUMS:</variable>
+    <variable id="dellps_caution">UZMANĪBU:</variable>
+    <variable id="dellps_notice">PAZIŅOJUMS:</variable>
+    <variable id="dellps_note">PIEZĪME:</variable>
+  
+</strings>

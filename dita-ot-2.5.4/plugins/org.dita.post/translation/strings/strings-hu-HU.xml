@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="hu-HU">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Vissza a tetejére</str>
+ <str name="TOC">Tartalomjegyzék</str>
+ <str name="Content">Tartalom</str>
+ <str name="Search">Keresés</str>
+ <str name="Index">Tárgymutató</str>
+ <str name="Keywords">Kulcsszavak</str>
+ <str name="linkToThis">Erre az oldalra mutató hivatkozás</str>
+ <str name="ExpandAll">Minden téma kibontása</str>
+ <str name="printThisPage">Az oldal nyomtatása</str>
+ <str name="CollapseAll">Minden téma összecsukása</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Ábra</str>
+ <str name="Table">Táblázat</str>
+ <str name="Next topic">Következő téma</str>
+ <str name="Previous topic">Előző téma</str>
+ <str name="Parent topic">Szülő téma</str>
+ <str name="Option">Opció</str>
+ <str name="Description">Leírás</str>
+ <str name="Optional">Opcionális</str>
+ <str name="Required">Kötelező</str>
+ <str name="Index">Tárgymutató</str>
+ <str name="Artwork">Kép</str>
+ <str name="Syntax">Szintaxis</str>
+ <str name="Type">Típus</str>
+ <str name="Value">Érték</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Tartalmak</str>
+ <str name="dellps_Related concepts">Kapcsolódó fogalmak</str>
+ <str name="dellps_Related tasks">Kapcsolódó feladatok</str>
+ <str name="dellps_Related reference">Kapcsolódó referencia</str>
+ <str name="dellps_Related information">Kapcsolódó információ</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Tudnivalók a feladatról</str>
+ <str name="dellps_task_example">Példa</str>
+ <str name="dellps_task_postreq">Következő lépések</str>
+ <str name="dellps_task_prereq">Előfeltételek</str>
+ <str name="dellps_task_procedure">Lépések</str>
+ <str name="dellps_task_results">Találatok</str>
+
+ <str name="Copyright">Szerzői jog</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> oldalon </str>
+ <str name="Related Links">Kapcsolódó linkek</str>
+ <str name="List item">Listaelem.</str>
+ <str name="Foot note">Lábjegyzet.</str>
+ <str name="Page"> oldal </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Közzététel: </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Ezen az oldalon</str>
+    <str name="see_also">Lásd még</str>
+
+    <str name="show_navigation">Navigáció megjelenítése</str>
+    <str name="hide_navigation">Navigáció elrejtése</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">VESZÉLY:</variable>
+    <variable id="dellps_warning">VIGYÁZAT:</variable>
+    <variable id="dellps_caution">FIGYELMEZTETÉS:</variable>
+    <variable id="dellps_notice">ÉRTESÍTÉS:</variable>
+    <variable id="dellps_note">MEGJEGYZÉS:</variable>
+	<!-- Glossary Constants -->
+	<str name="Glossary">Szószedet</str>
+	<str name="GlossaryShortDesc">Ez a szószedet a dokumentumban használt kifejezéseket tartalmazza.</str>
+</strings>

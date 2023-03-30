@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="sv-SE">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Tillbaka till början</str>
+ <str name="TOC">Innehållsförteckning</str>
+ <str name="Content">Innehåll</str>
+ <str name="Search">Sök</str>
+ <str name="Index">Register</str>
+ <str name="Keywords">Sökord</str>
+ <str name="linkToThis">Länk till den här sidan</str>
+ <str name="ExpandAll">Utöka alla ämnen</str>
+ <str name="printThisPage">Skriv ut den här sidan</str>
+ <str name="CollapseAll">Komprimera alla ämnen</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Bild</str>
+ <str name="Table">Tabell</str>
+ <str name="Next topic">Nästa ämne</str>
+ <str name="Previous topic">Föregående ämne</str>
+ <str name="Parent topic">Överordnat ämne</str>
+ <str name="Option">Alternativ</str>
+ <str name="Description">Beskrivning</str>
+ <str name="Optional">Valfri</str>
+ <str name="Required">Obligatorisk</str>
+ <str name="Index">Register</str>
+ <str name="Artwork">Bilder</str>
+ <str name="Syntax">Syntax</str>
+ <str name="Type">Typ</str>
+ <str name="Value">Värde</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Innehåll</str>
+ <str name="dellps_Related concepts">Relaterade koncept</str>
+ <str name="dellps_Related tasks">Relaterade uppgifter</str>
+ <str name="dellps_Related reference">Relaterad referens</str>
+ <str name="dellps_Related information">Relaterad information</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Om den här uppgiften</str>
+ <str name="dellps_task_example">Exempel</str>
+ <str name="dellps_task_postreq">Nästa steg</str>
+ <str name="dellps_task_prereq">Nödvändiga förhandsåtgärder</str>
+ <str name="dellps_task_procedure">Steg</str>
+ <str name="dellps_task_results">Resultat</str>
+
+ <str name="Copyright">Copyright</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> på sidan </str>
+ <str name="Related Links">Relaterade länkar</str>
+ <str name="List item">Listobjekt.</str>
+ <str name="Foot note">Fotnot.</str>
+ <str name="Page"> sidan </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Utgiven </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">På den här sidan</str>
+    <str name="see_also">Se även</str>
+
+    <str name="show_navigation">Visa navigering</str>
+    <str name="hide_navigation">Dölj navigering</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">FARA!</variable>
+    <variable id="dellps_warning">VARNING:</variable>
+    <variable id="dellps_caution">VARNING!</variable>
+    <variable id="dellps_notice">OBS!</variable>
+    <variable id="dellps_note">OBSERVERA!</variable>
+  
+</strings>

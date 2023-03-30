@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="mt-MT">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">Lura ’l Fuq</str>
+ <str name="TOC">Werrej</str>
+ <str name="Content">Kontenut</str>
+ <str name="Search">Tiftixa</str>
+ <str name="Index">Indiċi</str>
+ <str name="Keywords">Keywords</str>
+ <str name="linkToThis">Illinkja għal din il-paġna</str>
+ <str name="ExpandAll">Espandi s-Suġġetti Kollha</str>
+ <str name="printThisPage">Ipprintja din il-paġna</str>
+ <str name="CollapseAll">Ċekken is-Suġġetti Kollha</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">Figura</str>
+ <str name="Table">Tabella</str>
+ <str name="Next topic">Suġġett li jmiss</str>
+ <str name="Previous topic">Suġġett preċedenti</str>
+ <str name="Parent topic">Suġġett prinċipali</str>
+ <str name="Option">Għażla</str>
+ <str name="Description">Deskrizzjoni</str>
+ <str name="Optional">Mhux obbligatorju</str>
+ <str name="Required">Meħtieġ</str>
+ <str name="Index">Indiċi</str>
+ <str name="Artwork">Xogħol artistiku</str>
+ <str name="Syntax">Sintassi</str>
+ <str name="Type">Tip</str>
+ <str name="Value">Valur</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">Kontenut</str>
+ <str name="dellps_Related concepts">Kunċetti relatati</str>
+ <str name="dellps_Related tasks">Xogħlijiet relatati</str>
+ <str name="dellps_Related reference">Referenza relatata</str>
+ <str name="dellps_Related information">Informazzjoni relatata</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">Dwar dan ix-xogħol</str>
+ <str name="dellps_task_example">Eżempju</str>
+ <str name="dellps_task_postreq">Il-passi li jmiss</str>
+ <str name="dellps_task_prereq">Prerekwiżiti</str>
+ <str name="dellps_task_procedure">Passi</str>
+ <str name="dellps_task_results">Riżultati</str>
+
+ <str name="Copyright">Drittijiet tal-awtur</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> fuq il-paġna </str>
+ <str name="Related Links">Links Relatati</str>
+ <str name="List item">Oġġett tal-lista.</str>
+ <str name="Foot note">Nota f’qiegħ il-paġna.</str>
+ <str name="Page"> paġna </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">Ippubblikat </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">Fuq din il-paġna</str>
+    <str name="see_also">Ara wkoll</str>
+
+    <str name="show_navigation">Uri n-navigazzjoni</str>
+    <str name="hide_navigation">Aħbi n-navigazzjoni</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">PERIKLU:</variable>
+    <variable id="dellps_warning">TWISSIJA:</variable>
+    <variable id="dellps_caution">ATTENZJONI:</variable>
+    <variable id="dellps_notice">AVVIŻ:</variable>
+    <variable id="dellps_note">NOTA:</variable>
+  
+</strings>

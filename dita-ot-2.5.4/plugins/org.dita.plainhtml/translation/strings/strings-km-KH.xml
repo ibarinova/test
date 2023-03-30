@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="km-KH">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">ត្រឡប់ទៅលើ</str>
+ <str name="TOC">តារាងមាតិកា</str>
+ <str name="Content">ខ្លឹមសារ</str>
+ <str name="Search">ការស្វែងរក</str>
+ <str name="Index">សន្ទស្សន៍</str>
+ <str name="Keywords">ពាក្យគន្លឹះ</str>
+ <str name="linkToThis">ភ្ជាប់ទៅទំព័រនេះ</str>
+ <str name="ExpandAll">ពង្រីកប្រធានបទទាំងអស់</str>
+ <str name="printThisPage">បោះពុម្ពទំព័រនេះ</str>
+ <str name="CollapseAll">បង្រួមប្រធានបទទាំងអស់</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">រូបភាពយោង</str>
+ <str name="Table">តារាង</str>
+ <str name="Next topic">ប្រធានបទបន្ទាប់</str>
+ <str name="Previous topic">ប្រធានបទមុន</str>
+ <str name="Parent topic">ប្រធានបទចម្បង</str>
+ <str name="Option">ជម្រើស</str>
+ <str name="Description">ការពណ៌នា</str>
+ <str name="Optional">មិនតម្រូវ</str>
+ <str name="Required">ចាំបាច់</str>
+ <str name="Index">សន្ទស្សន៍</str>
+ <str name="Artwork">ស្នាដៃសិល្បៈ</str>
+ <str name="Syntax">វាក្យសម្ព័ន្ធ</str>
+ <str name="Type">ប្រភេទ</str>
+ <str name="Value">តម្លៃ</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">ខ្លឹមសារ</str>
+ <str name="dellps_Related concepts">គោលគំនិតដែលពាក់ព័ន្ធ</str>
+ <str name="dellps_Related tasks">កិច្ចការដែលពាក់ព័ន្ធ</str>
+ <str name="dellps_Related reference">ឯកសារយោងដែលពាក់ព័ន្ធ</str>
+ <str name="dellps_Related information">ព័ត៌មានដែលពាក់ព័ន្ធ</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">អំពីកិច្ចការនេះ</str>
+ <str name="dellps_task_example">ឧទាហរណ៍</str>
+ <str name="dellps_task_postreq">ជំហានបន្ទាប់</str>
+ <str name="dellps_task_prereq">លក្ខខណ្ឌជាមុន</str>
+ <str name="dellps_task_procedure">ជំហាន</str>
+ <str name="dellps_task_results">លទ្ធផល</str>
+
+ <str name="Copyright">រក្សាសិទ្ធិ</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">៖</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> នៅលើទំព័រ </str>
+ <str name="Related Links">តំណដែលពាក់ព័ន្ធ</str>
+ <str name="List item">ធាតុក្នុងបញ្ជី។</str>
+ <str name="Foot note">លេខយោង។</str>
+ <str name="Page"> ទំព័រ </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">បានបោះផ្សាយនៅ </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">នៅលើទំព័រនេះ</str>
+    <str name="see_also">មើលផងដែរ</str>
+
+    <str name="show_navigation">បង្ហាញការរុករក</str>
+    <str name="hide_navigation">លាក់ការរុករក</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">គ្រោះថ្នាក់៖</variable>
+    <variable id="dellps_warning">ការព្រមាន៖</variable>
+    <variable id="dellps_caution">ប្រយ័ត្ន៖</variable>
+    <variable id="dellps_notice">ការជូនដំណឹង៖</variable>
+    <variable id="dellps_note">សម្គាល់៖</variable>
+  
+</strings>

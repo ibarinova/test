@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+ Sourceforge.net. See the accompanying license.txt file for 
+ applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+
+<strings xml:lang="zh-HK">
+ <!-- US English -->
+
+ 
+ <str name="BacktoTop">返回頂部</str>
+ <str name="TOC">目錄</str>
+ <str name="Content">內容</str>
+ <str name="Search">搜尋</str>
+ <str name="Index">索引</str>
+ <str name="Keywords">關鍵字</str>
+ <str name="linkToThis">連結至本頁</str>
+ <str name="ExpandAll">展開所有主題</str>
+ <str name="printThisPage">列印本頁</str>
+ <str name="CollapseAll">摺疊所有主題</str>
+
+ <!-- various labels (not author controlled) -->
+ <str name="Figure">圖</str>
+ <str name="Table">表</str>
+ <str name="Next topic">下一個主題</str>
+ <str name="Previous topic">上一個主題</str>
+ <str name="Parent topic">父主題</str>
+ <str name="Option">選項</str>
+ <str name="Description">說明</str>
+ <str name="Optional">可選</str>
+ <str name="Required">必填</str>
+ <str name="Index">索引</str>
+ <str name="Artwork">作品集</str>
+ <str name="Syntax">語法</str>
+ <str name="Type">類型</str>
+ <str name="Value">值</str>
+ <!-- default title text for section level generated sections -->
+ <str name="Contents">內容</str>
+ <str name="dellps_Related concepts">相關概念</str>
+ <str name="dellps_Related tasks">相關任務</str>
+ <str name="dellps_Related reference">相關參考</str>
+ <str name="dellps_Related information">相關資訊</str>
+
+ <!--Task section labels -->
+ <str name="dellps_task_context">關於本任務</str>
+ <str name="dellps_task_example">範例</str>
+ <str name="dellps_task_postreq">下一步</str>
+ <str name="dellps_task_prereq">先決條件</str>
+ <str name="dellps_task_procedure">步驟</str>
+ <str name="dellps_task_results">結果</str>
+
+ <str name="Copyright">版權</str>
+
+ <!-- Symbols -->
+ <str name="OpenQuote">"</str>
+ <str name="CloseQuote">"</str>
+ <str name="ColonSymbol">:</str>
+
+ <!-- For odt transform -->
+ <str name="On the page"> 於第 頁 </str>
+ <str name="Related Links">相關連結</str>
+ <str name="List item">清單項目。</str>
+ <str name="Foot note">腳註。</str>
+ <str name="Page"> 頁 </str>
+ <str name="Unordered List bullet">&#x2022;</str>
+ 
+ 
+ <str name="start_q">&quot;</str>
+ <str name="end_q">&quot;</str>
+   <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str>  <!-- ” -->
+  <!-- need to be translated-->
+    <str name="Published">已發佈 </str>
+    <str name="year"></str>
+
+    <str name="on_this_page">於本頁</str>
+    <str name="see_also">另見</str>
+
+    <str name="show_navigation">顯示導覽</str>
+    <str name="hide_navigation">隱藏導覽</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="dellps_danger">危險：</variable>
+    <variable id="dellps_warning">警告：</variable>
+    <variable id="dellps_caution">警示：</variable>
+    <variable id="dellps_notice">注意：</variable>
+    <variable id="dellps_note">備註：</variable>
+	<!-- Glossary Constants -->
+	<str name="Glossary">詞彙表</str>
+	<str name="GlossaryShortDesc">本詞彙表包含本文件內使用的詞彙。</str>
+</strings>
