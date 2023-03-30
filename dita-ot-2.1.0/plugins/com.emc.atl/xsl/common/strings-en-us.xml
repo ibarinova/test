@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Translation strings for US English language. -->
+<strings xml:lang="en-us">    
+	
+    <!-- For ATL -->
+    <str name="atl.publicationname">Publication name</str>
+    <str name="atl.maptitle">Map title</str>
+    <str name="atl.version">Version</str>
+    <str name="atl.topicname1">Topic name, Level 1</str>
+    <str name="atl.topicname2">Level 2</str>
+    <str name="atl.topicname3">Level 3</str>
+    <str name="atl.topicname4">Level 4</str>
+    <str name="atl.topicname5+">Level 5+</str>
+    <str name="atl.objectname">Object name</str>
+    <str name="atl.version">Version</str>
+    <str name="atl.objecttype">Object type</str>
+    <str name="atl.topictype">Topic type</str>
+    <str name="atl.parentobject">Parent Object</str>
+    <str name="atl.reused">Reused</str>
+    <str name="atl.datecreated">Date created</str>
+    <str name="atl.datemodified">Date modified</str>
+    <str name="atl.status">Status</str>
+    <str name="atl.informationarchitect">Information architect</str>
+    <str name="atl.writer">Writer</str>
+    <str name="atl.lastmodifiedby">Last modified by</str>
+    <str name="atl.shortdescription">Short description</str>
+    <str name="atl.GUID">GUID</str>
+    <str name="atl.LibraryConrefTopics">Library Conref topics</str>
+    <str name="atl.ConditionName">Condition name</str>
+    <str name="atl.ConditionValue">Condition value</str>
+
+</strings>

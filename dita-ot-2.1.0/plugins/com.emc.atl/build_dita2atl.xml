@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is part of the DITA Open Toolkit project hosted on
+     Sourceforge.net. See the accompanying license.txt file for
+     applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2006 All Rights Reserved. -->
+<project name="dita2atl">
+
+    <import file="../org.dita.base/build_init.xml"/>
+    <import file="../org.dita.base/build_preprocess.xml"/>
+    <import file="../org.dita.xhtml/build_general.xml"/>
+
+    <target name="dita2atl" depends="dita2atl.init, build-init, preprocess, dita.map.xhtml.atl, copy-atl-css"/>
+
+    <target name="dita2atl.init">
+        <property name="transtype" value="atl"/>
+        <property name="atl.plugin.dir" location="${dita.dir}${file.separator}plugins${file.separator}com.emc.atl"/>
+        <property name="atl.plugin.dir.xsl" location="${atl.plugin.dir}${file.separator}xsl"/>
+        <property name="atl.plugin.dir.css" location="${atl.plugin.dir.xsl}${file.separator}style"/>
+        <property name="atl.plugin.strings.file" location="${atl.plugin.dir.xsl}${file.separator}common${file.separator}strings.xml"/>
+
+        <dirname property="args.args.input.location" file="${args.input}"/>
+        <xmlcatalog id="atl.plugin.xmlCatalog">
+            <catalogpath path="${dita.dir}/catalog-dita.xml"/>
+        </xmlcatalog>
+    </target>
+
+    <target name="dita.map.xhtml.atl" depends="dita.map.xhtml.atl.init, dita.map.atl.toc"/>
+
+    <target name="dita.map.xhtml.atl.init">
+        <condition property="out.ext" value=".html">
+            <not>
+                <isset property="out.ext"/>
+            </not>
+        </condition>
+        <condition property="args.xhtml.toc" value="${dita.input.filename}">
+            <not>
+                <isset property="args.xhtml.toc"/>
+            </not>
+        </condition>
+    </target>
+
+    <target name="dita.map.atl.toc"
+            unless="noMap" if="inner.transform"
+            description="Build HTML ATL file">
+        <xslt processor="trax"
+              basedir="${dita.temp.dir}"
+              destdir="${output.dir}"
+              includesfile="${dita.temp.dir}${file.separator}${user.input.file.listfile}"
+              classpathref="dost.class.path"
+              style="${atl.plugin.dir.xsl}${file.separator}emc_map2htmtocImpl.xsl">
+            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+            <param name="DITAEXT" expression="${dita.ext}" if="dita.ext"/>
+            <param name="OUTEXT" expression="${out.ext}" if="out.ext"/>
+            <param name="contenttarget" expression="${args.xhtml.contenttarget}" if="args.xhtml.contenttarget"/>
+            <param name="CSS" expression="${args.css.file}" if="args.css.file"/>
+            <param name="CSSPATH" expression="${user.csspath}" if="user.csspath"/>
+            <param name="OUTPUTCLASS" expression="${args.xhtml.toc.class}" if="args.xhtml.toc.class"/>
+            <param name="variableFiles.path" expression="${atl.plugin.strings.file}" />
+            <xmlcatalog refid="atl.plugin.xmlCatalog"/>
+            <mapper type="glob" from="*${dita.input.filename}" to="*${args.xhtml.toc}${out.ext}"/>
+        </xslt>
+    </target>
+
+    <target name="copy-atl-css" unless="user.csspath.url" description="Copy CSS files">
+        <condition property="user.copycss.yes">
+            <and>
+                <equals arg1="${args.copycss}" arg2="yes"/>
+                <isset property="args.css.present"/>
+            </and>
+        </condition>
+        <condition property="user.csspath" value="${user.csspath}" else="">
+            <isset property="user.csspath"/>
+        </condition>
+        <property name="user.csspath.real" value="${output.dir}${file.separator}${user.csspath}"/>
+
+        <mkdir dir="${user.csspath.real}"/>
+
+        <copy todir="${user.csspath.real}">
+            <fileset dir="${atl.plugin.dir.css}" includes="*.css"/>
+        </copy>
+
+        <antcall target="copy-css-user"/>
+    </target>
+
+</project>

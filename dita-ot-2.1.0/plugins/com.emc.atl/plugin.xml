@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin id="com.emc.atl">
+  <feature extension="dita.conductor.transtype.check" value="atl"/>
+  <feature extension="dita.conductor.target.relative" file="conductor.xml"/>
+</plugin>
+

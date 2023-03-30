@@ -1,0 +1,3 @@
+<plugin id="com.emc.common.resources">
+  <feature extension="dita.xsl.strings" file="strings/emc-strings.xml"/>
+</plugin>
