@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<plugin id="rocks.xml.dita.references.validator">
+    <feature extension="dita.conductor.transtype.check" value="references-validator"/>
+    <feature extension="dita.transtype.print" value="references-validator"/>
+
+    <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+</plugin>

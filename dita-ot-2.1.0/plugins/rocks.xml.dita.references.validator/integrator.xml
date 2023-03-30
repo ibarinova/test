@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<project name="rocks.xml.dita.references.validator">
+        <target name="dita2references-validator" depends="build-init,
+                                                preprocess.init,
+                                                gen-list,
+                                                debug-filter,
+                                                keyref,
+                                                profile,
+                                                topic-fragment,
+                                                coderef,
+                                                move-meta-entries,
+                                                mappull,
+                                                maplink,
+                                                topicpull,
+                                                flag-module,
+                                                dita2references-validator.init,
+                                                dita2references-validator.copy-meta,
+                                                dita2references-validator.merge-publication,
+                                                dita2references-validator.generate-dita-json,
+                                                dita2references-validator.generate-ishcondition-structure.xml,
+                                                dita2references-validator.generate-ishcondition-structure-json"/>
+
+    <target name="dita2references-validator.init">
+        <dirname property="references-validator.original.sourcepath" file="${args.input}"/>
+        <basename property="references-validator.original.input.map.name" file="${args.input}" />
+        <property name="references-validator.input.map" location="${dita.temp.dir}${file.separator}${references-validator.original.input.map.name}"/>
+        <property name="references-validator.merged.map" location="${dita.temp.dir}${file.separator}merged.xml"/>
+        <property name="references-validator.dita.json" location="${dita.temp.dir}${file.separator}dita.json"/>
+        <property name="references-validator.ishcondition-structure" location="${dita.temp.dir}${file.separator}1.xml"/>
+        <property name="references-validator.ishcondition-structure.json" location="${dita.temp.dir}${file.separator}ishcondition-structure.json"/>
+
+        <property name="dita.plugin.dir" location="${dita.dir}${file.separator}plugins"/>
+        <property name="references-validator.plugin.name" value="rocks.xml.dita.references.validator"/>
+        <property name="references-validator.plugin.dir" location="${dita.plugin.dir}${file.separator}${references-validator.plugin.name}"/>
+        <property name="references-validator.plugin.xsl.dir" location="${references-validator.plugin.dir}${file.separator}xsl"/>
+
+        <property name="references-validator.merge-publication.xsl" location="${references-validator.plugin.xsl.dir}${file.separator}references-validator.merge-publication.xsl"/>
+        <property name="references-validator.generate-dita-json.xsl" location="${references-validator.plugin.xsl.dir}${file.separator}references-validator.generate-dita-json.xsl"/>
+        <property name="references-validator.ishcondition-structure.xsl" location="${references-validator.plugin.xsl.dir}${file.separator}references-validator.generate-ishconditions-structure.xsl"/>
+        <property name="references-validator.ishcondition-structure-json.xsl" location="${references-validator.plugin.xsl.dir}${file.separator}references-validator.generate-ishcondition-structure-json.xsl"/>
+    </target>
+
+    <target name="dita2references-validator.copy-meta">
+        <copy todir="${dita.temp.dir}" failonerror="false">
+            <fileset dir="${references-validator.original.sourcepath}" includes="**/*.met"/>
+        </copy>
+    </target>
+
+    <target name="dita2references-validator.merge-publication">
+        <xslt in="${references-validator.input.map}"
+              out="${references-validator.merged.map}"
+              style="${references-validator.merge-publication.xsl}">
+            <param name="sourcedir" expression="${dita.temp.dir}"/>
+        </xslt>
+    </target>
+
+    <target name="dita2references-validator.generate-dita-json">
+        <xslt in="${references-validator.merged.map}"
+              out="${references-validator.dita.json}"
+              style="${references-validator.generate-dita-json.xsl}">
+        </xslt>
+    </target>
+
+    <target name="dita2references-validator.generate-ishcondition-structure.xml">
+        <xslt in="${references-validator.input.map}"
+              out="${references-validator.ishcondition-structure}"
+              style="${references-validator.ishcondition-structure.xsl}">
+            <param name="sourcedir" expression="${dita.temp.dir}"/>
+        </xslt>
+    </target>
+
+    <target name="dita2references-validator.generate-ishcondition-structure-json">
+        <xslt in="${references-validator.ishcondition-structure}"
+              out="${references-validator.ishcondition-structure.json}"
+              style="${references-validator.ishcondition-structure-json.xsl}">
+        </xslt>
+    </target>
+</project>
