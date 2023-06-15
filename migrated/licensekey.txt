@@ -1,0 +1,21 @@
+------START-LICENSE-KEY------
+
+Registration_Name=Mike Parent
+
+Company=Dell
+
+Category=Enterprise
+
+Component=Scripting
+
+Version=24
+
+Number_of_Licenses=1
+
+Date=04-07-2022
+
+Maintenance=418
+
+SGN=MCwCFD/88UyF95EjJ9/colcXp0jdld9LAhQN8Zh5KSCUSKW/xd2uJRIzk6f4Zg\=\=
+
+-------END-LICENSE-KEY-------
