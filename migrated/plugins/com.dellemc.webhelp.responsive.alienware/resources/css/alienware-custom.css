@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Alienware';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../resources/fonts/Alienware/Alienware-Light.ttf');
+}
+@font-face {
+    font-family: 'Alienware';
+    font-style: italic;
+    font-weight: 300;
+    src: url('../../resources/fonts/Alienware/Alienware-LightItalic.ttf');
+}
+@font-face {
+    font-family: 'Alienware';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../resources/fonts/Alienware/Alienware-Regular.ttf');
+}
+@font-face {
+    font-family: 'Alienware';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../../resources/fonts/Alienware/Alienware-Italic.ttf');
+}
+@font-face {
+    font-family: 'Alienware';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../resources/fonts/Alienware/Alienware-Bold.ttf');
+}
+@font-face {
+    font-family: 'Alienware';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../../resources/fonts/Alienware/Alienware-BoldItalic.ttf');
+}
+body {
+    font-family: Alienware, Arial, Helvetica, sans-serif !important;
+}
+
+.wh_logo {
+    width: 3em;
+}
+
+.wh_logo img {
+    height: 2.5em;
+    width: auto;
+    margin-bottom: 0.3em;
+}
+
+.wh_header {
+    background-color: rgba(0,0,0,0.85);
+}
+
+.wh_search_input {
+    background-color: rgba(0,0,0,0);
+}
+
+.booktitle {
+    line-height: 12pt;
+}
+
+.revision-date-container {
+    top: 1.6em;
+}
+
+.admonition td:first-of-type,
+.admonition.danger td:first-of-type,
+.admonition.warning td:first-of-type,
+.admonition.caution td:first-of-type {
+    border-right: 3px solid black;
+}
+
+.admonition-label,
+.admonition-label.danger,
+.admonition-label.caution,
+.admonition-label.warning {
+    color: black;
+}
+
+.wh_publication_toc #button-expand-action {
+    background-image: url("../images/expand-all-black.svg");
+}
+
+.wh_publication_toc #button-collapse-action {
+    background-image: url("../images/collapse-all-black.svg");
+}
+
+.wh_print_link button{
+    background-image: url("../images/printer-short-black.svg");
+}
+
+.glyphicon-arrow-left:before, .oxy-icon-arrow-left:before{
+    background-image: url('../images/arrow-tri-left-black.svg');
+}
+
+.glyphicon-arrow-right:before, .oxy-icon-arrow-right:before{
+    background-image: url('../images/arrow-tri-right-black.svg');
+}

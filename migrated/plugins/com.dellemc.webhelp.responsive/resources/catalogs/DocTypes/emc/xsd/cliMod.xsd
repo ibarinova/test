@@ -1,0 +1,1278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    EMC DITA Reference customization XSD Module      -->
+<!--  VERSION:   1.0                                               -->
+<!--  DATE:      November 2014                                     -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!-- SYSTEM:     Darwin Information Typing Architecture (DITA)     -->
+<!--                                                               -->
+<!-- PURPOSE:    XSD to describe                                   -->
+<!--             EMC DITA CLI References customization             -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <!-- ==================== Import Section ======================= -->
+    <xs:import namespace="http://dita.oasis-open.org/architecture/2005/"
+               schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.2"/>
+
+    <!--  Import the XML Schema that contains the defiinitions for xml:lang and xml:space attributes -->
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+               schemaLocation="urn:oasis:names:tc:dita:xsd:xml.xsd:1.2" />
+
+    <xs:annotation>
+        <xs:appinfo>
+            <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic reference cli)</dita:domainsModule>
+        </xs:appinfo>
+
+        <xs:documentation></xs:documentation>
+    </xs:annotation>
+
+    <!-- Embed reference to get specific elements. -->
+
+
+    <!--
+        cli_reference
+    -->
+
+    <xs:element name="cli_reference">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_reference.class">
+                    <xs:attribute ref="class" default="- topic/topic reference/reference cli_reference/cli_reference "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Base type: topic.class. -->
+
+    <xs:complexType name="cli_reference.class">
+        <xs:sequence>
+            <xs:group ref="cli_reference.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_reference.attributes"/>
+    </xs:complexType>
+
+    <!--
+         (
+         (%title;),
+         (%titlealts;)?,
+         (%shortdesc;)?,
+         (%prolog;)?,
+         (%cli_body;)?,
+         (%related-links;)?,
+         (%cli-info-types;)*
+         )
+    -->
+    <xs:group name="cli_reference.content">
+        <xs:sequence>
+            <xs:sequence>
+                <xs:group ref="title"/>
+                <xs:group ref="titlealts" minOccurs="0"/>
+                <xs:group ref="shortdesc" minOccurs="0"/>
+                <xs:group ref="prolog" minOccurs="0"/>
+                <xs:group ref="cli_body" minOccurs="0"/>
+                <xs:group ref="related-links" minOccurs="0"/>
+                <xs:group ref="cli-info-types" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        id              ID                               #REQUIRED
+        conref          CDATA                            #IMPLIED
+        %select-atts;
+        outputclass     CDATA                            #IMPLIED
+        xml:lang        NMTOKEN                          #IMPLIED
+        %arch-atts;
+        domains         CDATA                            "&included-domains;"
+    -->
+    <xs:attributeGroup name="cli_reference.attributes">
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="conref" type="xs:string"/>
+        <xs:attributeGroup ref="select-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+        <xs:attribute ref="xml:lang"/>
+        <xs:attribute ref="ditaarch:DITAArchVersion"/>
+        <xs:attributeGroup ref="domains-att"/>
+    </xs:attributeGroup>
+
+    <xs:group name="cli-info-types">
+        <xs:choice>
+            <xs:group ref="no-topic-nesting"/>
+        </xs:choice>
+    </xs:group>
+
+
+    <!--
+        cli_body
+    -->
+
+    <xs:element name="cli_body">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_body.class">
+                    <xs:attribute ref="class" default="- topic/body reference/refbody cli_reference/cli_body "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_body.class">
+        <xs:sequence>
+            <xs:group ref="cli_body.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_body.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (
+        %cli_syntax;,
+        (%cli_prereq;)?,
+        %cli_description;,
+        (%cli_postreq;)?,
+        (%cli_args;)?,
+        (%cli_options;)*,
+        (%cli_params;)?,
+        (%cli_backend_output;)?,
+        (%cli_example;)*
+        )
+    -->
+    <xs:group name="cli_body.content">
+        <xs:sequence>
+            <xs:sequence>
+                <xs:group ref="cli_syntax"/>
+                <xs:group ref="cli_prereq" minOccurs="0"/>
+                <xs:group ref="cli_description"/>
+                <xs:group ref="cli_postreq" minOccurs="0"/>
+                <xs:group ref="cli_args" minOccurs="0"/>
+                <xs:group ref="cli_options" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:group ref="cli_params" minOccurs="0"/>
+                <xs:group ref="cli_backend_output" minOccurs="0"/>
+                <xs:group ref="cli_example" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        %id-atts;
+        translate       (yes | no)                       #IMPLIED
+        xml:lang        NMTOKEN                          #IMPLIED
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_body.attributes">
+        <xs:attributeGroup ref="id-atts"/>
+        <xs:attribute name="translate" type="yesno-att.class"/>
+        <xs:attribute ref="xml:lang"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_syntax
+    -->
+
+    <xs:element name="cli_syntax">
+        <xs:annotation>
+            <xs:documentation>
+                cli_syntax contains one or more syntax diagrams for a command.
+                After the second &lt;codeph&gt; you can use &lt;codeph&gt; to add a newline.
+            </xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_syntax.class">
+                    <xs:attribute ref="class" default="- topic/section reference/refsyn cli_reference/cli_syntax "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Base type: section.class. -->
+
+    <xs:complexType name="cli_syntax.class">
+        <xs:sequence>
+            <xs:group ref="cli_syntax.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_syntax.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%ph;)*
+    -->
+    <xs:group name="cli_syntax.content">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <!-- see: cli.xsd -->
+                <xs:group ref="ph"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        spectitle       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_syntax.attributes">
+        <xs:attribute name="spectitle" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_prereq
+    -->
+
+    <xs:element name="cli_prereq">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_prereq.class">
+                    <xs:attribute ref="class" default="- topic/section reference/section cli_reference/cli_prereq "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_prereq.class">
+        <xs:sequence>
+            <xs:group ref="cli_prereq.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_prereq.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%section.cnt;)*
+    -->
+    <xs:group name="cli_prereq.content">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="section.cnt"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        spectitle       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_prereq.attributes">
+        <xs:attribute name="spectitle" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_description
+    -->
+
+    <xs:element name="cli_description">
+        <xs:annotation>
+            <xs:documentation>cli_description contains the expanded explanation of what the command does.</xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_description.class">
+                    <xs:attribute ref="class" default="- topic/section reference/section cli_reference/cli_description "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_description.class">
+        <xs:sequence>
+            <xs:group ref="cli_description.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_description.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%section.cnt;)*
+    -->
+    <xs:group name="cli_description.content">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="section.cnt"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        spectitle       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_description.attributes">
+        <xs:attribute name="spectitle" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_postreq
+    -->
+
+    <xs:element name="cli_postreq">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_postreq.class">
+                    <xs:attribute ref="class" default="- topic/section reference/section cli_reference/cli_postreq "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_postreq.class">
+        <xs:sequence>
+            <xs:group ref="cli_postreq.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_postreq.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%section.cnt;)*
+    -->
+    <xs:group name="cli_postreq.content">
+        <xs:sequence>
+            <xs:group ref="section.cnt" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        spectitle       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_postreq.attributes">
+        <xs:attribute name="spectitle" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_args
+    -->
+
+    <xs:element name="cli_args">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_args.class">
+                    <xs:attribute ref="class" default="- topic/simpletable reference/properties cli_reference/cli_args "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_args.class">
+        <xs:sequence>
+            <xs:group ref="cli_args.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_args.attributes"/>
+    </xs:complexType>
+
+    <!--
+        ((%cli_arg;)+)
+    -->
+    <xs:group name="cli_args.content">
+        <xs:sequence>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+                <xs:group ref="cli_arg"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        relcolwidth     CDATA                            #IMPLIED
+        keycol          NMTOKEN                          #IMPLIED
+        refcols         NMTOKENS                         #IMPLIED
+        %display-atts;
+        spectitle       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_args.attributes">
+        <xs:attribute name="relcolwidth" type="xs:string"/>
+        <xs:attribute name="keycol" type="xs:NMTOKEN"/>
+        <xs:attribute name="refcols" type="xs:NMTOKENS"/>
+        <xs:attributeGroup ref="display-atts"/>
+        <xs:attribute name="spectitle" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_arg
+    -->
+
+    <xs:element name="cli_arg">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_arg.class">
+                    <xs:attribute ref="class" default="- topic/strow reference/property cli_reference/cli_arg "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_arg.class">
+        <xs:sequence>
+            <xs:group ref="cli_arg.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_arg.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%cli_arg_value;, %cli_arg_desc;)
+    -->
+    <xs:group name="cli_arg.content">
+        <xs:sequence>
+            <xs:sequence>
+                <xs:group ref="cli_arg_value"/>
+                <xs:group ref="cli_arg_desc"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_arg.attributes">
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_arg_value
+    -->
+
+    <xs:element name="cli_arg_value">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="cli_arg_value.class">
+                    <xs:attribute ref="class" default="- topic/stentry reference/propvalue cli_reference/cli_arg_value "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_arg_value.class" mixed="true">
+        <xs:sequence>
+            <xs:group ref="cli_arg_value.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_arg_value.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%ph.cnt;)*
+    -->
+    <xs:group name="cli_arg_value.content">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="ph.cnt"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        specentry       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_arg_value.attributes">
+        <xs:attribute name="specentry" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_arg_desc
+    -->
+
+    <xs:element name="cli_arg_desc">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="cli_arg_desc.class">
+                    <xs:attribute ref="class" default="- topic/stentry reference/propvalue cli_reference/cli_arg_desc "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_arg_desc.class" mixed="true">
+        <xs:sequence>
+            <xs:group ref="cli_arg_desc.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_arg_desc.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%desc.cnt;)*
+    -->
+    <xs:group name="cli_arg_desc.content">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="desc.cnt"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        specentry       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_arg_desc.attributes">
+        <xs:attribute name="specentry" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_options
+    -->
+
+    <xs:element name="cli_options">
+        <xs:annotation>
+            <xs:documentation>cli_options contains the expanded explanation of each of the options in the syntax diagram.</xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_options.class">
+                    <xs:attribute ref="class" default="- topic/simpletable reference/properties cli_reference/cli_options "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_options.class">
+        <xs:sequence>
+            <xs:group ref="cli_options.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_options.attributes"/>
+    </xs:complexType>
+
+    <!--
+        ((%cli_options_head;)?, (%cli_option;)+)
+    -->
+    <xs:group name="cli_options.content">
+        <xs:sequence>
+            <xs:sequence>
+                <xs:group ref="cli_options_head" minOccurs="0"/>
+                <xs:group ref="cli_option" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        relcolwidth     CDATA                            #IMPLIED
+        keycol          NMTOKEN                          #IMPLIED
+        refcols         NMTOKENS                         #IMPLIED
+        %display-atts;
+        spectitle       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_options.attributes">
+        <xs:attribute name="relcolwidth" type="xs:string"/>
+        <xs:attribute name="keycol" type="xs:NMTOKEN"/>
+        <xs:attribute name="refcols" type="xs:NMTOKENS"/>
+        <xs:attributeGroup ref="display-atts"/>
+        <xs:attribute name="spectitle" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_options_head
+    -->
+
+    <xs:element name="cli_options_head">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_options_head.class">
+                    <xs:attribute ref="class" default="- topic/sthead reference/prophead cli_reference/cli_options_head "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_options_head.class">
+        <xs:sequence>
+            <xs:group ref="cli_options_head.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_options_head.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%cli_option_type;)?
+    -->
+    <xs:group name="cli_options_head.content">
+        <xs:sequence>
+            <xs:group ref="cli_option_type" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_options_head.attributes">
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_option_type
+    -->
+
+    <xs:element name="cli_option_type">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="cli_option_type.class">
+                    <xs:attribute ref="class" default="- topic/stentry reference/proptypehd cli_reference/cli_option_type "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_option_type.class" mixed="true">
+        <xs:sequence>
+            <xs:group ref="cli_option_type.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_option_type.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%ph.cnt;)*
+    -->
+    <xs:group name="cli_option_type.content">
+        <xs:sequence>
+            <xs:group ref="ph.cnt" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        specentry       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_option_type.attributes">
+        <xs:attribute name="specentry" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_option
+    -->
+
+    <xs:element name="cli_option">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_option.class">
+                    <xs:attribute ref="class" default="- topic/strow reference/property cli_reference/cli_option "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_option.class">
+        <xs:sequence>
+            <xs:group ref="cli_option.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_option.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%cli_option_value;, %cli_option_desc;)
+    -->
+    <xs:group name="cli_option.content">
+        <xs:sequence>
+            <xs:sequence>
+                <xs:group ref="cli_option_value"/>
+                <xs:group ref="cli_option_desc"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_option.attributes">
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_option_value
+    -->
+
+    <xs:element name="cli_option_value">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="cli_option_value.class">
+                    <xs:attribute ref="class" default="- topic/stentry reference/propvalue cli_reference/cli_option_value "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_option_value.class" mixed="true">
+        <xs:sequence>
+            <xs:group ref="cli_option_value.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_option_value.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%ph.cnt;)*
+    -->
+    <xs:group name="cli_option_value.content">
+        <xs:sequence>
+            <xs:group ref="ph.cnt" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        specentry       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_option_value.attributes">
+        <xs:attribute name="specentry" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_option_desc
+    -->
+
+    <xs:element name="cli_option_desc">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="cli_option_desc.class">
+                    <xs:attribute ref="class" default="- topic/stentry reference/propdesc cli_reference/cli_option_desc "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_option_desc.class" mixed="true">
+        <xs:sequence>
+            <xs:group ref="cli_option_desc.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_option_desc.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%desc.cnt;)*
+    -->
+    <xs:group name="cli_option_desc.content">
+        <xs:sequence>
+            <xs:group ref="desc.cnt" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        specentry       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_option_desc.attributes">
+        <xs:attribute name="specentry" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_params
+    -->
+
+    <xs:element name="cli_params">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_params.class">
+                    <xs:attribute ref="class" default="- topic/simpletable reference/properties cli_reference/cli_params "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_params.class">
+        <xs:sequence>
+            <xs:group ref="cli_params.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_params.attributes"/>
+    </xs:complexType>
+
+    <!--
+        ((%cli_param;)+)
+    -->
+    <xs:group name="cli_params.content">
+        <xs:sequence>
+            <xs:sequence>
+                <xs:group ref="cli_param" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        relcolwidth     CDATA                            #IMPLIED
+        keycol          NMTOKEN                          #IMPLIED
+        refcols         NMTOKENS                         #IMPLIED
+        %display-atts;
+        spectitle       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_params.attributes">
+        <xs:attribute name="relcolwidth" type="xs:string"/>
+        <xs:attribute name="keycol" type="xs:NMTOKEN"/>
+        <xs:attribute name="refcols" type="xs:NMTOKENS"/>
+        <xs:attributeGroup ref="display-atts"/>
+        <xs:attribute name="spectitle" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_param
+    -->
+
+    <xs:element name="cli_param">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_param.class">
+                    <xs:attribute ref="class" default="- topic/strow reference/property cli_reference/cli_param "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_param.class">
+        <xs:sequence>
+            <xs:group ref="cli_param.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_param.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%cli_param_value;, %cli_param_desc;)
+    -->
+    <xs:group name="cli_param.content">
+        <xs:sequence>
+            <xs:group ref="cli_param_value"/>
+            <xs:group ref="cli_param_desc"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_param.attributes">
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_param_value
+    -->
+
+    <xs:element name="cli_param_value">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent mixed="true">
+                <xs:extension base="cli_param_value.class">
+                    <xs:attribute ref="class" default="- topic/stentry reference/propvalue cli_reference/cli_param_value "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_param_value.class" mixed="true">
+        <xs:sequence>
+            <xs:group ref="cli_param_value.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_param_value.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%ph.cnt;)*
+    -->
+    <xs:group name="cli_param_value.content">
+        <xs:sequence>
+            <xs:group ref="ph.cnt" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        specentry       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_param_value.attributes">
+        <xs:attribute name="specentry" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_param_desc
+    -->
+
+    <xs:element name="cli_param_desc">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="cli_param_desc.class">
+                    <xs:attribute ref="class" default="- topic/stentry reference/propvalue cli_reference/cli_param_desc "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_param_desc.class" mixed="true">
+        <xs:sequence>
+            <xs:group ref="cli_param_desc.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_param_desc.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%desc.cnt;)*
+    -->
+    <xs:group name="cli_param_desc.content">
+        <xs:sequence>
+            <xs:group ref="desc.cnt" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        specentry       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_param_desc.attributes">
+        <xs:attribute name="specentry" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_backend_output
+    -->
+
+    <xs:element name="cli_backend_output">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_backend_output.class">
+                    <xs:attribute ref="class" default="- topic/section reference/section cli_reference/cli_backend_output "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_backend_output.class">
+        <xs:sequence>
+            <xs:group ref="cli_backend_output.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_backend_output.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%section.cnt;)*
+    -->
+    <xs:group name="cli_backend_output.content">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="section.cnt"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        spectitle       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_backend_output.attributes">
+        <xs:attribute name="spectitle" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_example
+    -->
+
+    <xs:element name="cli_example">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="cli_example.class">
+                    <xs:attribute ref="class" default="- topic/example reference/example cli_reference/cli_example "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_example.class">
+        <xs:sequence>
+            <xs:group ref="cli_example.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_example.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (%section.cnt;)*
+    -->
+    <xs:group name="cli_example.content">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="section.cnt"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        spectitle       CDATA                            #IMPLIED
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_example.attributes">
+        <xs:attribute name="spectitle" type="xs:string"/>
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+
+    <!--
+        cli_where
+    -->
+
+    <xs:element name="cli_where">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="cli_where.class">
+                    <xs:attribute ref="class" default="- topic/p reference/p cli_reference/cli_where "/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="cli_where.class" mixed="true">
+        <xs:sequence>
+            <xs:group ref="cli_where.content"/>
+        </xs:sequence>
+
+        <xs:attributeGroup ref="cli_where.attributes"/>
+    </xs:complexType>
+
+    <!--
+        (#PCDATA | %basic.ph; | %simpletable; | %note; | %txt.incl;)*
+    -->
+    <xs:group name="cli_where.content">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="basic.ph"/>
+                <xs:group ref="simpletable"/>
+                <xs:group ref="note"/>
+                <xs:group ref="txt.incl"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        ishlabelxpath   CDATA #FIXED "./title | @alt | @href | @conref | self::*[@id and not(@varid)]/@id"
+        ishlinkxpath    CDATA #FIXED "@conref | @href[contains(parent::*/@class,&apos; topic/image &apos;) and not(parent::*/@conref)]"
+        %univ-atts;
+        outputclass     CDATA                            #IMPLIED
+    -->
+    <xs:attributeGroup name="cli_where.attributes">
+        <xs:attributeGroup ref="univ-atts"/>
+        <xs:attribute name="outputclass" type="xs:string"/>
+    </xs:attributeGroup>
+
+</xs:schema>

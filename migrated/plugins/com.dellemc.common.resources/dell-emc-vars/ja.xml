@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<strings>
+
+    <!-- PDF and common strings -->
+
+    <!-- Product name to be placed inside headers etc. -->
+    <variable id="Product Name">OpenTopic</variable>
+
+    <!-- The footer that appears on odd-numbered pages. -->
+    <variable id="Body odd footer"/>
+
+    <!-- The footer that appears on even-numbered pages. -->
+    <variable id="Body even footer"/>
+
+    <!-- The footer that appears on the first page of a chapter. -->
+    <variable id="Body first footer"/>
+
+    <!-- The header that appears on the first page of a chapter. -->
+    <variable id="Body first header"/>
+
+    <!-- The header that appears on odd-numbered pages. -->
+    <variable id="Body odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on even-numbered pages. -->
+    <variable id="Body even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/></variable>
+
+    <!-- The footer that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd footer"/>
+
+    <!-- The footer that appears on Preface even-numbered pages. -->
+    <variable id="Preface even footer"/>
+
+    <!-- The footer that appears on the first page of a Preface -->
+    <variable id="Preface first footer"/>
+
+    <!-- The header that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd header">はじめに&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on Preface even-numbered pages. -->
+    <variable id="Preface even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;はじめに</variable>
+
+    <!-- The header that appears on Preface first page. -->
+    <variable id="Preface first header"/>
+
+    <!-- The footer that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd footer"/>
+
+    <!-- The footer that appears on the even-numbered table of contents pages. -->
+    <variable id="Toc even footer"/>
+
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;TOC&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the odd-numbered table of contents
+         pages. -->
+    <variable id="Toc even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;TOC</variable>
+
+    <!-- The footer that appears on the odd-numbered index pages. -->
+    <variable id="Index odd footer"/>
+
+    <!-- The footer that appears on the even-numbered index pages. -->
+    <variable id="Index even footer"/>
+
+    <!-- The header that appears on the odd-numbered index pages. -->
+    <variable id="Index odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;索引&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+
+    <!-- The header that appears on the even-numbered index pages. -->
+    <variable id="Index even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="prodname"/>&#xA0;|&#xA0;索引</variable>
+
+    <!-- glj  Phrase appended to chapter title in header to indicate it's a continuation of the chapter -->
+    <variable id="Chapter Continued string">（続き）</variable>
+
+    <!-- The formatting used to display ordered lists (e.g., "1., 2." or "1), 2)" -->
+    <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number consumer"><param ref-name="number"/>&#xA0; </variable>
+
+    <!-- The unordered list bullet   -->
+    <variable id="Unordered List bullet 1">&#x25CF;</variable>
+	<variable id="Unordered List bullet 2">&#x25CB;</variable>
+	<variable id="Unordered List bullet 3">&#xFFED;</variable>
+	<variable id="Unordered List bullet 4">&#x002D;</variable>
+    <variable id="Unordered List bullet 5">&#x2022;</variable>
+    <variable id="Ordered List Number 1"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 2"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 3"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 4"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Format 1">1</variable>
+    <variable id="Ordered List Format 2">a</variable>
+    <variable id="Ordered List Format 3">i</variable>
+    <variable id="Ordered List Format 4">i</variable>
+
+    <variable id="Step Number"><param ref-name="number"/>. </variable>
+    <variable id="Step Format">1</variable>
+    <variable id="Substep Number"><param ref-name="number"/>) </variable>
+    <variable id="Substep Format">a</variable>
+
+    <!-- The heading string to put at the top of the Table of Contents -->
+    <variable id="Table of Contents">目次</variable>
+
+    <!-- The heading string to put at the top of the Index -->
+    <variable id="Index">索引</variable>
+
+    <variable id="Index Continued String">続き</variable>
+
+    <!--string before see element-->
+    <variable id="Index See String">、次を参照してください</variable>
+
+    <!--string before see also element-->
+    <variable id="Index See Also String">次も参照してください</variable>
+
+    <!-- The string used to label a chapter within the table of contents. -->
+    <!--<variable id="Table of Contents Chapter">章&#xA0;<param ref-name="number"/>:&#xA0;</variable>-->
+    <variable id="Table of Contents Chapter"> <param ref-name="number"/> </variable>
+
+    <!-- The string used to label an appendix within the table of contents. -->
+    <variable id="Table of Contents Appendix">付録&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an part within the table of contents. -->
+    <variable id="Table of Contents Part">パート&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Preface">前書き：&#xA0;</variable>
+
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Notices"></variable>
+
+    <!-- The string used to label an preface in body text. -->
+    <variable id="Preface title">前書き</variable>
+
+    <!-- The string used to label an notices in body text. -->
+    <variable id="Notices title">注意</variable>
+
+    <!-- The heading to put at the top of a chapter when creating a
+         chapter-level "mini-TOC" -->
+    <variable id="Mini Toc">トピック：</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <variable id="Note">メモ: </variable>
+    <variable id="note">メモ: </variable>
+    <variable id="note-dell">メモ:</variable>
+
+    <variable id="notice-dell">通知</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Tip">ヒント: </variable>
+    <variable id="tip-dell">ヒント: </variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'tip'. -->
+    <variable id="Important">重要</variable>
+    <variable id="important-dell">重要</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'fastpath'. -->
+    <variable id="Fastpath">ファストパス</variable>
+    <variable id="fastpath-dell">ファストパス</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'remember'. -->
+    <variable id="Remember">注意</variable>
+    <variable id="remember-dell">注意</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'attention'. -->
+    <variable id="Attention">注意</variable>
+    <variable id="attention-dell">注意</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'caution'. -->
+    <variable id="Caution">注意: </variable>
+    <variable id="caution-dell">注意:</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'danger'. -->
+    <variable id="Danger">危険</variable>
+    <variable id="danger-dell">危険</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <variable id="Warning">警告: </variable>
+    <variable id="warning-dell">警告:</variable>
+    <variable id="Warning_Title">警告について</variable>
+    <variable id="Warning_Blurb">物的損害、けが、または死亡の原因となる可能性があることを示しています。</variable>
+
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+    <variable id="High Voltage">電気的危険性</variable>
+
+    <!-- Text to use for 'Note' label generated from <note> element
+         with 'type' attribute set to 'restriction'. -->
+    <variable id="Restriction">制限事項</variable>
+
+    <!-- Text to use for figure titles. Renders as part of <fig>/<title>
+          elements. -->
+    <variable id="Figure.title">図<param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for table titles. Renders as part of <table>/<title>
+         elements. -->
+    <variable id="Table.title">表<param ref-name="number"/>. <param ref-name="title"/></variable>
+
+    <!-- Text to use for related links label.
+         Renders as part of <related-links> element. -->
+    <variable id="Related Links">関連リンク</variable>
+
+    <!-- Default cross-reference text prefix. Used to generate reference
+         text in case it's not specified in source. -->
+    <variable id="Cross-Reference">相互参照：</variable>
+
+    <!-- Default content-reference text prefix. Used to generate reference
+         text in case target cannot be resolved. -->
+    <variable id="Content-Reference">内容参照：</variable>
+
+    <!-- Default title text for referenced section title. Used to generate
+         reference text in case reference has no explicit content and
+         referenced section has no title. -->
+    <variable id="Untitled section">無題の項です。</variable>
+
+    <!-- Default title text for referenced list item. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a list item. -->
+    <variable id="List item">アイテムをリストします。</variable>
+
+    <!-- Default title text for referenced footnote. Used to generate
+         reference text in case reference has no explicit content and
+         reference target is a footnote. -->
+    <variable id="Foot note">脚注。</variable>
+
+    <!-- Text to use for a generated label of navigation title. Renders
+         as part of <navtitle> element. -->
+    <variable id="Navigation title">ナビゲーションタイトル</variable>
+
+    <!-- Text to use for a generated label of search title. Renders
+         as part of <searchtitle> element. -->
+    <variable id="Search title">検索タイトル</variable>
+
+    <!-- Text to use for chapter titles.-->
+    <variable id="Chapter with number">章 <param ref-name="number"/></variable>
+
+    <!-- Text to use for appendix titles.-->
+    <variable id="Appendix with number">付録<param ref-name="number"/></variable>
+
+    <!-- Text to use for part titles.-->
+    <variable id="Part with number">パート <param ref-name="number"/></variable>
+
+    <!-- Text to use for a label generated from <required-cleanup> element. -->
+    <variable id="Required-Cleanup">[必須クリーンアップ]</variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual. -->
+    <variable id="On the page">ページに<param ref-name="pagenum"/></variable>
+    <variable id="On the page EMC">ページに<param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in printed manual, when referenced element has no title. -->
+    <variable id="Page"> ページ<param ref-name="pagenum"/></variable>
+
+    <!-- Template for generated page number of a reference
+         in chm/html, when referenced element has no title. -->
+    <variable id="This link">このリンク</variable>
+
+    <!-- Image path to use for a note of "note" type. -->
+    <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "attention" type. -->
+    <variable id="attention Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "caution" type. -->
+    <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution.png</variable>
+
+    <!-- Image path to use for a note of "danger" type. -->
+    <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image path to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "important" type. -->
+    <variable id="important Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "remember" type. -->
+    <variable id="remember Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "restriction" type. -->
+    <variable id="restriction Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "tip" type. -->
+    <variable id="tip Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "other" type. -->
+    <variable id="other Note Image Path">Customization/OpenTopic/common/artwork/hand.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Image Path">Customization/OpenTopic/common/artwork/highvoltage.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "warning" type. -->
+    <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image alt text to use for a note of "note" type. -->
+    <variable id="note Note Alt Text"><variable id="Note"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "attention" type. -->
+    <variable id="attention Note Alt Text"><variable id="Attention"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "caution" type. -->
+    <variable id="caution Note Alt Text"><variable id="Caution"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "danger" type. -->
+    <variable id="danger Note Alt Text"><variable id="Danger"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Alt Text"><variable id="Fastpath"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "important" type. -->
+    <variable id="important Note Alt Text"><variable id="Important"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "remember" type. -->
+    <variable id="remember Note Alt Text"><variable id="Remember"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "restriction" type. -->
+    <variable id="restriction Note Alt Text"><variable id="Restriction"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "tip" type. -->
+    <variable id="tip Note Alt Text"><variable id="Tip"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "other" type. -->
+    <variable id="other Note Alt Text">Hand icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Alt Text"><variable id="High Voltage"/> icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "warning" type. -->
+    <variable id="warning Note Alt Text"><variable id="Warning"/> icon</variable>
+
+
+    <!-- Image alt text to use for a logos. -->
+    <variable id="Logo Alt Text"><param ref-name="author"/> Logo</variable>
+
+
+    <!-- RN New strings for DELL -->
+    <variable id="Regulatory Model">規制モデル：</variable>
+    <variable id="Regulatory Type">規制タイプ：</variable>
+    <variable id="Computer Model">コンピュータモデル：</variable>
+    <!--
+        String used for links in end of document in XHTML
+    -->
+
+    <!-- The title of the links to parent -->
+    <variable id="Parent topic">親トピック</variable>
+
+    <!-- The title of the links to next topics -->
+    <variable id="Next topic">次のトピック</variable>
+
+    <!-- The title of the links to previous topics -->
+    <variable id="Previous topic">前のトピック</variable>
+
+    <!-- The title of the links to child topics -->
+    <variable id="Child topics">子トピック</variable>
+
+    <!-- The title of the links to Related concepts -->
+    <variable id="Related concepts">関連概念</variable>
+
+    <!-- The title of the links to Related tasks -->
+    <variable id="Related tasks">関連タスク</variable>
+
+    <!-- The title of the links to Related references -->
+    <variable id="Related references">関連参照文献</variable>
+    <variable id="Related reference">関連参照文献</variable>
+
+    <!-- The title of the links to Related information -->
+    <variable id="Related information">関連情報</variable>
+
+    <!--
+       Strings used in the online-help publishing.
+    -->
+
+    <!-- The title of the "contents" button in online-help output -->
+    <variable id="Contents button title">目次</variable>
+
+    <!-- The title of the "index" button in online-help output -->
+    <variable id="Index button title">索引</variable>
+
+    <!-- The separator of multiple index entries in online-help output -->
+    <variable id="Index multiple entries separator">, </variable>
+
+    <!-- The title of the "search" button in online-help output -->
+    <variable id="Search button title">検索</variable>
+
+    <!-- The title of the "back" button in online-help output -->
+    <variable id="Back button title">戻る</variable>
+
+    <!-- The title of the "forward" button in online-help output -->
+    <variable id="Forward button title">先送り</variable>
+
+    <!-- The title of the "main page" button in online-help output -->
+    <variable id="Main page button title">ホーム</variable>
+
+    <!-- The title of the "previous page" button in online-help output -->
+    <variable id="Previous page button title">前のトピック</variable>
+
+    <!-- The title of the "next page" button in online-help output -->
+    <variable id="Next page button title">次のトピック</variable>
+
+    <!-- The "online help" document title prefix in online-help output -->
+    <variable id="Online help prefix">オンラインヘルプ</variable>
+
+    <!-- The search by index field title in online-help output -->
+    <variable id="Search index field title">キーワードを検索：</variable>
+
+    <!-- The search by index button title in online-help output -->
+    <variable id="Search index button title">表示</variable>
+
+    <!-- The search by text field title in online-help output -->
+    <variable id="Search text field title">次のヘルプを検索：</variable>
+
+    <!-- The search by text button title in online-help output -->
+    <variable id="Search text button title">検索</variable>
+
+    <!-- The heading for task prerequisites -->
+    <variable id="Prereq Heading">前提条件</variable>
+    <variable id="task_prereq-dell">前提条件</variable>
+
+    <!-- The heading for task contexts -->
+    <variable id="Context Heading">このタスクについて</variable>
+    <variable id="task_context-dell">このタスクについて</variable>
+
+    <!-- The heading for task steps -->
+    <variable id="Steps Heading">手順</variable>
+    <variable id="task_procedure-dell">手順</variable>
+
+    <!-- The heading for task examples -->
+    <variable id="Example Heading">例</variable>
+    <variable id="task_example-dell">例</variable>
+    <variable id="Example Open">例</variable>
+
+    <!-- The heading for task postrequisites -->
+    <variable id="Postreq Heading">次の手順</variable>
+    <variable id="task_postreq-dell">次の手順</variable>
+
+    <!-- User Interface strings -->
+
+    <variable id="Back">前のトピック</variable>
+    <variable id="Forward">次のトピック</variable>
+    <variable id="Glossary Pane">用語集</variable>
+    <variable id="Go">検索</variable>
+    <variable id="Hide Navigation">ナビゲーションの非表示</variable>
+    <variable id="Home">ホーム</variable>
+    <str name="label.home" js="true" php="false">ホーム</str>
+    <variable id="Index Pane">インデックス</variable>
+    <variable id="No Search Performed">検索は行われませんでした。</variable>
+    <variable id="No Search Results">検索の結果はありません。</variable>
+    <variable id="Print">印刷</variable>
+    <variable id="Print All">トピックおよびサブトピックの印刷</variable>
+    <variable id="Print Topic">トピックの印刷</variable>
+    <variable id="printThisPage">トピックの印刷</variable>
+    <variable id="Search">検索する語句を入力してください</variable>
+    <str name="webhelp.search" js="true" php="false">検索する語句を入力してください</str>
+    <variable id="Search Blue">検索</variable>
+    <variable id="Search Pane">検索</variable>
+    <variable id="Search Results">検索結果</variable>
+    <str name="Search results" js="true" php="false">検索結果</str>
+    <variable id="TOC Pane">目次</variable>
+    <variable id="BreadCrumb Search">検索</variable>
+    <variable id="BreadCrumb TOC">目次</variable>
+    <variable id="Toggle Navigation">ナビゲーションの切り替え</variable>
+    <variable id="Toggle Highlighting">強調表示の切り替え</variable>
+    <variable id="Searched for">検索したもの</variable>
+    <variable id="PDF Link">PDF</variable>
+    <variable id="Email">電子メール送信先</variable>
+    <variable id="Email Address">mailto:solutions@suite-sol.com</variable>
+
+    <variable id="Restricted">デル - 制限付き - 機密情報</variable>
+    <variable id="Copyright">デル</variable>
+    <variable id="For Dell Employees">デル従業員およびデルのサービスプロバイダ限定。</variable>
+    <variable id="Legal">法的情報</variable>
+    <variable id="Contact">お問い合わせ</variable>
+
+    <!--IA      Dell EMC consolidation.     Jun-2019    Add EMC Strings - STARTS HERE      IB-->
+    <!-- Comtech Services 10/02/2013 strings for webhelp, webhelp-single, webhelp-mobile -->
+    <str name="label.home" js="true" php="false">ホーム</str>
+    <str name="expandSections" js="true" php="false">セクションを開く</str>
+    <str name="collapseSections" js="true" php="false">セクションを閉じる</str>
+    <str name="webhelp.search" js="true" php="false">検索</str>
+    <str name="Search results" js="true" php="false">検索結果</str>
+
+    <str name="BacktoTop">トップに戻る</str>
+    <str name="TOC">目次</str>
+    <str name="RSA">RSA関係者外秘</str>
+    <str name="DraftRSA">ドラフト - RSA関係者外秘</str>
+    <str name="Draft">ドラフト - 関係者外秘</str>
+    <str name="Content">内容</str>
+    <str name="oldFrames">フレームあり</str>
+    <str name="Search">検索</str>
+    <str name="Index">索引</str>
+    <str name="Keywords">キーワード</str>
+    <str name="Loading, please wait ...">ロード中です。お待ちください...</str>
+    <str name="Search no results" js="true">検索結果はありません</str>
+    <str name="Results for:" js="true">結果：</str>
+    <str name="There is no page containing all the search terms.">すべての検索語を含むページは
+        ありません。</str>
+    <str name="Partial results:">一部がヒットした結果：</str>
+    <str name="Output generated by">WebHelp出力の生成方法</str>
+    <str name="You must enter at least one character.">少なくとも1文字は入力する必要があります。</str>
+    <str name="Only first 10 words will be processed.">最初の10語のみが処理されます。</str>
+    <str name="Your browser is not supported. Use of Mozilla Firefox is recommended.">お使いのブラウザは
+        サポートされていません。 Mozilla Firefoxの使用を推奨します。</str>
+    <str name="linkToThis">このページへのリンク</str>
+    <str name="ExpandAll">すべてのトピックを展開する</str>
+    <str name="printThisPage">このページを印刷する</str>
+    <str name="CollapseAll">すべてのトピックを折りたたむ</str>
+    <!-- various labels (not author controlled) -->
+    <str name="Figure">図</str>
+    <str name="Table">表</str>
+    <str name="Next topic">次のトピック</str>
+    <str name="Previous topic">前のトピック</str>
+    <str name="Parent topic">親トピック</str>
+    <str name="Required cleanup">クリーンアップ要求</str>
+    <str name="Draft comment">ドラフト注釈</str>
+    <str name="Option">オプション</str>
+    <str name="Description">説明</str>
+    <str name="Optional">オプション</str>
+    <str name="Required">必須</str>
+    <str name="Skip visual syntax diagram">構文図をスキップする</str>
+    <str name="Read syntax diagram">構文図を読む</str>
+    <str name="Start of change">変更の始まり</str>
+    <str name="End of change">変更の終わり</str>
+    <str name="Index">索引</str>
+    <str name="Special characters">特殊文字</str>
+    <str name="Numerics">数字</str>
+    <str name="End notes">脚注</str>
+    <str name="Artwork">アートワーク</str>
+    <str name="Syntax">構文</str>
+    <str name="Type">タイプ</str>
+    <str name="Value">値</str>
+    <!-- Text that goes before a link to a topic -->
+    <str name="intro-to-topic-link"></str>
+
+    <!-- peril notice labels -->
+    <str name="Note">注</str>
+    <str name="Notes">注</str>
+    <str name="Tip">ヒント</str>
+    <str name="Fastpath">ファースト・パス</str>
+    <str name="Important">重要</str>
+    <str name="Attention">重要</str>
+    <str name="Caution">注意</str>
+    <str name="Danger">危険</str>
+    <str name="Remember">要確認</str>
+    <str name="Restriction">制約事項</str>
+    <str name="Warning">警告</str>
+
+    <!-- default title text for section level generated sections -->
+    <str name="Contents">目次</str>
+    <str name="Related concepts">関連概念</str>
+    <str name="Related tasks">関連タスク</str>
+<!--    Comment 'Related reference' string because it was added above. IDPL-13249 -->
+<!--    <str name="Related reference">関連資料</str>-->
+    <str name="Related information">関連情報</str>
+
+    <str name="Prerequisite">前提条件</str>
+    <str name="Prerequisites">前提条件</str>
+    <str name="or">または</str>
+
+    <!--Task section labels -->
+    <str name="task_context">このタスクについて</str>
+    <str name="task_example">例</str>
+    <str name="task_prereq">始める前に</str>
+    <str name="task_postreq">次のタスク</str>
+    <str name="task_procedure">手順</str>
+    <str name="task_results">タスクの結果</str>
+
+    <str name="Copyright">Copyright</str>
+
+    <!-- Symbols -->
+    <str name="OpenQuote">"</str>
+    <str name="CloseQuote">"</str>
+    <str name="ColonSymbol">:</str>
+
+    <!-- For odt transform -->
+    <str name="On the page">ページ </str>
+    <str name="Related Links">関連リンク</str>
+    <str name="List item">リスト項目</str>
+    <str name="Foot note">脚注</str>
+    <str name="Page">ページ </str>
+    <str name="Unordered List bullet">•</str>
+
+    <!-- emc: autogenerated strings based on paragraph style name -->
+    <str type="webworks" name="child link Open" attribute="bullet-character">Subtopics</str>
+    <str type="webworks" name="Next link" attribute="bullet-character" stylename="Bold">次のトピック: </str>
+    <str type="webworks" name="Previous link" attribute="bullet-character" stylename="Bold">前のトピック: </str>
+    <str type="webworks" name="Related Topic Open" attribute="bullet-character">関連するトピック</str>
+    <str type="webworks" name="Related Concepts Open" attribute="bullet-character">関連する概念</str>
+    <str type="webworks" name="Related Reference Open" attribute="bullet-character">関連する参考資料</str>
+    <str type="webworks" name="Related Tasks Open" attribute="bullet-character">関連するタスク</str>
+    <str type="webworks" name="Related Information Open" attribute="bullet-character">関連する情報</str>
+
+    <str type="webworks" name="Postrequisite Open show_hide_open" attribute="bullet-character">必要条件</str>
+    <str type="webworks" name="Postrequisite Open show_hide_closed" attribute="bullet-character">必要条件</str>
+    <str type="webworks" name="Postrequisite Open" attribute="bullet-character">必要条件</str>
+
+    <str type="webworks" name="ReviewerNote" attribute="bullet-character">Reviewers</str>
+    <str type="webworks" name="child link sequence Open" attribute="bullet-character">手順</str>
+    <str type="webworks" name="Steps Open" attribute="bullet-character">手順</str>
+    <str type="webworks" name="Steps show_hide_open Open" attribute="bullet-character">手順</str>
+    <str type="webworks" name="Steps show_hide_closed Open" attribute="bullet-character">手順</str>
+
+    <str type="webworks" name="Single Appendix Heading 1" attribute="bullet-character">付録 </str>
+    <str type="webworks" name="Single Appendix Title" attribute="bullet-character">付録 </str>
+
+    <str type="webworks" name="List optional 1" attribute="paragraph-prefix">(オプション) </str>
+    <str type="webworks" name="List optional 2" attribute="paragraph-prefix">(オプション) </str>
+    <str type="webworks" name="List optional 3" attribute="paragraph-prefix">(オプション) </str>
+    <str type="webworks" name="Step optional 1" attribute="paragraph-prefix">(オプション) </str>
+    <str type="webworks" name="SubStep optional 2" attribute="paragraph-prefix">(オプション) </str>
+    <str type="webworks" name="Numbered optional 2" attribute="paragraph-prefix">(オプション) </str>
+    <str type="webworks" name="Numbered optional 1" attribute="paragraph-prefix">(オプション) </str>
+    <str type="webworks" name="Numbered optional 3" attribute="paragraph-prefix">(オプション) </str>
+    <str type="webworks" name="child link family Optional" attribute="paragraph-prefix">(オプション) </str>
+    <str type="webworks" name="child link sequence Optional" attribute="paragraph-prefix">(オプション) </str>
+    <str type="webworks" name="child link unordered Optional" attribute="paragraph-prefix">(オプション) </str>
+
+    <str type="webworks" name="Step required 1" attribute="paragraph-prefix">(必須) </str>
+    <str type="webworks" name="SubStep required 2" attribute="paragraph-prefix">(必須) </str>
+
+    <str type="webworks" name="copyright" attribute="paragraph-prefix">Copyright</str>
+    <str type="webworks" name="Prerequisite Open" attribute="bullet-character">はじめに</str>
+    <str type="webworks" name="Result Open" attribute="bullet-character">結果</str>
+    <str type="webworks" name="Context Open" attribute="bullet-character">手順</str>
+    <str type="webworks" name="Example Open" attribute="bullet-character">例</str>
+    <str type="webworks" name="Example Open show_hide_closed" attribute="bullet-character">例</str>
+    <str type="webworks" name="Example Open show_hide_open" attribute="bullet-character">例</str>
+    <str type="webworks" name="Description Open" attribute="bullet-character">説明</str>
+    <str type="webworks" name="Syntax Open" attribute="bullet-character">構文</str>
+    <str type="webworks" name="Arguments Open" attribute="paragraph-prefix">引数</str>
+    <str type="webworks" name="Options Open" attribute="paragraph-prefix">オプション</str>
+    <str type="webworks" name="Parameters Open" attribute="paragraph-prefix">パラメータ</str>
+
+    <!-- EMC	IB5	  25-Aug-2014 	TKT-123: Remove word "Step" generated in WebHelp cross-references -->
+    <!--str type="webworks" name="XREF step" attribute="character-prefix">Step </str>
+    <str type="webworks" name="XREF li" attribute="character-prefix">Step </str-->
+    <str type="webworks" name="XREF figure" attribute="character-prefix">図 </str>
+    <str type="webworks" name="XREF table" attribute="character-prefix">表 </str>
+    <str type="webworks" name="CLIOptions" attribute="character-prefix">オプション</str>
+    <str type="webworks" name="CLIParameters" attribute="character-prefix">パラメータ</str>
+    <str type="webworks" name="CLIArguments" attribute="character-prefix">引数</str>
+
+    <str type="webworks" name="fastpath Open" attribute="bullet-character">便利な方法</str>
+    <str type="webworks" name="fastpath 1 Open" attribute="bullet-character">便利な方法</str>
+    <str type="webworks" name="fastpath 2 Open" attribute="bullet-character">便利な方法</str>
+    <str type="webworks" name="fastpath 3 Open" attribute="bullet-character">便利な方法</str>
+    <str type="webworks" name="remember Open" attribute="bullet-character">留意</str>
+    <str type="webworks" name="remember 1 Open" attribute="bullet-character">留意</str>
+    <str type="webworks" name="remember 2 Open" attribute="bullet-character">留意</str>
+    <str type="webworks" name="remember 3 Open" attribute="bullet-character">留意</str>
+    <str type="webworks" name="restriction Open" attribute="bullet-character">制限</str>
+    <str type="webworks" name="restriction 1 Open" attribute="bullet-character">制限</str>
+    <str type="webworks" name="restriction 2 Open" attribute="bullet-character">制限</str>
+    <str type="webworks" name="restriction 3 Open" attribute="bullet-character">制限</str>
+    <str type="webworks" name="attention Open" attribute="bullet-character">注目</str>
+    <str type="webworks" name="attention 1 Open" attribute="bullet-character">注目</str>
+    <str type="webworks" name="attention 2 Open" attribute="bullet-character">注目</str>
+    <str type="webworks" name="attention 3 Open" attribute="bullet-character">注目</str>
+    <!-- EMC IB5 24-Jul-2014 "Option"/"Description" headers on <choicetable> are inconsistent -->
+    <str type="webworks" name="Option" attribute="character-prefix">オプション</str>
+    <str type="webworks" name="Description" attribute="character-prefix">説明</str>
+
+    <!-- Localization prefix and suffix characters -->
+    <str name="start_cite">&#x300C;</str> <!-- 「 -->
+    <str name="end_cite">&#x300D;</str> <!-- 」 -->
+
+    <str name="start_var">&#xFF3B;</str> <!-- ［ -->
+    <str name="end_var">&#xFF3D;</str> <!-- ］ -->
+
+    <str name="start_q">&#xFF3B;</str> <!-- ［ -->
+    <str name="end_q">&#xFF3D;</str> <!-- ］ -->
+
+    <str name="start_lq"></str>
+    <str name="end_lq"></str>
+
+    <str name="start_userinput">&#xFF3B;</str> <!-- ［ -->
+    <str name="end_userinput">&#xFF3D;</str> <!-- ］ -->
+
+    <str name="start_option">&#xFF3B;</str> <!-- ［ -->
+    <str name="end_option">&#xFF3D;</str> <!-- ］ -->
+
+    <str name="start_term">&#xFF3B;</str> <!-- ［ -->
+    <str name="end_term">&#xFF3D;</str> <!-- ］ -->
+
+    <str name="start_q_responsive">&#x300C;</str> <!-- 「 -->
+    <str name="end_q_responsive">&#x300D;</str> <!-- 」 -->
+
+    <str name="start_option_responsive"></str>
+    <str name="end_option_responsive"></str>
+
+    <!--
+        <str name="start_option_responsive">&#xFF3B;</str> &lt;!&ndash; ［ &ndash;&gt;
+        <str name="end_option_responsive">&#xFF3D;</str> &lt;!&ndash; ］ &ndash;&gt;
+
+    -->
+    <str name="start_uicontrol_responsive">&#xFF3B;</str> <!-- ［ -->
+    <str name="end_uicontrol_responsive">&#xFF3D;</str> <!-- ］ -->
+
+    <str name="start_var_responsive">&#xFF3B;</str> <!-- ［ -->
+    <str name="end_var_responsive">&#xFF3D;</str> <!-- ］ -->
+
+    <str name="start_wintitle_responsive">&#xFF3B;</str> <!-- ［ -->
+    <str name="end_wintitle_responsive">&#xFF3D;</str> <!-- ］ -->
+
+    <!-- need to be translated-->
+    <str name="Published">発行 </str>
+    <str name="year">年 </str>
+
+    <str name="on_this_page" js="true">このページの</str>
+    <str name="see_also">以下も参照してください。</str>
+
+    <str name="show_navigation">ナビゲーションを表示する</str>
+    <str name="hide_navigation">ナビゲーションを表示しない</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="danger">危険</variable>
+    <variable id="warning">警告</variable>
+    <variable id="caution">注意</variable>
+    <variable id="notice">通知</variable>
+    <variable id="note">注：</variable>
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images ENDS HERE- IB-->
+    <!--IA      Dell EMC consolidation.     Jun-2019    Add EMC Strings - ENDS HERE      IB-->
+
+    <variable id="Current Release Version">現在のバージョン : </variable>
+    <variable id="Previous Release Version">前のバージョン : </variable>
+    <variable id="Release Type">リリースの種類 : </variable>
+    <variable id="Major">メジャー（MA）</variable>
+    <variable id="Minor">マイナー（MI）</variable>
+    <variable id="Service">サービス（SR）</variable>
+    <variable id="Patch">パッチ（P）</variable>
+
+    <variable id="Technote Current Version">現在のバージョン： </variable>
+    <variable id="Technote Release Date">リリース日： </variable>
+    <variable id="Technote Previous Version">以前のバージョン： </variable>
+    <variable id="Technote Document Number">文書番号： </variable>
+    <variable id="Technote Document Rev">Rev. </variable>
+    <variable id="part number">P/N </variable>
+    <variable id="batterywarning">バッテリ警告</variable>
+    <variable id="dsg Updated Date">アップデート済み</variable>
+    <variable id="dsg Software Version">バージョン</variable>
+    <variable id="dsg Part Number">パーツ番号</variable>
+    <variable id="dsg topics">トピック：</variable>
+
+    <variable id="note-non-brand Image Path">Customization/OpenTopic/common/artwork/note-non-brand.png</variable>
+    <variable id="caution-non-brand Image Path">Customization/OpenTopic/common/artwork/caution-non-brand.png</variable>
+    <variable id="warning-non-brand Image Path">Customization/OpenTopic/common/artwork/warning-non-brand.png</variable>
+
+    <variable id="note Image Path">Customization/OpenTopic/common/artwork/note.svg</variable>
+    <variable id="caution Image Path">Customization/OpenTopic/common/artwork/caution.svg</variable>
+    <variable id="danger Image Path">Customization/OpenTopic/common/artwork/danger.svg</variable>
+    <variable id="warning Image Path">Customization/OpenTopic/common/artwork/warning.svg</variable>
+    <!--Added new variable for PDF A4-->
+	<variable id="continued">（続き）</variable>
+	<variable id="release">リリース</variable>
+	<variable id="revision">リビジョン</variable>
+	<variable id="Version">バージョン</variable>
+	<variable id="on page"> 、p. <param ref-name="pagenum"/></variable>
+
+    <variable id="Highly Restricted Confidential">極秘 - 社外秘</variable>
+    <variable id="Restricted Confidential">限定 - 社外秘</variable>
+    <variable id="Restricted Internal">社内使用 - 社外秘</variable>
+
+    <variable id="Abstract">摘要</variable>
+    <variable id="Figure toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+	<variable id="Table toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+    <variable id="LOT-dell">表</variable>
+    <variable id="LOF-dell">図</variable>
+
+    <variable id="#menucascade-separator"> &gt; </variable>
+
+    <!--    IB: Add support for TOC 'expand all'/'Collapse all' buttons-->
+    <variable id="Expand all">すべて展開</variable>
+    <variable id="Collapse all">すべて折りたたむ</variable>
+
+</strings>

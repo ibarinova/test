@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <!-- PDF and common strings -->
+
+    <!-- Product name to be placed inside headers etc. -->
+    <variable id="Product Name">打开主题</variable>
+    <!-- The footer that appears on odd-numbered pages. -->
+    <variable id="Body odd footer"/>
+    <!-- The footer that appears on even-numbered pages. -->
+    <variable id="Body even footer"/>
+    <!-- The footer that appears on the first page of a chapter. -->
+    <variable id="Body first footer"/>
+    <!-- The header that appears on the first page of a chapter. -->
+    <variable id="Body first header"/>
+    <!-- The header that appears on odd-numbered pages. -->
+    <variable id="Body odd header"><param ref-name="prodname"/> | <param ref-name="heading"/> | <param ref-name="pagenum"/></variable>
+    <!-- The header that appears on even-numbered pages. -->
+    <variable id="Body even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | <param ref-name="heading"/></variable>
+    <!-- The footer that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd footer"/>
+    <!-- The footer that appears on Preface even-numbered pages. -->
+    <variable id="Preface even footer"/>
+    <!-- The footer that appears on the first page of a Preface -->
+    <variable id="Preface first footer"/>
+    <!-- The header that appears on Preface odd-numbered pages. -->
+    <variable id="Preface odd header">前言 | <param ref-name="prodname"/> | <param ref-name="heading"/> | <param ref-name="pagenum"/></variable>
+    <!-- The header that appears on Preface even-numbered pages. -->
+    <variable id="Preface even header"><param ref-name="pagenum"/> | <param ref-name="prodname" /> | 前言</variable>
+    <!-- The header that appears on Preface first page. -->
+    <variable id="Preface first header"/>
+    <!-- The footer that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd footer"/>
+    <!-- The footer that appears on the even-numbered table of contents pages. -->
+    <variable id="Toc even footer"/>
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc odd header"><param ref-name="prodname"/>目录<param ref-name="pagenum"/></variable>
+    <!-- The header that appears on the odd-numbered table of contents pages. -->
+    <variable id="Toc even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | 目录</variable>
+    <!-- The footer that appears on the odd-numbered index pages. -->
+    <variable id="Index odd footer"/>
+    <!-- The footer that appears on the even-numbered index pages. -->
+    <variable id="Index even footer"/>
+    <!-- The header that appears on the odd-numbered index pages. -->
+    <variable id="Index odd header"><param ref-name="prodname"/>索引<param ref-name="pagenum"/></variable>
+    <!-- The header that appears on the even-numbered index pages. -->
+    <variable id="Index even header"><param ref-name="pagenum"/> | <param ref-name="prodname"/> | 索引</variable>
+    <!-- glj  Phrase appended to chapter title in header to indicate it's a continuation of the chapter -->
+    <variable id="Chapter Continued string">（续）</variable>
+    <!-- The formatting used to display ordered lists (e.g., "1., 2." or
+    "1), 2)" -->
+    <variable id="Ordered List Number"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number consumer"><param ref-name="number"/>&#xA0; </variable>
+    <!-- The unordered list bullet   -->
+    <variable id="Unordered List bullet 1">&#x25CF;</variable>
+	<variable id="Unordered List bullet 2">&#x25CB;</variable>
+	<variable id="Unordered List bullet 3">&#xFFED;</variable>
+	<variable id="Unordered List bullet 4">&#x002D;</variable>
+    <variable id="Unordered List bullet 5">&#x2022;</variable>
+	<variable id="Ordered List Number 1"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 2"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 3"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Number 4"><param ref-name="number"/>. </variable>
+    <variable id="Ordered List Format 1">1</variable>
+    <variable id="Ordered List Format 2">a</variable>
+    <variable id="Ordered List Format 3">i</variable>
+    <variable id="Ordered List Format 4">i</variable>
+
+    <variable id="Step Number"><param ref-name="number"/>. </variable>
+    <variable id="Step Format">1</variable>
+    <variable id="Substep Number"><param ref-name="number"/>) </variable>
+    <variable id="Substep Format">a</variable>
+
+    <!-- The heading string to put at the top of the Table of Contents -->
+    <variable id="Table of Contents">目录</variable>
+    <!-- The heading string to put at the top of the Index -->
+    <variable id="Index">索引</variable>
+    <variable id="Index Continued String">续</variable>
+    <!--string before see element-->
+    <variable id="Index See String">参见 </variable>
+    <!--string before see also element-->
+    <variable id="Index See Also String">另见 </variable>
+    <!-- The string used to label a chapter within the table of contents. -->
+    <!--<variable id="Table of Contents Chapter">章 <param ref-name="number"/>. </variable>-->
+    <variable id="Table of Contents Chapter"> <param ref-name="number"/> </variable>
+    <!-- The string used to label an appendix within the table of contents. -->
+    <variable id="Table of Contents Appendix">附录 <param ref-name="number"/>: </variable>
+    <!-- The string used to label an part within the table of contents. -->
+    <variable id="Table of Contents Part">部分 <param ref-name="number"/>: </variable>
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Preface">序言</variable>
+    <!-- The string used to label an preface within the table of contents. -->
+    <variable id="Table of Contents Notices"/>
+    <!-- The string used to label an preface in body text. -->
+    <variable id="Preface title">序言</variable>
+    <!-- The string used to label an notices in body text. -->
+    <variable id="Notices title">通知</variable>
+    <!-- The heading to put at the top of a chapter when creating a
+    chapter-level "mini-TOC" -->
+    <variable id="Mini Toc">主题： </variable>
+    <!-- Text to use for 'Note' label generated from <note> element. -->
+    <variable id="Note">注: </variable>
+    <variable id="note">注: </variable>
+    <variable id="note-dell">注:</variable>
+
+    <variable id="notice-dell">注意</variable>
+    <!-- Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'tip'. -->
+    <variable id="Tip">提示: </variable>
+    <variable id="tip-dell">提示: </variable>
+    <!-- Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'tip'. -->
+    <variable id="Important">重要注意事项</variable>
+    <variable id="important-dell">重要注意事项</variable>
+    <!-- Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'fastpath'. -->
+    <variable id="Fastpath">捷径</variable>
+    <variable id="fastpath-dell">捷径</variable>
+    <!-- Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'remember'. -->
+    <variable id="Remember">谨记</variable>
+    <variable id="remember-dell">谨记</variable>
+    <!-- Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'attention'. -->
+    <variable id="Attention">注意</variable>
+    <variable id="attention-dell">注意</variable>
+    <!-- Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'caution'. -->
+    <variable id="Caution">小心: </variable>
+    <variable id="caution-dell">小心:</variable>
+    <!-- Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'danger'. -->
+    <variable id="Danger">危险</variable>
+    <variable id="danger-dell">危险</variable>
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+     with 'type' attribute set to 'other' and 'othertype' attribute set to 'warning'. -->
+    <variable id="Warning">警告: </variable>
+    <variable id="warning-dell">警告:</variable>
+    <!-- glj : 071214 : Text to use for 'Note' label generated from <note> element
+     with 'type' attribute set to 'other' and 'othertype' attribute set to 'hivolt'. -->
+    <variable id="High Voltage">电气危险</variable>
+    <!-- Text to use for 'Note' label generated from <note> element
+    with 'type' attribute set to 'restriction'. -->
+    <variable id="Restriction">限制</variable>
+    <!-- Text to use for figure titles. Renders as part of <fig>/<title>
+     elements. -->
+    <variable id="Figure.title">图 <param ref-name="number"/>: <param ref-name="title"/></variable>
+    <!-- Text to use for table titles. Renders as part of <table>/<title>
+    elements. -->
+    <variable id="Table.title">表. <param ref-name="number"/>: <param ref-name="title"/></variable>
+    <!-- Text to use for related links label.
+    Renders as part of <related-links> element. -->
+    <variable id="Related Links">相关链接</variable>
+    <!-- Default cross-reference text prefix. Used to generate reference
+    text in case it's not specified in source. -->
+    <variable id="Cross-Reference">交叉引用自：</variable>
+    <!-- Default content-reference text prefix. Used to generate reference
+    text in case target cannot be resolved. -->
+    <variable id="Content-Reference">内容引用自：</variable>
+    <!-- Default title text for referenced section title. Used to generate
+    reference text in case reference has no explicit content and
+    referenced section has no title. -->
+    <variable id="Untitled section">无标题部分。</variable>
+    <!-- Default title text for referenced list item. Used to generate
+    reference text in case reference has no explicit content and
+    reference target is a list item. -->
+    <variable id="List item">列表项</variable>
+    <!-- Default title text for referenced footnote. Used to generate
+    reference text in case reference has no explicit content and
+    reference target is a footnote. -->
+    <variable id="Foot note">脚注</variable>
+    <!-- Text to use for a generated label of navigation title. Renders
+    as part of <navtitle> element. -->
+    <variable id="Navigation title">导航标题</variable>
+    <!-- Text to use for a generated label of search title. Renders
+    as part of <searchtitle> element. -->
+    <variable id="Search title">搜索标题</variable>
+    <!-- Text to use for chapter titles.-->
+    <variable id="Chapter with number">章 <param ref-name="number"/></variable>
+    <!-- Text to use for appendix titles.-->
+    <variable id="Appendix with number">附录 <param ref-name="number"/></variable>
+    <!-- Text to use for part titles.-->
+    <variable id="Part with number">部分 <param ref-name="number"/></variable>
+    <!-- Text to use for a label generated from <required-cleanup> element. -->
+    <variable id="Required-Cleanup">[需要清理]</variable>
+    <!-- Template for generated page number of a reference
+    in printed manual. -->
+    <variable id="On the page"> (第 页 <param ref-name="pagenum"/>)</variable>
+    <variable id="On the page EMC"> (第 页 <param ref-name="pagenum"/>)</variable>
+    <!-- Template for generated page number of a reference
+    in printed manual, when referenced element has no title. -->
+    <variable id="Page"> 第 页 <param ref-name="pagenum"/></variable>
+    <!-- Template for generated page number of a reference
+    in chm/html, when referenced element has no title. -->
+    <variable id="This link">此链接</variable>
+    <!-- Image path to use for a note of "note" type. -->
+    <!-- Image path to use for a note of "note" type. -->
+    <variable id="note Note Image Path">Customization/OpenTopic/common/artwork/note.png</variable>
+
+    <!-- Image path to use for a note of "attention" type. -->
+    <variable id="attention Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "caution" type. -->
+    <variable id="caution Note Image Path">Customization/OpenTopic/common/artwork/caution.png</variable>
+
+    <!-- Image path to use for a note of "danger" type. -->
+    <variable id="danger Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image path to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "important" type. -->
+    <variable id="important Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "remember" type. -->
+    <variable id="remember Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "restriction" type. -->
+    <variable id="restriction Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "tip" type. -->
+    <variable id="tip Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+
+    <!-- Image path to use for a note of "other" type. -->
+    <variable id="other Note Image Path">Customization/OpenTopic/common/artwork/hand.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Image Path">Customization/OpenTopic/common/artwork/highvoltage.gif</variable>
+
+    <!-- glj:071214 Image path to use for a note of "warning" type. -->
+    <variable id="warning Note Image Path">Customization/OpenTopic/common/artwork/warning.png</variable>
+
+    <!-- Image alt text to use for a note of "note" type. -->
+    <variable id="note Note Alt Text"><variable id="Note"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "attention" type. -->
+    <variable id="attention Note Alt Text"><variable id="Attention"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "caution" type. -->
+    <variable id="caution Note Alt Text"><variable id="Caution"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "danger" type. -->
+    <variable id="danger Note Alt Text"><variable id="Danger"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "fastpath" type. -->
+    <variable id="fastpath Note Alt Text"><variable id="Fastpath"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "important" type. -->
+    <variable id="important Note Alt Text"><variable id="Important"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "remember" type. -->
+    <variable id="remember Note Alt Text"><variable id="Remember"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "restriction" type. -->
+    <variable id="restriction Note Alt Text"><variable id="Restriction"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "tip" type. -->
+    <variable id="tip Note Alt Text"><variable id="Tip"/> icon</variable>
+
+    <!-- Image alt text to use for a note of "other" type. -->
+    <variable id="other Note Alt Text">Hand icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "high-voltage" type. -->
+    <variable id="high-voltage Note Alt Text"><variable id="High Voltage"/> icon</variable>
+
+    <!-- glj:071214 Image alt text to use for a note of "warning" type. -->
+    <variable id="warning Note Alt Text"><variable id="Warning"/> icon</variable>
+
+
+    <!-- Image alt text to use for a logos. -->
+    <variable id="Logo Alt Text"><param ref-name="author"/> Logo</variable>
+
+    <!-- RN New strings for DELL -->
+    <variable id="Regulatory Model">管制型号：</variable>
+    <variable id="Regulatory Type">管制类型：</variable>
+    <variable id="Computer Model">计算机型号：</variable>
+    <!--
+        String used for links in end of document in XHTML
+    -->
+    <!-- The title of the links to parent -->
+    <variable id="Parent topic">专利主题</variable>
+    <!-- The title of the links to next topics -->
+    <variable id="Next topic">下一主题</variable>
+    <!-- The title of the links to previous topics -->
+    <variable id="Previous topic">上一主题</variable>
+    <!-- The title of the links to child topics -->
+    <variable id="Child topics">子主题</variable>
+    <!-- The title of the links to Related concepts -->
+    <variable id="Related concepts">相关概念</variable>
+    <!-- The title of the links to Related tasks -->
+    <variable id="Related tasks">相关任务</variable>
+    <!-- The title of the links to Related references -->
+    <variable id="Related references">相关参考资料</variable>
+    <variable id="Related reference">相关参考资料</variable>
+    <!-- The title of the links to Related information -->
+    <variable id="Related information">相关信息</variable>
+    <!--
+       Strings used in the online-help publishing.
+    -->
+    <!-- The title of the "contents" button in online-help output -->
+    <variable id="Contents button title">内容</variable>
+    <!-- The title of the "index" button in online-help output -->
+    <variable id="Index button title">索引</variable>
+    <!-- The separator of multiple index entries in online-help output -->
+    <variable id="Index multiple entries separator">, </variable>
+    <!-- The title of the "search" button in online-help output -->
+    <variable id="Search button title">搜索</variable>
+    <!-- The title of the "back" button in online-help output -->
+    <variable id="Back button title">后退</variable>
+    <!-- The title of the "forward" button in online-help output -->
+    <variable id="Forward button title">前进</variable>
+    <!-- The title of the "main page" button in online-help output -->
+    <variable id="Main page button title">主页</variable>
+    <!-- The title of the "previous page" button in online-help output -->
+    <variable id="Previous page button title">上一主题</variable>
+    <!-- The title of the "next page" button in online-help output -->
+    <variable id="Next page button title">下一主题</variable>
+    <!-- The "online help" document title prefix in online-help output -->
+    <variable id="Online help prefix">在线帮助</variable>
+    <!-- The search by index field title in online-help output -->
+    <variable id="Search index field title">搜索关键字： </variable>
+    <!-- The search by index button title in online-help output -->
+    <variable id="Search index button title">视图</variable>
+    <!-- The search by text field title in online-help output -->
+    <variable id="Search text field title">搜索帮助： </variable>
+    <!-- The search by text button title in online-help output -->
+    <variable id="Search text button title">搜索</variable>
+    <!-- *** end of task section labels *** -->
+    <!-- *** start of custom ITT strings *** -->
+    <variable id="Intro to Web site URL">访问我们的网站，获取该文档的最新版本及更多信息</variable>
+    <variable id="Web site URL">www.ittwww.com</variable>
+    <variable id="Translation of Original Instructions">该说明最初是用英语编写的。所有除英语版本之外的说明均从最初的说明翻译而来。</variable>
+    <!-- *** end of custom ITT strings *** -->
+
+    <!-- The heading for task prerequisites -->
+    <variable id="Prereq Heading">前提条件</variable>
+    <variable id="task_prereq-dell">前提条件</variable>
+
+    <!-- The heading for task contexts -->
+    <variable id="Context Heading">关于此任务</variable>
+    <variable id="task_context-dell">关于此任务</variable>
+
+    <!-- The heading for task steps -->
+    <variable id="Steps Heading">步骤</variable>
+    <variable id="task_procedure-dell">步骤</variable>
+
+    <!-- The heading for task examples -->
+    <variable id="Example Heading">实例</variable>
+    <variable id="task_example-dell">实例</variable>
+    <variable id="Example Open">实例</variable>
+
+    <!-- The heading for task postrequisites -->
+    <variable id="Postreq Heading">后续步骤</variable>
+    <variable id="task_postreq-dell">后续步骤</variable>
+
+    <!-- User Interface strings -->
+
+    <variable id="Back">上一主题</variable>
+    <variable id="Forward">下一主题</variable>
+    <variable id="Glossary Pane">词汇表</variable>
+    <variable id="Go">搜索</variable>
+    <variable id="Hide Navigation">隐藏导航</variable>
+    <variable id="Home">主页</variable>
+    <str name="label.home" js="true" php="false">主页</str>
+    <variable id="Index Pane">索引</variable>
+    <variable id="No Search Performed">未执行搜索。</variable>
+    <variable id="No Search Results">您的搜索没有返回任何结果。</variable>
+    <variable id="Print">打印</variable>
+    <variable id="Print All">打印主题和副主题</variable>
+    <variable id="Print Topic">打印主题</variable>
+    <variable id="printThisPage">打印主题</variable>
+    <variable id="Search">输入搜索词</variable>
+    <str name="webhelp.search" js="true" php="false">输入搜索词</str>
+    <variable id="Search Blue">搜索</variable>
+    <variable id="Search Pane">搜索</variable>
+    <variable id="Search Results">搜索结果</variable>
+    <str name="Search results" js="true" php="false">搜索结果</str>
+    <variable id="TOC Pane">内容</variable>
+    <variable id="BreadCrumb Search">搜索</variable>
+    <variable id="BreadCrumb TOC">目录</variable>
+    <variable id="Toggle Navigation">切换导航</variable>
+    <variable id="Toggle Highlighting">切换高亮显示</variable>
+    <variable id="Searched for">搜索内容</variable>
+    <variable id="PDF Link">PDF</variable>
+    <variable id="Email">发送电子邮件给我们</variable>
+    <variable id="Email Address">mailto:solutions@suite-sol.com</variable>
+
+    <variable id="Restricted">戴尔 - 限制 - 机密</variable>
+    <variable id="Copyright">Dell</variable>
+    <variable id="For Dell Employees">仅限戴尔员工和戴尔服务提供商使用。</variable>
+    <variable id="Legal">法律声明</variable>
+    <variable id="Contact">联系信息</variable>
+
+    <!--IA      Dell EMC consolidation.     Jun-2019    Add EMC Strings - STARTS HERE      IB-->
+    <!-- Comtech Services 10/02/2013 strings for webhelp, webhelp-single, webhelp-mobile -->
+    <str name="label.home" js="true" php="false">主页</str>
+    <str name="expandSections" js="true" php="false">展开各个部分</str>
+    <str name="collapseSections" js="true" php="false">折叠各个部分</str>
+    <str name="webhelp.search" js="true" php="false">搜索</str>
+    <str name="Search results" js="true" php="false">搜索结果</str>
+
+    <str name="BacktoTop">返回页首</str>
+    <str name="TOC">目录</str>
+    <str name="RSA">RSA 机密资料</str>
+    <str name="DraftRSA">草稿 RSA 机密资料</str>
+    <str name="Draft">草稿机密资料</str>
+    <str name="Content">内容</str>
+    <str name="oldFrames">带框架</str>
+    <str name="Search">搜索</str>
+    <str name="Index">索引</str>
+    <str name="Keywords">关键字</str>
+    <str name="Loading, please wait ...">正在加载，请稍候...</str>
+    <str name="Search no results" js="true">您的搜索返回了 0 个结果</str>
+    <str name="Results for:" js="true">搜索结果：</str>
+    <str name="There is no page containing all the search terms.">没有任何页面包含全部
+        搜索条目。</str>
+    <str name="Partial results:">部分搜索结果：</str>
+    <str name="Output generated by">Web 帮助输出创建于</str>
+    <str name="You must enter at least one character.">必须至少输入一个字符。</str>
+    <str name="Only first 10 words will be processed.">仅将处理前 10 个字。</str>
+    <str name="Your browser is not supported. Use of Mozilla Firefox is recommended.">您的浏览器
+        不受支持。 推荐使用 Mozilla Firefox。</str>
+    <str name="linkToThis">指向此页的链接</str>
+    <str name="ExpandAll">展开所有主题</str>
+    <str name="printThisPage">打印此页</str>
+    <str name="CollapseAll">折叠所有主题</str>
+    <!-- various labels (not author controlled) -->
+    <str name="Figure">图</str>
+    <str name="Table">表</str>
+    <str name="Next topic">下一主题</str>
+    <str name="Previous topic">上一主题</str>
+    <str name="Parent topic">父主题</str>
+    <str name="Required cleanup">需要修正</str>
+    <str name="Draft comment">非正式版注释</str>
+    <str name="Option">选项</str>
+    <str name="Description">描述</str>
+    <str name="Optional">可选</str>
+    <str name="Required">必需</str>
+    <str name="Skip visual syntax diagram">跳过直观语法图</str>
+    <str name="Read syntax diagram">阅读语法图</str>
+    <str name="Start of change">更新开始</str>
+    <str name="End of change">更新结束</str>
+    <str name="Index">索引</str>
+    <str name="Special characters">特别字符</str>
+    <str name="Numerics">数字</str>
+    <str name="End notes">结尾注释</str>
+    <str name="Artwork">图片</str>
+    <str name="Syntax">语法</str>
+    <str name="Type">类型</str>
+    <str name="Value">值</str>
+    <!-- Text that goes before a link to a topic -->
+    <str name="intro-to-topic-link"></str>
+
+    <!-- peril notice labels -->
+    <str name="Note">注</str>
+    <str name="Notes">注</str>
+    <str name="Tip">提示</str>
+    <str name="Fastpath">捷径</str>
+    <str name="Important">重要</str>
+    <str name="Attention">注意</str>
+    <str name="Caution">警告</str>
+    <str name="Danger">危险</str>
+    <str name="Remember">切记</str>
+    <str name="Restriction">限制</str>
+    <str name="Warning">警告</str>
+
+    <!-- default title text for section level generated sections -->
+    <str name="Contents">内容</str>
+    <str name="Related concepts">相关概念</str>
+    <str name="Related tasks">相关任务</str>
+    <!--    Comment 'Related reference' string because it was added above. IDPL-13249 -->
+<!--    <str name="Related reference">相关参考</str>-->
+    <str name="Related information">相关信息</str>
+
+    <str name="Prerequisite">先决条件</str>
+    <str name="Prerequisites">先决条件</str>
+    <str name="or">或</str>
+
+    <!--Task section labels -->
+    <str name="task_context">关于此任务</str>
+    <str name="task_example">示例</str>
+    <str name="task_postreq">下一步做什么</str>
+    <str name="task_prereq">开始之前</str>
+    <str name="task_procedure">过程</str>
+    <str name="task_results">结果</str>
+
+    <str name="Copyright">版权</str>
+
+    <!-- Symbols -->
+    <str name="OpenQuote">“</str>
+    <str name="CloseQuote">”</str>
+    <str name="ColonSymbol">：</str>
+
+    <!-- For odt transform -->
+    <str name="On the page"> on page </str>
+    <str name="Related Links">Related Links</str>
+    <str name="List item">List item.</str>
+    <str name="Foot note">Footnote.</str>
+    <str name="Page"> page </str>
+    <str name="Unordered List bullet">&#8226;</str>
+
+
+    <!-- emc: autogenerated strings based on paragraph style name -->
+    <str type="webworks" name="child link Open" attribute="bullet-character">Subtopics</str>
+    <str type="webworks" name="Next link" attribute="bullet-character" stylename="Bold">下一主题: </str>
+    <str type="webworks" name="Previous link" attribute="bullet-character" stylename="Bold">上一主题: </str>
+    <str type="webworks" name="Related Topic Open" attribute="bullet-character">相关主题</str>
+    <str type="webworks" name="Related Concepts Open" attribute="bullet-character">相关概念</str>
+    <str type="webworks" name="Related Reference Open" attribute="bullet-character">相关参考</str>
+    <str type="webworks" name="Related Tasks Open" attribute="bullet-character">相关任务</str>
+    <str type="webworks" name="Related Information Open" attribute="bullet-character">相关信息</str>
+
+    <str type="webworks" name="Postrequisite Open show_hide_open" attribute="bullet-character">后续工作</str>
+    <str type="webworks" name="Postrequisite Open show_hide_closed" attribute="bullet-character">后续工作</str>
+    <str type="webworks" name="Postrequisite Open" attribute="bullet-character">后续工作</str>
+
+    <str type="webworks" name="ReviewerNote" attribute="bullet-character">Reviewers</str>
+    <str type="webworks" name="child link sequence Open" attribute="bullet-character">过程</str>
+    <str type="webworks" name="Steps Open" attribute="bullet-character">过程</str>
+    <str type="webworks" name="Steps show_hide_open Open" attribute="bullet-character">过程</str>
+    <str type="webworks" name="Steps show_hide_closed Open" attribute="bullet-character">过程</str>
+
+    <str type="webworks" name="Single Appendix Heading 1" attribute="bullet-character">附录 </str>
+    <str type="webworks" name="Single Appendix Title" attribute="bullet-character">附录 </str>
+
+    <str type="webworks" name="List optional 1" attribute="paragraph-prefix">(可选) </str>
+    <str type="webworks" name="List optional 2" attribute="paragraph-prefix">(可选) </str>
+    <str type="webworks" name="List optional 3" attribute="paragraph-prefix">(可选) </str>
+    <str type="webworks" name="Step optional 1" attribute="paragraph-prefix">(可选) </str>
+    <str type="webworks" name="SubStep optional 2" attribute="paragraph-prefix">(可选) </str>
+    <str type="webworks" name="Numbered optional 2" attribute="paragraph-prefix">(可选) </str>
+    <str type="webworks" name="Numbered optional 1" attribute="paragraph-prefix">(可选) </str>
+    <str type="webworks" name="Numbered optional 3" attribute="paragraph-prefix">(可选) </str>
+    <str type="webworks" name="child link family Optional" attribute="paragraph-prefix">(可选) </str>
+    <str type="webworks" name="child link sequence Optional" attribute="paragraph-prefix">(可选) </str>
+    <str type="webworks" name="child link unordered Optional" attribute="paragraph-prefix">(可选) </str>
+
+    <str type="webworks" name="Step required 1" attribute="paragraph-prefix">(必需) </str>
+    <str type="webworks" name="SubStep required 2" attribute="paragraph-prefix">(必需) </str>
+
+    <str type="webworks" name="copyright" attribute="paragraph-prefix">Copyright</str>
+    <str type="webworks" name="Prerequisite Open" attribute="bullet-character">准备工作</str>
+    <str type="webworks" name="Result Open" attribute="bullet-character">结果</str>
+    <str type="webworks" name="Context Open" attribute="bullet-character">步骤</str>
+    <str type="webworks" name="Example Open" attribute="bullet-character">示例</str>
+    <str type="webworks" name="Example Open show_hide_closed" attribute="bullet-character">示例</str>
+    <str type="webworks" name="Example Open show_hide_open" attribute="bullet-character">示例</str>
+    <str type="webworks" name="Description Open" attribute="bullet-character">描述</str>
+    <str type="webworks" name="Syntax Open" attribute="bullet-character">语法</str>
+    <str type="webworks" name="Arguments Open" attribute="paragraph-prefix">变量</str>
+    <str type="webworks" name="Options Open" attribute="paragraph-prefix">选项</str>
+    <str type="webworks" name="Parameters Open" attribute="paragraph-prefix">参数</str>
+
+    <!-- EMC	IB5	  25-Aug-2014 	TKT-123: Remove word "Step" generated in WebHelp cross-references -->
+    <!--str type="webworks" name="XREF step" attribute="character-prefix">Step </str>
+    <str type="webworks" name="XREF li" attribute="character-prefix">Step </str-->
+    <str type="webworks" name="XREF figure" attribute="character-prefix">图 </str>
+    <str type="webworks" name="XREF table" attribute="character-prefix">表 </str>
+    <str type="webworks" name="CLIOptions" attribute="character-prefix">选项</str>
+    <str type="webworks" name="CLIParameters" attribute="character-prefix">参数</str>
+    <str type="webworks" name="CLIArguments" attribute="character-prefix">变量</str>
+
+    <str type="webworks" name="fastpath Open" attribute="bullet-character">捷径</str>
+    <str type="webworks" name="fastpath 1 Open" attribute="bullet-character">捷径</str>
+    <str type="webworks" name="fastpath 2 Open" attribute="bullet-character">捷径</str>
+    <str type="webworks" name="fastpath 3 Open" attribute="bullet-character">捷径</str>
+    <str type="webworks" name="remember Open" attribute="bullet-character">切记</str>
+    <str type="webworks" name="remember 1 Open" attribute="bullet-character">切记</str>
+    <str type="webworks" name="remember 2 Open" attribute="bullet-character">切记</str>
+    <str type="webworks" name="remember 3 Open" attribute="bullet-character">切记</str>
+    <str type="webworks" name="restriction Open" attribute="bullet-character">限制</str>
+    <str type="webworks" name="restriction 1 Open" attribute="bullet-character">限制</str>
+    <str type="webworks" name="restriction 2 Open" attribute="bullet-character">限制</str>
+    <str type="webworks" name="restriction 3 Open" attribute="bullet-character">限制</str>
+    <str type="webworks" name="attention Open" attribute="bullet-character">注意</str>
+    <str type="webworks" name="attention 1 Open" attribute="bullet-character">注意</str>
+    <str type="webworks" name="attention 2 Open" attribute="bullet-character">注意</str>
+    <str type="webworks" name="attention 3 Open" attribute="bullet-character">注意</str>
+    <!-- EMC IB5 24-Jul-2014 "Option"/"Description" headers on <choicetable> are inconsistent -->
+    <str type="webworks" name="Option" attribute="character-prefix">选项</str>
+    <str type="webworks" name="Description" attribute="character-prefix">描述</str>
+
+    <!-- Localization prefix and suffix characters -->
+    <str name="start_cite">&#x300a;</str>  <!-- 《 -->
+    <str name="end_cite">&#x300b;</str> <!-- 》 -->
+
+    <str name="start_var">&#x201C;</str> <!-- “ -->
+    <str name="end_var">&#x201D;</str> <!-- ” -->
+
+    <str name="start_q"></str>
+    <str name="end_q"></str>
+
+    <str name="start_lq"></str>
+    <str name="end_lq"></str>
+
+    <str name="start_userinput">&#x201C;</str> <!-- “ -->
+    <str name="end_userinput">&#x201D;</str> <!-- ” -->
+
+    <str name="start_option"></str>
+    <str name="end_option"></str>
+
+    <str name="start_term">&#x201C;</str> <!-- “ -->
+    <str name="end_term">&#x201D;</str> <!-- ” -->
+
+    <str name="start_q_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_q_responsive">&#x0201D;</str> <!-- ” -->
+
+    <str name="start_option_responsive"></str>
+    <str name="end_option_responsive"></str>
+
+    <!--
+        <str name="start_option_responsive">&#x0201C;</str> &lt;!&ndash; “ &ndash;&gt;
+        <str name="end_option_responsive">&#x0201D;</str> &lt;!&ndash; ” &ndash;&gt;
+
+    -->
+    <str name="start_uicontrol_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_uicontrol_responsive">&#x0201D;</str> <!-- ” -->
+
+    <str name="start_var_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_var_responsive">&#x0201D;</str> <!-- ” -->
+
+    <str name="start_wintitle_responsive">&#x0201C;</str> <!-- “ -->
+    <str name="end_wintitle_responsive">&#x0201D;</str> <!-- ” -->
+
+    <!-- need to be translated-->
+    <str name="Published">发布日期: </str>
+    <str name="year">年 </str>
+
+    <str name="on_this_page" js="true">在此页上</str>
+    <str name="see_also">另请参见</str>
+
+    <str name="show_navigation">显示导航</str>
+    <str name="hide_navigation">隐藏导航</str>
+
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images STARTS HERE- IB-->
+    <variable id="danger">危险</variable>
+    <variable id="warning">警告</variable>
+    <variable id="caution">小心</variable>
+    <variable id="notice">注意</variable>
+    <variable id="note">注意：</variable>
+    <!-- IA   Tridion upgrade    Oct-2018   Add admonition strings instead of images ENDS HERE- IB-->
+    <!--IA      Dell EMC consolidation.     Jun-2019    Add EMC Strings - ENDS HERE      IB-->
+
+    <variable id="Current Release Version">当前版本： </variable>
+    <variable id="Previous Release Version">先前版本： </variable>
+    <variable id="Release Type">版本类型： </variable>
+    <variable id="Major">主要 (MA)</variable>
+    <variable id="Minor">次要 (MI)</variable>
+    <variable id="Service">服务 (SR)</variable>
+    <variable id="Patch">修补程序 (P)</variable>
+
+    <variable id="Technote Current Version">当前版本： </variable>
+    <variable id="Technote Release Date">发布日期： </variable>
+    <variable id="Technote Previous Version">之前版本： </variable>
+    <variable id="Technote Document Number">文档编号： </variable>
+    <variable id="Technote Document Rev">Rev. </variable>
+    <variable id="part number">P/N </variable>
+    <variable id="batterywarning">电池警告</variable>
+    <variable id="dsg Updated Date">已更新</variable>
+    <variable id="dsg Software Version">版本</variable>
+    <variable id="dsg Part Number">部件号</variable>
+    <variable id="dsg topics">主题：</variable>
+
+    <variable id="note-non-brand Image Path">Customization/OpenTopic/common/artwork/note-non-brand.png</variable>
+    <variable id="caution-non-brand Image Path">Customization/OpenTopic/common/artwork/caution-non-brand.png</variable>
+    <variable id="warning-non-brand Image Path">Customization/OpenTopic/common/artwork/warning-non-brand.png</variable>
+
+    <variable id="note Image Path">Customization/OpenTopic/common/artwork/note.svg</variable>
+    <variable id="caution Image Path">Customization/OpenTopic/common/artwork/caution.svg</variable>
+    <variable id="danger Image Path">Customization/OpenTopic/common/artwork/danger.svg</variable>
+    <variable id="warning Image Path">Customization/OpenTopic/common/artwork/warning.svg</variable>
+
+    <variable id="Highly Restricted Confidential">高度受限 — 机密</variable>
+    <variable id="Restricted Confidential">受限 — 机密</variable>
+    <variable id="Restricted Internal">仅供内部使用 - 机密</variable>
+
+    <variable id="Abstract">摘要</variable>
+
+<!--Added new variable for PDF A4-->
+    <variable id="continued">（续）</variable>
+	<variable id="release">版本</variable>
+	<variable id="revision">修订版</variable>
+	<variable id="Version">版本</variable>
+	<variable id="on page"> 页面上的 <param ref-name="pagenum"/></variable>
+	<variable id="Figure toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+	<variable id="Table toc"><param ref-name="number"/>. <param ref-name="title"/></variable>
+    <variable id="LOT-dell">表</variable>
+    <variable id="LOF-dell">图</variable>
+
+    <variable id="#menucascade-separator"> &gt; </variable>
+
+    <!--    IB: Add support for TOC 'expand all'/'Collapse all' buttons-->
+    <variable id="Expand all">展开全部</variable>
+    <variable id="Collapse all">折叠全部</variable>
+
+</strings>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+	<!-- EMC CLI specialization. -->
+
+	<system systemId="cli.xsd" uri="cli.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:cli.xsd" uri="cli.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:xsd:cli.xsd:1.x" uri="cli.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:xsd:cli.xsd:1.2" uri="cli.xsd" xml:base="emc/xsd/"/>
+
+	<uri name="cli.xsd" uri="cli.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:cli.xsd" uri="cli.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:xsd:cli.xsd:1.x" uri="cli.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:xsd:cli.xsd:1.2" uri="cli.xsd" xml:base="emc/xsd/"/>
+
+	<system systemId="cliMod.xsd" uri="cliMod.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:cliMod.xsd" uri="cliMod.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:cliMod.xsd:1.x" uri="cliMod.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:cliMod.xsd:1.2" uri="cliMod.xsd" xml:base="emc/xsd/"/>
+
+	<uri name="cliMod.xsd" uri="cliMod.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:cliMod.xsd" uri="cliMod.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:cliMod.xsd:1.x" uri="cliMod.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:cliMod.xsd:1.2" uri="cliMod.xsd" xml:base="emc/xsd/"/>
+
+	<system systemId="cliGrp.xsd" uri="cliGrp.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:cliGrp.xsd" uri="cliGrp.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:cliGrp.xsd:1.x" uri="cliGrp.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:cliGrp.xsd:1.2" uri="cliGrp.xsd" xml:base="emc/xsd/"/>
+
+	<uri name="cliGrp.xsd" uri="cliGrp.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:cliGrp.xsd" uri="cliGrp.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:cliGrp.xsd:1.x" uri="cliGrp.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:cliGrp.xsd:1.2" uri="cliGrp.xsd" xml:base="emc/xsd/"/>
+
+	<!-- EMC glossary specialization. -->
+
+	<system systemId="emcglossary.xsd" uri="emcglossary.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossary.xsd" uri="emcglossary.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossary.xsd:1.x" uri="emcglossary.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossary.xsd:1.2" uri="emcglossary.xsd" xml:base="emc/xsd/"/>
+
+	<uri name="emcglossary.xsd" uri="emcglossary.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossary.xsd" uri="emcglossary.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossary.xsd:1.x" uri="emcglossary.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossary.xsd:1.2" uri="emcglossary.xsd" xml:base="emc/xsd/"/>
+
+	<system systemId="emcglossaryGrp.xsd" uri="emcglossaryGrp.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossaryGrp.xsd" uri="emcglossaryGrp.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossaryGrp.xsd:1.x" uri="emcglossaryGrp.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossaryGrp.xsd:1.2" uri="emcglossaryGrp.xsd" xml:base="emc/xsd/"/>
+
+	<uri name="emcglossaryGrp.xsd" uri="emcglossaryGrp.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossaryGrp.xsd" uri="emcglossaryGrp.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossaryGrp.xsd:1.x" uri="emcglossaryGrp.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossaryGrp.xsd:1.2" uri="emcglossaryGrp.xsd" xml:base="emc/xsd/"/>
+
+	<system systemId="emcglossaryMod.xsd" uri="emcglossaryMod.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossaryMod.xsd" uri="emcglossaryMod.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossaryMod.xsd:1.x" uri="emcglossaryMod.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossaryMod.xsd:1.2" uri="emcglossaryMod.xsd" xml:base="emc/xsd/"/>
+
+	<uri name="emcglossaryMod.xsd" uri="emcglossaryMod.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossaryMod.xsd" uri="emcglossaryMod.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossaryMod.xsd:1.x" uri="emcglossaryMod.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossaryMod.xsd:1.2" uri="emcglossaryMod.xsd" xml:base="emc/xsd/"/>
+
+	<!-- EMC glossentry specialization. -->
+
+	<system systemId="emcglossentry.xsd" uri="emcglossentry.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossentry.xsd" uri="emcglossentry.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossentry.xsd:1.x" uri="emcglossentry.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossentry.xsd:1.2" uri="emcglossentry.xsd" xml:base="emc/xsd/"/>
+
+	<uri name="emcglossentry.xsd" uri="emcglossentry.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossentry.xsd" uri="emcglossentry.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossentry.xsd:1.x" uri="emcglossentry.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossentry.xsd:1.2" uri="emcglossentry.xsd" xml:base="emc/xsd/"/>
+
+	<system systemId="emcglossentryGrp.xsd" uri="emcglossentryGrp.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossentryGrp.xsd" uri="emcglossentryGrp.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossentryGrp.xsd:1.x" uri="emcglossentryGrp.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossentryGrp.xsd:1.2" uri="emcglossentryGrp.xsd" xml:base="emc/xsd/"/>
+
+	<uri name="emcglossentryGrp.xsd" uri="emcglossentryGrp.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossentryGrp.xsd" uri="emcglossentryGrp.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossentryGrp.xsd:1.x" uri="emcglossentryGrp.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossentryGrp.xsd:1.2" uri="emcglossentryGrp.xsd" xml:base="emc/xsd/"/>
+
+	<system systemId="emcglossentryMod.xsd" uri="emcglossentryMod.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossentryMod.xsd" uri="emcglossentryMod.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossentryMod.xsd:1.x" uri="emcglossentryMod.xsd" xml:base="emc/xsd/"/>
+	<system systemId="urn:emc.com:names:dita:xsd:emcglossentryMod.xsd:1.2" uri="emcglossentryMod.xsd" xml:base="emc/xsd/"/>
+
+	<uri name="emcglossentryMod.xsd" uri="emcglossentryMod.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossentryMod.xsd" uri="emcglossentryMod.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossentryMod.xsd:1.x" uri="emcglossentryMod.xsd" xml:base="emc/xsd/"/>
+	<uri name="urn:emc.com:names:dita:xsd:emcglossentryMod.xsd:1.2" uri="emcglossentryMod.xsd" xml:base="emc/xsd/"/>
+
+</catalog>

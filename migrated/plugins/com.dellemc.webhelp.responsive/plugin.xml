@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.dellemc.webhelp.responsive">
+	<feature extension="dita.conductor.transtype.check" value="dellemc-webhelp-responsive"/>
+	<feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+	<feature extension="com.oxygenxml.webhelp.xsl.dita2webhelp.param" file="params.xml"/>
+	<feature extension="com.oxygenxml.webhelp.xsl.createMainPage.param" file="params.xml"/>
+	<feature extension="com.oxygenxml.webhelp.xsl.createSearchPage.param" file="params.xml"/>
+	<feature extension="depend.preprocess.debug-filter.pre" value="dita2dellemc-webhelp.fix-job-xml-file-format"/>
+</plugin>

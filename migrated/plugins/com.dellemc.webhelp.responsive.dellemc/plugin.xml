@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.dellemc.webhelp.responsive.dellemc">
+	<feature extension="dita.conductor.transtype.check"
+			 value="dellemc-webhelp-responsive.dellemc"
+			 desc="HTML5 Web Help - Dell EMC"/>
+
+	<feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+</plugin>

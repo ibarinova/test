@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HTML5 Web Help - Legacy Dell"
+		 default="dita2dellemc-webhelp-responsive.dell">
+
+	<target name="dita2dellemc-webhelp-responsive.dell" depends="dita2dellemc-webhelp-responsive.dell.init,
+																    dita2dellemc-webhelp-responsive,
+																	dita2dellemc-webhelp-responsive.dell.copy-resources"/>
+
+	<target name="dita2dellemc-webhelp-responsive.dell.init">
+		<property name="dellemc-webhelp.resources.dir-dell" value="${dita.plugin.com.dellemc.webhelp.responsive.dell.dir}/resources"/>
+
+		<property name="dellemc-logo-required" value="yes"/>
+		<property name="dellemc-webhelp.output-resources.dir" value="oxygen-webhelp/template/resources"/>
+		<property name="dellemc-logo-css-path" value="${dellemc-webhelp.output-resources.dir}/images/logos"/>
+		<property name="webhelp.logo.image.output" value="${dellemc-logo-css-path}/dell-white.svg"/>
+		<property name="dellemc-logo-path" value="${dellemc-webhelp.resources.dir-dell}/images/logo/dell-white.svg"/>
+
+		<property name="args.css.file" value="${dellemc-webhelp.output-resources.dir}/css/dell-custom.css"/>
+	</target>
+
+	<target name="dita2dellemc-webhelp-responsive.dell.copy-resources">
+		<copy todir="${output.dir}/${dellemc-webhelp.output-resources.dir}/css"
+			  overwrite="true" encoding="ISO-8859-1">
+			<fileset dir="${dellemc-webhelp.resources.dir-dell}/css">
+				<include name="*/**"/>
+			</fileset>
+		</copy>
+	</target>
+</project>

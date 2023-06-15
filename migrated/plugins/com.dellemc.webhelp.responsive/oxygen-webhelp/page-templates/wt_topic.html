@@ -1,0 +1,86 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Added browser compatibility statement with X-UA-Compatible http-equiv attribute
+            to latest browser compatible 
+        -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <whc:page_libraries page="topic"/>
+        <whc:webhelp_skin_resources/>
+        <whc:include_html href="${args.hdf}"/>
+        <whc:include_html href="${webhelp.fragment.head}"/>
+    </head>
+
+    <body class="wh_topic_page">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            <whc:macro value="${i18n(jump.to.content)}" />
+        </a>
+        <whc:include_html href="${args.hdr}"/>
+        <whc:include_html href="${webhelp.fragment.before.body}"/>
+
+        <whc:include_html href="${webhelp.fragment.header}"/>
+        <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+            <whc:include_html href="${webhelp.fragment.before.top_menu}"/>
+            <whc:webhelp_top_menu />
+            <whc:include_html href="${webhelp.fragment.after.top_menu}"/>
+        </div>
+
+        <div class="container-fluid">
+            <div class="wh_content_area">
+                <div class="row">
+                    <whc:webhelp_publication_toc data-tooltip-position="${webhelp.publication.toc.tooltip.position}">
+                        <nav role="navigation" id="wh_publication_toc"
+                             class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none">
+                            <whc:component_content/>
+                        </nav>
+                    </whc:webhelp_publication_toc>
+
+                    <div id="wh_topic_body" class="col-lg-7 col-md-9 col-sm-12">
+                        <div class="container-fluid">
+                            <div class="topic-top-bar">
+                                <nav aria-label="breadcrumb"  class="wh_tools" style="min-width: -webkit-fill-available;">
+                                    <whc:webhelp_breadcrumb/>
+                                </nav>
+                                <div class="wh_right_tools_dell">
+                                    <whc:webhelp_navigation_links/>
+                                    <whc:webhelp_print_link class="print"/>
+                                </div>
+                            </div>
+                            <div class="row topic_content_row">
+                                <div id="topic_content" class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    <whc:webhelp_topic_content class="body"/>
+                                    <whc:webhelp_child_links/>
+                                    <whc:webhelp_related_links/>
+                                    <whc:webhelp_feedback/>
+                                </div>
+                                <whc:webhelp_topic_toc>
+                                    <nav role="navigation"  id="wh_topic_toc" aria-label="On this page"
+                                         class="col-lg-2 d-none d-lg-block navbar d-print-none">
+                                        <div id="wh_topic_toc_content">
+                                            <whc:include_html href="${webhelp.fragment.before.topic.toc}"/>
+                                            <whc:component_content/>
+                                            <whc:include_html href="${webhelp.fragment.after.topic.toc}"/>
+                                        </div>
+                                    </nav>
+                                </whc:webhelp_topic_toc>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <whc:include_html href="footer.xml"/>
+
+        <div id="go2top" tabindex="0" role="button">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+
+    </body>
+</html>

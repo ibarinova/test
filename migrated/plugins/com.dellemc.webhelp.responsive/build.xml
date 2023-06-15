@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Dell Webhelp Responsive"
+		 default="dita2dellemc-webhelp-responsive"
+		 xmlns:if="ant:if"
+		 xmlns:unless="ant:unless">
+
+	<target name="dita2dellemc-webhelp-responsive" depends="dellemc-webhelp-responsive.init,
+															dellemc-webhelp.preprocess,
+															dellemc-webhelp.whr-init,
+															dellemc-webhelp.dita.preprocess,
+															html5.init,
+															html5.image-metadata,
+															whr-detect-lang,
+															dellemc-webhelp.whr-detect-lang,
+															whr-collect-indexterms,
+															whr-create-props-file,
+															whr-toc-xml,
+															dellemc-webhelp.whr-nav-links,
+															whr-context-help-map,
+															whr-sitemap,
+															dellemc-webhelp.preprocess.fix-topic-xrefs,
+															whr-copy-resources,
+															html5.css,
+															whr-clean-css,
+															dita.topics.html.common,
+															dellemc-webhelp.whr-create-topic-pages,
+															dellemc-webhelp.whr-create-main-files,
+															whr-search-index,
+															dellemc-webhelp.whr-copy-resources,
+															dellemc-webhelp-responsive.cleanup-out,
+															dellemc-webhelp-responsive.remove-workdir"/>
+
+	<target name="dellemc-webhelp-responsive.init">
+		<property name="webhelp.publishing.template" value="${dita.plugin.com.dellemc.webhelp.responsive.dir}/templates/dellemc.template/dellemc-tiles.opt"/>
+
+		<property name="dellemc-webhelp.responsive.assets.dir" location="${dita.plugin.com.dellemc.webhelp.responsive.dir}/oxygen-webhelp"/>
+		<property name="webhelp.template.search.file" value="${dellemc-webhelp.responsive.assets.dir}/page-templates/wt_search.html" />
+		<property name="webhelp.template.file.path" value="${dellemc-webhelp.responsive.assets.dir}/page-templates/wt_topic.html"/>
+		<property name="webhelp.template.index.file" value="${dellemc-webhelp.responsive.assets.dir}/page-templates/wt_index.html"/>
+
+		<property name="webhelp.enable.sticky.header" value="no" />
+		<property name="webhelp.enable.sticky.publication.toc" value="no" />
+		<property name="webhelp.show.expand.collapse.sections" value="no" />
+		<property name="webhelp.default.collection.type.sequence.prop" value="yes"/>
+		<property name="webhelp.show.navigation.links" value="yes"/>
+
+		<property name="dellemc-logo-required" value="yes"/>
+
+		<condition property="dellemc-copy-logo">
+			<equals arg1="${dellemc-logo-required}" arg2="yes"/>
+		</condition>
+
+		<condition property="dellemc-webhelp.use-ftitle-name" value="${include-outfile-mode}">
+			<isset property="include-outfile-mode"/>
+		</condition>
+
+		<property name="dellemc-webhelp.use-ftitle-name" value="yes"/>
+
+		<property name="dellemc-webhelp.xsl.dir" value="${dita.plugin.com.dellemc.webhelp.responsive.dir}/xsl"/>
+		<property name="dellemc-webhelp.context-xsl.dir" value="${dellemc-webhelp.xsl.dir}/context-help"/>
+		<property name="dellemc-webhelp.preprocess-xsl.dir" value="${dellemc-webhelp.xsl.dir}/plugin-preprocess"/>
+		<property name="args.whr.create.search.page.xsl" value="${dellemc-webhelp.xsl.dir}/mainFiles/createSearchPage.xsl"/>
+		<property name="args.whr.create.main.page.xsl" value="${dellemc-webhelp.xsl.dir}/mainFiles/createMainPage.xsl"/>
+		<property name="args.whr.topic.xsl" value="${dellemc-webhelp.xsl.dir}/dita2webhelp/dita2webhelp.xsl"/>
+		<property name="args.whr.createTocXML.xsl" value="${dellemc-webhelp.xsl.dir}/navLinks/tocDita.xsl"/>
+		<property name="create.search.excludes.xsl" value="${dellemc-webhelp.xsl.dir}/search/createSearchExcludesFile.xsl"/>
+
+		<dirname property="orig.args.input.location" file="${args.input}"/>
+		<basename property="orig.args.input.folder.name" file="${orig.args.input.location}"/>
+
+		<dirname property="orig.args.input.location.parent" file="${orig.args.input.location}"/>
+		<property name="dellemc-webhelp.preprocess.work.dir" location="${orig.args.input.location.parent}${file.separator}${orig.args.input.folder.name}-workdir-${dell-brand}-${include-outfile-mode}"/>
+		<property name="dellemc-webhelp.preprocess.tmp.work.dir" location="${dellemc-webhelp.preprocess.work.dir}${file.separator}tmp"/>
+
+		<mkdir dir="${dellemc-webhelp.preprocess.work.dir}"/>
+		<mkdir dir="${dellemc-webhelp.preprocess.tmp.work.dir}"/>
+
+		<property name="dellemc-webhelp.preprocess.properties.xml" location="${dellemc-webhelp.preprocess.work.dir}${file.separator}properties.xml"/>
+		<property name="dellemc-webhelp.preprocess.properties" location="${dellemc-webhelp.preprocess.work.dir}${file.separator}dellemc-webhelp.preprocess.properties"/>
+		<property name="dellemc-webhelp.preprocess.topic-file-list" location="${dellemc-webhelp.preprocess.work.dir}${file.separator}topic.list"/>
+		<property name="dellemc-webhelp.preprocess.needless-file-list" location="${dellemc-webhelp.preprocess.work.dir}${file.separator}needlessfile.list"/>
+		<property name="dellemc-webhelp-cleanup-list" value="${dita.plugin.com.dellemc.webhelp.responsive.dir}/clean-up/common.needless.file.list"/>
+
+		<property name="fixJobXML" value="true"/>
+	</target>
+
+	<target name="dellemc-webhelp.preprocess" depends="dellemc-webhelp.preprocess.generate-properties-file,
+														dellemc-webhelp.preprocess.generate-topic-file-list,
+														dellemc-webhelp.preprocess.generate-needless-file-list,
+														dellemc-webhelp.preprocess.prepare-content,
+														dita2html5-webhelp-dellemc.generate-context-sensitive-help,
+														dita2html5-webhelp-emc.generate-context-sensitive-help">
+	</target>
+
+	<xmlcatalog id="dellemc-webhelp-catalog">
+		<catalogpath>
+			<fileset file="${dita.plugin.com.dellemc.webhelp.responsive.dir}/resources/catalogs/DocTypes/catalog-dita.xml"/>
+		</catalogpath>
+	</xmlcatalog>
+
+	<target name="dellemc-webhelp.preprocess.generate-properties-file">
+		<xslt style="${dellemc-webhelp.preprocess-xsl.dir}${file.separator}generate-properties-file.xsl"
+			  in="${args.input}"
+			  out="${dellemc-webhelp.preprocess.properties.xml}">
+			<param name="use-ftitle-name" expression="${dellemc-webhelp.use-ftitle-name}"/>
+			<param name="properties-file-path" expression="${dellemc-webhelp.preprocess.properties}"/>
+			<param name="dell-brand" expression="${dell-brand}" if:set="dell-brand"/>
+			<param name="include-outfile-mode" expression="${include-outfile-mode}" if:set="include-outfile-mode"/>
+			<xmlcatalog refid="dellemc-webhelp-catalog"/>
+		</xslt>
+		<property file="${dellemc-webhelp.preprocess.properties}"/>
+	</target>
+
+	<target name="dellemc-webhelp.preprocess.generate-topic-file-list">
+		<xslt processor="trax"
+			  style="${dellemc-webhelp.preprocess-xsl.dir}${file.separator}generate-topic-file-list.xsl"
+			  in="${dellemc-webhelp.preprocess.properties.xml}"
+			  out="${dellemc-webhelp.preprocess.topic-file-list}">
+			<param name="dell-brand" expression="${dell-brand}" if:set="dell-brand"/>
+		</xslt>
+	</target>
+
+	<target name="dellemc-webhelp.preprocess.generate-needless-file-list">
+		<xslt processor="trax"
+			  style="${dellemc-webhelp.preprocess-xsl.dir}${file.separator}generate-needless-file-list.xsl"
+			  in="${dellemc-webhelp.preprocess.properties.xml}"
+			  out="${dellemc-webhelp.preprocess.needless-file-list}">
+		</xslt>
+	</target>
+
+	<target name="dellemc-webhelp.preprocess.prepare-content">
+		<basename property="dita.input.filename" file="${args.input}" />
+		<dirname property="args.input.location" file="${args.input}"/>
+
+		<copy file="${args.input}" tofile="${args.input.location}/orig${dita.input.filename}"/>
+
+		<xslt processor="trax"
+			  style="${dellemc-webhelp.preprocess-xsl.dir}${file.separator}prepare-content.xsl"
+			  in="${args.input}"
+			  out="${dellemc-webhelp.preprocess.tmp.work.dir}/${dita.input.filename}">
+			<param name="properties-xml" expression="${dellemc-webhelp.preprocess.properties.xml}"/>
+			<param name="dell-brand" expression="${dell-brand}" if:set="dell-brand"/>
+			<xmlcatalog refid="dellemc-webhelp-catalog"/>
+		</xslt>
+		<move todir="${args.input.location}" overwrite="true">
+			<fileset dir="${dellemc-webhelp.preprocess.tmp.work.dir}"/>
+		</move>
+	</target>
+
+	<target name="dita2html5-webhelp-dellemc.generate-context-sensitive-help">
+		<xslt processor="trax"
+			  in="${args.input}"
+			  out="${dita.temp.dir}/contexts.xml"
+			  style="${dellemc-webhelp.context-xsl.dir}/generate-context-sensitive-help-xml.xsl">
+			<xmlcatalog refid="dellemc-webhelp-catalog"/>
+		</xslt>
+
+		<move file="${dita.temp.dir}/contexts.xml" tofile="${output.dir}/contexts.txt"/>
+	</target>
+
+	<target name="dita2html5-webhelp-emc.generate-context-sensitive-help">
+		<basename property="dita.input.filename" file="${args.input}" />
+		<xslt processor="trax"
+			  in="${args.input}"
+			  out="${dita.temp.dir}/map.xml"
+			  style="${dellemc-webhelp.preprocess-xsl.dir}/generate-context-sensitive-help-xml.xsl">
+			<xmlcatalog refid="dellemc-webhelp-catalog"/>
+		</xslt>
+
+		<xslt processor="trax"
+			  in="${dita.temp.dir}/map.xml"
+			  out="${output.dir}/map.xml"
+			  style="${dellemc-webhelp.preprocess-xsl.dir}/generate-context-sensitive-help-xml-cleanup.xsl"/>
+
+		<xslt processor="trax"
+			  in="${args.input}"
+			  out="${output.dir}/map.js"
+			  style="${dellemc-webhelp.preprocess-xsl.dir}/generate-context-sensitive-help-js.xsl">
+			<param name="OUTEXT" expression="${out.ext}" if:set="out.ext"/>
+			<xmlcatalog refid="dellemc-webhelp-catalog"/>
+		</xslt>
+	</target>
+
+	<target name="dellemc-webhelp.whr-init" depends="init-whr-version,
+												  dellemc-webhelp.build-init,
+												  whr-init-classpath,
+												  dellemc-whr-init-publishing-template,
+												  whr-init-properties,
+												  whr-init-collection-type-prop"/>
+
+	<target name="dellemc-webhelp.build-init" depends="init-properties,
+                   					   	   			dellemc-webhelp.check-arg,
+													log-arg"/>
+
+	<target name="dellemc-webhelp.check-arg"
+			description="Validate and init input arguments">
+		<!-- begin to check input parameters -->
+		<dita-ot-fail id="DOTA003F">
+			<condition>
+				<and>
+					<isset property="args.xsl" />
+					<not>
+						<available file="${args.xsl}" type="file" />
+					</not>
+				</and>
+			</condition>
+			<param name="1" location="${args.xsl}"/>
+		</dita-ot-fail>
+		<!-- end to check input parameters -->
+
+		<!-- begin to init required parameters -->
+
+		<property name="filter-stage" value="early"/>
+		<condition property="filter-on-parse" value="true">
+			<and>
+				<equals arg1="${filter-stage}" arg2="early"/>
+			</and>
+		</condition>
+
+		<!-- append a '.' to out.ext if args.outext not contains '.' -->
+		<condition property="out.ext" value=".${args.outext}">
+			<and>
+				<isset property="args.outext" />
+				<not>
+					<contains string="${args.outext}" substring="." />
+				</not>
+			</and>
+		</condition>
+		<condition property="out.ext" value="${args.outext}">
+			<and>
+				<isset property="args.outext" />
+				<contains string="${args.outext}" substring="." />
+			</and>
+		</condition>
+
+		<property name="args.grammar.cache" value="yes"/>
+		<property name="args.xml.systemid.set" value="yes"/>
+		<!-- end to init required parameters -->
+
+		<condition property="com.oxygenxml.xhtml.linkToMediaResources" value="yes">
+			<not>
+				<isset property="com.oxygenxml.xhtml.linkToMediaResources"/>
+			</not>
+		</condition>
+
+		<!-- create required directories -->
+		<mkdir dir="${output.dir}" />
+		<local name="createTempDir"/>
+		<condition property="createTempDir" value="true">
+			<equals arg1="${store-type}" arg2="file"/>
+		</condition>
+		<delete dir="${dita.temp.dir}" quiet="false" if:true="${createTempDir}"/>
+		<mkdir dir="${dita.temp.dir}" if:true="${createTempDir}" />
+
+		<!-- Validate the xml file or not,default is validation(true)-->
+		<property name="validate" value="true"/>
+
+		<!-- Related links to output: none, all, nofamily -->
+		<condition property="include.rellinks" value="">
+			<equals arg1="${args.rellinks}" arg2="none"/>
+		</condition>
+		<condition property="include.rellinks" value="#default friend sample external other">
+			<equals arg1="${args.rellinks}" arg2="nofamily"/>
+		</condition>
+		<condition property="include.rellinks" value="#default child sibling friend next previous cousin descendant sample external other">
+			<or>
+				<equals arg1="${args.hide.parent.link}" arg2="yes"/>
+				<equals arg1="${args.rellinks}" arg2="noparent"/>
+			</or>
+		</condition>
+		<condition property="include.rellinks" value="#default parent child sibling friend next previous cousin ancestor descendant sample external other">
+			<or>
+				<equals arg1="${args.rellinks}" arg2="all"/>
+			</or>
+		</condition>
+		<condition property="include.rellinks" value="#default parent child sibling friend next previous cousin descendant sample external other">
+			<not><isset property="args.rellinks"/></not>
+		</condition>
+
+		<!--solution for the output control-->
+		<property name="generate.copy.outer" value="1"/>
+
+		<property name="onlytopic.in.map" value="false"/>
+
+		<property name="link-crawl" value="topic"/>
+
+		<!--
+        default value : warn
+      fail     :1a) Fail quickly if files are going to be generated/copied outside of that directory
+      warn  :1b) Complete if files will be generated/copied outside, but log a warning
+      quiet  :1c) Quietly finish with only those files (no warning or error)
+        -->
+		<property name="outer.control" value="warn"/>
+
+		<condition property="inner.transform">
+			<equals arg1="${generate.copy.outer}" arg2="1"/>
+		</condition>
+
+		<condition property="old.transform">
+			<equals arg1="${generate.copy.outer}" arg2="3"></equals>
+		</condition>
+
+		<property name="conserve-memory" value="false"/>
+	</target>
+
+	<target name="dellemc-whr-init-publishing-template">
+		<taskdef name="templatetask" classname="com.oxygenxml.publishing.template.PublishingTemplateTask" classpathref="wh_classpath"/>
+		<condition property="template.descriptor.name" value="${webhelp.publishing.template.descriptor}" else="">
+			<isset property="webhelp.publishing.template.descriptor"/>
+		</condition>
+
+		<makeurl property="webhelp.default.xml.catalog.url"
+				 file="${dita.plugin.com.oxygenxml.webhelp.responsive.dir}/xsl/template_catalog.xml"/>
+		<templatetask outputDir="${output.dir}"
+					  tempDir="${dita.temp.dir}"
+					  pluginDir="${webhelp.responsive.dir}"
+					  templateDescriptor="${template.descriptor.name}"
+					  templateRootPath="${webhelp.publishing.template}"
+					  defaultXMLCatalog="${webhelp.default.xml.catalog.url}"
+					  transtype="webhelp-responsive"/>
+	</target>
+
+	<target name="dellemc-webhelp.dita.preprocess" depends="com.oxygenxml.cleanOutput,
+																	  preprocess.init,
+																	  ditaval-merge,
+																	  gen-list,
+																	  debug-filter,
+																	  mapref,
+																	  branch-filter,
+																	  keyref,
+																	  copy-to,
+																	  conrefpush,
+																	  conref,
+																	  profile,
+																	  topic-fragment,
+																	  chunk,
+																	  move-meta-entries,
+																	  dellemc-webhelp.maplink,
+																	  topicpull,
+																	  clean-map,
+																	  clean-preprocess,
+																	  copy-files"
+			description="Preprocessing ended"/>
+
+	<target name="dita2dellemc-webhelp.fix-job-xml-file-format" if="fixJobXML">
+		<replaceregexp file="${dita.temp.dir}/.job.xml" match="format=&quot;dita &quot;" byline="true" flags="g" replace="format=&quot;dita&quot;"/>
+	</target>
+
+	<target name="dellemc-webhelp.maplink" depends="maplink-check" unless="preprocess.maplink.skip"
+			description="Find and generate related link information">
+		<property name="dita.preprocess.reloadstylesheet.maplink" value="${dita.preprocess.reloadstylesheet}"/>
+		<pipeline message="Move related links" taskname="maplink" inputmap="${user.input.file}">
+			<module class="org.dita.dost.module.MoveLinksModule">
+				<param name="style" location="${dellemc-webhelp.xsl.dir}/preprocess/maplink.xsl"/>
+				<param name="include.rellinks" expression="${include.rellinks}" if:set="include.rellinks"/>
+				<param name="properties-xml" expression="${dellemc-webhelp.preprocess.properties.xml}"/>
+			</module>
+		</pipeline>
+	</target>
+
+	<target name="dellemc-webhelp.whr-detect-lang">
+		<var name="webhelp.page.direction" unset="true"/>
+		<condition property="webhelp.page.direction" value="rtl" else="ltr">
+			<or>
+				<equals arg1="ar" arg2="${webhelp.language}" casesensitive="false"/>
+				<equals arg1="ar-eg" arg2="${webhelp.language}" casesensitive="false"/>
+				<equals arg1="ar-sa" arg2="${webhelp.language}" casesensitive="false"/>
+				<equals arg1="he" arg2="${webhelp.language}" casesensitive="false"/>
+				<equals arg1="he-il" arg2="${webhelp.language}" casesensitive="false"/>
+				<equals arg1="ur" arg2="${webhelp.language}" casesensitive="false"/>
+				<equals arg1="ur-pk" arg2="${webhelp.language}" casesensitive="false"/>
+			</or>
+		</condition>
+	</target>
+
+	<target name="dellemc-webhelp.whr-nav-links">
+		<makeurl file="${dita.temp.dir}" property="dita.temp.dir.url"/>
+
+		<property name="nav.json.out.dir" value="${output.dir}/oxygen-webhelp/app/nav-links/json"/>
+		<makeurl property="nav.json.out.dir.url" file="${nav.json.out.dir}" validate="false"/>
+		<pipeline>
+			<xslt in="${dita.temp.dir}/toc.xml"
+				  out="${dita.temp.dir}/navlinks-dummy.html"
+				  style="${dellemc-webhelp.xsl.dir}/navLinks/navLinks.xsl"
+				  classpathref="dost.class.path"
+				  reloadstylesheet="${webhelp.reload.stylesheet}">
+				<param name="TEMP_DIR_URL" expression="${dita.temp.dir.url}"/>
+				<param name="WEBHELP_SIDE_TOC_LINKS" expression="${webhelp.side.toc.links}" if:set="webhelp.side.toc.links"/>
+				<param name="WEBHELP_PUBLICATION_TOC_LINKS" expression="${webhelp.publication.toc.links}"/>
+				<param name="WEBHELP_PUBLICATION_TOC_HIDE_CHUNKED_TOPICS" expression="${webhelp.publication.toc.hide.chunked.topics}"/>
+				<param name="MENU_TEMP_FILE_URI" expression="${webhelp.top.menu.temp.file.url}"/>
+				<param name="WEBHELP_TOP_MENU_DEPTH" expression="${webhelp.top.menu.depth}"/>
+				<param name="JSON_OUTPUT_DIR_URI" expression="${nav.json.out.dir.url}"/>
+
+				<xmlcatalog>
+					<catalogpath path="${xsl.extensions.xml.catalog.file.path}"/>
+					<catalogpath path="${dita.plugin.org.dita.base.dir}/catalog-dita.xml"/>
+				</xmlcatalog>
+			</xslt>
+		</pipeline>
+		<delete file="${dita.temp.dir}/navlinks-dummy.html"/>
+	</target>
+
+	<target name="dellemc-webhelp.preprocess.fix-topic-xrefs">
+		<basename property="dita.input.filename" file="${args.input}" />
+
+		<mkdir dir="${dellemc-webhelp.preprocess.tmp.work.dir}"/>
+
+		<xslt processor="trax"
+			  basedir="${dita.temp.dir}"
+			  destdir="${dellemc-webhelp.preprocess.tmp.work.dir}"
+			  includesfile="${dellemc-webhelp.preprocess.topic-file-list}"
+			  style="${dellemc-webhelp.preprocess-xsl.dir}${file.separator}fix-topic-xrefs.xsl"
+			  reloadstylesheet="${webhelp.reload.stylesheet}">
+			<param name="properties-xml" expression="${dellemc-webhelp.preprocess.properties.xml}"/>
+			<param name="dell-brand" expression="${dell-brand}" if:set="dell-brand"/>
+			<mapper type="regexp" from="^(.*)$" to="\1"/>
+			<xmlcatalog refid="dellemc-webhelp-catalog"/>
+		</xslt>
+
+		<move todir="${dita.temp.dir}" overwrite="true">
+			<fileset dir="${dellemc-webhelp.preprocess.tmp.work.dir}"/>
+		</move>
+	</target>
+
+	<target name="dellemc-webhelp.whr-create-topic-pages" depends="whr-process-reviews,
+																dellemc-webhelp.whr-dita-inner-topics" unless="noTopic"/>
+
+	<target name="dellemc-webhelp.whr-dita-inner-topics" description="Build WebHelp output from dita topics" unless="noTopic">
+		<property name="out.ext" value=".html"/>
+		<property name="transtype.ext" value=".xsl"/>
+		<basename property="dita.input.filename" file="${args.input}" />
+
+		<property name="args.whr.topic.xsl" value="${webhelp.responsive.dir}/xsl/dita2webhelp/dita2webhelp.xsl"/>
+
+		<!-- URL to the DITA Map -->
+		<makeurl property="org.dita-ot.html.map.url" file="${dita.temp.dir}/${user.input.file}" validate="no"/>
+
+		<makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"/>
+		<makeurl property="webhelp.template.file.path.url" file="${webhelp.template.file.path}"/>
+
+		<!-- Test if args.input is already URL -->
+		<condition property="args.input.url" value="${args.input}">
+			<matches pattern="^file\:/" string="${args.input}"/>
+		</condition>
+		<makeurl file="${args.input}" property="args.input.url" validate="no" unless:set="args.input.url"/>
+		<makeurl file="${output.dir}" property="dita.output.dir.url"/>
+
+		<!--
+			added includesfile="${dellemc-webhelp.preprocess.topic-file-list} into the pipeline processing
+			added excludesfile="${dellemc-webhelp.preprocess.needless-file-list} into the pipeline processing
+			Fixed by: Irina
+			for removing duplicates to make it compatible with DITA OT 3.6.1 and Oxygen WebHelp 24
+		-->
+
+		<sequential>
+			<pipeline>
+				<xslt basedir="${dita.temp.dir}"
+					  destdir="${dita.output.dir}"
+					  includesfile="${dellemc-webhelp.preprocess.topic-file-list}"
+					  excludesfile="${dellemc-webhelp.preprocess.needless-file-list}"
+					  reloadstylesheet="${webhelp.reload.stylesheet}"
+					  classpathref="dost.class.path"
+					  extension="${out.ext}"
+					  style="${args.whr.topic.xsl}"
+					  filenameparameter="FILENAME"
+					  filedirparameter="FILEDIR">
+<!--					<ditafileset format="dita" processingRole="normal"/>-->
+					<param name="TRANSTYPE" expression="${transtype}"/>
+					<param name="DITAEXT" expression="${dita.ext}" if:set="dita.ext"/>
+					<param name="FILTERFILE" expression="${dita.input.valfile.url}" if:set="dita.input.valfile"/>
+					<param name="HDF" expression="${args.hdf}" if:set="args.hdf"/>
+					<param name="HDR" expression="${args.hdr}" if:set="args.hdr"/>
+					<param name="FTR" expression="${args.ftr}" if:set="args.ftr"/>
+					<param name="DRAFT" expression="${args.draft}" if:set="args.draft"/>
+					<param name="ARTLBL" expression="${args.artlbl}" if:set="args.artlbl"/>
+					<param name="GENERATE-TASK-LABELS" expression="${args.gen.task.lbl}" if:set="args.gen.task.lbl"/>
+					<param name="PRESERVE-DITA-CLASS" expression="${args.xhtml.classattr}" if:set="args.xhtml.classattr"/>
+					<param name="NOPARENTLINK" expression="${args.hide.parent.link}" if:set="args.hide.parent.link"/>
+					<param name="include.rellinks" expression="${include.rellinks}" if:set="include.rellinks"/>
+					<param name="BREADCRUMBS" expression="${args.breadcrumbs}" if:set="args.breadcrumbs"/>
+					<param name="INDEXSHOW" expression="${args.indexshow}" if:set="args.indexshow"/>
+					<param name="genDefMeta" expression="${args.gen.default.meta}" if:set="args.gen.default.meta"/>
+					<param name="OUTEXT" expression="${out.ext}" if:set="out.ext"/>
+					<param name="BASEDIR" expression="${basedir}"/>
+					<param name="OUTPUTDIR" expression="${output.dir}"/>
+					<param name="OUTPUTDIR_URL" expression="${dita.output.dir.url}"/>
+					<!-- WH-257: Parameter used in commonComponentsExpander.xsl -->
+					<param name="TEMPDIR" expression="${dita.temp.dir}"/>
+					<param name="TEMPDIR_URL" expression="${dita.temp.dir.url}"/>
+					<param name="LANGUAGE" expression="${webhelp.language}" if:set="webhelp.language"/>
+					<param name="DBG" expression="${args.debug}" if:set="args.debug"/>
+					<param name="CSS" expression="${args.css.file}" if:set="args.css.file"/>
+					<param name="CSSPATH" expression="${user.csspath}" if:set="user.csspath"/>
+					<param name="CUSTOM_BASEDIR" expression="${dita.temp.dir}"/>
+					<param name="WEBHELP_FOOTER_INCLUDE" expression="${webhelp.footer.include}" if:set="webhelp.footer.include"/>
+					<param name="WEBHELP_FOOTER_FILE" expression="${webhelp.footer.file}" if:set="webhelp.footer.file"/>
+					<param name="WEBHELP_TRIAL_LICENSE" expression="${webhelp.trial.license}" if:set="webhelp.trial.license"/>
+					<param name="WEBHELP_SEARCH_SCRIPT" expression="${webhelp.google.search.script.url}" if:set="webhelp.google.search.script.url"/>
+					<param name="WEBHELP_VERSION" expression="${webhelp.version}" if:set="webhelp.version"/>
+					<param name="WEBHELP_BUILD_NUMBER" expression="${webhelp.build.number}" if:set="webhelp.build.number"/>
+					<param name="WEBHELP_TRANSFORMATION_TIMESTAMP" expression="${webhelp.transformation.timestamp}" if:set="webhelp.transformation.timestamp"/>
+					<param name="INDEX_XML_FILEPATH" expression="${output.dir}/index.xml"/>
+					<param name="WEBHELP_FAVICON" expression="${webhelp.favicon.relpath}" if:set="webhelp.favicon.relpath"/>
+
+					<!-- URL to the DITA map is necesary only for responsive webhelp -->
+					<param name="TOC_XML_FILEPATH" expression="${dita.temp.dir}/toc.xml"/>
+					<param name="WEBHELP_DITAMAP_URL" expression="${org.dita-ot.html.map.url}"/>
+					<param name="WEBHELP_TEMPLATE_URL" expression="${webhelp.template.file.path.url}"/>
+					<param name="WEBHELP_LOGO_IMAGE" expression="${webhelp.logo.image.output}" if:set="webhelp.logo.image.output"/>
+					<param name="WEBHELP_LOGO_IMAGE_TARGET_URL" expression="${webhelp.logo.image.target.url}" if:set="webhelp.logo.image.target.url"/>
+					<param name="WEBHELP_DEBUG_DITA_OT_OUTPUT" expression="${webhelp.debug.dita.ot.output}"/>
+					<param name="WEBHELP_PARAMETERS_URL" expression="${webhelp.responsive.parameters.file.url}"/>
+					<param name="show.changes.and.comments" expression="${webhelp.show.changes.and.comments}"/>
+
+					<!-- Navigation links params -->
+					<param name="WEBHELP_TOP_MENU_TEMP_FILE_URL" expression="${webhelp.top.menu.temp.file.url}"/>
+					<param name="DEFAULTLANG" expression="${webhelp.language}" if:set="webhelp.language"/>
+
+					<param name="DATA_OFBID_ELEMENTS" expression="${webhelp.feedback.block.level.comments}" if:set="webhelp.feedback.block.level.comments"/>
+					<param name="DATA_OFBID_ELEMENTS_TO_EXCLUDE" expression="${webhelp.feedback.block.level.comments.elements.to.exclude}" if:set="webhelp.feedback.block.level.comments.elements.to.exclude"/>
+
+					<param name="DITAMAP_URL" expression="${args.input.url}"/>
+
+					<param name="args.rellinks.group.mode" expression="${webhelp.rellinks.group.mode}" if:set="webhelp.rellinks.group.mode"/>
+
+					<param name="figure.title.placement" expression="${webhelp.figure.title.placement}" if:set="webhelp.figure.title.placement"/>
+					<param name="table.title.placement" expression="${webhelp.table.title.placement}" if:set="webhelp.table.title.placement"/>
+
+
+					<param name="input.map.url" expression="${html5.map.url}" if:set="html5.map.url"/>
+					<param name="nav-toc" expression="${html5.nav-toc}" if:set="html5.nav-toc"/>
+
+					<param name="google.structured.data" expression="${google.structured.data}" if:set="google.structured.data"/>
+
+					<param name="com.oxygenxml.xhtml.linkToMediaResources" expression="${com.oxygenxml.xhtml.linkToMediaResources}" if:set="com.oxygenxml.xhtml.linkToMediaResources"/>
+					<param name="ditaTempDir" expression="${dita.temp.dir}"/>
+
+					<!--
+                  Extension point to pass parameters to the XSLT transformation.
+                -->
+
+					<param name="DRAFT" expression="${args.draft}" if:set="args.draft"/>
+					<param name="ARGS.BU" expression="${args.bu}" if:set="args.bu"/>
+					<param name="dell-brand" expression="${dell-brand}" if:set="dell-brand"/>
+					<param name="include-draft-comments" expression="${include-draft-comments}" if:set="include-draft-comments"/>
+					<param name="include-outfile-mode" expression="${include-outfile-mode}" if:set="include-outfile-mode"/>
+					<param name="ARGS.INPUT.SCRIPT.MAP" expression="${output.dir}/map.js"/>
+					<param name="TRANSTYPE" expression="${transtype}"/>
+					<param name="MAP_NAME" expression="${dita.input.filename}"/>
+					<param name="properties-xml" expression="${dellemc-webhelp.preprocess.properties.xml}"/>
+
+					<!--          -->
+
+					<xmlcatalog>
+						<catalogpath path="${xsl.extensions.xml.catalog.file.path}"/>
+						<catalogpath path="${dita.plugin.org.dita.base.dir}/catalog-dita.xml"/>
+					</xmlcatalog>
+					<!--					<mapper classname="org.dita.dost.ant.types.JobMapper" to="${out.ext}"/>-->
+				</xslt>
+			</pipeline>
+		</sequential>
+	</target>
+
+	<!-- Creating main files for the webhelp output -->
+	<target name="dellemc-webhelp.whr-create-main-files" depends="whr-create-main-page,
+																whr-create-search-page,
+																whr-create-indexterms-page,
+																dellemc-webhelp.whr-create-localization-files"/>
+
+	<target name="dellemc-webhelp.whr-create-localization-files">
+		<property name="strings.list.file" value="${webhelp.responsive.dir}/oxygen-webhelp/resources/localization/strings.xml"/>
+		<available file="${dita.dir}/resources/plugins.xml" property="DITA_OT_PLUGINS_FILE_PATH" value="${dita.dir}/resources/plugins.xml"/>
+		<available file="${dita.dir}/config/plugins.xml" property="DITA_OT_PLUGINS_FILE_PATH" value="${dita.dir}/config/plugins.xml"/>
+		<pipeline>
+			<xslt in="${strings.list.file}" style="${dellemc-webhelp.xsl.dir}/mainFiles/createLocalizationFiles.xsl" out="${dita.temp.dir}/dummy.html" classpathref="dost.class.path">
+				<param name="TOC_XML_FILEPATH" expression="${dita.temp.dir}/toc.xml"/>
+				<param name="INDEX_XML_FILEPATH" expression="${output.dir}/index.xml"/>
+				<param name="XHTML_FOLDER" expression="${output.dir}"/>
+				<param name="OUTPUTDIR" expression="${output.dir}"/>
+				<param name="BASEDIR" expression="${webhelp.responsive.dir}"/>
+				<param name="OUTEXT" expression="${out.ext}" if:set="out.ext"/>
+				<param name="DEFAULTLANG" expression="${webhelp.language}" if:set="webhelp.language"/>
+				<param name="CSS" expression="${args.css.file}" if:set="args.css.file"/>
+				<param name="CSSPATH" expression="${user.csspath}" if:set="user.csspath"/>
+
+				<param name="DITA_OT_PLUGINS_FILE_PATH" expression="${DITA_OT_PLUGINS_FILE_PATH}"/>
+
+				<param name="WEBHELP_LOGO_IMAGE" expression="${webhelp.logo.image.output}" if:set="webhelp.logo.image.output"/>
+				<param name="WEBHELP_LOGO_IMAGE_TARGET_URL" expression="${webhelp.logo.image.target.url}" if:set="webhelp.logo.image.target.url"/>
+				<param name="WEBHELP_FAVICON" expression="${webhelp.favicon.relpath}" if:set="webhelp.favicon.relpath"/>
+				<param name="WEBHELP_SEARCH_RANKING" expression="${webhelp.search.ranking}" if:set="webhelp.search.ranking"/>
+				<param name="WEBHELP_SEARCH_SCRIPT" expression="${webhelp.google.search.script.url}" if:set="webhelp.google.search.script.url"/>
+				<param name="WEBHELP_SEARCH_RESULT" expression="${webhelp.google.search.results.url}" if:set="webhelp.google.search.results.url"/>
+				<param name="WEBHELP_VERSION" expression="${webhelp.version}" if:set="webhelp.version"/>
+				<param name="WEBHELP_BUILD_NUMBER" expression="${webhelp.build.number}" if:set="webhelp.build.number"/>
+				<param name="WEBHELP_TRANSFORMATION_TIMESTAMP" expression="${webhelp.transformation.timestamp}" if:set="webhelp.transformation.timestamp"/>
+				<param name="WEBHELP_TRIAL_LICENSE" expression="${webhelp.trial.license}" if:set="webhelp.trial.license"/>
+
+				<param name="WEBHELP_DITAMAP_URL" expression="${org.dita-ot.html.map.url}"/>
+				<param name="WEBHELP_PARAMETERS_URL" expression="${webhelp.responsive.parameters.file.url}"/>
+				<param name="show.changes.and.comments" expression="${webhelp.show.changes.and.comments}"/>
+
+				<param name="DRAFT" expression="${args.draft}" if:set="args.draft"/>
+				<param name="ARGS.BU" expression="${args.bu}" if:set="args.bu"/>
+				<param name="dell-brand" expression="${dell-brand}" if:set="dell-brand"/>
+				<param name="include-draft-comments" expression="${include-draft-comments}" if:set="include-draft-comments"/>
+				<param name="ARGS.INPUT.SCRIPT.MAP" expression="${output.dir}/map.js"/>
+				<param name="TRANSTYPE" expression="${transtype}"/>
+				<param name="MAP_NAME" expression="${dita.input.filename}"/>
+
+				<xmlcatalog>
+					<catalogpath path="${xsl.extensions.xml.catalog.file.path}"/>
+					<catalogpath path="${dita.plugin.org.dita.base.dir}/catalog-dita.xml"/>
+				</xmlcatalog>
+			</xslt>
+		</pipeline>
+
+		<delete dir="${dita.temp.dir}">
+			<include name="dummy.html"/>
+		</delete>
+	</target>
+
+	<target name="dellemc-webhelp.whr-copy-resources" depends="dellemc-webhelp.whr-copy-resources.init,
+															dellemc-webhelp.whr-copy-logo-image,
+														    whr-copy-favicon,
+														    whr-copy-custom-resources,
+														    whr-copy-common-resources,
+														    dellemc-webhelp.whr-copy-kuromoji,
+														    dellemc-webhelp.copy-dell-custom.js,
+														    dellemc-webhelp.copy-dell-topic-input-sanitizer.js,
+														    dellemc-webhelp.copy-dell-topic-title-meta.js,
+														    whr-copy-template-resources"/>
+
+	<!--
+	This target is added for the purpose of handling ja, ja-jp search in html5 webhelp and
+	at present scenario this target is disabled and is not invoked in the target dellemc-webhelp.whr-copy-resources as a dependent target
+	-->
+	<target name="dellemc-webhelp.whr-copy-resources.init">
+		<condition property="use.kuromoji" value="yes">
+			<and>
+				<equals arg1="${webhelp.language}" arg2="ja" casesensitive="false"/>
+				<istrue value="${webhelp.enable.search.kuromoji.js}"/>
+			</and>
+		</condition>
+	</target>
+
+	<target name="dellemc-webhelp.whr-copy-logo-image" if="dellemc-copy-logo">
+		<copy todir="${output.dir}/${dellemc-logo-css-path}" file="${dellemc-logo-path}"/>
+	</target>
+
+	<target name="dellemc-webhelp.whr-copy-kuromoji" if="use.kuromoji">
+		<copy todir="${output.dir}/oxygen-webhelp/app/search/kuromoji" overwrite="true" encoding="ISO-8859-1">
+			<fileset dir="${webhelp.responsive.dir}/oxygen-webhelp/app/search/kuromoji"/>
+		</copy>
+	</target>
+	
+	<target name="dellemc-webhelp.copy-dell-custom.js">
+		<copy todir="${output.dir}/oxygen-webhelp/app"
+			  file="${dita.plugin.com.dellemc.webhelp.responsive.dir}/resources/js/dell-custom.js"
+			  overwrite="true" encoding="ISO-8859-1"/>
+	</target>
+
+	<target name="dellemc-webhelp.copy-dell-topic-input-sanitizer.js">
+		<copy todir="${output.dir}/oxygen-webhelp/app"
+			  file="${dita.plugin.com.dellemc.webhelp.responsive.dir}/resources/js/dell-topic-input-sanitizer.js"
+			  overwrite="true" encoding="ISO-8859-1"/>
+	</target>
+
+	<target name="dellemc-webhelp.copy-dell-topic-title-meta.js">
+		<copy todir="${output.dir}/oxygen-webhelp/app"
+			  file="${dita.plugin.com.dellemc.webhelp.responsive.dir}/resources/js/dell-topic-title-meta.js"
+			  overwrite="true" encoding="ISO-8859-1"/>
+	</target>
+	
+	<target name="dellemc-webhelp-responsive.cleanup-out">
+		<delete>
+			<fileset dir="${output.dir}">
+				<include name="context-help-map.xml"/>
+				<include name="cshelp.html"/>
+				<include name="sitemap.xml"/>
+				<include name="index.xml"/>
+				<include name="indexterms.properties"/>
+				<include name="toc.xml"/>
+				<include name="indexTerms.html"/>
+<!--				<include name="**/*.map"/>-->
+				<include name="**/context-help-map.js"/>
+			</fileset>
+		</delete>
+		<delete includeemptydirs="yes"
+				failonerror="no">
+			<fileset dir="${output.dir}/${dellemc-webhelp.output-resources.dir}/images"
+					 includesfile="${dellemc-webhelp-cleanup-list}"/>
+		</delete>
+	</target>
+
+	<target name="dellemc-webhelp-responsive.remove-workdir">
+		<copy file="${args.input}" todir="${dellemc-webhelp.preprocess.work.dir}" overwrite="true"/>
+		<move file="${args.input.location}/orig${dita.input.filename}" tofile="${args.input}" overwrite="true"/>
+		<delete dir="${dellemc-webhelp.preprocess.work.dir}"/>
+	</target>
+</project>

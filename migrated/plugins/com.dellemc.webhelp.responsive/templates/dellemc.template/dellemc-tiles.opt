@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publishing-template>
+    <name>dellemc</name>
+    <webhelp>
+        <tags>
+            <tag type="layout">tiles</tag>
+            <tag type="color">blue</tag>
+            <tag type="color">light</tag>
+        </tags>
+        <!--<preview-image file="oxygen-tiles.png"/>-->
+        <resources>
+            <css file="resources/css/dell-emc-main.css"/>
+            <css file="resources/css/dell-emc-topic.css"/>
+            <css file="resources/css/dell-emc-admonitions.css"/>
+            <css file="resources/css/dell-emc-nav-links.css"/>
+
+            <fileset>
+                <include name="resources/**/*"/>
+                <exclude name="resources/**/*.svn"/>
+                <exclude name="resources/**/*.git"/>
+            </fileset>
+        </resources>
+        
+        <parameters>
+            <parameter name="webhelp.show.indexterms.link" value="no"/>
+            <parameter name="webhelp.footer.include" value="no"/>
+            <parameter name="webhelp.show.main.page.tiles" value="no"/>
+            <parameter name="webhelp.show.main.page.toc" value="no"/>
+            <parameter name="webhelp.show.top.menu" value="yes"/>
+            <parameter name="webhelp.top.menu.depth" value="6"/>
+            <parameter name="webhelp.publication.toc.links" value="all"/>
+            <parameter name="webhelp.default.collection.type.sequence" value="yes"/>
+        </parameters>
+    </webhelp>
+</publishing-template>

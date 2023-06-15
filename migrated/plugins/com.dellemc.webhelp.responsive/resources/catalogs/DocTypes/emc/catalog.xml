@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+	<!-- EMC-specific DTD -->
+	<public publicId="-//EMC//DTD DITA CliReference//EN" uri="dtd/cli.dtd"/> 
+	<public publicId="-//EMC//ELEMENTS EMC DITA CLI Module//EN" uri="dtd/cli.mod"/>
+	<!-- ...................................................................... -->
+	<!-- End of XML Catalog data for OASIS version-less DITA pointing to latest --> 
+	<!-- ...................................................................... -->
+
+	<!-- EMC-specific glossary specialization -->
+	<!-- jholmber: Added 07182013-->
+
+	<public publicId="-//EMC//DTD DITA Glossary Entry//EN" uri="dtd/emcglossentry.dtd"/>
+	<public publicId="-//EMC//DTD DITA 1.2 Glossary Entry//EN" uri="dtd/emcglossentry.dtd"/>
+
+	<public publicId="-//EMC//ELEMENTS DITA Glossary Entry//EN" uri="dtd/emcglossentry.mod"/>
+	<public publicId="-//EMC//ELEMENTS DITA 1.2 Glossary Entry//EN" uri="dtd/emcglossentry.mod"/>
+
+	<public publicId="-//EMC//ENTITIES DITA Glossary Entry//EN" uri="dtd/emcglossentry.ent"/>
+	<public publicId="-//EMC//ENTITIES DITA 1.2 Glossary Entry//EN" uri="dtd/emcglossentry.ent"/>
+
+	<public publicId="-//EMC//DTD DITA Glossary//EN" uri="dtd/emcglossary.dtd"/>
+	<public publicId="-//EMC//DTD DITA 1.2 Glossary//EN" uri="dtd/emcglossary.dtd"/>
+
+	<public publicId="-//EMC//ELEMENTS DITA Glossary//EN" uri="dtd/emcglossary.mod"/>
+	<public publicId="-//EMC//ELEMENTS DITA 1.2 Glossary//EN" uri="dtd/emcglossary.mod"/>
+
+	<public publicId="-//EMC//ENTITIES DITA Glossary//EN" uri="dtd/emcglossary.ent"/>
+	<public publicId="-//EMC//ENTITIES DITA 1.2 Glossary//EN" uri="dtd/emcglossary.ent"/>
+</catalog>

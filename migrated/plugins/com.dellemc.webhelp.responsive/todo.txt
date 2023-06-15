@@ -1,0 +1,3 @@
+Related issues:
+
+- TOC expand-all / collapse-all buttons (not sure this is possible)
