@@ -31,7 +31,8 @@
 	<xsl:template name="gen-table-footnote">
 		<xsl:param name="table"/>
 		<xsl:param name="element"/>
-		<xsl:apply-templates select="$table/descendant::*[self::* = $element]
+		<xsl:param name="xtrc"/>
+		<xsl:apply-templates select="$table/descendant::*[self::* = $element][@xtrc = $xtrc]
                                                 [not( (ancestor-or-self::*[contains(@class, ' topic/draft-comment ')]
                                                         or ancestor::*[contains(@class, ' topic/required-cleanup ')])
                                                     and $DRAFT = 'no')][1]" mode="table.fn"/>

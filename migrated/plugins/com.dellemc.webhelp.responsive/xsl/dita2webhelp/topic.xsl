@@ -542,7 +542,7 @@ See the accompanying LICENSE file for applicable license.
 		<img class="admonition-image" src="{$image_path}" alt=""/>
 	</xsl:template>
 
-	<xsl:template match="*[contains(@class, ' topic/fn ') or (contains(@class, ' topic/xref ') and @type = 'fn')]" name="topic.fn">
+	<xsl:template match="*[contains(@class, ' topic/fn ') or (contains(@class, ' topic/xref ') and @type = 'fn')]" name="topic.fn" priority="1">
 		<xsl:param name="xref"/>
 		<xsl:choose>
 			<xsl:when test="ancestor::*[contains(@class, ' topic/table ') or contains(@class,' topic/simpletable ')]">
@@ -552,6 +552,7 @@ See the accompanying LICENSE file for applicable license.
 				<xsl:call-template name="gen-table-footnote">
 					<xsl:with-param name="table" select="$table"/>
 					<xsl:with-param name="element" select="self::*"/>
+					<xsl:with-param name="xtrc" select="@xtrc"/>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:otherwise>
